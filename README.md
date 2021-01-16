@@ -25,7 +25,7 @@
 
 ### Part 2: Installing the program
 
-1. On this page, hit the green CODE button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
+1. On this page, hit the green "Code" button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
 2. Open the file and unzip it.
 3. Inside the folder you unzipped, there will be ANOTHER folder called `DiscordRPCGenerator-main`. MOVE THIS FOLDER SOMEWHERE MEMORABLE!
 4. Download the NodeJS installer at https://nodejs.org/en/download/current/ (for Windows and macOS users). Linux users, install from your [package manager.](https://nodejs.org/en/download/package-manager/).
