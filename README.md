@@ -1,3 +1,5 @@
+# ⚠️ THIS PROGRAM IS NOT READY! CHECK BACK HERE IN A DAY OR SO! ⚠️
+
 # DiscordRPCGenerator
 ### Discord Rich Presence Generator, WITH BUTTONS!
 
