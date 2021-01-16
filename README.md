@@ -52,3 +52,5 @@ And close the window! Watch as your new presence springs to life!
 
 ### Do you need help?
 Open a new issue here, or [join my Discord!](https://discord.com/invite/mG94DqX)
+
+The program has been tested on Arch Linux and Windows 10. 
