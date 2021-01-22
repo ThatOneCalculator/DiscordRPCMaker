@@ -79,6 +79,10 @@ Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Make sure you don't have another program taking up a presence slot.
 - Try running the last command again
 
+### I can't install the npm packages!
+- Follow the troubleshooting steps under step 3 of part 3.
+- Try running `cmd` as Administrator if you're on Windows.
+- Try reinstalling node, making sure npm is included.
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
