@@ -47,9 +47,9 @@
     
 Type all of these lines seperately:
   ```sh
-  npm i discord-rpc
-  npm i syncprompt
-  npm i fs
+  npm i -g discord-rpc
+  npm i -g syncprompt
+  npm i -g fs
   ```
 </details>
 
