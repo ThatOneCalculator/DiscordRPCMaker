@@ -52,6 +52,7 @@ Type all of these lines seperately:
   npm i fs
   ```
 </details>
+
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
 
