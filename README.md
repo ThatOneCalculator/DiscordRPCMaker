@@ -44,8 +44,9 @@
 <details>
     <summary markdown="span">Are you having trouble with this step? Click me!</summary>
     
-    
-Type all of these lines seperately:
+On macOS, you may be prompted to install a seperate package. Install it.
+
+If that still doesn't work (or you're on Windows or Linux), type all of these lines seperately:
   ```sh
   npm i -g discord-rpc
   npm i -g syncprompt
