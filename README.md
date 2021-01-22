@@ -58,5 +58,12 @@ And close the window! Watch as your new presence springs to life!
 
 The program has been tested on Arch Linux and Windows 10. 
 
-### Help! My buttons aren't working!
+## Common "issues"
+
+### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
+
+### I can't see the presence!
+Make sure you are not invisible/offline. If you ARE online/idle/dnd...
+A. Make sure you don't have another program taking up a presence slot.
+B. Try running the last command again
