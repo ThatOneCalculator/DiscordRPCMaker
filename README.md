@@ -43,16 +43,14 @@
 3. Type `npm i` and hit enter.
 <details>
     <summary markdown="span">Are you having trouble with this step? Click me!</summary>
+    
+    
 Type all of these lines seperately:
-  <code>
-      
+  ```sh
   npm i discord-rpc
-      
   npm i syncprompt
-  
   npm i fs
-  
-  </code>
+  ```
 </details>
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
