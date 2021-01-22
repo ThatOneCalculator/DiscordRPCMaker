@@ -5,8 +5,7 @@ import fs from 'fs';
 
 function validateurl(str) {
 	const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
-	if (regexp.test(str)) { return true; }
-	else { return false; }
+	return regexp.test(str);
 }
 
 const go = prompt("Did you create an application at https://discord.com/developers/applications ? If not, you probably should read the README on the GitHub repo before continuing. Enter 'y' or 'yes' to continue.\n").toLowerCase();
@@ -108,7 +107,7 @@ switch (numbuttons) {
 		break;
 }
 
-if (smallimage.length === 2) { largeimage = largeimage + ","; }
+if (smallimage.length > 1) { largeimage = largeimage + ","; }
 
 let content = `
 import RPC from 'discord-rpc'
