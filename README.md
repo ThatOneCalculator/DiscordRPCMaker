@@ -89,4 +89,4 @@ Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
 
-The program has been tested on Arch Linux and Windows 10. 
+The program has been tested on Arch Linux, macOS 10.14, and Windows 10. 
