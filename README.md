@@ -42,7 +42,7 @@
 2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it, and hit enter.
 3. Type `npm i` and hit enter.
 <details>
-    <summary markdown="span">Are you having trouble with this step? Click me!  <summary markdown="span">This is the summary text, click me to expand</summary></summary>
+    <summary markdown="span">Are you having trouble with this step? Click me!</summary>
 Type all of these lines seperately:
   <code>
   
