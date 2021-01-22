@@ -77,6 +77,9 @@ Want to edit your presence later? You can either
 
 ## Common issues
 
+<details>
+    <summary markdown="span">Click me!</summary>
+
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
@@ -85,11 +88,16 @@ Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Make sure you don't have another program taking up a presence slot.
 - Try running the last command again
 
+### The image(s) aren't showing!
+If you just put them in, sometimes Discord takes a minute or 2 to cache them properly.
+
 ### I can't install the npm packages!
 - Make sure you're using the LTS release of Node.js
 - Follow the troubleshooting steps under step 3 of part 3.
 - Try running `cmd` as Administrator if you're on Windows.
 - Try reinstalling node, making sure npm is included.
+
+</details>
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
