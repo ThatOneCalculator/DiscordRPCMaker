@@ -45,9 +45,11 @@
     <summary markdown="span">Are you having trouble with this step? Click me!</summary>
 Type all of these lines seperately:
   <code>
-  npm i discord-rpc<br>
-  npm i syncprompt<br>
-  npm i fs<br>
+  npm i discord-rpc
+      
+  npm i syncprompt
+  
+  npm i fs
   </code>
 </details>
 4. Type `node maker.js` and hit enter.
