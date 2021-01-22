@@ -56,3 +56,6 @@ And close the window! Watch as your new presence springs to life!
 Open a new issue here, or [join my Discord!](https://discord.com/invite/mG94DqX)
 
 The program has been tested on Arch Linux and Windows 10. 
+
+### Help! My buttons aren't working!
+Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
