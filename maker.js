@@ -108,7 +108,7 @@ switch (numbuttons) {
 		break;
 }
 
-if (smallimage.length >= 1) { largeimage = largeimage + ","; }
+if (smallimage.length === 2) { largeimage = largeimage + ","; }
 
 let content = `
 import RPC from 'discord-rpc'
