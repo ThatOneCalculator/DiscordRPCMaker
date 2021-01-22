@@ -17,7 +17,6 @@
   "dependencies": {
     "discord-rpc": "^3.1.4",
     "fs": "0.0.1-security",
-    "prompt-sync": "^4.2.0",
     "syncprompt": "^2.0.0"
   }
 }
