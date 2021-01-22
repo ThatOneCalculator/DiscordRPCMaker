@@ -42,7 +42,7 @@
 2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it.
 3. Type `npm i` and hit enter.
 4. Type `node maker.js` and hit enter.
-5. Follow the prompts the program gives you. This will generate a file called `presence.js`.
+5. Follow the prompts the program gives you.
 
 ### Part 4: Running your presence
 1. Open Discord
@@ -52,11 +52,23 @@
 
 And close the window! Watch as your new presence springs to life!
 
+### Part 5: Editing your presence
+Want to edit your presence later? You can either
+- Redo part 3 (reccomended).
+- Manually edit the `options.json` file.
 
-### Do you need help?
-Open a new issue here, or [join my Discord!](https://discord.com/invite/mG94DqX)
+## Common issues
+
+### My buttons aren't working!
+Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
+
+### I can't see the presence!
+Make sure you are not invisible/offline. If you ARE online/idle/dnd...
+- Make sure you don't have another program taking up a presence slot.
+- Try running the last command again
+
+
+### Still need help?
+[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
 
 The program has been tested on Arch Linux and Windows 10. 
-
-### Help! My buttons aren't working!
-Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
