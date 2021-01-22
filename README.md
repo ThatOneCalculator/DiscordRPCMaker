@@ -41,6 +41,19 @@
 - **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
 2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it, and hit enter.
 3. Type `npm i` and hit enter.
+<details>
+    <summary markdown="span">Are you having trouble with this step? Click me!  <summary markdown="span">This is the summary text, click me to expand</summary></summary>
+Type all of these lines seperately:
+  <code>
+  
+  npm i discord-rpc  
+    
+  npm i syncprompt
+  
+  npm i fs<br>
+  
+  </code>
+</details>
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
 
