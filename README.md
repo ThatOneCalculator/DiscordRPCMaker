@@ -1,4 +1,4 @@
-# DiscordRPCGenerator
+# Discord RPC Generator
 ### Discord Rich Presence Generator, WITH BUTTONS!
 
 ![Big](https://linus-tech.tips/T7VQq5w27N.png)
