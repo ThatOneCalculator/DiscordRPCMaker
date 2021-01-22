@@ -60,8 +60,8 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
 
 ### I can't see the presence!
 Make sure you are not invisible/offline. If you ARE online/idle/dnd...
-A. Make sure you don't have another program taking up a presence slot.
-B. Try running the last command again
+- Make sure you don't have another program taking up a presence slot.
+- Try running the last command again
 
 
 ### Still need help?
