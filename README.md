@@ -78,7 +78,7 @@ Want to edit your presence later? You can either
 ## Common issues
 
 <details>
-    <summary markdown="span">Click me!</summary>
+    <summary markdown="span">Click me for the  list of issues!</summary>
 
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
@@ -96,6 +96,9 @@ If you just put them in, sometimes Discord takes a minute or 2 to cache them pro
 - Follow the troubleshooting steps under step 3 of part 3.
 - Try running `cmd` as Administrator if you're on Windows.
 - Try reinstalling node, making sure npm is included.
+
+### I'm on mobile, what do I do?
+As of right now, there's no way to do this through a mobile device. Sorry!
 
 </details>
 
