@@ -50,7 +50,7 @@ Type all of these lines seperately:
     
   npm i syncprompt
   
-  npm i fs<br>
+  npm i fs
   
   </code>
 </details>
