@@ -39,7 +39,7 @@
 - **Windows**: Open a program called `cmd`. 
 - **macOS**: Open a program called `Terminal`.
 - **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
-2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it.
+2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it, and hit enter.
 3. Type `npm i` and hit enter.
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
