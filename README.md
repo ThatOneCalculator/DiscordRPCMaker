@@ -46,8 +46,8 @@
 ### Part 4: Running your presence
 1. Open Discord
 2. Just type the command below into your terminal/cmd:
-- Windows: `start /b node presence.js`
-- macOS/Linux: `node presence.js & disown`
+- **Windows**: `start /b node presence.js`
+- **macOS/Linux**: `node presence.js & disown`
 
 And close the window! Watch as your new presence springs to life!
 
