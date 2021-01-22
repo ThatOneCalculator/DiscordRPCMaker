@@ -6,6 +6,8 @@
 
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
 
+### The whole setup takes only a couple minutes!
+
 ### Part 1: Creating your presence application (same on all platforms)
 
 1. Go to https://discord.com/developers/applications/.
