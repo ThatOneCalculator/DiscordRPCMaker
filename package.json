@@ -17,7 +17,6 @@
   "dependencies": {
     "discord-rpc": "^3.1.4",
     "fs": "0.0.1-security",
-    "inquirer": "^7.3.3",
     "syncprompt": "^2.0.0"
   }
 }
