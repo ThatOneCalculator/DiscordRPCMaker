@@ -40,20 +40,9 @@
 - **macOS**: Open a program called `Terminal`.
 - **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
 2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it, and hit enter.
-3. Type `npm i` and hit enter.
-<details>
-    <summary markdown="span">Are you having trouble with this step? Click me!</summary>
-    
-On macOS, you may be prompted to install a seperate package. Install it.
-
-If that still doesn't work (or you're on Windows or Linux), type all of these lines seperately:
-  ```sh
-  npm i -g discord-rpc
-  npm i -g syncprompt
-  npm i -g fs
-  ```
-</details>
-
+3. Type `npm i` and hit enter. 
+ - On macOS, you may be prompted to install a seperate package. If so, install it.
+ - Make sure you are using the LTS release of Node.js, or you may get errors!
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
 
@@ -89,7 +78,7 @@ Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Try running the last command again
 
 ### The image(s) aren't showing!
-If you just put them in, sometimes Discord takes a minute or 2 to cache them properly.
+If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
 
 ### I can't install the npm packages!
 - Make sure you're using the LTS release of Node.js
