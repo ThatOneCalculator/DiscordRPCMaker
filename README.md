@@ -66,7 +66,7 @@ If that still doesn't work (or you're on Windows or Linux), type all of these li
 And close the window! Watch as your new presence springs to life!
 
 #### How to run your presence again later:
-1. Open cmd/Terminal
+1. Open cmd/Terminal.
 2. `cd` and drop in the folder.
 3. Repeat steps 1 and 2 of Part 4.
 
