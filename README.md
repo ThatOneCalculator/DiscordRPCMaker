@@ -101,7 +101,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 </details>
 
 ### Here is an example gif!
-###### This took place after I downloaded and extracted the zip.
+###### This took place after I installed Node and downloaded/extracted the zip.
 ![Example](https://cdn.discordapp.com/attachments/802218008574820393/802349525343797258/demo.gif)
 
 ### Still need help?
