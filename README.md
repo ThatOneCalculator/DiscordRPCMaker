@@ -83,8 +83,7 @@ If you just put them in, *sometimes* Discord takes a minute or so to cache them 
 
 ### I can't install the npm packages!
 - Make sure you're using the LTS release of Node.js
-- Try running `cmd` as Administrator if you're on Windows.
-- Try :
+- Try:
 1. Going into the folder and deleting the sub-folder called `node_modules`
 2. `cd`ing back into the folder (step 2 of part 3)
 3. Running
@@ -94,6 +93,7 @@ npm i -g discord-rpc
 npm i -g syncprompt
 ```
 - Try reinstalling node, making sure npm is included.
+- Windows specific: `npm i -g --production windows-build-tools --vs2015` (Note: this may take a while and will restart your PC. Only do this as a last resort.)
 
 ### I'm on mobile, what do I do?
 As of right now, there's no way to do this through a mobile device. Sorry!
