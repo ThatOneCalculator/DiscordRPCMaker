@@ -27,7 +27,7 @@
 
 ### Part 2: Installing the program
 
-1. On this page, hit the green "Code" button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
+1. On this page, hit the green <kbd>Code</kbv> button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
 2. Open the file and unzip it.
 3. Inside the folder you unzipped, there will be ANOTHER folder called `DiscordRPCGenerator-main`. **MOVE THIS FOLDER SOMEWHERE MEMORABLE!**
 4. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
@@ -48,7 +48,7 @@
 
 ### Part 4: Running your presence
 1. Open Discord
-2. Just type the command below into your terminal/cmd:
+2. Just type the command below into the same cmd/Terminal window from before:
 - **Windows**: `start /b node presence.js`
 - **macOS/Linux**: `node presence.js & disown`
 
@@ -57,10 +57,10 @@ And close the window! Watch as your new presence springs to life!
 #### How to run your presence again later:
 1. Open cmd/Terminal.
 2. `cd` and drop in the folder.
-3. Repeat steps 1 and 2 of Part 4.
+3. Repeat steps 1 and 2 of part 4.
 
 ### Part 5: Editing your presence
-Want to edit your presence later? You can either
+Want to edit your presence later? You can either:
 - Redo part 3 (reccomended).
 - Manually edit the `options.json` file.
 
@@ -82,8 +82,16 @@ If you just put them in, *sometimes* Discord takes a minute or so to cache them 
 
 ### I can't install the npm packages!
 - Make sure you're using the LTS release of Node.js
-- Follow the troubleshooting steps under step 3 of part 3.
 - Try running `cmd` as Administrator if you're on Windows.
+- Try :
+1. Going into the folder and deleting the sub-folder called `node_modules`
+2. `cd`ing back into the folder (step 2 of part 3)
+3. Running
+```sh
+npm i -g fs
+npm i -g discord-rpc
+npm i -g syncprompt
+```
 - Try reinstalling node, making sure npm is included.
 
 ### I'm on mobile, what do I do?
