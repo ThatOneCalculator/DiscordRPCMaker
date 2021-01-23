@@ -35,7 +35,7 @@
 
 ### Part 3: Generating your presence
 
-1. This will vary by operating system. 
+1. Open a console. This will vary by operating system. 
 - **Windows**: Open a program called `cmd`. 
 - **macOS**: Open a program called `Terminal`.
 - **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
