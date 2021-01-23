@@ -102,7 +102,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 ### Here is an example gif!
 ###### This took place after I downloaded and extracted the zip.
-![Example gif](https://media.discordapp.net/attachments/802218008574820393/802349525343797258/demo.gif)
+![Example](https://cdn.discordapp.com/attachments/802218008574820393/802349525343797258/demo.gif)
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
