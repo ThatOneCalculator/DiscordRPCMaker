@@ -7,6 +7,7 @@
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
 
 ### The whole setup takes only a couple minutes!
+There's even an example gif at the bottom of this page!
 
 ### Part 1: Creating your presence application (same on all platforms)
 
@@ -98,6 +99,10 @@ npm i -g syncprompt
 As of right now, there's no way to do this through a mobile device. Sorry!
 
 </details>
+
+### Here is an example gif!
+###### This took place after I downloaded and extracted the zip.
+![Example gif](https://media.discordapp.net/attachments/802218008574820393/802349525343797258/demo.gif)
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
