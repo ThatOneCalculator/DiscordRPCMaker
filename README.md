@@ -41,9 +41,7 @@ There's even an example gif at the bottom of this page!
 - **macOS**: Open a program called `Terminal`.
 - **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
 2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it, and hit enter.
-3. Type `npm i` and hit enter. 
- - On macOS, you may be prompted to install a seperate package. If so, install it.
- - Make sure you are using the LTS release of Node.js, or you may get errors!
+3. Type `npm i` and hit enter. *Some people get stuck on this. Scroll to the bottom and click on the errors section for solutions if you get errors!*
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
 
@@ -73,14 +71,6 @@ Want to edit your presence later? You can either:
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
-### I can't see the presence!
-Make sure you are not invisible/offline. If you ARE online/idle/dnd...
-- Make sure you don't have another program taking up a presence slot.
-- Try running the last command again
-
-### The image(s) aren't showing!
-If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
-
 ### I can't install the npm packages!
 - Make sure you're using the LTS release of Node.js
 - Try reinstalling node, making sure npm is included.
@@ -90,6 +80,14 @@ If you just put them in, *sometimes* Discord takes a minute or so to cache them 
   - [Download this and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
   - Go into the project directory, and `sudo npm i -g node-gyp; npm i`
 - Windows specific: `npm i -g --production windows-build-tools --vs2015` (Note: this may take a while and will restart your PC. Only do this as a last resort.)
+
+### I can't see the presence!
+Make sure you are not invisible/offline. If you ARE online/idle/dnd...
+- Make sure you don't have another program taking up a presence slot.
+- Try running the last command again
+
+### The image(s) aren't showing!
+If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
 
 ### I'm on mobile, what do I do?
 As of right now, there's no way to do this through a mobile device. Sorry!
