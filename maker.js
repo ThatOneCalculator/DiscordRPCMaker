@@ -23,6 +23,7 @@ let clientid = 0;
 let largeimage = "";
 let smallimage = "";
 let description = "";
+let state = "";
 let numbuttons = 0;
 let buttononelabel = "";
 let buttontwolabel = "";
@@ -32,14 +33,15 @@ let isnum = false;
 let isurl = false;
 
 while (!isnum){
-	clientid = prompt("\nWhat is your app's client ID? This can be found on the main section of your app.\n");
+	clientid = prompt("What is your app's Client ID? This can be found on the main section of your app.\n");
 	if (clientid == "" || isNaN(clientid)) { console.log(`Your Client ID has to be a number.\n`); }
 	else { isnum = true; }	
 }
 	
 largeimage = prompt("\nWhat's the name of the larger image?\n");
 if (largeimage !== "") { smallimage = prompt("What's the name of the smaller image?\n"); }
-description = prompt("\nWhat do you want the Rich Presence to say? You can make it as long as you want, but it might show up cut off if it's too long. I'd say around a sentence or two is good.\n");
+description = prompt("\nWhat do you want the first line of the Rich Presence to say?\n");
+state = prompt("\nWhat do you want the second line of the Rich Presence to say?\n");
 numbuttons = Number(prompt("How many buttons do you want? Enter either 0, 1, or 2.\n"));
 
 if (numbuttons == "" || isNaN(numbuttons) || numbuttons < 0) { 
@@ -78,6 +80,7 @@ Client ID: ${clientid}
 Large Image Asset: ${largeimage}
 Small Image Asset: ${smallimage}
 Description: ${description}
+State: ${state}
 Number of buttons: ${numbuttons}
 Button one's label: ${buttononelabel}
 Button one's url: ${buttononeurl}
@@ -111,6 +114,7 @@ if (buttontwo !== null) { buttons.push(buttontwo) }
 let content = {
 	clientid: clientid,
 	description: description,
+	state: state,
 	largeimage: largeimage,
 	smallimage: smallimage,
 	buttons: buttons
@@ -122,4 +126,3 @@ fs.writeFile('options.json', data, (err) => {
 	if (err) { throw err; }
 	console.log(`\n\nDone! Time to run the presence.js file, instructions in the README.\nI really hope you enjoy using this! If you do, please consider starring this repository on GitHub: https://github.com/ThatOneCalculator/DiscordRPCGenerator`)
 });
-
