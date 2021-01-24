@@ -1,5 +1,4 @@
-https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg# Discord RPC Generator
-### Discord Rich Presence Generator, WITH BUTTONS!
+# Discord Rich Presence Generator, WITH BUTTONS!
 
 ![Big](https://linus-tech.tips/T7VQq5w27N.png)
 ![Small](https://linus-tech.tips/XqJ6wDtW6H.png)
