@@ -45,7 +45,7 @@ There's even an example gif at the bottom of this page!
 5. Follow the prompts the program gives you.
 
 ### Part 4: Running your presence
-1. Open Discord
+1. Open Discord (optional, but you wanna see your cool presence, right?)
 2. Just type the command below into the same cmd/Terminal window from before:
 - **Windows**: `start /b node presence.js`
 - **macOS/Linux**: `node presence.js & disown`
@@ -55,7 +55,7 @@ And close the window! Watch as your new presence springs to life!
 #### How to run your presence again later:
 1. Open cmd/Terminal.
 2. `cd` and drop in the folder.
-3. Repeat steps 1 and 2 of part 4.
+3. Repeat part 4.
 
 ### Part 5: Editing your presence
 Want to edit your presence later? You can either:
