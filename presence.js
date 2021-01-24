@@ -23,7 +23,7 @@ if (options['smallimage'] !== "") {
 }
 if (assets !== {}) { activity.assets = assets; }
 if (options['description'] !== "") { activity.details = options['description']; }
-if (options['state'] !== "") { activity.details = options['state']; }
+if (options['state'] !== "") { activity.state = options['state']; }
 if (options['buttons'].length !== 0) { activity.buttons = options['buttons']; }
 
 client.on('ready', () => {
