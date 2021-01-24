@@ -1,4 +1,4 @@
-# Discord RPC Generator
+https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg# Discord RPC Generator
 ### Discord Rich Presence Generator, WITH BUTTONS!
 
 ![Big](https://linus-tech.tips/T7VQq5w27N.png)
@@ -77,7 +77,7 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
 - Try deleting the `node_modules` folder, run `npm i -g node-gyp`, and then `npm i` (in the project directory).
 - macOS specific: If you upgraded your macOS from any version below 10.15 to 10.15 or 11, this will fix it:
   - `sudo rm -rf /Library/Developer/CommandLineTools`
-  - [Download this and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
+  - [Download and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
   - Go into the project directory, and `sudo npm i -g node-gyp; npm i`
 - Windows specific: `npm i -g --production windows-build-tools --vs2015` (Note: this may take a while and will restart your PC. Only do this as a last resort.)
 
