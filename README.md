@@ -100,4 +100,4 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), or [join my Discord!](https://discord.com/invite/mG94DqX)
 
-The program has been tested on Arch Linux, macOS 10.14, and Windows 10. 
+The program has been tested on Arch Linux, Windows 10, macOS 10.14, and macOS 10.15. 
