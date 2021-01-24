@@ -15,7 +15,7 @@ if (["yes","y"].indexOf(go) < 0){
 	process.exit();
 }
 
-console.log(`\n\nFor any of these, if you don't want one of them, just hit Enter/Return.\n\n`);
+console.log(`\n\n**For any of these, if you don't want one of them, just hit Enter/Return.**\n\n`);
 
 let isdone = false;
 
@@ -32,14 +32,14 @@ let isnum = false;
 let isurl = false;
 
 while (!isnum){
-	clientid = prompt("What is your app's client ID? This can be found on the main section of your app.\n");
+	clientid = prompt("\nWhat is your app's client ID? This can be found on the main section of your app.\n");
 	if (clientid == "" || isNaN(clientid)) { console.log(`Your Client ID has to be a number.\n`); }
 	else { isnum = true; }	
 }
 	
-largeimage = prompt("What's the name of the larger image?\n");
+largeimage = prompt("\nWhat's the name of the larger image?\n");
 if (largeimage !== "") { smallimage = prompt("What's the name of the smaller image?\n"); }
-description = prompt("What do you want the Rich Presence to say? You can make it as long as you want, but it might show up cut off if it's too long. I'd say around a sentence or two is good.\n");
+description = prompt("\nWhat do you want the Rich Presence to say? You can make it as long as you want, but it might show up cut off if it's too long. I'd say around a sentence or two is good.\n");
 numbuttons = Number(prompt("How many buttons do you want? Enter either 0, 1, or 2.\n"));
 
 if (numbuttons == "" || isNaN(numbuttons) || numbuttons < 0) { 
@@ -51,21 +51,21 @@ else if (numbuttons > 2) {
 	numbuttons = 2;
 }
 if (numbuttons >=1) {
-	buttononelabel = prompt("What do you want button 1's label to be?\n");
+	buttononelabel = prompt("\nWhat do you want button 1's label to be?\n");
 	if (buttononelabel === "") { buttononelabel = " "; }
 	while (!isurl) {
-		buttononeurl = prompt("What do you want button 1's URL to be? (The website where you're taken when it's clicked.)\n");
+		buttononeurl = prompt("\nWhat do you want button 1's URL to be? (The website where you're taken when it's clicked.)\n");
 		if (!validateurl(buttononeurl)) { console.log(`That's not a website!`); }
 		else { isurl = true; }
 	}
 	if (!buttononeurl.startsWith("http")) { buttononeurl = "https://" + buttononeurl; }
 }
 if (numbuttons === 2) { 
-	buttontwolabel = prompt("What do you want button 2's label to be?\n");
+	buttontwolabel = prompt("\nWhat do you want button 2's label to be?\n");
 	if (buttontwolabel  === "") { buttontwolabel  = " "; }
 	isurl = false;
 	while (!isurl) {
-		buttontwourl = prompt("What do you want button 2's URL to be? (The website where you're taken when it's clicked.)\n");
+		buttontwourl = prompt("\nWhat do you want button 2's URL to be? (The website where you're taken when it's clicked.)\n");
 		if (!validateurl(buttontwourl)) { console.log(`That's not a website!`); }
 		else { isurl = true; }
 	}
@@ -99,7 +99,7 @@ switch (numbuttons) {
 		buttontwo = { label: buttontwolabel, url: buttontwourl };
 		break;
 	default:
-		console.error(`This wasn't supposed to happen! Try re-running the program, or file an issue in the GitHub repo if this persists.`);
+		console.error(`\n\nThis wasn't supposed to happen! Try re-running the program, or file an issue in the GitHub repo if this persists.`);
 		process.exit();
 		break;
 }
