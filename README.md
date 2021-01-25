@@ -1,9 +1,9 @@
 # Discord Rich Presence Generator, WITH BUTTONS!
-###### Version 1.4.6, [now on npm!](https://www.npmjs.com/rpcmaker)
+###### Version 1.5.0, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
-![Big](https://linus-tech.tips/lNPp6VxmrZ.png)
-![Small](https://linus-tech.tips/qNm_9quNgf.png)
+![Large](assets/large.png)
+![Small](assets/small.png)
 
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
 
@@ -91,7 +91,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 ### Here is an example gif!
 ###### This took place after I installed Node and downloaded/extracted the zip.
-![Example](https://cdn.discordapp.com/attachments/802218008574820393/802349525343797258/demo.gif)
+![Example](assets/demo.gif)
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCGenerator/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
