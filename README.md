@@ -2,7 +2,7 @@
 Version 1.4.5, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
-![Big](https://linus-tech.tips/4HoRiWyCBp.png)
+![Big](https://linus-tech.tips/lNPp6VxmrZ.png)
 ![Small](https://linus-tech.tips/qNm_9quNgf.png)
 
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
