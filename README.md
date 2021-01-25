@@ -100,6 +100,6 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ![Example](https://cdn.discordapp.com/attachments/802218008574820393/802349525343797258/demo.gif)
 
 ### Still need help?
-[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCGenerator/discussions), or [join my Discord!](https://discord.com/invite/mG94DqX)
+[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCGenerator/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
 
 The program has been tested on Arch Linux, Windows 10, macOS 10.14, and macOS 10.15. 
