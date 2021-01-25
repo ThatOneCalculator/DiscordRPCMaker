@@ -1,11 +1,11 @@
 {
   "name": "rpcmaker",
-  "version": "1.4.3",
-  "description": "A Discord RPC maker",
+  "version": "1.4.4",
+  "description": "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!",
   "main": "maker.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node maker.js; node presence.js && exit 1"
   },
   "keywords": [
     "discord",
