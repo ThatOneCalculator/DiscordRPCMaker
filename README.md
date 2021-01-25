@@ -1,5 +1,5 @@
 # Discord Rich Presence Generator, WITH BUTTONS!
-####### Version 1.4.6, [now on npm!](https://www.npmjs.com/rpcmaker)
+###### Version 1.4.6, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
 ![Big](https://linus-tech.tips/lNPp6VxmrZ.png)
@@ -9,7 +9,7 @@
 
 ### The whole setup takes only a couple minutes!
 There's even an example gif at the bottom of this page!
-
+---
 ### Part 1: Creating your presence application (same on all platforms)
 
 1. Go to https://discord.com/developers/applications/.
