@@ -91,7 +91,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 ### Here is an example video!
 ###### This took place after I installed Node and downloaded/extracted the zip.
-![Example](https://cdn.discordapp.com/attachments/671117418189422594/803350157860143135/demo.webm)
+[![RPC Demo](https://res.cloudinary.com/marcomontalbano/image/upload/v1611604546/video_to_markdown/images/youtube--Vhx-fmmK8EE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=Vhx-fmmK8EE "RPC Demo")
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCGenerator/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
