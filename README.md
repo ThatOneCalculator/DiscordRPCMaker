@@ -8,7 +8,7 @@
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
 
 ### The whole setup takes only a couple minutes!
-There's even an example video at the bottom of this page!
+There's even an example GIF at the bottom of this page!
 ---
 ### Part 1: Creating your presence application (same on all platforms)
 *Options 4-7 are optional! This is if you want your status to have images.*
@@ -89,9 +89,9 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 </details>
 
-### Here is an example video!
+### Here is an example GIF!
 ###### This took place after I installed Node and downloaded/extracted the zip.
-https://www.youtube.com/Vhx-fmmK8EE
+![](https://cdn.discordapp.com/attachments/671117418189422594/803354823134543872/demo.gif)
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCGenerator/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
