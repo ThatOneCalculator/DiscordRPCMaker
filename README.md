@@ -1,5 +1,5 @@
 # Discord Rich Presence Generator, WITH BUTTONS!
-Version 1.4.0
+Version 1.4.0, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
 ![Big](https://linus-tech.tips/4HoRiWyCBp.png)
