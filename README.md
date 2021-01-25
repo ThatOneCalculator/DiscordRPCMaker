@@ -22,9 +22,6 @@ There's even an example gif at the bottom of this page!
 5. Go down to "Rich Presence Assets". You don't need a cover image, don't worry!
 6. Upload either one or two images. One will be used for the large image, and the other will be used for the small image. Both are optional. In the example screenshots, I only uploaded one image (for a large image). Give them memorable names! (Note: sometimes they don't show up directly after being uploaded. This is normal.)
 7. Go back to the "General Information" tab in the left bar. 
-
-*Back to the important stuff!*
-
 8. Copy your Client ID. It should be a big number, and is underneath the description on the left-hand. Hold on to this, it's important! (No, you do NOT need a Client Secret.)
 
 ### Part 2: Installing the program
