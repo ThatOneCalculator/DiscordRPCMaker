@@ -67,6 +67,9 @@ Want to edit your presence later? You can either:
 <details>
     <summary markdown="span">Click me for the  list of issues!</summary>
 
+### I have to be in the directory to run the file!
+This is a known issue, I'm working on an implementation for global configs.
+
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
