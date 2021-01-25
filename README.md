@@ -1,7 +1,7 @@
 # Discord Rich Presence Generator, WITH BUTTONS!
 
-![Big](https://linus-tech.tips/T7VQq5w27N.png)
-![Small](https://linus-tech.tips/XqJ6wDtW6H.png)
+![Big](https://linus-tech.tips/4HoRiWyCBp.png)
+![Small](https://linus-tech.tips/AJNL3JCOyi.png)
 
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
 
@@ -65,7 +65,7 @@ Want to edit your presence later? There's 2 options:
 ## Common issues
 
 <details>
-    <summary markdown="span">Click me for the  list of issues!</summary>\
+    <summary markdown="span">Click me for the  list of issues!</summary>
 
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
