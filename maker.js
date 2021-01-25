@@ -38,12 +38,11 @@ while (!isnum){
 	if (clientid == "" || isNaN(clientid)) { console.log(`Your Client ID has to be a number.\n`); }
 	else { isnum = true; }	
 }
-	
 largeimage = prompt("\nWhat's the name of the larger image?\n");
 if (largeimage !== "") { smallimage = prompt("What's the name of the smaller image?\n"); }
 description = prompt("\nWhat do you want the first line of the Rich Presence to say?\n");
 state = prompt("\nWhat do you want the second line of the Rich Presence to say?\n");
-numbuttons = Number(prompt("How many buttons do you want? Enter either 0, 1, or 2.\n"));
+numbuttons = Math.floor(prompt("How many buttons do you want? Enter either 0, 1, or 2.\n"));
 
 if (numbuttons == "" || isNaN(numbuttons) || numbuttons < 0) { 
 	console.log(`I don't think that was 0, 1, or 2... So I made it 0.\n`);
