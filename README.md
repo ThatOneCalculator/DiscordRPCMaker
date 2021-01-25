@@ -1,5 +1,7 @@
 # Discord Rich Presence Generator, WITH BUTTONS!
 Version 1.4.0
+
+
 ![Big](https://linus-tech.tips/4HoRiWyCBp.png)
 ![Small](https://linus-tech.tips/AJNL3JCOyi.png)
 
