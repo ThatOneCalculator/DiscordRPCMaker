@@ -1,6 +1,6 @@
 {
   "name": "rpcmaker",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A Discord RPC maker",
   "main": "maker.js",
   "type": "module",
@@ -15,9 +15,9 @@
   "author": "ThatOneCalculator",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/ThatOneCalculator/discordrpcmaker/issues"
+    "url": "https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues"
   },
-  "homepage": "https://github.com/ThatOneCalculator/discordrpcmaker",
+  "homepage": "https://github.com/ThatOneCalculator/DiscordRPCGenerator",
   "dependencies": {
     "discord-rpc": "^3.1.4",
     "fs": "0.0.1-security",
