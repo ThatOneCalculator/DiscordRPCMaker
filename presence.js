@@ -1,11 +1,11 @@
-'use strict';
-
 import RPC from 'discord-rpc';
 import fs from 'fs';
+import os from 'os';
 
 const client = new RPC.Client({ transport: 'ipc' })
 
-const rawdata = fs.readFileSync('options.json');
+const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming' : '/.config'}`;
+const rawdata = fs.readFileSync(`${dir}/drg-options.json`);
 const options = JSON.parse(rawdata);
 
 //console.log(options);

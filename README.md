@@ -58,17 +58,14 @@ And close the window! Watch as your new presence springs to life!
 3. Repeat part 4.
 
 ### Part 5: Editing your presence
-Want to edit your presence later? You can either:
-- Redo part 3 (reccomended).
-- Manually edit the `options.json` file.
+Want to edit your presence later? There's 2 options:
+- Redo part 3 (*Recommended, just do this!*)
+- Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drg-options.json`. In macOS/Linux, it's in `~/.config/drg-options.json`.
 
 ## Common issues
 
 <details>
-    <summary markdown="span">Click me for the  list of issues!</summary>
-
-### I have to be in the directory to run the file!
-This is a known issue, I'm working on an implementation for global configs.
+    <summary markdown="span">Click me for the  list of issues!</summary>\
 
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
