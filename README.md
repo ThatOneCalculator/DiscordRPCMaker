@@ -95,6 +95,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 ### Here is an example GIF!
 ###### This took place after I installed Node
+⚠️ This is outdated! Don't refer to this GIF for help! ⚠️
 ![Example](https://cdn.discordapp.com/attachments/671117418189422594/803356843577049148/demo.gif)
 
 ### Still need help?
