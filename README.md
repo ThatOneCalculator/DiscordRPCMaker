@@ -54,6 +54,7 @@ And close the window! Watch as your new presence springs to life!
 - Open cmd/Terminal.
 - Windows: `start /b node` *drag in the `presence.js` file in the folder* and hit enter.
 - macOS/Linux: `node` *drag in the `presence.js` file in the folder* `& disown` and hit enter.
+
 **All times after**
 - Open cmd/Terminal.
 - Hit the up key once (brings you to your last run command).
