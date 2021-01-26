@@ -46,9 +46,9 @@
 - **Windows**: `start /b node presence.js`
 - **macOS/Linux**: `node presence.js & disown`
 
-**And close the window! Watch as your new presence springs to life!**
+#### And close the window! Watch as your new presence springs to life!
 ---
-#### How to run your presence again later:
+### How to run your presence again later:
 If you're not using your terminal for anything else, this should be fine. If you are, then you should know what you're doing.
 There's different steps for doing it the first time after and every time after that. For the first time, you'll just need to open the folder and locate the `presence.js` file.
 
