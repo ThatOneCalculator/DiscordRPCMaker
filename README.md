@@ -1,10 +1,10 @@
-![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803360458429038622/image1.png)
+![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803420833993064518/image2.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
 ###### Version 1.5.5, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
-![Large](https://cdn.discordapp.com/attachments/671117418189422594/803357493077475448/large.png)
-![Small](https://cdn.discordapp.com/attachments/671117418189422594/803357509091590144/small.png)
+![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
+![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
 
 ## This is meant to be ultra noob-friendly, as long as you follow the instructions!
 
