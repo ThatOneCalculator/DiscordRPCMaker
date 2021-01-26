@@ -104,6 +104,11 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ⚠️ This is outdated! Don't refer to this GIF for help! ⚠️
 ![Example](https://cdn.discordapp.com/attachments/671117418189422594/803356843577049148/demo.gif)
 
+### Planned features:
+[ ] v1.7: storing and accessing multiple presences
+[ ] v2.0: Electron GUI
+[ ] >2.0: Binary releases
+
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
 
