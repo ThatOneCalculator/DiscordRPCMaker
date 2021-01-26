@@ -28,7 +28,6 @@
 2. (Windows/macOS) Install the program.
 
 ### Part 3: Generating your presence
-##### ⚠️ These new instructions might not work for everyone yet! If you're having problems, refer to old_instructions.md ⚠️
 
 1. Open a console. This will vary by operating system. 
 - **Windows**: Open a program called `cmd`. 
@@ -78,10 +77,11 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
   - `sudo rm -rf /Library/Developer/CommandLineTools`
   - [Download and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
   - `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
-- Windows specific (note: this may take a while and will restart your PC. Only do this as a last resort.):
+- Windows specific (note: this may take a while and will restart your PC.):
   - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
   - After restart, open up cmd again and type `npm i -g rpcmaker`
-  
+**If none of this works, refer to old_instructions.md!!**
+
 ### I can't see the presence!
 Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Make sure you don't have another program taking up a presence slot.
