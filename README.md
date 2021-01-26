@@ -1,6 +1,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
-###### Version 1.6.0, [on npm!](https://www.npmjs.com/rpcmaker)
+###### Version 1.6.1, [on npm!](https://www.npmjs.com/rpcmaker)
 
 
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
