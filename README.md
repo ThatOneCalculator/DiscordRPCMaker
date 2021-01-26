@@ -10,6 +10,7 @@
 
 ### The whole setup takes only a couple minutes! There's even an example GIF at the bottom of this page!
 ---
+
 ### Part 1: Creating your presence application (same on all platforms)
 *Options 4-7 are optional! This is if you want your status to have images.*
 1. Go to https://discord.com/developers/applications/.
@@ -27,6 +28,7 @@
 2. (Windows/macOS) Install the program.
 
 ### Part 3: Generating your presence
+### ⚠️ These new instructions might not work for everyone! If you're having problems, refer to old_instructions.md ⚠️
 
 1. Open a console. This will vary by operating system. 
 - **Windows**: Open a program called `cmd`. 
