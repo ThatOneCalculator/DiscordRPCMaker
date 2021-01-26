@@ -107,7 +107,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ### Planned features:
 - [ ] v1.7: Storing and accessing multiple presences
 - [ ] v2.0: Electron based GUI, collab with [@AlekEagle](https://github.com/alekeagle) ❤️
-- [ ] >2.0: Binary releases
+- [ ] ≥2.0: Binary releases
 
 ### Still need help?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
