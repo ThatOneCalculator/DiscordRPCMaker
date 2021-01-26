@@ -52,12 +52,13 @@ And close the window! Watch as your new presence springs to life!
 #### How to run your presence again later:
 If you're not using your terminal for anything else, this should be fine. If you are, then you should know what you're doing.
 There's different steps for doing it the first time after and every time after that. For the first time, you'll just need to open the folder and locate the `presence.js` file.
-**First time**
+
+**First time:**
 - Open cmd/Terminal.
 - Windows: `start /b node` *drag in `presence.js`* and hit enter.
 - macOS/Linux: `node` *drag in `presence.js`* `& disown` and hit enter.
 
-**All times after**
+**All times after:**
 - Open cmd/Terminal.
 - Hit the up key once (brings you to your last run command).
 - Hit enter.
