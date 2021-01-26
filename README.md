@@ -1,6 +1,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803360458429038622/image1.png)
 # Discord Rich Presence Generator, WITH BUTTONS!
-###### Version 1.5.3, [now on npm!](https://www.npmjs.com/rpcmaker)
+###### Version 1.5.4, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803357493077475448/large.png)
@@ -50,9 +50,14 @@ There's even an example GIF at the bottom of this page!
 And close the window! Watch as your new presence springs to life!
 
 #### How to run your presence again later:
-1. Open cmd/Terminal.
-2. `cd` and drop in the folder.
-3. Repeat part 4.
+**First time**
+- Open cmd/Terminal.
+- Windows: `start /b node` *drag in the `presence.js` file in the folder* and hit enter.
+- macOS/Linux: `node` *drag in the `presence.js` file in the folder* `& disown` and hit enter.
+**All times after**
+- Open cmd/Terminal.
+- Hit the up key once (brings you to your last run command).
+- Hit enter.
 
 ### Part 5: Editing your presence
 Want to edit your presence later? There's 2 options:
