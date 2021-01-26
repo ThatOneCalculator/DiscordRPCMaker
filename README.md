@@ -22,7 +22,7 @@
 7. Go back to the "General Information" tab in the left bar. 
 8. Copy your Client ID. It should be a big number, and is underneath the description on the left-hand. Hold on to this, it's important! (No, you do NOT need a Client Secret.)
 
-### Part 2: Installing the pre-requisites
+### Part 2: Installing the prerequisites
 
 1. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
 2. (Windows/macOS) Install the program.
