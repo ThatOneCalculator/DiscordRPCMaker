@@ -51,6 +51,10 @@
 
 *Pro tip: instead of typing the command every time, you can hit the ↑ (up) key and hit enter!*
 
+### How to update the program:
+- Open cmd/Terminal.
+- `npm i -g rpcmaker`
+
 ### How to edit your presence:
 There's 2 options:
 - Open cmd and run `rpcmaker` (*Recommended, just do this!*)
