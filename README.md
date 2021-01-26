@@ -1,6 +1,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803360458429038622/image1.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
-###### Version 1.5.4, [now on npm!](https://www.npmjs.com/rpcmaker)
+###### Version 1.5.5, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803357493077475448/large.png)
@@ -25,7 +25,7 @@
 
 1. On this page, hit the green <kbd>Code</kbd> button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
 2. Open the file and unzip it.
-3. Inside the folder you unzipped, there will be ANOTHER folder called `DiscordRPCGenerator-main`. **MOVE THIS FOLDER SOMEWHERE MEMORABLE!**
+3. Inside the folder you unzipped, there will be ANOTHER folder called `DiscordRPCMaker-main`. **MOVE THIS FOLDER SOMEWHERE MEMORABLE!**
 4. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
 5. (Windows/macOS) Install the program.
 
@@ -35,7 +35,7 @@
 - **Windows**: Open a program called `cmd`. 
 - **macOS**: Open a program called `Terminal`.
 - **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
-2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCGenerator-main` (the one you moved into a memorable) folder into it, and hit enter.
+2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCMaker-main` (the one you moved into a memorable) folder into it, and hit enter.
 3. Type `npm i` and hit enter. *Some people get stuck on this. Scroll to the bottom and click on the errors section for solutions if you get errors!*
 4. Type `node maker.js` and hit enter.
 5. Follow the prompts the program gives you.
@@ -102,6 +102,6 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ![Example](https://cdn.discordapp.com/attachments/671117418189422594/803356843577049148/demo.gif)
 
 ### Still need help?
-[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCGenerator/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCGenerator/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
+[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
 
 The program has been tested on Arch Linux, Windows 10, macOS 10.14, and macOS 10.15. 

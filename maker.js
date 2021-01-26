@@ -125,5 +125,5 @@ const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData
 
 fs.writeFile(`${dir}/drg-options.json`, data, (err) => {
 	if (err) { throw err; }
-	console.log(chalk`\n{bold.magenta Done!} Time to run the {cyan presence.js} file, instructions in the {green README}.\nI really hope you enjoy using this! If you do, please consider {bold.yellow starring this repository on GitHub}: {blue https://github.com/ThatOneCalculator/DiscordRPCGenerator}`)
+	console.log(chalk`\n{bold.magenta Done!} Time to run the {cyan presence.js} file, instructions in the {green README}.\nI really hope you enjoy using this! If you do, please consider {bold.yellow starring this repository on GitHub}: {blue https://github.com/ThatOneCalculator/DiscordRPCMaker}`)
 });
