@@ -34,7 +34,7 @@
 1. Open a console. This will vary by operating system. 
 - **Windows**: Open a program called `cmd`. 
 - **macOS**: Open a program called `Terminal`.
-- **Linux**: Open your terminal emulator of choice (Kitty, Alacritty, URXVT, Termite, GNOME Terminal, Konsole, etc).
+- **Linux**: Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
 2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCMaker-main` (the one you moved into a memorable) folder into it, and hit enter.
 3. Type `npm i` and hit enter. *Some people get stuck on this. Scroll to the bottom and click on the errors section for solutions if you get errors!*
 4. Type `node maker.js` and hit enter.
