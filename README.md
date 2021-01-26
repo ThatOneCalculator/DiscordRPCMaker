@@ -105,8 +105,8 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ![Example](https://cdn.discordapp.com/attachments/671117418189422594/803356843577049148/demo.gif)
 
 ### Planned features:
-- [ ] v1.7: storing and accessing multiple presences
-- [ ] v2.0: Electron GUI
+- [ ] v1.7: Storing and accessing multiple presences
+- [ ] v2.0: Electron based GUI, collab with @AlekEagle ❤️
 - [ ] >2.0: Binary releases
 
 ### Still need help?
