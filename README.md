@@ -40,7 +40,7 @@
 4. Follow the prompts the program gives you.
 
 ### Part 4: Running your presence
-1. Open Discord (optional, but you wanna see your cool presence, right?)
+1. Open Discord (it's fine in the background, but you wanna see your cool presence, right?)
 2. Just type the command below into the same cmd/Terminal window from before:
 - **Windows**: `start /b drpc`
 - **macOS/Linux**: `drpc & disown`
