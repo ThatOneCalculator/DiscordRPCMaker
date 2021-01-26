@@ -12,7 +12,7 @@
 ---
 
 ### Part 1: Creating your presence application (same on all platforms)
-*Options 4-7 are optional! This is if you want your status to have images.*
+*Options 4-7 are optional! They're if you want images.*
 1. Go to https://discord.com/developers/applications/.
 2. Hit the "New Application" button in the top right.
 3. Give it a good name. This will be what the main text says!
