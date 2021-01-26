@@ -28,7 +28,7 @@
 2. (Windows/macOS) Install the program.
 
 ### Part 3: Generating your presence
-### ⚠️ These new instructions might not work for everyone! If you're having problems, refer to old_instructions.md ⚠️
+### ⚠️ These new instructions might not work for everyone yet! If you're having problems, refer to old_instructions.md ⚠️
 
 1. Open a console. This will vary by operating system. 
 - **Windows**: Open a program called `cmd`. 
