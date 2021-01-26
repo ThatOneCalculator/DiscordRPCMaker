@@ -18,7 +18,7 @@ let assets = {};
 
 if (options['largeimage'] !== "") {
 	assets.large_image = options['largeimage'];
-	assets.large_text = "Made with ThatOneCalculator's Discord RPC Maker (v1.6.1)!";
+	assets.large_text = "Made with ThatOneCalculator's Discord RPC Maker (v1.6.2)!";
 }
 if (options['smallimage'] !== "") {
 	assets.small_image = options['smallimage'];
