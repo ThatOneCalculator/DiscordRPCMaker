@@ -60,8 +60,7 @@ There's different steps for doing it the first time after and every time after t
 
 **All times after:**
 - Open cmd/Terminal.
-- Hit the up key once (brings you to your last run command).
-- Hit enter.
+- Hit the up key once (brings you to your last run command), and hit enter.
 
 ### Part 5: Editing your presence
 Want to edit your presence later? There's 2 options:
