@@ -80,6 +80,8 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
 - Windows specific (note: this may take a while and will restart your PC.):
   - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
   - After restart, open up cmd again and type `npm i -g rpcmaker`
+  
+  
 **If none of this works, refer to old_instructions.md!!**
 
 ### I can't see the presence!
