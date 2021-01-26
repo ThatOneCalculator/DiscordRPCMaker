@@ -106,7 +106,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 ### Planned features:
 - [ ] v1.7: Storing and accessing multiple presences
-- [ ] v2.0: Electron based GUI, collab with @AlekEagle ❤️
+- [ ] v2.0: Electron based GUI, collab with [@AlekEagle](https://github.com/alekeagle) ❤️
 - [ ] >2.0: Binary releases
 
 ### Still need help?
