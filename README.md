@@ -1,5 +1,5 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803360458429038622/image1.png)
-# Discord Rich Presence Generator, WITH BUTTONS!
+# Discord Rich Presence Maker, WITH BUTTONS!
 ###### Version 1.5.4, [now on npm!](https://www.npmjs.com/rpcmaker)
 
 
