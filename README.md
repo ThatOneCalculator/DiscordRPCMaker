@@ -1,6 +1,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
-###### Version 1.5.5, [now on npm!](https://www.npmjs.com/rpcmaker)
+###### Version 1.6.0, [on npm!](https://www.npmjs.com/rpcmaker)
 
 
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
@@ -21,13 +21,10 @@
 7. Go back to the "General Information" tab in the left bar. 
 8. Copy your Client ID. It should be a big number, and is underneath the description on the left-hand. Hold on to this, it's important! (No, you do NOT need a Client Secret.)
 
-### Part 2: Installing the program
+### Part 2: Installing the pre-requisites
 
-1. On this page, hit the green <kbd>Code</kbd> button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
-2. Open the file and unzip it.
-3. Inside the folder you unzipped, there will be ANOTHER folder called `DiscordRPCMaker-main`. **MOVE THIS FOLDER SOMEWHERE MEMORABLE!**
-4. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
-5. (Windows/macOS) Install the program.
+1. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
+2. (Windows/macOS) Install the program.
 
 ### Part 3: Generating your presence
 
@@ -35,36 +32,29 @@
 - **Windows**: Open a program called `cmd`. 
 - **macOS**: Open a program called `Terminal`.
 - **Linux**: Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
-2. Type in `cd ` (making sure there is a space after `cd`), and drag the `DiscordRPCMaker-main` (the one you moved into a memorable) folder into it, and hit enter.
-3. Type `npm i` and hit enter. *Some people get stuck on this. Scroll to the bottom and click on the errors section for solutions if you get errors!*
-4. Type `node maker.js` and hit enter.
-5. Follow the prompts the program gives you.
+2. Type `npm i -g rpcmaker` and hit enter. 
+<!-- (Arch Linux users can also `yay -S rpcmaker`) -->
+3. Type `rpcmaker` and hit enter.
+4. Follow the prompts the program gives you.
 
 ### Part 4: Running your presence
 1. Open Discord (optional, but you wanna see your cool presence, right?)
 2. Just type the command below into the same cmd/Terminal window from before:
-- **Windows**: `start /b node presence.js`
-- **macOS/Linux**: `node presence.js & disown`
+- **Windows**: `start /b drpc`
+- **macOS/Linux**: `drpc & disown`
 
 #### And close the window! Watch as your new presence springs to life!
 ---
 ### How to run your presence again later:
-If you're not using your terminal for anything else, this should be fine. If you are, then you should know what you're doing.
-There's different steps for doing it the first time after and every time after that. For the first time, you'll just need to open the folder and locate the `presence.js` file.
-
-**First time:**
 - Open cmd/Terminal.
-- Windows: `start /b node` *drag in `presence.js`* and hit enter.
-- macOS/Linux: `node` *drag in `presence.js`* `& disown` and hit enter.
+- Do part 4 again. 
 
-**All times after:**
-- Open cmd/Terminal.
-- Hit the up key once (brings you to your last run command), and hit enter.
+*Pro tip: instead of typing the command every time, you can hit the ↑ (up) key and hit enter!*
 
 ### How to edit your presence:
 There's 2 options:
-- Redo part 3 (*Recommended, just do this!*)
-- Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drg-options.json`. In macOS/Linux, it's in `~/.config/drg-options.json`.
+- Open cmd and run `rpcmaker` (*Recommended, just do this!*)
+- Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drpcm-options.json`. In macOS/Linux, it's in `~/.config/drpcm-options.json`.
 
 ## Common issues
 
@@ -77,13 +67,15 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
 ### I can't install the npm packages!
 - Make sure you're using the LTS release of Node.js
 - Try reinstalling node, making sure npm is included.
-- Try deleting the `node_modules` folder, run `npm i -g node-gyp`, and then `npm i` (in the project directory).
+- Try `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
 - macOS specific: If you upgraded your macOS from any version below 10.15 to 10.15 or 11, this will fix it:
   - `sudo rm -rf /Library/Developer/CommandLineTools`
   - [Download and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
-  - Go into the project directory, and `sudo npm i -g node-gyp; npm i`
-- Windows specific: `npm i -g --production windows-build-tools --vs2015` (Note: this may take a while and will restart your PC. Only do this as a last resort.)
-
+  - `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
+- Windows specific (note: this may take a while and will restart your PC. Only do this as a last resort.):
+  - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
+  - After restart, open up cmd again and type `npm i -g rpcmaker`
+  
 ### I can't see the presence!
 Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Make sure you don't have another program taking up a presence slot.
@@ -98,7 +90,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 </details>
 
 ### Here is an example GIF!
-###### This took place after I installed Node and downloaded/extracted the zip.
+###### This took place after I installed Node
 ![Example](https://cdn.discordapp.com/attachments/671117418189422594/803356843577049148/demo.gif)
 
 ### Still need help?

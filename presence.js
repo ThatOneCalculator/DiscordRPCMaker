@@ -1,12 +1,14 @@
-import RPC from 'discord-rpc';
-import chalk from 'chalk';
-import fs from 'fs';
-import os from 'os';
+#!/bin/node
+
+const RPC = require('discord-rpc');
+const chalk = require('chalk');
+const fs = require('fs');
+const os = require('os');
 
 const client = new RPC.Client({ transport: 'ipc' })
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming' : '/.config'}`;
-const rawdata = fs.readFileSync(`${dir}/drg-options.json`);
+const rawdata = fs.readFileSync(`${dir}/drpcm-options.json`);
 const options = JSON.parse(rawdata);
 
 //console.log(options);

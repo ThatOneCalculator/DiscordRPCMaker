@@ -1,9 +1,11 @@
+#!/bin/node
+
 // Author: ThatOneCalculator ~ https://t1c.dev/
 
-import prompt from 'syncprompt';
-import fs from 'fs';
-import os from 'os';
-import chalk from 'chalk';
+const prompt = require('syncprompt');
+const chalk = require('chalk');
+const fs = require('fs');
+const os = require('os');
 
 function validateurl(str) {
 	const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
@@ -123,7 +125,7 @@ let content = {
 const data = JSON.stringify(content, null, 2);
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming' : '/.config'}`;
 
-fs.writeFile(`${dir}/drg-options.json`, data, (err) => {
+fs.writeFile(`${dir}/drpcm-options.json`, data, (err) => {
 	if (err) { throw err; }
 	console.log(chalk`\n{bold.magenta Done!} Time to run the {cyan presence.js} file, instructions in the {green README}.\nI really hope you enjoy using this! If you do, please consider {bold.yellow starring this repository on GitHub}: {blue https://github.com/ThatOneCalculator/DiscordRPCMaker}`)
 });
