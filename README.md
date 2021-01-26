@@ -48,8 +48,8 @@ There's even an example GIF at the bottom of this page!
 - **macOS/Linux**: `node presence.js & disown`
 
 And close the window! Watch as your new presence springs to life!
-
-#### How to run your presence again later:
+---
+### How to run your presence again later:
 If you're not using your terminal for anything else, this should be fine. If you are, then you should know what you're doing.
 There's different steps for doing it the first time after and every time after that. For the first time, you'll just need to open the folder and locate the `presence.js` file.
 
@@ -62,11 +62,10 @@ There's different steps for doing it the first time after and every time after t
 - Open cmd/Terminal.
 - Hit the up key once (brings you to your last run command), and hit enter.
 
-### Part 5: Editing your presence
-Want to edit your presence later? There's 2 options:
+### How to edit your presence:
 - Redo part 3 (*Recommended, just do this!*)
 - Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drg-options.json`. In macOS/Linux, it's in `~/.config/drg-options.json`.
-
+---
 ## Common issues
 
 <details>
