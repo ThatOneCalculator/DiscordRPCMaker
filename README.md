@@ -2,8 +2,8 @@
 # Discord Rich Presence Maker, WITH BUTTONS!
 ###### Version 1.6.4, [on npm!](https://www.npmjs.com/rpcmaker)
 
-[![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)](https://discord.gg/mG94DqX) 
-[![StandardJS](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=shield&logo=node)](JavaScript Standard Style)
+![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)
+![StandardJS](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=shield&logo=node)
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
 ![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
 
