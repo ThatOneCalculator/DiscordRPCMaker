@@ -27,7 +27,9 @@
 ### Part 2: Installing Node
 
 1. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
-2. (Windows/macOS) Install the program.
+2. Install.
+- (Windows/macOS) Install the program. If prompted, make sure to check the box for "Automatically install the necessary tools."
+- (Linux) Make sure `npm` and `node-gyp` is installed.
 
 ### Part 3: Generating your presence
 
