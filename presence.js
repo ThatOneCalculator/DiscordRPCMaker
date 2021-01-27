@@ -18,10 +18,12 @@ let assets = {};
 
 if (options['largeimage'] !== "") {
 	assets.large_image = options['largeimage'];
-	assets.large_text = "Made with ThatOneCalculator's Discord RPC Maker (v1.6.2)!";
+	// If you change this and some asks about this, please still give me credit :)
+	assets.large_text = "Made with ThatOneCalculator's Discord RPC Maker (v1.6.3)!";
 }
 if (options['smallimage'] !== "") {
 	assets.small_image = options['smallimage'];
+	// Same applies with assets.large_text 
 	assets.small_text = "https://github.com/ThatOneCalculator/DiscordRPCMaker"
 }
 if (assets !== {}) { activity.assets = assets; }
