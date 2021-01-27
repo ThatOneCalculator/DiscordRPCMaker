@@ -114,7 +114,8 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ⚠️ This is outdated! Don't refer to this GIF for help! ⚠️
 ![Example](https://cdn.discordapp.com/attachments/671117418189422594/803356843577049148/demo.gif)
 
-### Planned features:
+### [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1
+):
 - [ ] v1.7: Storing and accessing multiple presences
 - [ ] v2.0: Electron based GUI, collab with [@AlekEagle](https://github.com/alekeagle) ❤️ (not abandoning CLI, just adding an easier option)
 - [ ] v?: Binary releases
