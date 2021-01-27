@@ -1,4 +1,4 @@
-https://www.linuxfx.org/![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
+![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
 ###### Version 1.6.3, [on npm!](https://www.npmjs.com/rpcmaker)
 
