@@ -1,4 +1,4 @@
-![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
+https://www.linuxfx.org/![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
 ###### Version 1.6.3, [on npm!](https://www.npmjs.com/rpcmaker)
 
@@ -81,9 +81,14 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
   - `sudo rm -rf /Library/Developer/CommandLineTools`
   - [Download and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
   - `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
-- Windows specific (note: this may take a while and will restart your PC.):
-  - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
-  - After restart, open up cmd again and type `npm i -g rpcmaker`
+- Windows specific:
+  - If you are getting "System cannot find the specified path", you need to add `C:\Users\`Your name here`\AppData\Roaming\npm` to PATH, [here's how to do that](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+).
+  - Otherwise, follow these instructions.
+    - Make sure that with your Node install, you checked "Automatically install the necessary tools." If you didn't reinstall Node.
+    - If you are STILL having problems, refer to this. Note that it will restart your PC.
+      - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
+      - After restart, open up cmd again and type `npm i -g rpcmaker`
   
   
 **If none of this works, refer to old_instructions.md!!**
