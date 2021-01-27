@@ -74,7 +74,7 @@ There's 2 options:
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
-### I can't install the npm packages!
+### I can't install the npm package(s)!
 - Make sure you're using the LTS release of Node.js
 - Try reinstalling node, making sure npm is included.
 - Try `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
@@ -83,18 +83,18 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
   - [Download and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
   - `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
 - Windows specific:
-  - If you are getting "System cannot find the specified path", you need to add `C:\Users\`Your name here`\AppData\Roaming\npm` to PATH, [here's how to do that](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
-), then restart.
-    - If you still get this error after adding to PATH and restarting, try directly running `C:\Users\`Your name here`\AppData\Roaming\npm\rpcmaker.cmd` and `_____\maker.js`
-    - You can also do the instructions in old_instructions.md.
-  - Otherwise, follow these instructions.
-    - Make sure that with your Node install, you checked "Automatically install the necessary tools." If you didn't reinstall Node.
-    - If you are STILL having problems, refer to this. Note that it will restart your PC.
-      - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
-      - After restart, open up cmd again and type `npm i -g rpcmaker`
-  
+  - Make sure that with your Node install, you checked "Automatically install the necessary tools." If you didn't reinstall Node.
+  - If you are STILL having problems, refer to this. Note that it will restart your PC.
+    - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
+    - After restart, open up cmd again and type `npm i -g rpcmaker`
   
 **If none of this works, refer to old_instructions.md!!**
+
+### Windows: System cannot find the specified path
+- Try adding `C:\Users\`Your name here`\AppData\Roaming\npm` to PATH, [here's how to do that](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+), then restart.
+- If you still get this error after adding to PATH and restarting, try directly running `C:\Users\`Your name here`\AppData\Roaming\npm\rpcmaker.cmd` and `_____\maker.js`
+- You can also do the instructions in old_instructions.md.
 
 ### I can't see the presence!
 Make sure you are not invisible/offline. If you ARE online/idle/dnd...
