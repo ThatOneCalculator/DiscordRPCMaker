@@ -26,7 +26,9 @@
 ### Part 2: Installing Node
 
 1. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
-2. (Windows/macOS) Install the program.
+2. Install.
+- (Windows/macOS) Install the program. If prompted, make sure to check the box for "Automatically install the necessary tools."
+- (Linux) Make sure `npm` and `node-gyp` is installed.
 
 ### Part 3: Generating your presence
 
@@ -78,9 +80,16 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
   - `sudo rm -rf /Library/Developer/CommandLineTools`
   - [Download and install this](https://download.developer.apple.com/Developer_Tools/Command_Line_Tools_for_Xcode_11.5/Command_Line_Tools_for_Xcode_11.5.dmg) (you will need an Apple ID)
   - `npm r -g rpcmaker`, then `npm i -g node-gyp`, then `npm i -g rpcmaker`.
-- Windows specific (note: this may take a while and will restart your PC.):
-  - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
-  - After restart, open up cmd again and type `npm i -g rpcmaker`
+- Windows specific:
+  - If you are getting "System cannot find the specified path", you need to add `C:\Users\`Your name here`\AppData\Roaming\npm` to PATH, [here's how to do that](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+), then restart.
+    - If you still get this error after adding to PATH and restarting, try directly running `C:\Users\`Your name here`\AppData\Roaming\npm\rpcmaker.cmd` and `_____\maker.js`
+    - You can also do the instructions in old_instructions.md.
+  - Otherwise, follow these instructions.
+    - Make sure that with your Node install, you checked "Automatically install the necessary tools." If you didn't reinstall Node.
+    - If you are STILL having problems, refer to this. Note that it will restart your PC.
+      - `npm r -g rpcmaker`, `npm i -g --production windows-build-tools --vs2015` 
+      - After restart, open up cmd again and type `npm i -g rpcmaker`
   
   
 **If none of this works, refer to old_instructions.md!!**
