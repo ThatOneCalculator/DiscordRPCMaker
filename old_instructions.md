@@ -11,7 +11,7 @@
 
 ### Part 2: Installing the program
 
-1. On this page, hit the green <kbd>Code</kbd> button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
+1. On the main page, hit the green <kbd>Code</kbd> button, and click "Download as ZIP". (Or `git clone` if you're savvy 😉)
 2. Open the file and unzip it.
 3. Inside the folder you unzipped, there will be ANOTHER folder called `DiscordRPCMaker-main`. **MOVE THIS FOLDER SOMEWHERE MEMORABLE!**
 4. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
