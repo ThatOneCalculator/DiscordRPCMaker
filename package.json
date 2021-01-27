@@ -1,6 +1,6 @@
 {
   "name": "rpcmaker",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!",
   "main": "./maker.js",
   "bin": {
@@ -26,5 +26,6 @@
     "chalk": "^4.1.0",
     "discord-rpc": "^3.1.4",
     "syncprompt": "^2.0.0"
-  }
+  },
+  "devDependencies": {}
 }
