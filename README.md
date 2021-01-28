@@ -15,12 +15,14 @@
 ---
 
 ## Table of Contents:
-- Pre-install
-- Regular install
-- Run/build from source
-- Common issues
-- Planned features 
-- Contact
+- [Pre-install](https://github.com/ThatOneCalculator/DiscordRPCMaker#pre-install)
+- [Regular install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install)
+- [Run/build from source](https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
+  - [Running](https://github.com/ThatOneCalculator/DiscordRPCMaker#running)
+  - [Building](https://github.com/ThatOneCalculator/DiscordRPCMaker#building)
+- [Common issues](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
+- [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker#planned-features)
+- [Contact](https://github.com/ThatOneCalculator/DiscordRPCMaker#still-need-help-or-just-want-to-chat)
 
 # Pre-install
 
@@ -66,7 +68,7 @@ If you want to edit your presence, re-run rpcmaker.
 --- 
 
 # Running/building from source
-### Only if you know what you're doing! Go back to [Regular Install](https://github.com/thatonecalculator/discordrpcmaker#regular-install) if you're lost.
+### Only if you know what you're doing! Go back to [Regular Install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install) if you're lost.
 
 ## Running
 
@@ -123,6 +125,19 @@ There's 2 options:
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
+### I can't see the presence!
+Make sure you are not invisible/offline. If you ARE online/idle/dnd...
+- Make sure you don't have another program taking up a presence slot.
+- Try running the last command again
+
+### The image(s) aren't showing!
+If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
+
+### I'm on mobile, what do I do?
+As of right now, there's no way to do this through a mobile device. Sorry!
+
+### Running/building specific issues below
+
 ### I can't install the npm package(s)!
 - Make sure you're using the LTS release of Node.js
 - Try reinstalling node, making sure npm is included.
@@ -145,16 +160,6 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
 - If you still get this error after adding to PATH and restarting, try directly running `C:\Users\`Your name here`\AppData\Roaming\npm\rpcmaker.cmd` and `_____\maker.js`
 - You can also do the instructions in old_instructions.md.
 
-### I can't see the presence!
-Make sure you are not invisible/offline. If you ARE online/idle/dnd...
-- Make sure you don't have another program taking up a presence slot.
-- Try running the last command again
-
-### The image(s) aren't showing!
-If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
-
-### I'm on mobile, what do I do?
-As of right now, there's no way to do this through a mobile device. Sorry!
 
 </details>
 
