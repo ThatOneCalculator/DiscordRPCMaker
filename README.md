@@ -45,16 +45,15 @@
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
-  - Download the msi
+  - Download the msi.
   - Run the installer. (Thank you [milq](https://twitter.com/milqsnake) for the installer!)
 - macOS:
-  - Download the dmg
-  - Mount and open it
-  - Drag the applications into the Applications folder
+  - Download the pkg
+  - Run the installer.
 - Linux:
-  - Download and extract the zip
-  - Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc)
-  - `cd` into the extracted folder
+  - Download and extract the zip.
+  - Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
+  - `cd` into the extracted folder.
   - `sudo install -m755 drpc /usr/bin/drpc; sudo install -m755 rpcmaker /usr/bin/rpcmaker`
 4. Run rpcmaker, and follow the instructions there.
   - macOS users: You may not be able to open it at first. If it doesn't let you run it, the Applications folder, find the app, right click and hit open (the first option).
