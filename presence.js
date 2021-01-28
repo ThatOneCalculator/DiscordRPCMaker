@@ -7,7 +7,7 @@ const os = require('os');
 
 const client = new RPC.Client({ transport: 'ipc' })
 
-const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming' : '/.config'}`;
+const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? 'AppData/Roaming' : '.config'}`;
 const rawdata = fs.readFileSync(`${dir}/drpcm-options.json`);
 const options = JSON.parse(rawdata);
 
