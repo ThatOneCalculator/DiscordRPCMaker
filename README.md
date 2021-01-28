@@ -14,7 +14,7 @@
 ### The whole setup takes only a minute!
 ---
 
-## Table of Contents:
+# Table of Contents:
 - [Pre-install](https://github.com/ThatOneCalculator/DiscordRPCMaker#pre-install)
 - [Regular install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install)
 - [Run/build from source](https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
