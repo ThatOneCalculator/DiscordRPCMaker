@@ -119,9 +119,6 @@ There's 2 options:
 
 # Common issues
 
-<details>
-    <summary markdown="span">Click me for the  list of issues!</summary>
-
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
@@ -136,8 +133,11 @@ If you just put them in, *sometimes* Discord takes a minute or so to cache them 
 ### I'm on mobile, what do I do?
 As of right now, there's no way to do this through a mobile device. Sorry!
 
-### Running/building specific issues below
+### Running/building from source specific issues below
 
+<details>
+    <summary markdown="span">Click me for the  list of running/building issues!</summary>
+  
 ### I can't install the npm package(s)!
 - Make sure you're using the LTS release of Node.js
 - Try reinstalling node, making sure npm is included.
