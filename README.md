@@ -48,7 +48,7 @@
   - Download the msi.
   - Run the installer. (Thank you [milq](https://twitter.com/milqsnake) for the installer!)
 - macOS:
-  - Download the pkg
+  - Download the pkg.
   - Run the installer.
 - Linux:
   - Download and extract the zip.
