@@ -57,7 +57,7 @@
   - `cd` into the extracted folder
   - `sudo install -m755 drpc /usr/bin/drpc; sudo install -m755 rpcmaker /usr/bin/rpcmaker`
 4. Run rpcmaker, and follow the instructions there.
-  - macOS users: You may not be able to open it at first. Open the Applications folder, find the app, right click & open.
+  - macOS users: You may not be able to open it at first. If it doesn't let you run it, the Applications folder, find the app, right click and hit open (the first option).
 5. Open Discord.
 6. Run drpc, and watch your presence spring to life!
   - macOS steps from step 4 apply here as well.
