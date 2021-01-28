@@ -52,9 +52,10 @@
   - Mount and open it
   - Drag the applications into the Applications folder
 - Linux:
-  - Download the zip
+  - Download and extract the zip
+  - Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc)
   - `cd` into the extracted folder
-  - `sudo mv ./* /usr/bin/`.
+  - `sudo install -m755 drpc /usr/bin/drpc; sudo install -m755 rpcmaker /usr/bin/rpcmaker`
 4. Run rpcmaker, and follow the instructions there.
   - macOS users: You may not be able to open it at first. Open the Applications folder, find the app, right click & open.
 5. Open Discord.
