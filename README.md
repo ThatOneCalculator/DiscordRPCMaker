@@ -14,6 +14,13 @@
 ### The whole setup takes only a minute!
 ---
 
+## Table of Contents:
+- Pre-install
+- Regular install
+- Run/build from source
+- Common issues
+- Planned features 
+- Contact
 
 # Pre-install
 
@@ -35,12 +42,22 @@
 1. Go to the [releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
-- Windows: download the msi, run the installer. (Thank you [milq](https://twitter.com/milqsnake) for the installer!)
-- macOS: download the dmg, run it, drag the applications into the Applications folder.
-- Linux: download the zip, `cd` into the extracted folder, `sudo mv ./* /usr/bin/`.
+- Windows: 
+  - Download the msi
+  - Run the installer. (Thank you [milq](https://twitter.com/milqsnake) for the installer!)
+- macOS:
+  - Download the dmg
+  - Mount and open it
+  - Drag the applications into the Applications folder
+- Linux:
+  - Download the zip
+  - `cd` into the extracted folder
+  - `sudo mv ./* /usr/bin/`.
 4. Run rpcmaker, and follow the instructions there.
+  - macOS users: You may not be able to open it at first. Open the Applications folder, find the app, right click & open.
 5. Open Discord.
 6. Run drpc, and watch your presence spring to life!
+  - macOS steps from step 4 apply here as well.
 
 If you want to edit your presence, re-run rpcmaker.
 
