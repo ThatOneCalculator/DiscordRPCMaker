@@ -1,6 +1,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
-###### Version 1.7.3, [![on npm!](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
+###### Version 1.7.4, [![on npm!](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 
 [![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)](https://discord.gg/SjAb7mkQQe)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
@@ -54,12 +54,12 @@
   - Download and extract the Linux zip. (Alpine users, download the Alpine zip!)
   - Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
   - `cd` into the extracted folder.
-  - `sudo install -m755 drpc /usr/bin/drpc; sudo install -m755 rpcmaker /usr/bin/rpcmaker`
+  - `sudo ./install.sh`.
 4. Run rpcmaker, and follow the instructions there.
   - macOS users: You may not be able to open it at first. If it doesn't let you run it, the Applications folder, find the app, right click and hit open (the first option).
 5. Open Discord.
 6. Run drpc, and watch your presence spring to life!
-  - macOS steps from step 4 apply here as well.
+  - macOS instructions from step 4 apply here as well.
 
 If you want to edit your presence, re-run rpcmaker.
 
@@ -100,11 +100,14 @@ If you want to edit your presence, re-run rpcmaker.
 
 ## Building
 
-This will only work on Linux/macOS.
+**This will only work on Linux/macOS.** Windows users can follow the steps and manually run the contents of `build.sh`, I guess.
 1. `npm i -g pkg`
 2. `cd` into the project directory.
 3. `mkdir ./bin/`
-4. `./build.sh`
+4. `cd ./bin/`
+5. `mkdir windows; mkdir macos; mkdir alpine; mkdir linux`
+6. `cd ../scripts`
+7. `./build.sh`
 
 *Pro tip: instead of typing the command every time, you can hit the ↑ (up) key and hit enter!*
 

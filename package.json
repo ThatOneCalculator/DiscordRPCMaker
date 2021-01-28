@@ -14,7 +14,11 @@
     "discord",
     "rpc",
     "discord-rpc",
-    "cli"
+    "cli",
+    "rich-presence",
+    "richpresence",
+    "rpcmaker",
+    "drpc"
   ],
   "author": {
     "name": "ThatOneCalculator",
@@ -31,9 +35,11 @@
     "email": "kainoa@t1c.dev"
   },
   "homepage": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
+  "repository": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
   "dependencies": {
     "chalk": "^4.1.0",
     "discord-rpc": "^3.1.4",
+    "node-notifier": "^9.0.0",
     "prompt-sync": "^4.2.0"
   },
   "pkg": {

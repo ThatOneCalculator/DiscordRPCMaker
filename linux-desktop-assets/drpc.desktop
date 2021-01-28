@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.7.4
+Type=Application
+Name=drpc
+Terminal=false
+GenericName=Discord RPC Launcher
+TryExec=drpc
+Exec=drpc
+Icon=rpcmaker
