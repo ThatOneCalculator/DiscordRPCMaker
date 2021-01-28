@@ -47,6 +47,7 @@
 - Windows: 
   - Download the msi.
   - Run the installer. (Thank you [milq](https://twitter.com/milqsnake) for the installer!)
+  - Note: on Windows 10, you may have to hit More Info > Run Anyway.
 - macOS:
   - Download the pkg.
   - Run the installer.
