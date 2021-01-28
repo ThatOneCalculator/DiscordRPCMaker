@@ -51,7 +51,7 @@
   - Download the pkg.
   - Run the installer.
 - Linux:
-  - Download and extract the zip.
+  - Download and extract the Linux zip. (Alpine users, download the Alpine zip!)
   - Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
   - `cd` into the extracted folder.
   - `sudo install -m755 drpc /usr/bin/drpc; sudo install -m755 rpcmaker /usr/bin/rpcmaker`
