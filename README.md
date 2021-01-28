@@ -98,7 +98,7 @@ There's 2 options:
 - Open cmd and run `rpcmaker` (*Recommended, just do this!*)
 - Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drpcm-options.json`. In macOS/Linux, it's in `~/.config/drpcm-options.json`.
 
-## Common issues
+# Common issues
 
 <details>
     <summary markdown="span">Click me for the  list of issues!</summary>
@@ -142,13 +142,13 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 </details>
 
 
-### [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
+# [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
 - [ ] v1.8: Storing and accessing multiple presences
 - [ ] v2.0: Electron based GUI, collab with [@AlekEagle](https://github.com/alekeagle) ❤️ (not abandoning CLI, just adding an easier option)
 
 
-### Still need help, or just want to chat?
+# Still need help, or just want to chat?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
 
 The program has been tested on Arch Linux, Windows 10, macOS 10.14, and macOS 10.15. 
