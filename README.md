@@ -68,7 +68,7 @@ If you want to edit your presence, re-run rpcmaker.
 --- 
 
 # Running/building from source
-### Only if you know what you're doing! Go back to [Regular Install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install) if you're lost.
+## ⚠️ Only if you know what you're doing! Go back to [Regular Install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install) if you're lost. ⚠️https://github.com/ThatOneCalculator/DiscordRPCMaker#building
 
 ## Running
 
