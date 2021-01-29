@@ -64,7 +64,7 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-***Congats, you're done! Scroll down to the bottom for ways to contact me!***
+***Congats, you're done!*** *Scroll down to the bottom for common issues and ways to contact me!*
 
 --- 
 
