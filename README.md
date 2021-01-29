@@ -41,7 +41,7 @@
 # Regular install
 ### If you're a regular user, this is what you want!
 
-1. Go to the [releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).
+1. Go to the **[releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).**
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
@@ -64,7 +64,7 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-*From here, you're done! Scroll down to the bottom for ways to contact me!*
+***Congats, you're done! Scroll down to the bottom for ways to contact me!***
 
 --- 
 
