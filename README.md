@@ -120,6 +120,9 @@ There's 2 options:
 
 # Common issues
 
+### Help, I'm confused and followed the run from source instructions!
+There was a big warning there for a reason. Go back and read the regular install instructions, ya goober.
+
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
 
