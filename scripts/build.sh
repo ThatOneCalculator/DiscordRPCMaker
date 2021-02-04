@@ -19,8 +19,8 @@ cp -r ../linux-desktop-assets/ ./linux/assets
 cp -r ../linux-desktop-assets/ ./alpine/assets
 cp ../scripts/linux-install.sh ./linux/install.sh
 cp ../scripts/linux-install.sh ./alpine/install.sh
-zip -r windows.zip ./windows
-zip -r linux.zip ./linux
-zip -r alpine.zip ./alpine
-zip -r macos.zip ./macos
+zip -r drpcm-windows.zip ./windows
+zip -r drpcm-linux.zip ./linux
+zip -r drpcm-alpine.zip ./alpine
+zip -r drpcm-macos.zip ./macos
 cd ..
