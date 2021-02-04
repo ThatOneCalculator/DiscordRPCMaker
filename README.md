@@ -41,12 +41,13 @@
 # Regular install
 ### If you're a regular user, this is what you want!
 
-1. Go to the [releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).
+1. Go to the **[releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).**
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
   - Download the msi.
   - Run the installer. (Thank you [milq](https://twitter.com/milqsnake) for the installer!)
+  - Note: on Windows 10, you may have to hit More Info > Run Anyway.
 - macOS:
   - Download the pkg.
   - Run the installer.
@@ -63,7 +64,7 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-*From here, you're done! Scroll down to the bottom for ways to contact me!*
+***Congats, you're done!*** *Scroll down to the bottom for common issues and ways to contact me!*
 
 --- 
 
@@ -121,6 +122,9 @@ There's 2 options:
 - Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drpcm-options.json`. In macOS/Linux, it's in `~/.config/drpcm-options.json`.
 
 # Common issues
+
+### Help, I'm confused and followed the run from source instructions!
+There was a big warning there for a reason. Go back and read the regular install instructions, ya goober.
 
 ### My buttons aren't working!
 Discord doesn't let you click your own buttons. However, everyone else can. This is a limitation with Discord.
