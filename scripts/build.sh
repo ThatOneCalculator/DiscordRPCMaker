@@ -15,8 +15,8 @@ rm windows.zip
 rm linux.zip
 rm alpine.zip
 rm macos.zip
-cp -r ../linux-desktop-assets/ ./linux/linux-desktop-assets
-cp -r ../linux-desktop-assets/ ./alpine/linux-desktop-assets
+cp -r ../linux-desktop-assets/ ./linux/assets
+cp -r ../linux-desktop-assets/ ./alpine/assets
 cp ../scripts/linux-install.sh ./linux/install.sh
 cp ../scripts/linux-install.sh ./alpine/install.sh
 zip -r windows.zip ./windows
