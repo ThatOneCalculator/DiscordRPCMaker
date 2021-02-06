@@ -9,9 +9,8 @@
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
 ![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
 
-## This is meant to be ultra noob-friendly, as long as you follow the instructions!
+## This is meant to be noob-friendly, as long as you follow the instructions!
 
-### The whole setup takes only a minute!
 ---
 
 # Table of Contents:
@@ -64,7 +63,7 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-***Congats, you're done!*** *Scroll down to the bottom for common issues and ways to contact me!*
+🎉 ***Congats, you're done!*** 🎉 *Scroll down to the bottom for common issues, planned features, and ways to contact me!*
 
 --- 
 
