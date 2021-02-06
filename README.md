@@ -53,7 +53,7 @@
   - Run the installer.
 - Linux:
   - Download and extract the Linux zip. (Alpine users, download the Alpine zip!)
-  - Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
+  - Open your terminal emulator of choice.
   - `cd` into the extracted folder.
   - `sudo ./install.sh`.
 4. Run rpcmaker, and follow the instructions there.
@@ -85,7 +85,7 @@ If you want to edit your presence, re-run rpcmaker.
 1. Open a console. This will vary by operating system. 
 - **Windows**: Open a program called `cmd`. 
 - **macOS**: Open a program called `Terminal`.
-- **Linux**: Open your terminal emulator of choice (Kitty, RXVT, GNOME Terminal, Konsole, etc).
+- **Linux**: Open your terminal emulator of choice.
 2. Type `npm i -g rpcmaker` and hit enter. 
 <!-- (Arch Linux users can also `yay -S rpcmaker`) -->
 3. Type `rpcmaker` and hit enter.
