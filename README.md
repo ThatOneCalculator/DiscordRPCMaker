@@ -79,7 +79,7 @@ If you want to edit your presence, re-run rpcmaker.
 1. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
 2. Install.
 - (Windows/macOS) Install the program. If prompted, make sure to check the box for "Automatically install the necessary tools."
-- (Linux) Make sure `npm` and `node-gyp` is installed.
+- (Linux) Make sure `npm` and `node-gyp` are installed.
 
 ### Generating your presence
 
