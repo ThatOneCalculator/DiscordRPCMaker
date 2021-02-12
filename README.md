@@ -181,4 +181,4 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 # Still need help, or just want to chat?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
 
-The program has been tested on Arch Linux, Windows 10, macOS 10.14, and macOS 10.15. 
+The program has been tested on Windows 10, macOS 10.14, macOS 10.15, Arch Linux, and Ubuntu 20.04 LTS. 
