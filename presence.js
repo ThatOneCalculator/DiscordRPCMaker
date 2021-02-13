@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/env node
 
 const RPC = require('discord-rpc')
 const chalk = require('chalk')

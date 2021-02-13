@@ -1,4 +1,4 @@
-#!/bin/node
+#!/usr/bin/env node
 
 // Author: ThatOneCalculator ~ https://t1c.dev/
 
