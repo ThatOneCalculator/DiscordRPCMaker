@@ -34,7 +34,7 @@
 *Options 4-7 are optional! They're if you want images.*
 
 4. Navigate to the "Rich Presence" tab in the left bar. It should be the 4th option down.
-5. Go down to "Rich Presence Assets". You don't need a cover image, don't worry!
+5. Go down to "Rich Presence Assets". You don't need a cover/invite image, don't worry!
 6. Upload either one or two images. One will be used for the large image, and the other will be used for the small image. Both are optional. In the example screenshots, I only uploaded one image (for a large image). Give them memorable names! (Note: sometimes they don't show up directly after being uploaded. This is normal.)
 7. Go back to the "General Information" tab in the left bar. 
 8. Copy your Client ID. It should be a big number, and is underneath the description on the left-hand. Hold on to this, it's important! (No, you do NOT need a Client Secret.)
