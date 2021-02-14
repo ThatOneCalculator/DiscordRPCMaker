@@ -2,6 +2,7 @@
 # Discord Rich Presence Maker, WITH BUTTONS!
 ### ↓ Scroll down for instructions! ⬇️↓
 
+[![NPM](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 [![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)](https://discord.gg/SjAb7mkQQe)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
 [![pkg](https://img.shields.io/badge/built_with-pkg-8B8B8B.svg?style=flat)](https://github.com/vercel/pkg)
@@ -54,4 +55,16 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-🎉 ***Congats, you're done!*** 🎉 *Scroll down to the bottom for common issues, planned features, and ways to contact me!*
+🎉### ***Congats, you're done!*** 🎉
+
+# [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
+- [x] v1.7+: Binary releases
+- [ ] v1.8: Storing and accessing multiple presences
+- [ ] v2.0: Electron based GUI, collab with [@AlekEagle](https://github.com/alekeagle) ❤️ (not abandoning CLI, just adding an easier option)
+
+
+# Still need help, or just want to chat?
+[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.com/invite/mG94DqX)
+
+The program has been tested on Windows 10, macOS 10.14, macOS 10.15, Arch Linux, and Ubuntu 20.04 LTS. 
+
