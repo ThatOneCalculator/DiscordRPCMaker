@@ -1,7 +1,6 @@
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
-### ⬇️ Scroll down for instructions! ⬇️
-###### Version 1.7.5, [![on npm!](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
+### ↓ Scroll down for instructions! ⬇️↓
 
 [![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)](https://discord.gg/SjAb7mkQQe)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
@@ -13,16 +12,6 @@
 ## This is meant to be noob-friendly, as long as you follow the instructions!
 
 ---
-
-# Table of Contents:
-- [Pre-install](https://github.com/ThatOneCalculator/DiscordRPCMaker#pre-install)
-- [Regular install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install)
-- [Run/build from source](https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
-  - [Running](https://github.com/ThatOneCalculator/DiscordRPCMaker#running)
-  - [Building](https://github.com/ThatOneCalculator/DiscordRPCMaker#building)
-- [Common issues](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
-- [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker#planned-features)
-- [Contact](https://github.com/ThatOneCalculator/DiscordRPCMaker#still-need-help-or-just-want-to-chat)
 
 # Pre-install
 
@@ -38,10 +27,11 @@
 7. Go back to the "General Information" tab in the left bar. 
 8. Copy your Client ID. It should be a big number, and is underneath the description on the left-hand. Hold on to this, it's important! (No, you do NOT need a Client Secret.)
 
-# Regular install
-### If you're a regular user, this is what you want!
+---
 
-1. Go to the **[releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).**
+# Install
+
+1. Click to to the **[releases page](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).**
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
