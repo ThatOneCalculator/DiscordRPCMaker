@@ -41,7 +41,7 @@
 
 # Install
 
-1. Click to to the **[releases page](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).**
+1. Go to the top and click on your OS (Windows, macOS, Linux, Alpine) or go to the [releases page](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
