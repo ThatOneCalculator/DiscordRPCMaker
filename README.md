@@ -74,7 +74,7 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-🎉 ***Congats, you're done!*** 🎉 *Scroll down to the bottom for common issues, planned features, and ways to contact me!*
+🎉 ***Congrats, you're done!*** 🎉 *Scroll down to the bottom for common issues, planned features, and ways to contact me!*
 
 --- 
 
