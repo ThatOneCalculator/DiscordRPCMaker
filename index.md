@@ -1,4 +1,6 @@
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+<meta name="theme-color" content="#7289DA"/>
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/733857078388457502/810788933947621376/emote.png"/>
 
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
