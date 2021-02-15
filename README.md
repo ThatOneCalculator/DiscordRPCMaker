@@ -142,7 +142,8 @@ Discord doesn't let you click your own buttons. However, everyone else can. This
 ### I can't see the presence!
 Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Make sure you don't have another program taking up a presence slot.
-- Try running the last command again
+- Go to Settings > Game Activity > Make sure "Display currently running game as a status message" is ON.
+- Try running DRPC again.
 
 ### The image(s) aren't showing!
 If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
