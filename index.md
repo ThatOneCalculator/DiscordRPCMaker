@@ -4,7 +4,7 @@
 
 ![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)
 # Discord Rich Presence Maker, WITH BUTTONS!
-### ↓ Scroll down for instructions! ⬇️↓
+### ↓ Scroll down for instructions! ↓
 
 [![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)](https://discord.gg/SjAb7mkQQe)
 [![NPM](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
