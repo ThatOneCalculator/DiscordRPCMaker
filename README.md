@@ -15,6 +15,13 @@
 
 ---
 
+[![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-windows.msi) 
+[![macOS](https://cdn.discordapp.com/attachments/671117418189422594/810784647834763284/image20.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-macos.pkg) 
+[![Linux](https://cdn.discordapp.com/attachments/671117418189422594/810784878043856926/image21.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-linux.zip) 
+[![Alpine](https://cdn.discordapp.com/attachments/671117418189422594/810785094418956288/image22.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-alpine.zip)  
+
+---
+
 # Table of Contents:
 - [Pre-install](https://github.com/ThatOneCalculator/DiscordRPCMaker#pre-install)
 - [Regular install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install)
@@ -24,6 +31,8 @@
 - [Common issues](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
 - [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker#planned-features)
 - [Contact](https://github.com/ThatOneCalculator/DiscordRPCMaker#still-need-help-or-just-want-to-chat)
+
+---
 
 # Pre-install
 
@@ -42,7 +51,7 @@
 # Regular install
 ### If you're a regular user, this is what you want!
 
-1. Go to the **[releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).**
+1. Go to the top and click on your OS (Windows, macOS, Linux, Alpine) or go to the [releases tab](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
