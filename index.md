@@ -27,7 +27,7 @@
 
 # Pre-install
 
-1. Go to ![https://discord.com/developers/applications/](https://discord.com/developers/applications/).
+1. Go to [https://discord.com/developers/applications/](https://discord.com/developers/applications/).
 2. Hit the "New Application" button in the top right.
 3. Give it a good name. This will be what the main text says!
 
