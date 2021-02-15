@@ -64,7 +64,7 @@
 
 If you want to edit your presence, re-run rpcmaker.
 
-🎉### Congats, you're done! 🎉
+***Congats, you're done! ***
 
 # [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
