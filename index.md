@@ -4,8 +4,8 @@
 # Discord Rich Presence Maker, WITH BUTTONS!
 ### ↓ Scroll down for instructions! ⬇️↓
 
-[![NPM](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 [![Discord](https://discordapp.com/api/guilds/733856096963526667/embed.png?style=shield)](https://discord.gg/SjAb7mkQQe)
+[![NPM](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
 [![pkg](https://img.shields.io/badge/built_with-pkg-8B8B8B.svg?style=flat)](https://github.com/vercel/pkg)
 
@@ -13,6 +13,13 @@
 ![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
 
 ## This is meant to be noob-friendly, as long as you follow the instructions!
+
+---
+
+[![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-windows.msi) 
+[![macOS](https://cdn.discordapp.com/attachments/671117418189422594/810784647834763284/image20.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-macos.pkg) 
+[![Linux](https://cdn.discordapp.com/attachments/671117418189422594/810784878043856926/image21.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-linux.zip) 
+[![Alpine](https://cdn.discordapp.com/attachments/671117418189422594/810785094418956288/image22.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-alpine.zip)  
 
 ---
 
