@@ -1,5 +1,5 @@
 
-[![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.devhttps://twitter.com/PRADASFILM/status/1356910287778152449)
+[![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.dev/)
 # Discord Rich Presence Maker, WITH BUTTONS!
 ### ⬇️ Scroll down for instructions! ⬇️
 ###### Version 1.7.6, [![on npm!](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
