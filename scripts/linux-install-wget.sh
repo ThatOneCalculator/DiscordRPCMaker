@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 wget https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-linux.zip
 unzip ./drpcm-linux.zip
