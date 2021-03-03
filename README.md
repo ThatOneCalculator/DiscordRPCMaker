@@ -85,6 +85,10 @@ If you want to edit your presence, re-run rpcmaker.
 # Running/building from source
 ## ⚠️ Only if you know what you're doing! Go back to [Regular Install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install) if you're lost. ⚠️
 
+
+<details>
+    <summary markdown="span">Click me for the  list of running/building issues!</summary>
+
 ## Running
 
 ### Installing Node
@@ -135,6 +139,8 @@ There's 2 options:
 - Open cmd and run `rpcmaker` (*Recommended, just do this!*)
 - Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drpcm-options.json`. In macOS/Linux, it's in `~/.config/drpcm-options.json`.
 
+</details>
+
 # Common issues
 
 ### Help, I'm confused and followed the run from source instructions!
@@ -158,7 +164,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 ### Running/building from source specific issues below
 
 <details>
-    <summary markdown="span">Click me for the  list of running/building issues!</summary>
+    <summary markdown="h3">Click me for the running/building instructions!</summary>
   
 ### I can't install the npm package(s)!
 - Make sure you're using the LTS release of Node.js
