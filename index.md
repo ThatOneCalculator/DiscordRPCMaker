@@ -91,7 +91,7 @@ If you want to edit your presence, re-run rpcmaker.
 # [Click for a list of common issues!](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
 
 
-# [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
+### [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
 - [ ] v2.0: Electron based GUI
 
