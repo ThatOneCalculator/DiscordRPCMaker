@@ -42,6 +42,8 @@
 
 # Install
 
+
+0. **Linux users,** you skip all these steps by opening a terminal emulator and running `sh -c "$(wget https://raw.githubusercontent.com/ThatOneCalculator/DiscordRPCMaker/main/scripts/linux-install-wget.sh -O -)"`
 1. Go to the top and click on your OS's icon (Windows, macOS, Linux, Alpine) or go to the [releases page](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases).
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
