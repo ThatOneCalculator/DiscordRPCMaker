@@ -1,4 +1,5 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+ <link rel="stylesheet" href="style.css">
 <meta name="theme-color" content="#7289DA"/>
 <meta property="og:image" content="https://cdn.discordapp.com/attachments/733857078388457502/810788933947621376/emote.png"/>
 
