@@ -73,6 +73,10 @@ code, pre {
   color: #7CC653;
 }
 
+code {
+  color: #7CC653;sh -c "$(wget https://raw.githubusercontent.com/ThatOneCalculator/DiscordRPCMaker/main/scripts/linux-install-wget.sh -
+}
+
 pre {
   padding:8px 15px;
   background: #f8f8f8;
@@ -156,7 +160,7 @@ header ul a:active {
 }
 
 strong {
-  color:#222;
+  color: whitesh -c "$(wget https://raw.githubusercontent.com/ThatOneCalculator/DiscordRPCMaker/main/scripts/linux-install-wget.sh -;
   font-weight:500;
 }
 
