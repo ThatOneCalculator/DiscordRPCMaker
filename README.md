@@ -12,6 +12,8 @@
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
 ![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
 
+[![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=banner2)](https://discord.gg/Z7UZPR3bbW)
+
 ## This is meant to be noob-friendly, as long as you follow the instructions!
 
 ---
