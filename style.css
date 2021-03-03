@@ -160,7 +160,7 @@ header ul a:active {
 }
 
 strong {
-  color: whitesh -c "$(wget https://raw.githubusercontent.com/ThatOneCalculator/DiscordRPCMaker/main/scripts/linux-install-wget.sh -;
+  color: white;
   font-weight:500;
 }
 
@@ -172,7 +172,7 @@ header ul li + li + li {
 header ul a strong {
   font-size:14px;
   display:block;
-  color:#222;
+  color: white;
 }
 
 section {
