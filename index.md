@@ -85,74 +85,10 @@ If you want to edit your presence, re-run rpcmaker.
 --- 
 
 # Running/building from source
-## ⚠️ Only if you know what you're doing! Go back to [Regular Install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install) if you're lost. ⚠️
+## ⚠️ Only if you know what you're doing! ⚠️
+[Instructions here.]((https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
 
-
-<details>
-    <summary markdown="span">Click me for the  list of running/building issues!</summary>
-
-## Running
-
-### Installing Node
-
-1. Download the NodeJS installer at https://nodejs.org/en/download/ (for Windows and macOS users). Linux users, install from your [package manager](https://nodejs.org/en/download/package-manager/).
-2. Install.
-- (Windows/macOS) Install the program. If prompted, make sure to check the box for "Automatically install the necessary tools."
-- (Linux) Make sure `npm` and `node-gyp` are installed.
-
-### Generating your presence
-
-1. Open a console. This will vary by operating system. 
-- **Windows**: Open a program called `cmd`. 
-- **macOS**: Open a program called `Terminal`.
-- **Linux**: Open your terminal emulator of choice.
-2. Type `npm i -g rpcmaker` and hit enter. 
-<!-- (Arch Linux users can also `yay -S rpcmaker`) -->
-3. Type `rpcmaker` and hit enter.
-4. Follow the prompts the program gives you.
-
-### Part 4: Running your presence
-1. Open Discord (it's fine in the background, but you wanna see your cool presence, right?)
-2. Just type the command below into the same cmd/Terminal window from before:
-- **Windows**: `start /b drpc`
-- **macOS/Linux**: `drpc & disown`
-
-#### And close the window! Watch as your new presence springs to life!
-
-## Building
-
-**This will only work on Linux/macOS.** Windows users can follow the steps and manually run the contents of `build.sh`, I guess.
-1. `npm i -g pkg`
-2. `cd` into the project directory.
-3. `mkdir ./bin/`
-4. `cd ./bin/`
-5. `mkdir windows; mkdir macos; mkdir alpine; mkdir linux`
-6. `cd ../scripts`
-7. `./build.sh`
-
-*Pro tip: instead of typing the command every time, you can hit the ↑ (up) key and hit enter!*
-
-### How to update the program:
-- Open cmd/Terminal.
-- `npm i -g rpcmaker`
-
-### How to edit your presence:
-There's 2 options:
-- Open cmd and run `rpcmaker` (*Recommended, just do this!*)
-- Manually edit the options file. In Windows, this at `%APPDATA%\Roaming\drpcm-options.json`. In macOS/Linux, it's in `~/.config/drpcm-options.json`.
-
-</details>
-
-## [Click for a list of common issues!](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
-
-### Windows: System cannot find the specified path
-- Try adding `C:\Users\`Your name here`\AppData\Roaming\npm` to PATH, [here's how to do that](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
-), then restart.
-- If you still get this error after adding to PATH and restarting, try directly running `C:\Users\`Your name here`\AppData\Roaming\npm\rpcmaker.cmd` and `_____\maker.js`
-- You can also do the instructions in old_instructions.md.
-
-
-</details>
+# [Click for a list of common issues!](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
 
 
 # [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
