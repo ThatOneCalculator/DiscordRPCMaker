@@ -1,4 +1,3 @@
-https://discord.gg/Z7UZPR3bbW
 [![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.dev/)
 # Discord Rich Presence Maker, WITH BUTTONS!
 ### ⬇️ Scroll down for instructions! ⬇️
