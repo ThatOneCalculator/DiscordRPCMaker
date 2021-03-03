@@ -85,7 +85,7 @@
 
 
 <details>
-    <summary markdown="span">Click me for the  list of running/building issues!</summary>
+    <summary markdown="span">Click me for the  list of running/building instructions!</summary>
 
 ## Running
 
