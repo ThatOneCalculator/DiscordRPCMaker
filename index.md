@@ -88,8 +88,11 @@ If you want to edit your presence, re-run rpcmaker.
 ## ⚠️ Only if you know what you're doing! ⚠️
 [Instructions here.](https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
 
+---
+
 # [Click for a list of common issues!](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
 
+---
 
 ### [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
