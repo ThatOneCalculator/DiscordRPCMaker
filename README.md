@@ -192,7 +192,6 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 # [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
-- [ ] v1.8: Storing and accessing multiple presences
 - [ ] v2.0: Electron based GUI
 
 # Still need help, or just want to chat?
