@@ -29,8 +29,6 @@
 - [Pre-install](https://github.com/ThatOneCalculator/DiscordRPCMaker#pre-install)
 - [Regular install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install)
 - [Run/build from source](https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
-  - [Running](https://github.com/ThatOneCalculator/DiscordRPCMaker#running)
-  - [Building](https://github.com/ThatOneCalculator/DiscordRPCMaker#building)
 - [Common issues](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
 - [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker#planned-features)
 - [Contact](https://github.com/ThatOneCalculator/DiscordRPCMaker#still-need-help-or-just-want-to-chat)
