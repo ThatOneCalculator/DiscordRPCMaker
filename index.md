@@ -4,12 +4,12 @@
 
 [![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.dev/)
 # Discord Rich Presence Maker, WITH BUTTONS!
-### ⬇️ Scroll down for instructions! ⬇️
-###### Version 1.7.6, [![on npm!](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
+### ↓ Scroll down for instructions! ↓
 
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=shield)](https://discord.gg/Z7UZPR3bbW)
 [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915?style=shield&logo=liberapay)](https://liberapay.com/thatonecalculator)
 [![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
+[![NPM](https://img.shields.io/badge/v1.7.6-on_npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
 [![pkg](https://img.shields.io/badge/built_with-pkg-8B8B8B.svg?style=flat)](https://github.com/vercel/pkg)
 
