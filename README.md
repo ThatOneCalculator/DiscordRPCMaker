@@ -36,7 +36,7 @@
 ---
 
 # Pre-install
-*Steps 4-7 are if you want images*
+###### *Steps 4-7 are if you want images*
 
 1. Go to https://discord.com/developers/applications/.
 2. Hit the "New Application" button in the top right.
