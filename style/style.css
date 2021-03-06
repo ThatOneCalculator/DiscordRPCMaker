@@ -1,0 +1,22 @@
+@font-face {
+    font-family: logo;
+    src: url('../assets/logo.ttf');
+}
+
+:root {
+	background: #36393F;
+	color: white;
+}
+
+body, p {
+	background: #36393F;
+	color: white;
+}
+
+h1 {
+	font-family: logo;
+	text-align: center;
+	font-size: 40px;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #7289DA;
+}
