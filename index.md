@@ -10,7 +10,7 @@
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=shield)](https://discord.gg/Z7UZPR3bbW)
 [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915?style=shield&logo=liberapay)](https://liberapay.com/thatonecalculator)
 [![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
-[![NPM](https://img.shields.io/badge/v1.7.7-on_npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
+[![NPM](https://img.shields.io/badge/v1.7.8-on_npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
 [![pkg](https://img.shields.io/badge/built_with-pkg-8B8B8B.svg?style=flat)](https://github.com/vercel/pkg)
 
@@ -72,6 +72,7 @@
   - `cd` into the extracted folder.
   - `sudo ./install.sh`.
 4. Run rpcmaker, and follow the instructions there.
+  - Windows users: tip - right click to paste!
   - macOS users: You may not be able to open it at first. If it doesn't let you run it, the Applications folder, find the app, right click and hit open (the first option).
 5. Open Discord.
 6. Run drpc, and watch your presence spring to life!
