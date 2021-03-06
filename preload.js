@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
         //alert("Yo")
         const myNotification = new Notification('Discord RPC Maker', {
           body: 'Your presence has started.',
-          icon: 'assets/icon.png'
+          icon: 'assets/icon.png',
+          timeoutType: 'default'
         })
     })
 })
