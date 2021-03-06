@@ -1274,13 +1274,6 @@
   "resolved" "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz"
   "version" "2.0.3"
 
-"prompt-sync@^4.2.0":
-  "integrity" "sha512-BuEzzc5zptP5LsgV5MZETjDaKSWfchl5U9Luiu8SKp7iZWD5tZalOxvNcZRwv+d2phNFr8xlbxmFNcRKfJOzJw=="
-  "resolved" "https://registry.npmjs.org/prompt-sync/-/prompt-sync-4.2.0.tgz"
-  "version" "4.2.0"
-  dependencies:
-    "strip-ansi" "^5.0.0"
-
 "proto-list@~1.2.1":
   "integrity" "sha1-IS1b/hMYMGpCD2QCuOJv85ZHqEk="
   "resolved" "https://registry.npmjs.org/proto-list/-/proto-list-1.2.4.tgz"
@@ -1561,7 +1554,7 @@
     "is-fullwidth-code-point" "^3.0.0"
     "strip-ansi" "^6.0.0"
 
-"strip-ansi@^5.0.0", "strip-ansi@^5.1.0":
+"strip-ansi@^5.1.0":
   "integrity" "sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA=="
   "resolved" "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz"
   "version" "5.2.0"

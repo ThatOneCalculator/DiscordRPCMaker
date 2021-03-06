@@ -2,13 +2,12 @@
   "name": "rpcmaker",
   "version": "2.0",
   "description": "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!",
-  "main": "./maker.js",
+  "main": "./main.js",
   "bin": {
-    "rpcmaker": "./maker.js",
-    "drpc": "./presence.js"
+    "rpcmaker": "./main.js"
   },
   "scripts": {
-    "test": "node ./maker.js && exit 1"
+    "run": "node ./main.js && exit 1"
   },
   "keywords": [
     "discord",
@@ -37,9 +36,7 @@
   "homepage": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
   "repository": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
   "dependencies": {
-    "chalk": "^4.1.0",
-    "discord-rpc": "^3.1.4",
-    "prompt-sync": "^4.2.0"
+    "discord-rpc": "^3.1.4"
   },
   "pkg": {
     "assets": [
