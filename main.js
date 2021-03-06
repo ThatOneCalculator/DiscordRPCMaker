@@ -1,12 +1,24 @@
 const { app, BrowserWindow } = require('electron')
+const globalShortcut = electron.globalShortcut
 
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      enableRemoteModule: true,
+      preload: path.join(__dirname, "preload.js")
     }
+  })
+  
+  globalShortcut.register('f5', function() {
+      console.log('f5 is pressed')
+      mainWindow.reload()
+  })
+  globalShortcut.register('CommandOrControl+R', function() {
+      console.log('CommandOrControl+R is pressed')
+      mainWindow.reload()
   })
 
   win.loadFile('index.html')
