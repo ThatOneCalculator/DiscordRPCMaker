@@ -72,7 +72,7 @@
   - `cd` into the extracted folder.
   - `sudo ./install.sh`.
 4. Run rpcmaker, and follow the instructions there.
-  - Windows users: tip - right click to paste!
+  - Windows users: right click to paste!
   - macOS users: You may not be able to open it at first. If it doesn't let you run it, the Applications folder, find the app, right click and hit open (the first option).
 5. Open Discord.
 6. Run drpc, and watch your presence spring to life!
