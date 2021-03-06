@@ -3,14 +3,23 @@
     src: url('../assets/logo.ttf');
 }
 
+@font-face {
+	font-family: body;
+	src: url('../assets/body.ttf');
+}
+
 :root {
 	background: #36393F;
 	color: white;
+	font-family: body;
+	font-kerning: none;
 }
 
 body, p {
 	background: #36393F;
 	color: white;
+	font-family: body;
+	font-kerning: none;
 }
 
 h1 {
