@@ -1,5 +1,4 @@
-const { app, BrowserWindow } = require('electron')
-const globalShortcut = electron.globalShortcut
+const { app, BrowserWindow, globalShortcut } = require('electron')
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -14,11 +13,11 @@ function createWindow () {
   
   globalShortcut.register('f5', function() {
       console.log('f5 is pressed')
-      mainWindow.reload()
+      win.reload()
   })
   globalShortcut.register('CommandOrControl+R', function() {
       console.log('CommandOrControl+R is pressed')
-      mainWindow.reload()
+      win.reload()
   })
 
   win.loadFile('index.html')
