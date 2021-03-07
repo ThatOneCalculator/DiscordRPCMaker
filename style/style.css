@@ -32,17 +32,21 @@ body, p {
 h1 {
 	font-family: logo;
 	text-align: center;
-	font-size: 40px;
+	font-size: 45px;
 	-webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #7289DA;
 }
 
 .zoom {
   padding: 50px;
-  transition: transform .2s;
+  transition: transform 0.2s;
   margin: 0 auto;
 }
 
 .zoom:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
