@@ -4,47 +4,58 @@
 }
 
 @font-face {
-	font-family: body;
-	src: url('../assets/body.ttf');
+    font-family: body;
+    src: url('../assets/body.ttf');
 }
 
-
-
 :root {
-	background: #36393F;
-	color: white;
-	font-family: body;
-	font-kerning: none;
-	padding-top: 0px;
-	padding-right: 100px;
-	padding-bottom: 50px;
-	padding-left: 100px;
-	box-sizing: border-box;
+    background: #36393F;
+    color: white;
+    font-family: body;
+    font-kerning: none;
+    padding-top: 0px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    box-sizing: border-box;
 }
 
 body, p {
-	background: #36393F;
-	color: white;
-	font-family: body;
-	font-kerning: none;
+    background: #36393F;
+    color: white;
+    font-family: body;
+    font-kerning: none;
 }
 
 h1 {
-	font-family: logo;
-	text-align: center;
-	font-size: 45px;
-	-webkit-text-stroke-width: 2px;
+    font-family: logo;
+    text-align: center;
+    font-size: 45px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #7289DA;
+    display: flex;
+    align-items: center;
+}
+
+.filler {
+  flex: 1 0 auto;
+}
+
+.htest {
+    margin: 0 auto;
+    display: flex;
 }
 
 .zoom {
-  padding: 50px;
+  padding: 20px;
   transition: transform 0.2s;
   margin: 0 auto;
+  text-align: center;
 }
 
+
 .zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.2);
 }
 
 ::-webkit-scrollbar {
