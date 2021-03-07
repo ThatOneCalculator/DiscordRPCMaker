@@ -13,10 +13,7 @@
     color: white;
     font-family: body;
     font-kerning: none;
-    padding-top: 0px;
-    padding-right: 100px;
-    padding-bottom: 50px;
-    padding-left: 100px;
+    padding: 0px 100px 50px 100px;
     box-sizing: border-box;
 }
 
@@ -31,26 +28,24 @@ h1 {
     font-family: logo;
     text-align: center;
     font-size: 45px;
+}
+
+.htest {
+    display: flex;
+}
+
+.zoom {
+    padding: 20px;
+    transition: transform 0.2s;
+    margin: 0 auto;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #7289DA;
     display: flex;
     align-items: center;
 }
 
-.centered {
-    margin: 0 auto;
-    display: flex;
-}
-
-.zoom {
-  padding: 20px;
-  transition: transform 0.2s;
-  margin: 0 auto;
-  text-align: center;
-}
-
 .zoom:hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 ::-webkit-scrollbar {
