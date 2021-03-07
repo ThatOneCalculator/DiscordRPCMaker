@@ -8,11 +8,18 @@
 	src: url('../assets/body.ttf');
 }
 
+
+
 :root {
 	background: #36393F;
 	color: white;
 	font-family: body;
 	font-kerning: none;
+	padding-top: 0px;
+	padding-right: 100px;
+	padding-bottom: 50px;
+	padding-left: 100px;
+	box-sizing: border-box;
 }
 
 body, p {
@@ -28,4 +35,14 @@ h1 {
 	font-size: 40px;
 	-webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #7289DA;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
