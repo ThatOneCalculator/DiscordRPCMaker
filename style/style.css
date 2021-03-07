@@ -37,11 +37,7 @@ h1 {
     align-items: center;
 }
 
-.filler {
-  flex: 1 0 auto;
-}
-
-.htest {
+.centered {
     margin: 0 auto;
     display: flex;
 }
@@ -52,7 +48,6 @@ h1 {
   margin: 0 auto;
   text-align: center;
 }
-
 
 .zoom:hover {
   transform: scale(1.2);
