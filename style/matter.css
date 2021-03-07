@@ -2,8 +2,15 @@
 
 /* Components */
 /* Button Contained */
+
+@font-face {
+	font-family: body;
+	src: url('../assets/body.ttf');
+}
+
 :root{
 	--matter-ontheme-rgb: #7289DA;
+	--matter-font-family: body;
 }
 
 .matter-button-contained {
