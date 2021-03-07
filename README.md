@@ -9,7 +9,7 @@
 [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915?style=shield&logo=liberapay)](https://liberapay.com/thatonecalculator)
 [![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
 [![StandardJS](https://img.shields.io/badge/code_style-standard-green.svg?style=flat&logo=node.js)](https://standardjs.com/)
-[![pkg](https://img.shields.io/badge/built_with-pkg-8B8B8B.svg?style=flat)](https://github.com/vercel/pkg)
+[![FOSSCord](https://img.shields.io/badge/made_with-fosscord-7287D9.svg?style=flat&logo=discord)](https://github.com/fosscord/fosscord-css)
 
 ![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
 ![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
