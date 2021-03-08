@@ -3,7 +3,7 @@ const path = require("path")
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 800,
+    width: 1200,
     height: 600,
     webPreferences: {
       contextIsolation: true,
@@ -22,6 +22,11 @@ function createWindow () {
       console.log("CommandOrControl+R is pressed")
       win.reload()
   })
+  globalShortcut.register("Control+Shift+I", function() {
+    console.log("opening devtools")
+    win.webContents.openDevTools();
+  })
+
 
   win.loadFile("index.html")
   win.setMenu(null)

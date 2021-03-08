@@ -22,6 +22,7 @@ body, p {
     color: white;
     font-family: body;
     font-kerning: none;
+    padding: 0px;
 }
 
 h1 {
@@ -50,4 +51,20 @@ h1 {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.presences {
+    height: 100vh;
+    max-height: 600px;
+    width: 33%;
+    float: left;
+    border: 1px solid white;
+}
+
+.editor {
+    height: 100vh;
+    max-height: 600px;
+    width: 67%;
+    float: right;
+    border: 1px solid white;
 }
