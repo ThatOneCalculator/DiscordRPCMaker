@@ -13,6 +13,7 @@ function createWindow () {
       icon: path.join(__dirname, "/assets/icon.png")
     }
   })
+  //win.setResizable(false);
   
   globalShortcut.register("f5", function() {
       win.reload()

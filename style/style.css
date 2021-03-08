@@ -62,7 +62,7 @@ h1 {
 .presences {
     height: 100vh;
     /*max-height: 600px;*/
-    width: 33%;
+    width: 20%;
     float: left;
     background: #202225;
     /*border: 1px solid white;*/
@@ -71,11 +71,48 @@ h1 {
 .editor {
     height: 100vh;
     /*max-height: 600px;*/
-    width: 67%;
+    width: 80%;
     float: right;
     padding: 15px;
    /* border: 1px solid white;*/
 }
 
-.oneliner {display: flex;}
+.oneliner, .button-inputs {
+    display: flex;
+    align-items: center;
+}
+
+.disabled {
+    opacity: 0.5
+}
 .oneliner * {margin-right: 10px;}
+
+.previewwrapper {
+    float: right;
+}
+
+textarea, input:not([type="checkbox"]) {
+    margin-bottom: 5px !important;
+    width: 50%;
+}
+textarea {
+    width: 50% !important;
+}
+
+.matterlabel {
+    color: var(--interactive);
+    font-family: monospace;
+}
+
+.autowidth {
+    width: auto !important;
+}
+
+.button-setup {
+    vertical-align: middle;
+    display: flex;
+    align-content: center;
+}
+.button-setup input:not([type="checkbox"]) {
+    margin-right: 5px;
+}

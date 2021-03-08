@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Discord RPC Maker</title>
 	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+	<link rel="stylesheet" href="style/matter.css">
 	<link rel="stylesheet" href="style/fosscord.css">
 	<link rel="stylesheet" href="style/style.css">
 </head>
@@ -24,6 +25,12 @@
 			<div class="htest">
 				<h1 class="zoom"><img src="assets/icon.png" width="70" height="70"/>&nbsp; Discord RPC Maker</h1>
 			</div>
+			<div class = "previewwrapper">
+				<hr>
+				<div>
+					preview
+				</div>
+			</div>
 			<span class = "oneliner">
 				<input class="single-input" placeholder="Presence Name" maxlength="40" name="Presence Name" type="text" value="">
 				<button id="save" class="btn primary">Save</button>
@@ -32,7 +39,37 @@
 			<hr>
 			Setup:
 			<input class="single-input" placeholder="Client ID" name="Client ID" type="text" value="">
-			<input class="single-input" placeholder="Large Image name" name="Large Image name" type="text" value="">
+			<input class="single-input" placeholder="Large Image name (optional)" name="Large Image name" type="text" value="">
+			<input class="single-input" placeholder="Small Image name (optional)" name="Small Image name" type="text" value="">
+			<textarea class="textarea-input desc" rows="3" placeholder="Description (optional)" name="Description" type="text" value=""></textarea>
+
+			<div class="button-setup" >
+				<span class="oneliner">
+					<span class="matterlabel">Button 1</span>
+					<label class="matter-switch">
+						<input type="checkbox" role="switch" id = "button1-enable">
+						<span></span>
+					</label>
+				</span>
+				<div class="button-inputs" id="button-inputs-1">
+					<input class="single-input autowidth" placeholder="Label" name="Button 1 label" type="text" value="" disabled>
+					<input class="single-input autowidth" placeholder="url" name="Button 1 url" type="text" value="" disabled>
+				</div>
+			</div>
+			<div class="button-setup">
+				<span class="oneliner">
+					<span class="matterlabel">Button 2</span>
+					<label class="matter-switch">
+						<input type="checkbox" role="switch" id = "button2-enable">
+						<span></span>
+					</label>
+				</span>
+				<div class="button-inputs" id="button-inputs-2">
+					<input class="single-input autowidth" placeholder="Label" name="Button 2 label" type="text" value="" disabled>
+					<input class="single-input autowidth" placeholder="url" name="Button 2 url" type="text" value="" disabled>
+				</div>
+			</div>
+
 	   </p>
 	</div>
 </body>
