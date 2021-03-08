@@ -1,11 +1,11 @@
 @font-face {
     font-family: logo;
-    src: url('../assets/logo.ttf');
+    src: url('../assets/logo.woff');
 }
 
 @font-face {
     font-family: body;
-    src: url('../assets/body.ttf');
+    src: url('../assets/body.woff');
 }
 
 :root {
@@ -13,7 +13,7 @@
     color: white;
     font-family: body;
     font-kerning: none;
-    padding: 0px 100px 50px 100px;
+    /*padding: 0px 100px 50px 100px;*/
     box-sizing: border-box;
 }
 
@@ -22,7 +22,11 @@ body, p {
     color: white;
     font-family: body;
     font-kerning: none;
-    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    margin: 0px;
 }
 
 h1 {
@@ -43,6 +47,8 @@ h1 {
     -webkit-text-stroke-color: #7289DA;
     display: flex;
     align-items: center;
+    font-family: logo;
+    font-kerning: none;
 }
 
 .zoom:hover {
@@ -58,7 +64,8 @@ h1 {
     max-height: 600px;
     width: 33%;
     float: left;
-    border: 1px solid white;
+    background: #202225;
+    /*border: 1px solid white;*/
 }
 
 .editor {
@@ -66,5 +73,6 @@ h1 {
     max-height: 600px;
     width: 67%;
     float: right;
-    border: 1px solid white;
+    padding: 15px;
+   /* border: 1px solid white;*/
 }
