@@ -76,3 +76,6 @@ h1 {
     padding: 15px;
    /* border: 1px solid white;*/
 }
+
+.oneliner {display: flex;}
+.oneliner * {margin-right: 10px;}
