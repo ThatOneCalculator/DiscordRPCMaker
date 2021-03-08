@@ -61,7 +61,7 @@ h1 {
 
 .presences {
     height: 100vh;
-    max-height: 600px;
+    /*max-height: 600px;*/
     width: 33%;
     float: left;
     background: #202225;
@@ -70,7 +70,7 @@ h1 {
 
 .editor {
     height: 100vh;
-    max-height: 600px;
+    /*max-height: 600px;*/
     width: 67%;
     float: right;
     padding: 15px;

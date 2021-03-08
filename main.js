@@ -15,15 +15,12 @@ function createWindow () {
   })
   
   globalShortcut.register("f5", function() {
-      console.log("f5 is pressed")
       win.reload()
   })
   globalShortcut.register("CommandOrControl+R", function() {
-      console.log("CommandOrControl+R is pressed")
       win.reload()
   })
   globalShortcut.register("Control+Shift+I", function() {
-    console.log("opening devtools")
     win.webContents.openDevTools();
   })
 
