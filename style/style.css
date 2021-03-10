@@ -31,6 +31,9 @@ button {
 .btn {
   padding: initial;
 }
+#test {
+  min-width: 8rem;
+}
 
 body,
 p {
