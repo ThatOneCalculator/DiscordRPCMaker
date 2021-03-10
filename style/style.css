@@ -154,10 +154,7 @@ textarea {
   padding: 0.3rem;
 }
 
-.grid-comp button,
-.grid-comp input[type="text"]:not(:last-child),
-.grid-comp textarea,
-.grid-comp label {
+.mr {
   margin-right: 0.3rem !important;
 }
 
