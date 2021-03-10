@@ -154,13 +154,11 @@ textarea {
   padding: 0.3rem;
 }
 
-.grid-comp * {
-  margin-right: 0.3rem !important;
-}
-.grid-comp:last-child,
-.grid-comp input[type="checkbox"],
+.grid-comp button,
+.grid-comp input[type="text"]:not(:last-child),
+.grid-comp textarea,
 .grid-comp label {
-  margin-right: 0px !important;
+  margin-right: 0.3rem !important;
 }
 
 .grid-comp input[type="text"],
