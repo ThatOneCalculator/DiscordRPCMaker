@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut, Notification } = require("electron")
+const { app, BrowserWindow, Notification, Menu, MenuItem } = require("electron")
 const path = require("path")
 
 function createWindow () {
@@ -15,7 +15,7 @@ function createWindow () {
   })
   //win.setResizable(false);
   
-  globalShortcut.register("f5", function() {
+  /*globalShortcut.register("f5", function() {
       win.reload()
   })
   globalShortcut.register("CommandOrControl+R", function() {
@@ -23,11 +23,31 @@ function createWindow () {
   })
   globalShortcut.register("Control+Shift+I", function() {
     win.webContents.openDevTools();
-  })
+  })*/
+  const menu = new Menu()
+  menu.append(new MenuItem({
+    label: 'Options',
+    submenu: [{
+      label: 'Reload',
+      accelerator: "f5",
+      click: () => { win.reload() }
+    },
+    {
+      label: 'Reload but with Ctrl+R',
+      accelerator: "CommandOrControl+R",
+      click: () => { win.reload()}
+    },
+    {
+      label: 'Open Devtools',
+      accelerator: "CommandOrControl+Shift+I",
+      click: () => { win.webContents.openDevTools(); }
+    }]
+  }))
+
+  Menu.setApplicationMenu(menu)
 
 
   win.loadFile("index.html")
-  win.setMenu(null)
   
 }
 
