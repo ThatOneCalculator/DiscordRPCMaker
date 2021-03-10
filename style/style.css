@@ -158,7 +158,8 @@ textarea {
   margin-right: 0.3rem !important;
 }
 .grid-comp:last-child,
-.grid-comp input[type="checkbox"] {
+.grid-comp input[type="checkbox"],
+.grid-comp label {
   margin-right: 0px !important;
 }
 
