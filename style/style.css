@@ -154,7 +154,7 @@ textarea {
   padding: 0.3rem;
 }
 .grid-comp *:not(:last-child):not(input[type="checkbox"]) {
-  margin-right: 0.3rem;
+  margin-right: 0.3rem !important;
 }
 .grid-comp input[type="text"],
 .grid-comp textarea {
