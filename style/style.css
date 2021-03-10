@@ -25,6 +25,12 @@ html,
 body {
   font-size: medium;
 }
+button {
+  text-align: center !important;
+}
+.btn {
+  padding: initial;
+}
 
 body,
 p {
