@@ -7,7 +7,8 @@
     "rpcmaker": "./main.js"
   },
   "scripts": {
-    "run": "node ./main.js && exit 1"
+    "run": "node ./main.js && exit 1",
+    "start": "electron main.js"
   },
   "keywords": [
     "discord",
