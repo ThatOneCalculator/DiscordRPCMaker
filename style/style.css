@@ -20,6 +20,11 @@
   --background-primary: #36393f;
   font-size: medium;
 }
+:root,
+html,
+body {
+  font-size: medium;
+}
 
 body,
 p {
