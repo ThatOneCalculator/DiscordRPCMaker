@@ -186,11 +186,11 @@ textarea {
   grid-column: 2/4;
 }
 .description {
-  grid-row: 8/10;
+  grid-row: 8/9;
   grid-column: 2/4;
 }
 .button1 {
-  grid-row: 10/11;
+  grid-row: 9/10;
   grid-column: 2/4;
   display: flex;
   justify-content: flex-end;
@@ -207,7 +207,7 @@ textarea {
   width: max-content;
 }
 .button2 {
-  grid-row: 11/12;
+  grid-row: 10/11;
   grid-column: 2/4;
   display: flex;
   justify-content: flex-end;
