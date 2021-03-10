@@ -45,8 +45,8 @@ function createWindow () {
   }))
 
   Menu.setApplicationMenu(menu)
-
-
+  //TODO: add a html button to show this for some peeps who don't know the hotkeys by default
+  win.setMenuBarVisibility(false)
   win.loadFile("index.html")
   
 }
