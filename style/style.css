@@ -15,6 +15,9 @@
   font-kerning: none;
   /*padding: 0px 100px 50px 100px;*/
   box-sizing: border-box;
+
+  --not-quite-black: #202225;
+  --background-primary: #36393f;
 }
 
 body,
@@ -38,12 +41,15 @@ h1 {
 
 .htest {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .zoom {
   padding: 20px;
   transition: transform 0.2s;
-  margin: 0 auto;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #7289da;
   display: flex;
@@ -95,11 +101,6 @@ h1 {
   float: right;
 }
 
-textarea,
-input:not([type="checkbox"]) {
-  margin-bottom: 5px !important;
-  width: 50%;
-}
 textarea {
   width: 50% !important;
 }
@@ -113,13 +114,98 @@ textarea {
   width: auto !important;
   min-width: unset;
 }
-
-.button-setup {
-  vertical-align: middle;
-  display: flex;
-  align-content: center;
-  width: 50%;
+.button-inputs {
+  width: auto;
+  max-width: 556px;
 }
-.button-setup input:not([type="checkbox"]) {
-  margin-right: 5px;
+
+/*grid stuff*/
+.main-grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-primary);
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1rem 1fr 1fr;
+}
+
+.presence-list {
+  grid-row: 1 / 16;
+  grid-column: 1 / 2;
+  background: var(--not-quite-black);
+}
+.logo {
+  grid-row: 1 / 4;
+  grid-column: 2 / 7;
+}
+.presence-name {
+  grid-row: 4 / 5;
+  grid-column: 2 / 7;
+  display: flex;
+  justify-content: space-between;
+}
+.grid-comp {
+  padding: 0.3rem;
+}
+.grid-comp *:not(:last-child):not(input[type="checkbox"]) {
+  margin-right: 0.3rem;
+}
+.grid-comp input[type="text"],
+.grid-comp textarea {
+  width: 100% !important;
+  height: 100% !important;
+}
+.grid-comp button {
+  width: max-content;
+}
+.presence-name input {
+  flex-grow: 4;
+}
+.client-id {
+  grid-row: 5/6;
+  grid-column: 2/4;
+  padding-top: 1rem;
+}
+.large-image-name {
+  grid-row: 6/7;
+  grid-column: 2/4;
+}
+.small-image-name {
+  grid-row: 7/8;
+  grid-column: 2/4;
+}
+.description {
+  grid-row: 8/10;
+  grid-column: 2/4;
+}
+.button1 {
+  grid-row: 10/11;
+  grid-column: 2/4;
+  display: flex;
+  justify-content: flex-end;
+}
+.button-setup .max-content {
+  width: 100%;
+  max-width: max-content;
+  margin-top: 2%;
+}
+.button-setup .max-content span {
+  float: left;
+}
+.max-content {
+  width: max-content;
+}
+.button2 {
+  grid-row: 11/12;
+  grid-column: 2/4;
+  display: flex;
+  justify-content: flex-end;
+}
+.grid-vr {
+  grid-row: 5/16;
+  grid-column: 4/5;
+  display: flex;
+}
+.hr-vr {
+  border-color: #9a9a9a99;
 }
