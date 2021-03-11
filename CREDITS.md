@@ -11,7 +11,7 @@
 ### [Discord](https://discord.gg/Z7UZPR3bbW) helpers
 ###### These lovely folks help answer questions in the Discord!
 
-- Cyanomous#10001
+- Cyanomous#1001
 - KingParity#7362
 - niekol#6568
 - Dylan Stone#0001
