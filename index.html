@@ -11,60 +11,6 @@
 </head>
 
 <body>
-	
-		<p>
-			
-			<!--
-				<div class = "presences">
-					<p>
-						<ul class="accent list">
-							<li class="title">Saved presences</li>
-							<li class="item">Presence 1</li>kv
-							<li class="item">Presence 2</li>
-							<li class="item">Presence 3</li>
-						</ul>
-					</p>
-				</div>
-				<span class = "oneliner">
-				<input class="single-input" placeholder="Presence Name" maxlength="40" name="Presence Name" type="text" value="">
-				<button id="save" class="btn primary">Save</button>
-				<button id="test" class="btn primary">Launch presence</button>
-			</span>
-			<hr>
-			Setup:
-			<input class="single-input" placeholder="Client ID" name="Client ID" type="text" value="">
-			
-			
-			<textarea class="textarea-input desc" rows="3" placeholder="Description (optional)" name="Description" type="text" value=""></textarea>
-
-			<div class="button-setup">
-				<span class="oneliner">
-					<span class="matterlabel">Button 1</span>
-					<label class="matter-switch">
-						<input type="checkbox" role="switch" id = "button1-enable">
-						<span></span>
-					</label>
-				</span>
-				<div class="button-inputs" id="button-inputs-1">
-					<input class="single-input autowidth" placeholder="Label" name="Button 1 label" type="text" value="" disabled>
-					<input class="single-input autowidth" placeholder="url" name="Button 1 url" type="text" value="" disabled>
-				</div>
-			</div>
-			<div class="button-setup">
-				<span class="oneliner">
-					<span class="matterlabel">Button 2</span>
-					<label class="matter-switch">
-						<input type="checkbox" role="switch" id = "button2-enable">
-						<span></span>
-					</label>
-				</span>
-				<div class="button-inputs" id="button-inputs-2">
-					
-				</div>
-			</div>
-		</div>-->
-
-	   </p>
 	   	<p>
 			<div class="main-grid">
 				<div class="presence-list grid-comp">
@@ -81,16 +27,19 @@
 					<button id="test" class="btn primary">Launch presence</button>
 				</div>
 				<div class="client-id grid-comp">
-					<input class="single-input" placeholder="Client ID" name="Client ID" type="text" value="">
+					<input class="single-input client-id-enabler" placeholder="Client ID" name="Client ID" type="text" value="">
 				</div>
 				<div class="large-image-name grid-comp">
-					<input class="single-input" placeholder="Large Image name (optional)" name="Large Image name" type="text" value="">
+					<input class="single-input enable-on-clientid" placeholder="Large Image name (optional)" name="Large Image name" type="text" value="" disabled>
 				</div>
 				<div class="small-image-name grid-comp">
-					<input class="single-input" placeholder="Small Image name (optional)" name="Small Image name" type="text" value="">
+					<input class="single-input enable-on-clientid" placeholder="Small Image name (optional)" name="Small Image name" type="text" value="" disabled>
 				</div>
-				<div class="description grid-comp">
-					<input class="single-input" placeholder="Description (optional)" name="Description" type="text" value="">
+				<div class="description-line-1 grid-comp">
+					<input class="single-input enable-on-clientid" placeholder="Description line 1 (optional)" name="Description" type="text" value="" disabled>
+				</div>
+				<div class="description-line-2 grid-comp">
+					<input class="single-input enable-on-clientid" placeholder="Description line 2 (optional)" name="Description" type="text" value="" disabled>
 				</div>
 				<div class="button1 button-setup grid-comp">
 					<label class="matter-switch max-content mr">
@@ -114,10 +63,20 @@
 				<div class="grid-preview grid-comp mr">
 					<div class="grid-preview-pfp grid-com">
 						<img src="assets/wumpus.gif" class="preview-pfp" alt="you">
-						<span class="preview-name">You#0001</span>
+						<span class="preview-name">You<span class="text secondary">#0001</span></span>
 					</div>
 					<div class="grid-preview-rpc grid-comp">
-						PLAYING A GAME
+						<div class="preview-playingagame">PLAYING A GAME</div>
+						<div class="preview-top-section">
+							<img src="assets/placeholder.png" class="preview-big-pic">
+							<strong class="preview-title">Discord RPC maker</strong>
+							<p class="preview-description">
+								Lorem ipsum, dolor sit amet consectetur poggers poggers
+							</p>
+							<p class="preview-description class-desc2">
+								Lorem ipsum, dolor sit amet consectetur poggers poggers
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>

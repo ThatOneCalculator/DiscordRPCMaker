@@ -1,3 +1,11 @@
+const fs = require('fs');
+const os = require('os');
+const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("test").addEventListener("click", () => {
     //alert("Yo")
@@ -8,6 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //clientid enabling
+  document.querySelector(".client-id-enabler").addEventListener("keyup", (e) => {
+    let inp = document.querySelector(".client-id-enabler")
+    let braincell = document.querySelectorAll(".enable-on-clientid")
+    if (inp.value !== "" && inp.value.toString().length > 17 && isNaN(parseInt(inp.value)) == false) {
+      braincell.forEach((item, i, arr) => {
+        item.removeAttribute("disabled")
+      })
+    } else {
+      braincell.forEach((item, i, arr) => {
+        item.disabled = true;
+      })
+    }
+    
+  })
+
+  //button enabling
   document.getElementById("button1-enable").addEventListener("change", () => {
     if (document.getElementById("button1-enable").checked) {
       inps = document.querySelector(".button1")

@@ -191,12 +191,16 @@ textarea {
   grid-row: 7/8;
   grid-column: 2/5;
 }
-.description {
+.description-line-1 {
   grid-row: 8/9;
   grid-column: 2/5;
 }
-.button1 {
+.description-line-2 {
   grid-row: 9/10;
+  grid-column: 2/5;
+}
+.button1 {
+  grid-row: 10/11;
   grid-column: 2/5;
   display: flex;
   justify-content: flex-end;
@@ -213,7 +217,7 @@ textarea {
   width: max-content;
 }
 .button2 {
-  grid-row: 10/11;
+  grid-row: 11/12;
   grid-column: 2/5;
   display: flex;
   justify-content: flex-end;
@@ -246,7 +250,16 @@ textarea {
   background: #6c82ce;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  display: grid;
+  grid-template: repeat(8, 1fr) / repeat(3, 1fr);
 }
+.grid-preview-rpc .preview-playingagame {
+  font-size: 0.8rem;
+  font-weight: bold;
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+
 .grid-preview-pfp {
   display: flex;
   justify-content: center;
@@ -261,4 +274,35 @@ textarea {
 }
 .preview-name {
   margin-top: 0.5rem;
+}
+.preview-top-section {
+  grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-rows: repeat(3, 100%);
+  grid-template-columns: repeat(3, 1fr);
+  height: 30%;
+}
+.preview-big-pic {
+  max-width: 4rem;
+  max-height: 4rem;
+  margin: 0rem 0.3rem 0rem 0.3rem;
+  grid-row: 1 / 4;
+  grid-column: 1 /2;
+}
+.preview-title {
+  font-weight: bold;
+  grid-row: 1 / 2;
+  grid-column: 2 / 4;
+}
+.preview-description {
+  background: transparent;
+  grid-row: 2 / 3;
+  grid-column: 2 / 4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.class-desc2 {
+  grid-row: 3/4;
 }
