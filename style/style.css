@@ -283,12 +283,26 @@ textarea {
   grid-template-columns: repeat(3, 1fr);
   height: 30%;
 }
-.preview-big-pic {
-  max-width: 4rem;
-  max-height: 4rem;
+/*preview pics*/
+.preview-image-wrapper {
   margin: 0rem 0.3rem 0rem 0.3rem;
   grid-row: 1 / 4;
   grid-column: 1 /2;
+  position: relative;
+}
+.preview-big-pic {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+.preview-small-pic {
+  position: absolute;
+  max-width: 1.3rem;
+  min-width: 1.3rem;
+  border-radius: 100rem;
+  mask: url("assets/mask.svg");
+  bottom: 0;
+  right: 0;
+  z-index: 10;
 }
 .preview-title {
   font-weight: bold;

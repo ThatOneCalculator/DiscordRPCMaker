@@ -30,7 +30,11 @@
 					<input class="single-input client-id-enabler" placeholder="Client ID" name="Client ID" type="text" value="">
 				</div>
 				<div class="large-image-name grid-comp">
-					<input class="single-input enable-on-clientid" placeholder="Large Image name (optional)" name="Large Image name" type="text" value="" disabled>
+					<input list = "large-image-list" class="single-input enable-on-clientid" placeholder="Large Image name (optional)" name="Large Image name" type="text" value="" disabled>
+					<datalist id="large-image-list">
+						<option>poggers</option>
+						<option>large-img</option>
+					</datalist>
 				</div>
 				<div class="small-image-name grid-comp">
 					<input class="single-input enable-on-clientid" placeholder="Small Image name (optional)" name="Small Image name" type="text" value="" disabled>
@@ -68,7 +72,12 @@
 					<div class="grid-preview-rpc grid-comp">
 						<div class="preview-playingagame">PLAYING A GAME</div>
 						<div class="preview-top-section">
-							<img src="assets/placeholder.png" class="preview-big-pic">
+							<!--we just hide this when images are off-->
+							<div class="preview-image-wrapper">
+								<img src="assets/placeholder.png" class="preview-big-pic"></img>
+								<img class= "preview-small-pic" src="assets/placeholder.png">
+							</div>
+							
 							<strong class="preview-title">Discord RPC maker</strong>
 							<p class="preview-description">
 								Lorem ipsum, dolor sit amet consectetur poggers poggers
