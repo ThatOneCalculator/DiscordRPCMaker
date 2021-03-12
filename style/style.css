@@ -234,7 +234,7 @@ textarea {
 /*bluple pfp bg #7289d9*/
 /*slightly darker blurple #6c82ce*/
 .grid-preview {
-  grid-row: 6 / 14;
+  grid-row: 6 / 12;
   grid-column: 6 / 7;
   background: #7289d9;
   border-radius: 5px;
@@ -318,4 +318,16 @@ textarea {
 }
 .class-desc2 {
   grid-row: 3/4;
+}
+/*preview buttons*/
+.preview-button {
+  color: white !important;
+  border-color: white !important;
+  grid-column: 1 / 4;
+  width: 100% !important;
+  margin-top: 0.5rem;
+}
+
+.initially-hidden {
+  visibility: hidden;
 }
