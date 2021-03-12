@@ -19,6 +19,13 @@
 
 ---
 
+### Supporters
+You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915?style=shield&logo=liberapay)](https://liberapay.com/thatonecalculator) or
+[![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
+
+- [**KingParity**](https://twitter.com/KingParity) 
+---
+
 [![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-windows.msi) 
 [![macOS](https://cdn.discordapp.com/attachments/671117418189422594/810798665232809984/image23.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-macos.pkg) 
 [![Linux](https://cdn.discordapp.com/attachments/671117418189422594/810784878043856926/image21.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-linux.zip) 
