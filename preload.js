@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let inp = document.querySelector(".client-id-enabler")
     let braincell = document.querySelectorAll(".enable-on-clientid")
     if (inp.value !== "" && inp.value.toString().length > 17 && isNaN(parseInt(inp.value)) == false) {
+      let options = fetch(`https://discord.com/api/oauth2/applications/${inp.value.toString()}/assets`).then(options => options.json())
+      console.log(options)
       braincell.forEach((item, i, arr) => {
         item.removeAttribute("disabled")
       })
