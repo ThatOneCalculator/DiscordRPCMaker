@@ -65,7 +65,7 @@ h1 {
 .zoom {
   padding: 20px;
   transition: transform 0.2s;
-  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #7289da;
   display: flex;
   align-items: center;

@@ -39,4 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  //fix win outline
+  if (process.platform === "win32") {
+    document.querySelector(".zoom").setAttribute("style", "-webkit-text-stroke-width: 0.01em")
+  }
 });
