@@ -299,7 +299,6 @@ textarea {
   max-width: 1.3rem;
   min-width: 1.3rem;
   border-radius: 100rem;
-  mask: url("assets/mask.svg");
   bottom: 0;
   right: 0;
   z-index: 10;
