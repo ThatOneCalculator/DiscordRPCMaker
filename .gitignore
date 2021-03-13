@@ -105,3 +105,4 @@ dist
 
 # Options
 options.json
+.vscode/settings.json
