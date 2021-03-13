@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".client-id-enabler").addEventListener("keyup", async (e) => {
     let inp = document.querySelector(".client-id-enabler")
     let braincell = document.querySelectorAll(".enable-on-clientid")
+    braincell.forEach((item, i, arr) => {
+      item.disabled = true;
+    })
     if (inp.value !== "" && inp.value.toString().length > 17 && isNaN(parseInt(inp.value)) == false) {
       let response = await fetch(`https://discord.com/api/oauth2/applications/${inp.value.toString()}/assets`)
       if (response.ok) {
@@ -31,24 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
         braincell.forEach((item, i, arr) => {
           item.removeAttribute("disabled")
         })
-
-        //galaxybrane datalist thing
         imageinputs = document.querySelectorAll("#small-image-list, #large-image-list")
         imageinputs.forEach((item, i, arr) => {
-          htmll = "" //i'll feed this to the innerHTML of the datalist
+          htmll = `<option image-id="none">None</option>` //i'll feed this to the innerHTML of the datalist
           options.forEach((opt, index, array) => {
             htmll += `<option image-id="${opt.id}">${opt.name}</option>` //i'll add a dummy attribute
           })
           item.innerHTML = htmll
         })
-        //add event listeners to inputs
-        } else {
-          braincell.forEach((item, i, arr) => {
-            item.disabled = true;
-          })
-        }
       }
-    })
+    }
+  })
 
   //button enabling
   document.getElementById("button1-enable").addEventListener("change", () => {
@@ -76,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         document.getElementById("button1-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-1").innerHTML = event.target.value})
         document.getElementById("button2-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
-      }catch(e){}
+      } catch(e) {}
     }
   });
   document.getElementById("button2-enable").addEventListener("change", () => {
