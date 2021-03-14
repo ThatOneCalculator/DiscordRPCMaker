@@ -39,17 +39,17 @@
 					<datalist id="small-image-list"></datalist>
 				</div>
 				<div class="description-line-1 grid-comp">
-					<input class="single-input enable-on-clientid" placeholder="Description line 1 (optional)" name="Description" type="text" value="" disabled>
+					<input class="single-input enable-on-clientid" id="description-input-1" maxlength="30" placeholder="Description line 1 (optional)" name="Description" type="text" value="" disabled>
 				</div>
 				<div class="description-line-2 grid-comp">
-					<input class="single-input enable-on-clientid" placeholder="Description line 2 (optional)" name="Description" type="text" value="" disabled>
+					<input class="single-input enable-on-clientid" id="description-input-2" maxlength="30" placeholder="Description line 2 (optional)" name="Description" type="text" value="" disabled>
 				</div>
 				<div class="button1 button-setup grid-comp ">
 					<label class="matter-switch max-content mr">
 						<input type="checkbox" role="switch" id = "button1-enable">
 						<span class="text secondary">Button 1</span>
 					</label>
-					<input class="single-input autowidth mr" id="button1-input-name" placeholder="Label" name="Button 1 label" type="text" value="" disabled>
+					<input class="single-input autowidth mr" id="button1-input-name"  maxlength="30" placeholder="Label" name="Button 1 label" type="text" value="" disabled>
 					<input class="single-input autowidth" placeholder="url" name="Button 1 URL" type="text" value="" disabled>
 				</div>
 				<div class="button2 button-setup grid-comp">
@@ -57,7 +57,7 @@
 						<input type="checkbox" role="switch" id="button2-enable" disabled>
 						<span class="text secondary">Button 2</span>
 					</label>
-					<input class="single-input autowidth mr" id="button2-input-name" placeholder="Label" name="Button 2 label" type="text" value="" disabled>
+					<input class="single-input autowidth mr" id="button2-input-name" maxlength="30" placeholder="Label" name="Button 2 label" type="text" value="" disabled>
 					<input class="single-input autowidth" placeholder="url" name="Button 2 URL" type="text" value="" disabled>
 				</div>
 				<div class="grid-vr grid-comp">
@@ -78,9 +78,9 @@
 							</div>
 							
 							<strong class="preview-title">Your app's name</strong>
-							<p class="preview-description">
+							<p class="preview-description" id="preview-description-1">
 							</p>
-							<p class="preview-description class-desc2">
+							<p class="preview-description class-desc2" id="preview-description-2">
 							</p>
 							
 						</div>
