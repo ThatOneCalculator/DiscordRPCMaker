@@ -24,6 +24,7 @@ You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915
 [![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
 
 - [**KingParity**](https://twitter.com/KingParity) 
+- [**Dylan Stone**](https://twitter.com/notDylanstone)
 ---
 
 [![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.7.4/drpcm-windows.msi) 
