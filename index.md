@@ -108,7 +108,7 @@ If you want to edit your presence, re-run rpcmaker.
 - [ ] v2.0: Electron based GUI, multiple presences
 
 # Still need help, or just want to chat?
-[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues), [ask in the community discussion forum](https://github.com/ThatOneCalculator/DiscordRPCMaker/discussions), or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
+[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
 
 The program has been tested on Windows 10, macOS 10.14, macOS 10.15, Arch Linux, and Ubuntu 20.04 LTS. 
 
