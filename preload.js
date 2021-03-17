@@ -44,6 +44,25 @@ function updateValidButton(button, event) {
   }
 }
 
+function saveAsJson() {
+  presencename = document.getElementById("presence-name-input").toString()
+  description = document.getElementById("description-input-1").value.toString()
+  state = document.getElementById("description-input-2").value.toString()
+  largeimage = document.getElementById("large-image-input").value.toString()
+  smallimage = document.getElementById("small-image-input").value.toString()
+  
+
+  const content = {
+    name: presencename,
+    clientid: clientID,
+    description: ,
+    state: state,
+    largeimage: largeimage,
+    smallimage: smallimage,
+    buttons: buttons
+  }
+}
+
 //what to do when dom loads
 document.addEventListener("DOMContentLoaded", () => {
   //launch presence
@@ -57,6 +76,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //TODO: start presence
   });
 
+  //save presence
+  document.getElementById("test").addEventListener("click", () => {
+    saveAsJson()
+  });
+  
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", async (e) => {
     //checks what is in clientid input
