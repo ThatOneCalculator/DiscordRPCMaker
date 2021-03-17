@@ -346,3 +346,12 @@ textarea {
 .input-success {
   color: #43b581;
 }
+
+@media only screen and (max-width: 620px) {
+  .grid-preview {
+    display: none;
+  }
+  .main-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1rem;
+  }
+}
