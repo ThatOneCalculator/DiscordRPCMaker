@@ -242,6 +242,7 @@ textarea {
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(1, 1fr);
   padding: 0px;
+  margin-top: -1.5rem;
 }
 
 .grid-preview-rpc {
