@@ -30,6 +30,20 @@ if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
 
+//make the border red if url validation fails
+function updateValidButton(button, event) {
+  url = event.target.value
+  isValid = validateurl(url)
+
+  if (isValid) {
+    button.classList.remove("danger")
+    event.target.classList.add("input-success")
+  } else { 
+    event.target.classList.remove("input-success")
+    button.classList.add("danger")
+  }
+}
+
 //what to do when dom loads
 document.addEventListener("DOMContentLoaded", () => {
   //launch presence
@@ -90,9 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
       inps.querySelectorAll('input[disabled]').forEach((item, i, arr) => {
         item.removeAttribute("disabled");
       });
+
       document.getElementById('button2-enable').removeAttribute('disabled')
       document.getElementById("preview-button-1").classList.remove("initially-hidden")
       document.getElementById("button1-input-name").addEventListener("keyup", (event) => {document.getElementById("preview-button-1").innerHTML = event.target.value})
+      document.getElementById("button1-input-url").addEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-1"), event)})
     } else {
       //disable buttons
       inps = document.querySelector(".button1")
@@ -151,25 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //if said image doesen't exist, show placeholder
     if (imgid == "") {
       largeimage.setAttribute("src", "assets/placeholder.png")
-      document.getElementById("small-image-input").setAttribute("disabled", "");
     } else {
       largeimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
-      document.getElementById("small-image-input").removeAttribute("disabled");
-    }
-  })
-
-  document.getElementById("small-image-input").addEventListener("keyup", () => {
-    let input = document.getElementById("small-image-input")
-    let imgname = input.value
-    let smallimage = document.getElementById("small-image")
-
-    let imgid = getImageIdFromName(imgname)
-
-    //if said image doesen't exist, show placeholder
-    if (imgid == "") {
-      smallimage.setAttribute("src", "assets/placeholder.png")
-    } else {
-      smallimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
     }
   })
 

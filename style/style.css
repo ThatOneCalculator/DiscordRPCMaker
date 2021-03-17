@@ -332,7 +332,17 @@ textarea {
   white-space: nowrap;
   overflow: hidden;
 }
-
 .initially-hidden {
   visibility: hidden;
+}
+.btn.danger.outline {
+  border-color: var(--BTN-danger-background) !important;
+  color: var(--BTN-danger-background) !important;
+}
+.btn.success.outline {
+  border-color: var(--BTN-success-background) !important;
+  color: var(--BTN-success-background) !important;
+}
+.input-success {
+  color: #43b581;
 }
