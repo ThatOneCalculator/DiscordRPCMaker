@@ -5,45 +5,73 @@ const RPC = require('discord-rpc')
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
 let clientID = 0
+let options = {}
 
+
+//url validation regex
 function validateurl (str) {
 	const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
 	return regexp.test(str)
 }
 
+//get the image id from options provided the name
+function getImageIdFromName(imgName) {
+  let matchedid = ""
+  options.forEach((image, i, arr) => {
+    if (image.name == imgName) {
+      matchedid = image.id
+    }
+  })
+  return matchedid
+}
+
+//check for appdata / linux config dir and make it if it doesen't exist
 if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
 
+//what to do when dom loads
 document.addEventListener("DOMContentLoaded", () => {
+  //launch presence
   document.getElementById("test").addEventListener("click", () => {
-    //alert("Yo")
+    //dummy notification
     const myNotification = new Notification("Discord RPC Maker", {
       body: "Your presence has started.",
       icon: "assets/icon.png",
       timeoutType: "default",
     });
+    //TODO: start presence
   });
 
-  //clientid enabling
+  //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", async (e) => {
+    //checks what is in clientid input
     let inp = document.querySelector(".client-id-enabler")
-    let braincell = document.querySelectorAll(".enable-on-clientid")
-    braincell.forEach((item, i, arr) => {
+    let enableOnClientid = document.querySelectorAll(".enable-on-clientid")
+    enableOnClientid.forEach((item, i, arr) => {
       item.disabled = true;
     })
+
+    //checks if clientid input has a valid clientid (long enough, only numbers)
     if (inp.value !== "" && inp.value.toString().length > 17 && isNaN(parseInt(inp.value)) == false) {
+      //call discord api to make sure clientid is valid
       let response = await fetch(`https://discord.com/api/oauth2/applications/${inp.value.toString()}/assets`)
       if (response.ok) {
-        let options = await fetch(`https://discord.com/api/oauth2/applications/${inp.value.toString()}/assets`).then(options => options.json())
-        clientid = parseInt(inp.value)//get clientid and store it
+        //client id is valid, enable inputs
+        options = await fetch(`https://discord.com/api/oauth2/applications/${inp.value.toString()}/assets`).then(options => options.json())
+        clientID = inp.value//get clientid and store it
+
         console.log(options)
-        braincell.forEach((item, i, arr) => {
+
+        //enable everything on valid clientid
+        enableOnClientid.forEach((item, i, arr) => {
           item.removeAttribute("disabled")
         })
+
+        //populate the image input datalists with fetched names of images from the discord api
         imageinputs = document.querySelectorAll("#small-image-list, #large-image-list")
         imageinputs.forEach((item, i, arr) => {
-          htmll = `<option image-id="none">None</option>` //i'll feed this to the innerHTML of the datalist
+          htmll = `` //i'll feed this to the innerHTML of the datalist
           options.forEach((opt, index, array) => {
             htmll += `<option image-id="${opt.id}">${opt.name}</option>` //i'll add a dummy attribute
           })
@@ -52,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   })
+
 
   //button enabling
   document.getElementById("button1-enable").addEventListener("change", () => {
@@ -102,13 +131,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //description line 1 updating
   document.getElementById("description-input-1").addEventListener("keyup", () => {
     document.getElementById("description-input-1").addEventListener("keyup", (event) => {document.getElementById("preview-description-1").innerHTML = event.target.value})    
   });
 
+  //description line 2 updating
   document.getElementById("description-input-2").addEventListener("keyup", () => {
     document.getElementById("description-input-2").addEventListener("keyup", (event) => {document.getElementById("preview-description-2").innerHTML = event.target.value})    
   });
+
+  document.getElementById("large-image-input").addEventListener("keyup", () => {
+    let input = document.getElementById("large-image-input")
+    let imgname = input.value
+    let largeimage = document.getElementById("large-image")
+
+    let imgid = getImageIdFromName(imgname)
+
+    //if said image doesen't exist, show placeholder
+    if (imgid == "") {
+      largeimage.setAttribute("src", "assets/placeholder.png")
+    } else {
+      largeimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
+    }
+  })
 
   //fix win outline
   if (process.platform === "win32") {

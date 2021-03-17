@@ -294,6 +294,7 @@ textarea {
 .preview-big-pic {
   max-width: 4rem;
   max-height: 4rem;
+  border-radius: 0.6rem;
 }
 .preview-small-pic {
   position: absolute;
