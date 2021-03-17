@@ -122,8 +122,12 @@ document.addEventListener("DOMContentLoaded", () => {
       button2enable.disabled = true;
 
       try {
+        //remove preview updating listeners
         document.getElementById("button1-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-1").innerHTML = event.target.value})
         document.getElementById("button2-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
+        //remove url validation listeners
+        document.getElementById("button1-input-url").removeEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-1"), event)})
+        document.getElementById("button2-input-url").removeEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-2"), event)})
       } catch(e) {}
     }
   });
@@ -136,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       document.getElementById("preview-button-2").classList.remove("initially-hidden")
       document.getElementById("button2-input-name").addEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
+      document.getElementById("button2-input-url").addEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-2"), event)})
     } else {
       inps = document.querySelector(".button2")
       //disable second button
@@ -144,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       document.getElementById("preview-button-2").classList.add("initially-hidden")
       document.getElementById("button2-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
+      document.getElementById("button2-input-url").removeEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-2"), event)})
     }
   });
 
@@ -157,21 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("description-input-2").addEventListener("keyup", (event) => {document.getElementById("preview-description-2").innerHTML = event.target.value})    
   });
 
-  document.getElementById("large-image-input").addEventListener("keyup", () => {
-    let input = document.getElementById("large-image-input")
-    let imgname = input.value
-    let largeimage = document.getElementById("large-image")
-
-    let imgid = getImageIdFromName(imgname)
-
-    //if said image doesen't exist, show placeholder
-    if (imgid == "") {
-      largeimage.setAttribute("src", "assets/placeholder.png")
-    } else {
-      largeimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
-    }
-  })
-  
+  //updating of the large image
   document.getElementById("large-image-input").addEventListener("keyup", () => {
     let input = document.getElementById("large-image-input")
     let imgname = input.value
