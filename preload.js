@@ -102,11 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.getElementById("description-input-1").addEventListener("change", () => {
+  document.getElementById("description-input-1").addEventListener("keyup", () => {
     document.getElementById("description-input-1").addEventListener("keyup", (event) => {document.getElementById("preview-description-1").innerHTML = event.target.value})    
   });
 
-  document.getElementById("description-input-2").addEventListener("change", () => {
+  document.getElementById("description-input-2").addEventListener("keyup", () => {
     document.getElementById("description-input-2").addEventListener("keyup", (event) => {document.getElementById("preview-description-2").innerHTML = event.target.value})    
   });
 
