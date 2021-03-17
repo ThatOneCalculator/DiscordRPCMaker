@@ -151,8 +151,25 @@ document.addEventListener("DOMContentLoaded", () => {
     //if said image doesen't exist, show placeholder
     if (imgid == "") {
       largeimage.setAttribute("src", "assets/placeholder.png")
+      document.getElementById("small-image-input").setAttribute("disabled", "");
     } else {
       largeimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
+      document.getElementById("small-image-input").removeAttribute("disabled");
+    }
+  })
+
+  document.getElementById("small-image-input").addEventListener("keyup", () => {
+    let input = document.getElementById("small-image-input")
+    let imgname = input.value
+    let smallimage = document.getElementById("small-image")
+
+    let imgid = getImageIdFromName(imgname)
+
+    //if said image doesen't exist, show placeholder
+    if (imgid == "") {
+      smallimage.setAttribute("src", "assets/placeholder.png")
+    } else {
+      smallimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
     }
   })
 
