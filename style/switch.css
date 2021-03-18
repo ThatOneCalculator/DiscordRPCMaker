@@ -12,7 +12,6 @@
   display: block;
   position: relative;
   background: #F04747;
-  box-shadow: 0 8px 16px -1px rgba(255, 70, 81, 0.4);
 }
 .switch input + span:before, .switch input + span:after {
   content: "";
@@ -43,7 +42,6 @@
 }
 .switch input:checked + span {
   background: #43B581;
-  box-shadow: 0 8px 16px -1px rgba(72, 234, 139, 0.4);
 }
 .switch input:checked + span:before {
   width: 0px;
@@ -63,7 +61,6 @@
 
 .switch > input:disabled + span {
     background-color: rgba(0, 0, 0, 0.38);
-    box-shadow: 0 8px 16px -1px rgba(0, 0, 0, 0.4);
 }
 
 @-webkit-keyframes blob {
