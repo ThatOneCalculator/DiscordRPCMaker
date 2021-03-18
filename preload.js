@@ -55,7 +55,7 @@ function saveAsJson() {
   const content = {
     name: presencename,
     clientid: clientID,
-    description: ,
+    description: description,
     state: state,
     largeimage: largeimage,
     smallimage: smallimage,
