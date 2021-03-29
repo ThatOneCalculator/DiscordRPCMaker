@@ -141,7 +141,7 @@ fs.writeFile(`${dir}/drpcm-options.json`, data, (err) => {
          {
          title: 'Discord RPC Maker',
          message: 'Your Rich Presence has been made!',
-         icon: path.join(__dirname, 'rpcmaker.png'),
+         icon: path.join(__dirname, 'linux-desktop-assets/rpcmaker.png'),
          sound: true,
          wait: true,
          open: "https://github.com/ThatOneCalculator/DiscordRPCMaker",
