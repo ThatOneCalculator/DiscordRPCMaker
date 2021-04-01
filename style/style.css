@@ -355,3 +355,22 @@ textarea {
     grid-template-columns: 1fr 1fr 1fr 1fr 1rem;
   }
 }
+
+/*matter switch adjusting*/
+.matter-switch > input { /*background*/
+  background-clip: border-box!important;
+  background-color: gray !important;
+}
+.matter-switch > input:checked + span::after { /*checked thumb*/
+  background-color: white !important;
+}
+.matter-switch > input:checked { /*checked bg*/
+  background-color: #43b581 !important;
+}
+.matter-switch > input[disabled] { /*disabled switch*/
+  opacity: 0.15 !important;
+}
+.matter-switch > input:checked + span::before, 
+.matter-switch > input + span::before {
+  background: transparent !important;
+}
