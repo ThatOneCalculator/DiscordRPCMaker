@@ -253,6 +253,7 @@ textarea {
   color: gray;
   outline: 0px solid transparent !important;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 .grey-btn:hover {
   opacity: 60%;
