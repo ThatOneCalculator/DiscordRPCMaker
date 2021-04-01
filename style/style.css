@@ -231,6 +231,36 @@ textarea {
   border-color: #9a9a9a99;
   height: 98%;
 }
+/*small buttons*/
+.settings-wrapper {
+  grid-row: 15 / 16;
+  grid-column: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-wrapper {
+  grid-row: 15 / 16;
+  grid-column: 6 / 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*buttons*/
+.grey-btn {
+  background: transparent!important;
+  border: none;
+  color: gray;
+  outline: 0px solid transparent !important;
+  cursor: pointer;
+}
+.grey-btn:hover {
+  opacity: 60%;
+}
+.grey-btn:active {
+  opacity: 30%;
+}
+
 /*bluple pfp bg #7289d9*/
 /*slightly darker blurple #6c82ce*/
 .grid-preview {
