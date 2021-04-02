@@ -461,3 +461,7 @@ textarea {
 .matter-switch>input+span::before {
   background: transparent !important;
 }
+
+.matter-switch {
+  margin-top: 0.6rem !important;
+}

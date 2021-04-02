@@ -1,6 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const RPC = require('discord-rpc')
+const shell = require('electron').shell
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
@@ -224,4 +225,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (process.platform === "win32") {
     document.querySelector(".zoom").setAttribute("style", "-webkit-text-stroke-width: 0.01em")
   }
+
+  //make links open in new tab
+  registerLinkToOpenInBrowser("github-button", "https://github.com/ThatOneCalculator/DiscordRPCMaker")
+
 });
+/**
+ * register a button to open in the native browser
+ * @param {String} elemid element id
+ * @param {String} link the link to go to
+ */
+function registerLinkToOpenInBrowser(elemid, link) {
+  let elem = document.querySelector(`#${elemid}`)
+
+  elem.addEventListener("click", () => {
+    shell.openExternal(link)
+  })
+}
