@@ -10,9 +10,9 @@ let options = {}
 
 
 //url validation regex
-function validateurl (str) {
-	const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
-	return regexp.test(str)
+function validateurl(str) {
+  const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
+  return regexp.test(str)
 }
 
 //get the image id from options provided the name
@@ -27,8 +27,8 @@ function getImageIdFromName(imgName) {
 }
 
 //check for appdata / linux config dir and make it if it doesen't exist
-if (!fs.existsSync(dir)){
-    fs.mkdirSync(dir);
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir);
 }
 
 //make the border red if url validation fails
@@ -39,7 +39,7 @@ function updateValidButton(button, event) {
   if (isValid) {
     button.classList.remove("danger")
     event.target.classList.add("input-success")
-  } else { 
+  } else {
     event.target.classList.remove("input-success")
     button.classList.add("danger")
   }
@@ -51,7 +51,7 @@ function saveAsJson() {
   state = document.getElementById("description-input-2").value.toString()
   largeimage = document.getElementById("large-image-input").value.toString()
   smallimage = document.getElementById("small-image-input").value.toString()
-  
+
 
   const content = {
     name: presencename,
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("test").addEventListener("click", () => {
     saveAsJson()
   });
-  
+
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", async (e) => {
     //checks what is in clientid input
@@ -132,8 +132,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.getElementById('button2-enable').removeAttribute('disabled')
       document.getElementById("preview-button-1").classList.remove("initially-hidden")
-      document.getElementById("button1-input-name").addEventListener("keyup", (event) => {document.getElementById("preview-button-1").innerHTML = event.target.value})
-      document.getElementById("button1-input-url").addEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-1"), event)})
+      document.getElementById("button1-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value })
+      document.getElementById("button1-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event) })
     } else {
       //disable buttons
       inps = document.querySelector(".button1")
@@ -143,17 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       button2enable = document.getElementById('button2-enable')
       document.getElementById("preview-button-1").classList.add("initially-hidden")
-      if (button2enable.checked == true){button2enable.click()}
+      if (button2enable.checked == true) { button2enable.click() }
       button2enable.disabled = true;
 
       try {
         //remove preview updating listeners
-        document.getElementById("button1-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-1").innerHTML = event.target.value})
-        document.getElementById("button2-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
+        document.getElementById("button1-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value })
+        document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value })
         //remove url validation listeners
-        document.getElementById("button1-input-url").removeEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-1"), event)})
-        document.getElementById("button2-input-url").removeEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-2"), event)})
-      } catch(e) {}
+        document.getElementById("button1-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event) })
+        document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event) })
+      } catch (e) { }
     }
   });
   document.getElementById("button2-enable").addEventListener("change", () => {
@@ -164,8 +164,8 @@ document.addEventListener("DOMContentLoaded", () => {
         item.removeAttribute("disabled");
       });
       document.getElementById("preview-button-2").classList.remove("initially-hidden")
-      document.getElementById("button2-input-name").addEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
-      document.getElementById("button2-input-url").addEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-2"), event)})
+      document.getElementById("button2-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value })
+      document.getElementById("button2-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event) })
     } else {
       inps = document.querySelector(".button2")
       //disable second button
@@ -173,19 +173,19 @@ document.addEventListener("DOMContentLoaded", () => {
         item.setAttribute("disabled", "");
       });
       document.getElementById("preview-button-2").classList.add("initially-hidden")
-      document.getElementById("button2-input-name").removeEventListener("keyup", (event) => {document.getElementById("preview-button-2").innerHTML = event.target.value})
-      document.getElementById("button2-input-url").removeEventListener("keyup", (event) => {updateValidButton(document.getElementById("preview-button-2"), event)})
+      document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value })
+      document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event) })
     }
   });
 
   //description line 1 updating
   document.getElementById("description-input-1").addEventListener("keyup", () => {
-    document.getElementById("description-input-1").addEventListener("keyup", (event) => {document.getElementById("preview-description-1").innerHTML = event.target.value})    
+    document.getElementById("description-input-1").addEventListener("keyup", (event) => { document.getElementById("preview-description-1").innerHTML = event.target.value })
   });
 
   //description line 2 updating
   document.getElementById("description-input-2").addEventListener("keyup", () => {
-    document.getElementById("description-input-2").addEventListener("keyup", (event) => {document.getElementById("preview-description-2").innerHTML = event.target.value})    
+    document.getElementById("description-input-2").addEventListener("keyup", (event) => { document.getElementById("preview-description-2").innerHTML = event.target.value })
   });
 
   //updating of the large image
@@ -230,18 +230,16 @@ document.addEventListener("DOMContentLoaded", () => {
   registerLinkToOpenInBrowser("github-button", "https://github.com/ThatOneCalculator/DiscordRPCMaker")
   registerLinkToOpenInBrowser("discord-button", "https://discord.com/invite/Z7UZPR3bbW")
 
-  document.querySelector('#donate-button').addEventListener("click",() => {
+  document.querySelector('#donate-button').addEventListener("click", () => {
     const options = {
       type: 'question',
-      buttons: ['Liberapay', 'buymeacoffee.com', 'No thanks'],
+      buttons: ['Liberapay', 'BuyMeACoffee', 'Never mind'],
       defaultId: 0,
       title: 'Donate',
-      message: '?',
-      detail: 'It does not really matter',
-      checkboxLabel: 'Remember my answer',
-      checkboxChecked: true,
+      message: 'Thanks for supporting the project! Liberapay is for recurring donations, and BuyMeACoffee is for one time donations.',
+      detail: 'Both will get you a spot on the Website & GitHub README. Both services accept PayPal. Make sure to join the Discord for more details.',
     };
-  
+
     dialog.showMessageBox(null, options, (response, checkboxChecked) => {
       console.log(response);
       console.log(checkboxChecked);
