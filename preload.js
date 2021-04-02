@@ -1,7 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const RPC = require('discord-rpc')
-const shell = require('electron').shell
+const { dialog, shell } = require('electron').remote
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
@@ -228,6 +228,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //make links open in new tab
   registerLinkToOpenInBrowser("github-button", "https://github.com/ThatOneCalculator/DiscordRPCMaker")
+  registerLinkToOpenInBrowser("discord-button", "https://discord.com/invite/Z7UZPR3bbW")
+
+  document.querySelector('#donate-button').addEventListener("click",() => {
+    const options = {
+      type: 'question',
+      buttons: ['Liberapay', 'buymeacoffee.com', 'No thanks'],
+      defaultId: 0,
+      title: 'Donate',
+      message: '?',
+      detail: 'It does not really matter',
+      checkboxLabel: 'Remember my answer',
+      checkboxChecked: true,
+    };
+  
+    dialog.showMessageBox(null, options, (response, checkboxChecked) => {
+      console.log(response);
+      console.log(checkboxChecked);
+    });
+  })
 
 });
 /**

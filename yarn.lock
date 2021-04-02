@@ -633,10 +633,10 @@
     "lazy-val" "^1.0.4"
     "mime" "^2.5.0"
 
-"electron@^12.0.0":
-  "integrity" "sha512-p6oxZ4LG82hopPGAsIMOjyoL49fr6cexyFNH0kADA9Yf+mJ72DN7bjvBG+6V7r6QKhwYgsSsW8RpxBeVOUbxVQ=="
-  "resolved" "https://registry.npmjs.org/electron/-/electron-12.0.0.tgz"
-  "version" "12.0.0"
+"electron@^12.0.2":
+  "integrity" "sha512-14luh9mGzfL4e0sncyy0+kW37IU7Y0Y1tvI97FDRSW0ZBQxi5cmAwSs5dmPmNBFBIGtzkaGaEB01j9RjZuCmow=="
+  "resolved" "https://registry.npmjs.org/electron/-/electron-12.0.2.tgz"
+  "version" "12.0.2"
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^14.6.2"
