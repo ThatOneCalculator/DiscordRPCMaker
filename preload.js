@@ -46,21 +46,60 @@ function updateValidButton(button, event) {
 }
 
 function saveAsJson() {
-  presencename = document.getElementById("presence-name-input").toString()
+  presencename = document.getElementById("presence-name-input").value.toString()
   description = document.getElementById("description-input-1").value.toString()
   state = document.getElementById("description-input-2").value.toString()
   largeimage = document.getElementById("large-image-input").value.toString()
   smallimage = document.getElementById("small-image-input").value.toString()
+  
+  buttons = []
+  failed = false
 
+  if (document.querySelector("#button1-enable").checked) {
+    let button = {}
 
-  const content = {
-    name: presencename,
-    clientid: clientID,
-    description: description,
-    state: state,
-    largeimage: largeimage,
-    smallimage: smallimage,
-    buttons: buttons
+    if (validateurl(document.querySelector("#button1-input-url").value)) { 
+      button.label = document.querySelector("#button1-input-name").value
+      button.url = document.querySelector("#button1-input-url").value
+      buttons.push(button)
+    } else {
+      failed = true
+      alert("button 1 url is not an url")
+    }
+  }
+  if (document.querySelector("#button2-enable").checked && failed == false) {
+    let button = {}
+
+    if (validateurl(document.querySelector("#button2-input-url").value)) { 
+      button.label = document.querySelector("#button2-input-name").value
+      button.url = document.querySelector("#button2-input-url").value
+      buttons.push(button)
+    } else {
+      failed = true
+      alert("button 2 url is not an url")
+    }
+  }
+  if (presencename == ""){alert("you have to name your presence");failed == true}
+  if (clientID == "" || clientID.toString().length < 17 || isNaN(parseInt(clientID)) == true){
+    alert("clientID is not valid.");failed == true
+  } else {
+    let response = await fetch(`https://discord.com/api/oauth2/applications/${clientID.toString()}/assets`)
+    if (response.ok == false) {
+      failed == true;
+      alert("failed to fetch clientID")
+    }
+  }
+  if (failed == false) {
+    const content = {
+      name: presencename,
+      clientid: clientID,
+      description: description,
+      state: state,
+      largeimage: largeimage,
+      smallimage: smallimage,
+      buttons: buttons
+    }
+    console.log(content)
   }
 }
 
@@ -78,8 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //save presence
-  document.getElementById("test").addEventListener("click", () => {
+  document.getElementById("save").addEventListener("click", () => {
     saveAsJson()
+    console.log("saving..")
   });
 
   //enable inputs 
@@ -240,10 +280,15 @@ document.addEventListener("DOMContentLoaded", () => {
       detail: 'Both will get you a spot on the Website & GitHub README. Both services accept PayPal. Make sure to join the Discord for more details.',
     };
 
-    dialog.showMessageBox(null, options, (response, checkboxChecked) => {
-      console.log(response);
-      console.log(checkboxChecked);
-    });
+    dialog.showMessageBox(null, options).then(result => {
+      if (result.response == 0) {
+        shell.openExternal('https://liberapay.com/ThatOneCalculator')
+      } else if (result.response == 1) {
+        shell.openExternal('https://buymeacoffee.com/that1calculator')
+      }
+    }).catch(err => {
+      console.log(err)
+    })
   })
 
 });
