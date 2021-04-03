@@ -22,6 +22,7 @@ if (['yes', 'y'].indexOf(go) < 0) {
 }
 
 console.log(chalk`\n\n{cyan.bold For any of these, if you don't want one of them, just hit} {magenta.underline.bold Enter/Return.}\n\n`)
+if (process.platform === 'win32') { console.log(chalk`\n{green.bold Tip: }{blue right click to paste!}`) }
 
 let clientid = 0
 let largeimage = ''
