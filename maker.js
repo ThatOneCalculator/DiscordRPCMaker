@@ -132,7 +132,7 @@ const content = {
 const data = JSON.stringify(content, null, 2)
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming' : '/.config'}`
 
-fs.writeFile(`${dir}/drpcm-options.json`, data, (err) => {
+fs.writeFile(`${dir}/drpcm-options.json`, data, 'utf8', (err) => {
 	if (err) { throw err }
 	console.log(chalk`\n{bold.magenta Done!} Time to run {bold.cyan drpc}!\nI really hope you enjoy using this! If you do, please consider {bold.yellow starring this repository on GitHub}: {blue https://github.com/ThatOneCalculator/DiscordRPCMaker}\nPress enter to exit.`)
 	prompt()

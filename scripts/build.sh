@@ -1,10 +1,10 @@
 #!/bin/bash
 cd ..
 pkg ./maker.js --target latest-macos-x64,latest-win-x64,latest-linux-x64,latest-alpine-x64 -c ./package.json
-mv rpcmaker-win.exe ./bin/windows/rpcmaker.exe
-mv rpcmaker-linux ./bin/linux/rpcmaker
-mv rpcmaker-macos ./bin/macos/rpcmaker
-mv rpcmaker-alpine ./bin/alpine/rpcmaker
+mv ./rpcmaker-win.exe ./bin/windows/rpcmaker.exe
+mv ./rpcmaker-linux ./bin/linux/rpcmaker
+mv ./rpcmaker-macos ./bin/macos/rpcmaker
+mv ./rpcmaker-alpine ./bin/alpine/rpcmaker
 pkg ./presence.js --target latest-macos-x64,latest-win-x64,latest-linux-x64,latest-alpine-x64 -c ./package.json
 mv rpcmaker-win.exe ./bin/windows/drpc.exe
 mv rpcmaker-linux ./bin/linux/drpc
