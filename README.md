@@ -64,7 +64,7 @@ You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915
 2. Choose the latest version, and download the zip file for your given system. 
 3. Install.
 - Windows: 
-  - Download the msi.
+  - Download the exe.
   - Run the installer.
   - Note: on Windows 10, you may have to hit More Info > Run Anyway.
 - macOS:
