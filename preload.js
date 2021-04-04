@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //save presence
   document.getElementById("save").addEventListener("click", () => {
-    console.log('here')
     saveAsJson()
   });
 
