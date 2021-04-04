@@ -27,7 +27,7 @@ You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915
 - [**Dylan Stone**](https://twitter.com/notDylanstone)
 ---
 
-[![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.8.2/drpcm-windows.msi) 
+[![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.8.2/drpcm-windows.exe) 
 [![macOS](https://cdn.discordapp.com/attachments/671117418189422594/810798665232809984/image23.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.8.2/drpcm-macos.pkg) 
 [![Linux](https://cdn.discordapp.com/attachments/671117418189422594/810784878043856926/image21.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.8.2/drpcm-linux.zip) 
 [![Alpine](https://cdn.discordapp.com/attachments/671117418189422594/810785094418956288/image22.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.8.2/drpcm-alpine.zip)  
