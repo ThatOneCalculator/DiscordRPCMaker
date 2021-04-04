@@ -7,7 +7,7 @@ const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData
 
 let clientID = 0
 let options = {}
-
+let client = new RPC.Client({ transport: 'ipc' })
 
 //url validation regex
 function validateurl(str) {
@@ -79,14 +79,17 @@ function saveAsJson() {
     smallimage: smallimage,
     buttons: buttons
   }
+
   const data = JSON.stringify(content, null, 2)
   fs.writeFile(`${dir}/${generateId(10)}.json`, data, 'utf8', (err) => {
     if (err) { throw err }
-  })
-  const myNotification = new Notification("Discord RPC Maker", {
-    body: "Your presence has been saved.",
-    icon: "assets/icon.png",
-    timeoutType: "default",
+    else {
+      const myNotification = new Notification("Discord RPC Maker", {
+        body: "Your presence has been saved.",
+        icon: "assets/icon.png",
+        timeoutType: "default",
+      })
+    }
   })
 }
 
