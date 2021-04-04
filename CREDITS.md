@@ -7,6 +7,7 @@
 - [KraXen72](https://github.com/KraXen72): helping make the upcoming GUI frontend in Electron 
 - [Milqsnake/mica](https://twitter.com/milqsnake): helped make the Windows installer for v1.7
 - [Bryan Hoang](https://github.com/bryan-hoang): helped with an `npm` [bug](https://github.com/ThatOneCalculator/DiscordRPCMaker/pull/13)
+- [Proxxa](https://github.com/Proxxaaa): created [auto-reconnect](https://github.com/ThatOneCalculator/DiscordRPCMaker/pull/30) featured in v1.8 and above
 
 ### [Discord](https://discord.gg/Z7UZPR3bbW) helpers
 ###### These lovely folks help answer questions in the Discord!
