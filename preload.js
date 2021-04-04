@@ -15,6 +15,16 @@ function validateurl(str) {
   return regexp.test(str)
 }
 
+function dec2hex(dec) {
+  return dec.toString(16).padStart(2, "0")
+}
+
+function generateId(len) {
+  let arr = new Uint8Array((len || 40) / 2)
+  window.crypto.getRandomValues(arr)
+  return Array.from(arr, dec2hex).join('')
+}
+
 //get the image id from options provided the name
 function getImageIdFromName(imgName) {
   let matchedid = ""
@@ -46,61 +56,38 @@ function updateValidButton(button, event) {
 }
 
 function saveAsJson() {
-  presencename = document.getElementById("presence-name-input").value.toString()
-  description = document.getElementById("description-input-1").value.toString()
-  state = document.getElementById("description-input-2").value.toString()
-  largeimage = document.getElementById("large-image-input").value.toString()
-  smallimage = document.getElementById("small-image-input").value.toString()
-  
-  buttons = []
-  failed = false
-
-  if (document.querySelector("#button1-enable").checked) {
-    let button = {}
-
-    if (validateurl(document.querySelector("#button1-input-url").value)) { 
-      button.label = document.querySelector("#button1-input-name").value
-      button.url = document.querySelector("#button1-input-url").value
-      buttons.push(button)
-    } else {
-      failed = true
-      alert("button 1 url is not an url")
-    }
+  let presencename = document.getElementById("presence-name-input").value.toString()
+  let description = document.getElementById("description-input-1").value.toString()
+  let state = document.getElementById("description-input-2").value.toString()
+  let largeimage = document.getElementById("large-image-input").value.toString()
+  let smallimage = document.getElementById("small-image-input").value.toString()
+  let buttononelabel = document.getElementById("button1-input-name").value.toString()
+  let buttononeurl = document.getElementById("button1-input-url").value.toString()
+  let buttontwolabel = document.getElementById("button2-input-name").value.toString()
+  let buttontwourl = document.getElementById("button2-input-url").value.toString()
+  buttonone = { label: buttononelabel, url: buttononeurl }
+  buttontwo = { label: buttontwolabel, url: buttontwourl }
+  const buttons = []
+  if (document.getElementById("button1-enable").checked && validateurl(buttononeurl)) { buttons.push(buttonone) }
+  if (document.getElementById("button2-enable").checked && validateurl(buttontwourl)) { buttons.push(buttontwo) }
+  const content = {
+    name: presencename,
+    clientid: clientID,
+    description: description,
+    state: state,
+    largeimage: largeimage,
+    smallimage: smallimage,
+    buttons: buttons
   }
-  if (document.querySelector("#button2-enable").checked && failed == false) {
-    let button = {}
-
-    if (validateurl(document.querySelector("#button2-input-url").value)) { 
-      button.label = document.querySelector("#button2-input-name").value
-      button.url = document.querySelector("#button2-input-url").value
-      buttons.push(button)
-    } else {
-      failed = true
-      alert("button 2 url is not an url")
-    }
-  }
-  if (presencename == ""){alert("you have to name your presence");failed == true}
-  if (clientID == "" || clientID.toString().length < 17 || isNaN(parseInt(clientID)) == true){
-    alert("clientID is not valid.");failed == true
-  } else {
-    let response = await fetch(`https://discord.com/api/oauth2/applications/${clientID.toString()}/assets`)
-    if (response.ok == false) {
-      failed == true;
-      alert("failed to fetch clientID")
-    }
-  }
-  if (failed == false) {
-    const content = {
-      name: presencename,
-      clientid: clientID,
-      description: description,
-      state: state,
-      largeimage: largeimage,
-      smallimage: smallimage,
-      buttons: buttons
-    }
-    console.log(content)
-  }
+  const data = JSON.stringify(content, null, 2)
+  fs.writeFile(`${dir}/${generateId(10)}.json`, data, 'utf8', (err) => {
+    if (err) { throw err }
+  })
+  const myNotification = new Notification("Discord RPC Maker", {
+    body: "Your presence has been saved.",
+    icon: "assets/icon.png",
+    timeoutType: "default",
+  })
 }
 
 //what to do when dom loads
@@ -118,8 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //save presence
   document.getElementById("save").addEventListener("click", () => {
+    console.log('here')
     saveAsJson()
-    console.log("saving..")
   });
 
   //enable inputs 
@@ -280,15 +267,10 @@ document.addEventListener("DOMContentLoaded", () => {
       detail: 'Both will get you a spot on the Website & GitHub README. Both services accept PayPal. Make sure to join the Discord for more details.',
     };
 
-    dialog.showMessageBox(null, options).then(result => {
-      if (result.response == 0) {
-        shell.openExternal('https://liberapay.com/ThatOneCalculator')
-      } else if (result.response == 1) {
-        shell.openExternal('https://buymeacoffee.com/that1calculator')
-      }
-    }).catch(err => {
-      console.log(err)
-    })
+    dialog.showMessageBox(null, options, (response, checkboxChecked) => {
+      console.log(response);
+      console.log(checkboxChecked);
+    });
   })
 
 });

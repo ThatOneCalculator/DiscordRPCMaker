@@ -1,7 +1,7 @@
 const { app, BrowserWindow, Notification, Menu, MenuItem } = require("electron")
 const path = require("path")
 
-function createWindow () {
+function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 700,
@@ -14,7 +14,7 @@ function createWindow () {
     }
   })
   //win.setResizable(false);
-  
+
   /*globalShortcut.register("f5", function() {
       win.reload()
   })
@@ -35,7 +35,7 @@ function createWindow () {
     {
       label: 'Reload but with Ctrl+R',
       accelerator: "CommandOrControl+R",
-      click: () => { win.reload()}
+      click: () => { win.reload() }
     },
     {
       label: 'Open Devtools',
@@ -48,7 +48,7 @@ function createWindow () {
   //TODO: add a html button to show this for some peeps who don't know the hotkeys by default
   win.setMenuBarVisibility(false)
   win.loadFile("index.html")
-  
+
 }
 
 app.whenReady().then(createWindow)
