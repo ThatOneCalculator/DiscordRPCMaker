@@ -117,7 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //enable inputs 
-  document.querySelector(".client-id-enabler").addEventListener("keyup", async (e) => {
+  document.querySelector(".client-id-enabler").addEventListener("keyup", () => {bootClientId()})
+
+  async function bootClientId() {
     //checks what is in clientid input
     let inp = document.querySelector(".client-id-enabler")
     let enableOnClientid = document.querySelectorAll(".enable-on-clientid")
@@ -152,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       }
     }
-  })
+  }
 
 
   //button enabling
@@ -320,11 +322,8 @@ function loadSavedPresences() {
       elem.querySelector('.presence-edit').addEventListener("click", () => {
         document.getElementById("presence-id").value = file.replaceAll(".json", "")
         document.getElementById("presence-name-input").value = presence.name
-        let clientidinp = document.getElementById("clientid-input")
-        clientidinp.value = presence.clientid
-        clientidinp.dispatchEvent(new KeyboardEvent('keydown', {'key':'Shift'} ));
-        
-
+        document.getElementById("clientid-input").value = presence.clientid
+        bootClientId()
 
       })
       }
