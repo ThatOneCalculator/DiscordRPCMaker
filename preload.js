@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //enable inputs 
-  document.querySelector(".client-id-enabler").addEventListener("keyup", () => {bootClientId()})
+  document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId() })
 
   async function bootClientId() {
     //checks what is in clientid input
@@ -156,6 +156,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function loadSavedPresences() {
+    let files = fs.readdir(dir, (directory, files) => {
+      console.log(files)
+      let wrapper = document.getElementById('presence-scroller')
+
+      files.forEach(file => {
+        console.log(file)
+        if (file.includes(".json") && file.includes("settings") == false) {
+          let presence = require(dir + file)
+          let elem = document.createElement('div')
+          html = `
+        <div class="presence-list-item">
+          <div class="presence-item-title">${presence.name}</div>
+          <div class="presence-item-id text secondary">File: ${file.replaceAll(".json", "")}</div>
+          <button class="presence-edit"><i class="fas fa-edit"></i></button>
+        </div>
+        `
+          elem.innerHTML = html
+          wrapper.appendChild(elem)
+
+          elem.querySelector('.presence-edit').addEventListener("click", () => {
+            document.getElementById("presence-id").value = file.replaceAll(".json", "")
+            document.getElementById("presence-name-input").value = presence.name
+            document.getElementById("clientid-input").value = presence.clientid
+            bootClientId()
+          })
+        }
+      })
+    })
+  }
 
   //button enabling
   document.getElementById("button1-enable").addEventListener("change", () => {
@@ -293,43 +323,5 @@ function registerLinkToOpenInBrowser(elemid, link) {
 
   elem.addEventListener("click", () => {
     shell.openExternal(link)
-  })
-}
-
-function loadSavedPresences() {
-  let files = fs.readdir(dir, (directory, files) => {
-    console.log(files)
-    let wrapper = document.getElementById('presence-scroller')
-
-    files.forEach(file => {
-      console.log(file)
-      if (file.includes(".json") && file.includes("settings") == false) {
-        let presence = require(dir + file)
-
-        let elem = document.createElement('div')
-
-      html = `
-      <div class="presence-list-item">
-        <div class="presence-item-title">${presence.name}</div>
-        <div class="presence-item-id text secondary">File: ${file.replaceAll(".json", "")}</div>
-        <button class="presence-edit"><i class="fas fa-edit"></i></button>
-      </div>
-      `
-
-      elem.innerHTML = html
-      wrapper.appendChild(elem)
-
-      elem.querySelector('.presence-edit').addEventListener("click", () => {
-        document.getElementById("presence-id").value = file.replaceAll(".json", "")
-        document.getElementById("presence-name-input").value = presence.name
-        document.getElementById("clientid-input").value = presence.clientid
-        bootClientId()
-
-      })
-      }
-      
-    })
-
-
   })
 }
