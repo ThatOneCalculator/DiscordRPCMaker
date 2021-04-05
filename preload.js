@@ -57,6 +57,7 @@ function updateValidButton(button, event) {
 
 function saveAsJson() {
   let presencename = document.getElementById("presence-name-input").value.toString()
+  let presenceid = document.getElementById("presence-id").value.toString()
   let description = document.getElementById("description-input-1").value.toString()
   let state = document.getElementById("description-input-2").value.toString()
   let largeimage = document.getElementById("large-image-input").value.toString()
@@ -81,7 +82,8 @@ function saveAsJson() {
   }
 
   const data = JSON.stringify(content, null, 2)
-  fs.writeFile(`${dir}/${generateId(10)}.json`, data, 'utf8', (err) => {
+  let filename = presenceid == "" ? generateId(10) : presenceid
+  fs.writeFile(`${dir}/${filename}.json`, data, 'utf8', (err) => {
     if (err) { throw err }
     else {
       const myNotification = new Notification("Discord RPC Maker", {
@@ -95,6 +97,9 @@ function saveAsJson() {
 
 //what to do when dom loads
 document.addEventListener("DOMContentLoaded", () => {
+  //load presences
+  loadSavedPresences()
+
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
     //dummy notification
@@ -286,5 +291,46 @@ function registerLinkToOpenInBrowser(elemid, link) {
 
   elem.addEventListener("click", () => {
     shell.openExternal(link)
+  })
+}
+
+function loadSavedPresences() {
+  let files = fs.readdir(dir, (directory, files) => {
+    console.log(files)
+    let wrapper = document.getElementById('presence-scroller')
+
+    files.forEach(file => {
+      console.log(file)
+      if (file.includes(".json") && file.includes("settings") == false) {
+        let presence = require(dir + file)
+
+        let elem = document.createElement('div')
+
+      html = `
+      <div class="presence-list-item">
+        <div class="presence-item-title">${presence.name}</div>
+        <div class="presence-item-id text secondary">File: ${file.replaceAll(".json", "")}</div>
+        <button class="presence-edit"><i class="fas fa-edit"></i></button>
+      </div>
+      `
+
+      elem.innerHTML = html
+      wrapper.appendChild(elem)
+
+      elem.querySelector('.presence-edit').addEventListener("click", () => {
+        document.getElementById("presence-id").value = file.replaceAll(".json", "")
+        document.getElementById("presence-name-input").value = presence.name
+        let clientidinp = document.getElementById("clientid-input")
+        clientidinp.value = presence.clientid
+        clientidinp.dispatchEvent(new KeyboardEvent('keydown', {'key':'Shift'} ));
+        
+
+
+      })
+      }
+      
+    })
+
+
   })
 }

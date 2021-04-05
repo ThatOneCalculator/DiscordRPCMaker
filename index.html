@@ -16,25 +16,10 @@
 	<div class="main-grid">
 		<h2 class="presence-title">Saved Presences</h2>
 		<div class="presence-list grid-comp">
-			<div class="presence-scroller">
-				<div class="presence-list-item">
-					<div class="presence-item-title">Sup</div>
-					<div class="presence-item-id text secondary">id: c1cb3e9fcf</div>
-				</div>
-				<div class="presence-list-item">
-					<div class="presence-item-title">Sup</div>
-					<div class="presence-item-id text secondary">id: c1cb3e9fcf</div>
-				</div>
-				<div class="presence-list-item">
-					<div class="presence-item-title">Sup</div>
-					<div class="presence-item-id text secondary">id: c1cb3e9fcf</div>
-				</div>
-				<div class="presence-list-item">
-					<div class="presence-item-title">Sup</div>
-					<div class="presence-item-id text secondary">id: c1cb3e9fcf</div>
-				</div>
+			<div class="presence-scroller" id="presence-scroller">
 			</div>
 		</div>
+		<input type="text" id="presence-id" style="display: none"/>
 		<div class="settings-wrapper grid-comp">
 			<button id="settings-button" class="grey-btn"><i class="fas fa-cog"></i></button>
 			<button id="faq-button" class="grey-btn"><i class="fas fa-question-circle"></i></button>
@@ -59,7 +44,7 @@
 		</div>
 		<div class="client-id grid-comp">
 			<input class="single-input client-id-enabler" maxlength="20" placeholder="Client ID" name="Client ID"
-				type="text" value="">
+				type="text" value="" id="clientid-input">
 		</div>
 		<div class="large-image-name grid-comp">
 			<input list="large-image-list" class="single-input enable-on-clientid" maxlength="32"

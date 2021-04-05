@@ -18,6 +18,7 @@
 
   --not-quite-black: #202225;
   --background-primary: #36393f;
+  --blurple: #7289DA;
   font-size: medium;
 }
 
@@ -198,6 +199,7 @@ textarea {
   padding: 0.5rem;
   border-radius: 0.3rem;
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .settings-wrapper {
@@ -320,7 +322,7 @@ textarea {
 }
 
 /*buttons*/
-.grey-btn {
+.grey-btn, .presence-edit {
   background: transparent !important;
   border: none;
   color: gray;
@@ -328,12 +330,20 @@ textarea {
   cursor: pointer;
   font-size: 1.2rem;
 }
+.presence-edit {
+  color: var(--blurple);
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  right: 0.3rem;
 
-.grey-btn:hover {
+}
+
+.grey-btn:hover, .presence-edit:hover {
   opacity: 60%;
 }
 
-.grey-btn:active {
+.grey-btn:active, .presence-edit:active {
   opacity: 30%;
 }
 
@@ -342,7 +352,7 @@ textarea {
 .grid-preview {
   grid-row: 6 / 12;
   grid-column: 6 / 7;
-  background: #7289d9;
+  background: var(--blurple);
   border-radius: 5px;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
