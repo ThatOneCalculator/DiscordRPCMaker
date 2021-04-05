@@ -160,38 +160,44 @@ textarea {
   padding: 0.3rem !important;
 
 }
+
 .presence-scroller {
   overflow-y: auto;
   height: 100%;
   width: 100%;
   padding: 0 0.3rem 0 0.3rem;
 }
+
 .presence-title {
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   grid-row: 1/4;
   margin: 0px;
   grid-row: 1 / 4;
   background: var(--not-quite-black);
 }
-.presence-scroller::-webkit-scrollbar-track{
-	background-color: transparent;
+
+.presence-scroller::-webkit-scrollbar-track {
+  background-color: transparent;
   border: 1px solid #444444;
   border-radius: 10px !important;
 }
-.presence-scroller::-webkit-scrollbar{
+
+.presence-scroller::-webkit-scrollbar {
   display: initial !important;
-  visibility: visible !important; 
-	width: 12px;
-	background-color: transparent;
+  visibility: visible !important;
+  width: 12px;
+  background-color: transparent;
   border-radius: 10px !important;
   border: 1px solid #444444;
 }
-.presence-scroller::-webkit-scrollbar-thumb{
-	border-radius: 10px !important;
-	background-color: #444444;
+
+.presence-scroller::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  background-color: #444444;
 }
+
 .presence-list-item {
   width: 100%;
   height: 3rem;
@@ -205,6 +211,7 @@ textarea {
 .settings-wrapper {
   background: var(--not-quite-black);
 }
+
 .logo {
   grid-row: 1 / 4;
   grid-column: 2 / 7;
@@ -215,6 +222,13 @@ textarea {
   grid-column: 2 / 7;
   display: flex;
   justify-content: space-between;
+}
+
+.presence-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10.5rem;
 }
 
 .grid-comp {
@@ -322,7 +336,8 @@ textarea {
 }
 
 /*buttons*/
-.grey-btn, .presence-edit {
+.grey-btn,
+.presence-edit {
   background: transparent !important;
   border: none;
   color: gray;
@@ -330,6 +345,7 @@ textarea {
   cursor: pointer;
   font-size: 1.2rem;
 }
+
 .presence-edit {
   color: var(--blurple);
   position: absolute;
@@ -339,11 +355,13 @@ textarea {
 
 }
 
-.grey-btn:hover, .presence-edit:hover {
+.grey-btn:hover,
+.presence-edit:hover {
   opacity: 60%;
 }
 
-.grey-btn:active, .presence-edit:active {
+.grey-btn:active,
+.presence-edit:active {
   opacity: 30%;
 }
 
