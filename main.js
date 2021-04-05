@@ -1,6 +1,8 @@
 const { app, BrowserWindow, Notification, Menu, MenuItem } = require("electron")
 const path = require("path")
 
+require('@electron/remote/main').initialize()
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const RPC = require('discord-rpc')
-const { dialog, shell } = require('electron').remote
+const { dialog, shell, BrowserWindow } = require('@electron/remote')
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
