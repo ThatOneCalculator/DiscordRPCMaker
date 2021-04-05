@@ -50,6 +50,7 @@ p {
 body {
   width: 100vw;
   margin: 0px;
+  overflow: hidden;
 }
 
 h1 {
@@ -151,11 +152,57 @@ textarea {
 }
 
 .presence-list {
-  grid-row: 1 / 16;
+  grid-row: 4 / 15;
   grid-column: 1 / 2;
   background: var(--not-quite-black);
+  grid-template-columns: 100%;
+  padding: 0.3rem !important;
+
+}
+.presence-scroller {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  padding: 0 0.3rem 0 0.3rem;
+}
+.presence-title {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  grid-row: 1/4;
+  margin: 0px;
+  grid-row: 1 / 4;
+  background: var(--not-quite-black);
+}
+.presence-scroller::-webkit-scrollbar-track{
+	background-color: transparent;
+  border: 1px solid #444444;
+  border-radius: 10px !important;
+}
+.presence-scroller::-webkit-scrollbar{
+  display: initial !important;
+  visibility: visible !important; 
+	width: 12px;
+	background-color: transparent;
+  border-radius: 10px !important;
+  border: 1px solid #444444;
+}
+.presence-scroller::-webkit-scrollbar-thumb{
+	border-radius: 10px !important;
+	background-color: #444444;
+}
+.presence-list-item {
+  width: 100%;
+  height: 3rem;
+  background: var(--background-primary);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
+.settings-wrapper {
+  background: var(--not-quite-black);
+}
 .logo {
   grid-row: 1 / 4;
   grid-column: 2 / 7;
