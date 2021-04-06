@@ -146,9 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
         //populate the image input datalists with fetched names of images from the discord api
         imageinputs = document.querySelectorAll("#small-image-list, #large-image-list")
         imageinputs.forEach((item, i, arr) => {
-          htmll = `` //i'll feed this to the innerHTML of the datalist
+          htmll = ``
           options.forEach((opt, index, array) => {
-            htmll += `<option image-id="${opt.id}">${opt.name}</option>` //i'll add a dummy attribute
+            htmll += `<option image-id="${opt.id}">${opt.name}</option>`
           })
           item.innerHTML = htmll
         })
@@ -180,7 +180,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("presence-id").value = file.replaceAll(".json", "")
             document.getElementById("presence-name-input").value = presence.name
             document.getElementById("clientid-input").value = presence.clientid
+            try { document.getElementById("large-image-input").value = presence.largeimage } catch (e) { }
+            try { document.getElementById("small-image-input").value = presence.smallimage } catch (e) { }
+            try { document.getElementById("description-input-1").value = presence.description } catch (e) { }
+            try { document.getElementById("description-input-2").value = presence.state } catch (e) { }
             bootClientId()
+            //TODO: buttons
+
           })
         }
       })
