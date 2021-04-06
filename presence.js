@@ -18,7 +18,7 @@ const assets = {}
 if (options.largeimage !== '') {
 	assets.large_image = options.largeimage
 	// If you change this and some asks about this, please still give me credit :)
-	assets.large_text = "Made with ThatOneCalculator's Discord RPC Maker (v1.8.2)!"
+	assets.large_text = `Made with ThatOneCalculator's Discord RPC Maker (v${require('./package.json').version})!`
 }
 if (options.smallimage !== '') {
 	assets.small_image = options.smallimage
@@ -59,6 +59,10 @@ process.on("unhandledRejection", e => {
 	if (e.message === "Could not connect") {
 		console.log(chalk`{bold.red Failed to connect.}\n{bold.green Retrying in 5 seconds.}`)
 		assembleClient()
+	} else {
+		console.log(chalk`{bold.red Something went wrong.}`)
+		console.error(e)
+		process.exit()
 	}
 })
 
