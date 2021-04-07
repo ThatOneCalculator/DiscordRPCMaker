@@ -217,16 +217,23 @@ document.addEventListener("DOMContentLoaded", () => {
   //save presence
   document.getElementById("save").addEventListener("click", () => {
     saveAsJson()
+    loadSavedPresences()
   });
 
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}) })
 
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
   function loadSavedPresences() {
     let files = fs.readdir(dir, (directory, files) => {
       console.log(files)
       let wrapper = document.getElementById('presence-scroller')
-
+      removeAllChildNodes(wrapper)
       files.forEach(file => {
         console.log(file)
         if (file.includes(".json") && file.includes("settings") == false) {
