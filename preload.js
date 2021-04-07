@@ -114,7 +114,7 @@ async function bootClientId(presence) {
   btn2label.value = ""
   btn1url.value = ""
   btn2url.value = ""
-  if (button1enable.checked) {button1enable.click()}
+  if (button1enable.checked) { button1enable.click() }
   document.getElementById("small-image").src = "assets/blank.png"
 
   //checks if clientid input has a valid clientid (long enough, only numbers)
@@ -152,7 +152,7 @@ async function bootClientId(presence) {
         let smallimg = document.getElementById("small-image-input")
         let desc1 = document.getElementById("description-input-1")
         let desc2 = document.getElementById("description-input-2")
-      
+
 
         //fill in the values from provided presence, and simulate user clicking / typing in the inputs, so the preview updates.
         largeimg.value = presence.largeimage
@@ -166,10 +166,9 @@ async function bootClientId(presence) {
 
         desc1.dispatchEvent(new KeyboardEvent("keyup"))
         desc2.dispatchEvent(new KeyboardEvent("keyup"))
-        
+
         if (presence.buttons.length > 0) {
           if (presence.buttons.length == 2) {
-            console.log(" 2 buttons")
             button1enable.checked = false;
             button2enable.checked = false;
             button1enable.click()
@@ -180,9 +179,8 @@ async function bootClientId(presence) {
 
             btn2label.value = presence.buttons[1].label
             btn2url.value = presence.buttons[1].url
-            
+
           } else if (presence.buttons.length == 1) {
-            console.log(" 1 button")
             button1enable.checked = false;
             button1enable.click()
 
@@ -194,7 +192,7 @@ async function bootClientId(presence) {
           btn1url.dispatchEvent(new KeyboardEvent("keyup"))
           btn2url.dispatchEvent(new KeyboardEvent("keyup"))
         }
-         
+
       }
     }
   }
@@ -312,11 +310,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //description line 1 updating
   document.getElementById("description-input-1").addEventListener("keyup", (event) => {
     document.getElementById("preview-description-1").innerHTML = event.target.value
- });
+  });
 
   //description line 2 updating
   document.getElementById("description-input-2").addEventListener("keyup", (event) => {
-     document.getElementById("preview-description-2").innerHTML = event.target.value
+    document.getElementById("preview-description-2").innerHTML = event.target.value
   });
 
   //updating of the large image
