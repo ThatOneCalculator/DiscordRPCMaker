@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.value = ""
       input.dispatchEvent(new KeyboardEvent("keyup"))
     })
-    
+
     document.getElementById("small-image-input").setAttribute("disabled", "true")
     bootClientId(empty)
   });
@@ -264,6 +264,22 @@ document.addEventListener("DOMContentLoaded", () => {
     reloadPresences()
     document.getElementById("new-presence-button").click()
   });
+
+  document.getElementById("del-btn").addEventListener("click", () => {
+    const options = {
+      type: 'question',
+      buttons: ['Cancel', 'Delete'],
+      defaultId: 0,
+      title: 'Delete presence',
+      message: 'Are you sure you want to delete this presence?',
+      detail: 'This cannot be undone.',
+    };
+
+    dialog.showMessageBox(null, options, (response, checkboxChecked) => {
+      console.log(response);
+      console.log(checkboxChecked);
+    });
+  })
 
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}) })
@@ -419,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector('#donate-button').addEventListener("click", () => {
     const options = {
       type: 'question',
-      buttons: ['Liberapay', 'BuyMeACoffee', 'Never mind'],
+      buttons: ['Never mind', 'Liberapay', 'BuyMeACoffee'],
       defaultId: 0,
       title: 'Donate',
       message: 'Thanks for supporting the project! Liberapay is for recurring donations, and BuyMeACoffee is for one time donations.',
