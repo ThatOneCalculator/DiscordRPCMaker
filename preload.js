@@ -196,6 +196,11 @@ async function bootClientId(presence) {
         }
 
       }
+      inp.classList.remove("danger")
+      inp.classList.add("input-success")
+    } else {
+      inp.classList.remove("input-success")
+      inp.classList.add("danger")
     }
   }
 }
@@ -214,6 +219,42 @@ document.addEventListener("DOMContentLoaded", () => {
       timeoutType: "default",
     });
     //TODO: start presence
+  });
+
+  document.getElementById("new-presence-button").addEventListener("click", () => {
+    let wrapper = document.getElementById('presence-scroller')
+    let elem = document.createElement('div')
+    const content = {
+      name: "",
+      clientid: "",
+      description: "",
+      state: "",
+      largeimage: "",
+      smallimage: "",
+      buttons: []
+    }
+
+    const data = JSON.stringify(content, null, 2)
+    let filename = generateId(10)
+    fs.writeFile(`${dir}/${filename}.json`, data, 'utf8', (err) => {
+      if (err) { throw err }
+      else {
+        const myNotification = new Notification("Discord RPC Maker", {
+          body: "Your presence has been saved.",
+          icon: "assets/icon.png",
+          timeoutType: "default",
+        })
+      }
+    })
+    html = `
+        <div class="presence-list-item">
+          <div class="presence-item-title"></div>
+          <div class="presence-item-id text secondary">File: ${filename}</div>
+          <button class="presence-edit"><i class="fas fa-edit"></i></button>
+        </div>
+        `
+    elem.innerHTML = html
+    wrapper.appendChild(elem)
   });
 
   //save presence
@@ -407,5 +448,5 @@ function loadPresence(presence, file) {
   document.getElementById("presence-name-input").value = presence.name
   document.getElementById("clientid-input").value = presence.clientid
 
-  bootClientId(presence)
+  try { bootClientId(presence) } catch (e) { }
 }
