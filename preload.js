@@ -217,27 +217,20 @@ document.addEventListener("DOMContentLoaded", () => {
   //save presence
   document.getElementById("save").addEventListener("click", () => {
     saveAsJson()
-    loadSavedPresences()
+    reloadPresences()
   });
 
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}) })
 
-  function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
-  }
-
   function loadSavedPresences() {
     let files = fs.readdir(dir, (directory, files) => {
       console.log(files)
       let wrapper = document.getElementById('presence-scroller')
-      removeAllChildNodes(wrapper)
       files.forEach(file => {
         console.log(file)
         if (file.includes(".json") && file.includes("settings") == false) {
-          let presence = require(dir + file)
+          let presence = JSON.parse(fs.readFileSync(dir + file, 'utf8'));
           let elem = document.createElement('div')
           html = `
         <div class="presence-list-item">
@@ -255,6 +248,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
     })
+  }
+
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
+
+  function reloadPresences() {
+    let wrapper = document.getElementById('presence-scroller')
+    removeAllChildNodes(wrapper)
+    loadSavedPresences()
   }
 
   //button enabling
