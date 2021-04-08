@@ -22,9 +22,9 @@
 		</div>
 		<input type="text" id="presence-id" style="display: none" />
 		<div class="settings-wrapper grid-comp">
-			
+
 		</div>
-		<div class="social-wrapper grid-comp">
+		<div class="social-wrapper grid-comp ">
 			<span class="left-grey-buttons">
 				<button id="donate-button" class="grey-btn"><i class="fas fa-donate"></i></button>
 				<button id="discord-button" class="grey-btn"><i class="fab fa-discord"></i></button>
@@ -41,7 +41,7 @@
 				<h1 class="zoom"><img src="assets/icon.png" width="70" height="70" />&nbsp; Discord RPC Maker</h1>
 			</div>
 		</div>
-		<div class="presence-name grid-comp">
+		<div class="pad-left presence-name grid-comp">
 			<input class="single-input mr" style="width: auto !important;" placeholder="Presence Name" maxlength="20"
 				id="presence-name-input" name="Presence Name" type="text" value="">
 			<button id="devel" class="btn primary mr" onclick="window.open('https://discord.com/developers', '_blank')"
@@ -49,31 +49,31 @@
 			<button id="save" class="btn primary enable-on-clientid mr" disabled>Save</button>
 			<button id="test" class="btn primary">Launch presence</button>
 		</div>
-		<div class="client-id grid-comp">
+		<div class="pad-left client-id grid-comp">
 			<input class="single-input client-id-enabler" maxlength="20" placeholder="Client ID" name="Client ID"
 				type="text" value="" id="clientid-input">
 		</div>
-		<div class="large-image-name grid-comp">
+		<div class="pad-left large-image-name grid-comp">
 			<input list="large-image-list" class="single-input enable-on-clientid" maxlength="32"
 				placeholder="Large Image name (optional)" name="Large Image name" type="text" value="" disabled
 				id="large-image-input">
 			<datalist id="large-image-list"></datalist>
 		</div>
-		<div class="small-image-name grid-comp">
+		<div class="pad-left small-image-name grid-comp">
 			<input list="small-image-list" class="single-input enable-on-large-image" maxlength="32"
 				placeholder="Small Image name (optional, only if you have a large image)" name="Small Image name"
 				type="text" value="" disabled id="small-image-input">
 			<datalist id="small-image-list"></datalist>
 		</div>
-		<div class="description-line-1 grid-comp">
+		<div class="pad-left description-line-1 grid-comp">
 			<input class="single-input enable-on-clientid" id="description-input-1" maxlength="32"
 				placeholder="Description line 1 (optional)" name="Description" type="text" value="" disabled>
 		</div>
-		<div class="description-line-2 grid-comp">
+		<div class="pad-left description-line-2 grid-comp">
 			<input class="single-input enable-on-clientid" id="description-input-2" maxlength="32"
 				placeholder="Description line 2 (optional)" name="Description" type="text" value="" disabled>
 		</div>
-		<div class="button1 button-setup grid-comp ">
+		<div class="pad-left button1 button-setup grid-comp ">
 			<label class="matter-switch max-content mr">
 				<input type="checkbox" role="switch" id="button1-enable">
 				<span class="text secondary">Button 1</span>
@@ -83,7 +83,7 @@
 			<input class="single-input autowidth" id="button1-input-url" placeholder="url" name="Button 1 URL"
 				type="text" value="" disabled>
 		</div>
-		<div class="button2 button-setup grid-comp">
+		<div class="pad-left button2 button-setup grid-comp">
 			<label class="matter-switch max-content mr" style="float: left;">
 				<input type="checkbox" role="switch" id="button2-enable" disabled>
 				<span class="text secondary">Button 2</span>
@@ -93,7 +93,7 @@
 			<input class="single-input autowidth" id="button2-input-url" placeholder="url" name="Button 2 URL"
 				type="text" value="" disabled>
 		</div>
-		<div id="delete-presence" class="grid-comp">
+		<div id="delete-presence" class="pad-left grid-comp">
 			<button class="danger outline btn" id="del-btn">Delete Presence</button>
 		</div>
 		<div class="grid-vr grid-comp">

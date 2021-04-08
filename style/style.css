@@ -587,8 +587,8 @@ textarea {
   grid-column: 2 / 3;
 }
 
-.grid-comp:not(.logo):not(.presence-list):not(.grid-comp) {
-  padding: 0.3rem 0.3rem 0.3rem 0.6rem;
+.pad-left {
+  padding-left: 0.6rem
 }
 
 #delete-presence button {
