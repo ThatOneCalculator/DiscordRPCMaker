@@ -154,11 +154,25 @@ textarea {
 }
 
 .presence-list {
-  grid-row: 3 / 15;
+  grid-row: 4 / 16;
   grid-column: 1 / 2;
   background: var(--not-quite-black);
   grid-template-columns: 100%;
   padding: 0.3rem !important;
+}
+
+#new-presence-button {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  background: var(--not-quite-black) !important;
+}
+#new-presence-button:hover, #new-presence-button:active {
+  background: var(--not-quite-black) !important;
+  opacity: 100%;
+  color: lightgray;
+}
+#new-presence-button:active {
+  color: gray;
 }
 
 .presence-scroller {
@@ -347,6 +361,21 @@ textarea {
   font-size: 1.2rem;
 }
 
+.left-grey-buttons, .right-grey-buttons {
+  flex-grow: 1;
+  display: flex;
+}
+.left-grey-buttons {
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: 0.5rem;
+}
+.right-grey-buttons {
+  justify-content: flex-end;
+  flex-direction: row;
+  margin-right: 0.5rem;
+}
+
 .white-btn {
   color: white;
 }
@@ -501,6 +530,7 @@ textarea {
   color: #43b581;
 }
 
+
 @media only screen and (max-width: 620px) {
   .grid-preview {
     display: none;
@@ -544,4 +574,16 @@ textarea {
 
 .matter-switch {
   margin-top: 0.6rem !important;
+}
+
+#delete-presence {
+  grid-row: 13 / 14;
+  grid-column: 2 / 3;
+}
+
+.grid-comp:not(.logo):not(.presence-list) {
+  padding: 0.3rem 0.3rem 0.3rem 0.6rem;
+}
+#delete-presence button {
+  padding: 0.4rem;
 }

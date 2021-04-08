@@ -9,6 +9,8 @@ let clientID = 0
 var options = {}
 let client = new RPC.Client({ transport: 'ipc' })
 
+let inputs = []
+
 //url validation regex
 function validateurl(str) {
   const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
@@ -120,6 +122,10 @@ async function bootClientId(presence) {
   document.getElementById("small-image").src = "assets/blank.png"
 
   //checks if clientid input has a valid clientid (long enough, only numbers)
+  if (presence.addDanger == true) {
+    inp.classList.remove("input-success")
+    inp.classList.add("input-danger")
+  }
   if (inp.value !== "" && inp.value.toString().length > 17 && isNaN(parseInt(inp.value)) == false) {
     //call discord api to make sure clientid is valid
     let response = await fetch(`https://discord.com/api/oauth2/applications/${inp.value.toString()}/assets`)
@@ -146,7 +152,7 @@ async function bootClientId(presence) {
       })
 
       //if we are loading a presence
-      console.log(presence)
+      console.log("loading: ", presence)
       if (Object.keys(presence).length > 0) {
         //console.log("loading: ", presence)
 
@@ -196,11 +202,11 @@ async function bootClientId(presence) {
         }
 
       }
-      inp.classList.remove("danger")
+      inp.classList.remove("input-danger")
       inp.classList.add("input-success")
     } else {
       inp.classList.remove("input-success")
-      inp.classList.add("danger")
+      inp.classList.add("input-danger")
     }
   }
 }
@@ -209,6 +215,17 @@ async function bootClientId(presence) {
 document.addEventListener("DOMContentLoaded", () => {
   //load presences
   loadSavedPresences()
+
+  inputs = [
+    document.getElementById("clientid-input"),
+    document.getElementById("presence-name-input"),
+    document.getElementById("large-image-input"),
+    document.getElementById("small-image-input"),
+    document.getElementById("description-input-1"),
+    document.getElementById("description-input-2"),
+    document.getElementById("presence-id"),
+    document.getElementById("small-image-input")
+  ]
 
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
@@ -222,45 +239,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("new-presence-button").addEventListener("click", () => {
-    let wrapper = document.getElementById('presence-scroller')
-    let elem = document.createElement('div')
-    const content = {
-      name: "",
+    let empty = {
+      buttons: [],
       clientid: "",
       description: "",
-      state: "",
       largeimage: "",
       smallimage: "",
-      buttons: []
+      name: "",
+      state: "",
+      addDanger: true
     }
-
-    const data = JSON.stringify(content, null, 2)
-    let filename = generateId(10)
-    fs.writeFile(`${dir}/${filename}.json`, data, 'utf8', (err) => {
-      if (err) { throw err }
-      else {
-        const myNotification = new Notification("Discord RPC Maker", {
-          body: "Your presence has been saved.",
-          icon: "assets/icon.png",
-          timeoutType: "default",
-        })
-      }
+    inputs.forEach((input) => {
+      input.value = ""
+      input.dispatchEvent(new KeyboardEvent("keyup"))
     })
-    html = `
-        <div class="presence-list-item">
-          <div class="presence-item-title"></div>
-          <div class="presence-item-id text secondary">File: ${filename}</div>
-          <button class="presence-edit"><i class="fas fa-edit"></i></button>
-        </div>
-        `
-    elem.innerHTML = html
-    wrapper.appendChild(elem)
+    
+    document.getElementById("small-image-input").setAttribute("disabled", "true")
+    bootClientId(empty)
   });
 
   //save presence
   document.getElementById("save").addEventListener("click", () => {
     saveAsJson()
     reloadPresences()
+    document.getElementById("new-presence-button").click()
   });
 
   //enable inputs 
@@ -412,6 +414,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //make links open in new tab
   registerLinkToOpenInBrowser("github-button", "https://github.com/ThatOneCalculator/DiscordRPCMaker")
   registerLinkToOpenInBrowser("discord-button", "https://discord.com/invite/Z7UZPR3bbW")
+  registerLinkToOpenInBrowser("web-button", "https://drpcm.t1c.dev")
 
   document.querySelector('#donate-button').addEventListener("click", () => {
     const options = {

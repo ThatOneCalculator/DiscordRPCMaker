@@ -15,20 +15,26 @@
 <body>
 	<div class="main-grid">
 		<h2 class="presence-title">Saved Presences</h2>
+		<button id="new-presence-button" class="grey-btn white-btn"><i class="fas fa-plus-circle"><br></i></button>
 		<div class="presence-list grid-comp">
-			<button id="new-presence-button" class="grey-btn white-btn"><i class="fas fa-plus-circle"><br></i></button>
 			<div class="presence-scroller" id="presence-scroller">
 			</div>
 		</div>
 		<input type="text" id="presence-id" style="display: none" />
 		<div class="settings-wrapper grid-comp">
-			<button id="settings-button" class="grey-btn"><i class="fas fa-cog"></i></button>
-			<button id="faq-button" class="grey-btn"><i class="fas fa-question-circle"></i></button>
+			
 		</div>
 		<div class="social-wrapper grid-comp">
-			<button id="github-button" class="grey-btn"><i class="fab fa-github"></i></button>
-			<button id="discord-button" class="grey-btn"><i class="fab fa-discord"></i></button>
-			<button id="donate-button" class="grey-btn"><i class="fas fa-donate"></i></button>
+			<span class="left-grey-buttons">
+				<button id="donate-button" class="grey-btn"><i class="fas fa-donate"></i></button>
+				<button id="discord-button" class="grey-btn"><i class="fab fa-discord"></i></button>
+				<button id="github-button" class="grey-btn"><i class="fab fa-github"></i></button>
+				<button id="web-button" class="grey-btn"><i class="fas fa-globe"></i></button>
+			</span>
+			<span class="right-grey-buttons">
+				<button id="faq-button" class="grey-btn"><i class="fas fa-question-circle"></i></button>
+				<button id="settings-button" class="grey-btn"><i class="fas fa-cog"></i></button>
+			</span>
 		</div>
 		<div class="logo grid-comp">
 			<div class="htest">
@@ -86,6 +92,9 @@
 				name="Button 2 label" type="text" value="" disabled>
 			<input class="single-input autowidth" id="button2-input-url" placeholder="url" name="Button 2 URL"
 				type="text" value="" disabled>
+		</div>
+		<div id="delete-presence" class="grid-comp">
+			<button class="danger outline btn" id="del-btn">Delete Presence</button>
 		</div>
 		<div class="grid-vr grid-comp">
 			<hr class="hr-vr">
