@@ -166,11 +166,14 @@ textarea {
   grid-column: 1 / 2;
   background: var(--not-quite-black) !important;
 }
-#new-presence-button:hover, #new-presence-button:active {
+
+#new-presence-button:hover,
+#new-presence-button:active {
   background: var(--not-quite-black) !important;
   opacity: 100%;
   color: lightgray;
 }
+
 #new-presence-button:active {
   color: gray;
 }
@@ -361,15 +364,18 @@ textarea {
   font-size: 1.2rem;
 }
 
-.left-grey-buttons, .right-grey-buttons {
+.left-grey-buttons,
+.right-grey-buttons {
   flex-grow: 1;
   display: flex;
 }
+
 .left-grey-buttons {
   justify-content: flex-start;
   flex-direction: row;
   margin-left: 0.5rem;
 }
+
 .right-grey-buttons {
   justify-content: flex-end;
   flex-direction: row;
@@ -581,9 +587,10 @@ textarea {
   grid-column: 2 / 3;
 }
 
-.grid-comp:not(.logo):not(.presence-list) {
+.grid-comp:not(.logo):not(.presence-list):not(.grid-preview-pfp):not(.grid-preview-rpc):not(.grid-preview):not(.grid-comp) {
   padding: 0.3rem 0.3rem 0.3rem 0.6rem;
 }
+
 #delete-presence button {
   padding: 0.4rem;
 }
