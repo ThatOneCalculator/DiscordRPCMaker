@@ -58,6 +58,7 @@ h1 {
   font-family: logo;
   text-align: center;
   font-size: 45px;
+  letter-spacing: 0.02em;
 }
 
 .htest {
@@ -172,6 +173,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-kerning: none;
+  letter-spacing: 0.05em;
   grid-row: 1/4;
   margin: 0px;
   grid-row: 1 / 4;
