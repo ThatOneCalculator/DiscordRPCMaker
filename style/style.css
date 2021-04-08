@@ -587,7 +587,7 @@ textarea {
   grid-column: 2 / 3;
 }
 
-.grid-comp:not(.logo):not(.presence-list):not(.grid-preview-pfp):not(.grid-preview-rpc):not(.grid-preview):not(.grid-comp) {
+.grid-comp:not(.logo):not(.presence-list):not(.grid-comp) {
   padding: 0.3rem 0.3rem 0.3rem 0.6rem;
 }
 
