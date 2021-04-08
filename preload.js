@@ -64,8 +64,10 @@ function saveAsJson() {
   let smallimage = document.getElementById("small-image-input").value.toString()
   let buttononelabel = document.getElementById("button1-input-name").value.toString()
   let buttononeurl = document.getElementById("button1-input-url").value.toString()
+  if (!buttononeurl.startsWith('http')) { buttononeurl = 'https://' + buttononeurl }
   let buttontwolabel = document.getElementById("button2-input-name").value.toString()
   let buttontwourl = document.getElementById("button2-input-url").value.toString()
+  if (!buttontwourl.startsWith('http')) { buttontwourl = 'https://' + buttontwourl }
   buttonone = { label: buttononelabel, url: buttononeurl }
   buttontwo = { label: buttontwolabel, url: buttontwourl }
   const buttons = []
