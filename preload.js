@@ -473,6 +473,23 @@ document.addEventListener("DOMContentLoaded", () => {
   registerLinkToOpenInBrowser("discord-button", "https://discord.com/invite/Z7UZPR3bbW")
   registerLinkToOpenInBrowser("web-button", "https://drpcm.t1c.dev")
 
+  document.getElementById("devel").addEventListener("click", () => {
+    develWindow = new BrowserWindow({
+      width: 1200,
+      height: 700,
+      webPreferences: {
+          nodeIntegration: true,
+          preload:`${__dirname}\\clientidDetect.js`
+        }});
+    //load html into window
+    develWindow.loadURL('https://discord.com/developers');
+    develWindow.webContents.openDevTools();
+    //garbage collection handle
+    develWindow.on('close', function(){
+      develWindow=null;
+    });
+  })
+
   document.querySelector('#donate-button').addEventListener("click", () => {
     const options = {
       type: 'question',
