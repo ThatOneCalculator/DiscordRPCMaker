@@ -282,32 +282,33 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     dialog.showMessageBox(null, options).then(result => {
       if (result.response == 1) { //delete the presence
-        let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\" )
+        let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
         let id = document.getElementById("presence-id").value
         let fullpath = opendir + "\\" + id + ".json"
 
         //delete the file
-        fs.stat(fullpath, function(err, stat) {
-          if(err == null) { //get if it exists
-              console.log(`${id}.json exists`);
-              fs.unlink(fullpath, (err) => {if (err) {throw err;} 
-                console.log("File is deleted."); //log that we deleted it
-                reloadPresences(); //reload the presences
-                const myNotification = new Notification("Discord RPC Maker", { //throw a notification
-                  body: `'${document.getElementById("presence-name-input").value}' has been saved.`,
-                  icon: "assets/icon.png",
-                  timeoutType: "default",
-                })
-                document.getElementById("new-presence-button").click() //clear all inputs
-              });
-              
-          } else if(err.code === 'ENOENT') { //if it doesen't exist then don't delete it lul
-               console.log(`${id}.json doesen't exist, nothing deleted.`)
+        fs.stat(fullpath, function (err, stat) {
+          if (err == null) { //get if it exists
+            console.log(`${id}.json exists`);
+            fs.unlink(fullpath, (err) => {
+              if (err) { throw err; }
+              console.log("File is deleted."); //log that we deleted it
+              reloadPresences(); //reload the presences
+              const myNotification = new Notification("Discord RPC Maker", { //throw a notification
+                body: `'${document.getElementById("presence-name-input").value}' has been saved.`,
+                icon: "assets/icon.png",
+                timeoutType: "default",
+              })
+              document.getElementById("new-presence-button").click() //clear all inputs
+            });
+
+          } else if (err.code === 'ENOENT') { //if it doesen't exist then don't delete it lul
+            console.log(`${id}.json doesen't exist, nothing deleted.`)
           } else {
-              alert('error while trying to delete file: ', err.code);
+            alert('error while trying to delete file: ', err.code);
           }
-        
-      });
+
+        });
       }
     }).catch(err => {
       console.log("error while trying to create message box: " + err)
@@ -316,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("file-btn").addEventListener("click", () => {
     console.log(dir)
-    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\" )
+    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     /*if (process.platform == "linux") { openExplorer(opendir) }
     else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }*/
     openExplorer(opendir)
@@ -328,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function loadSavedPresences() {
     let files = fs.readdir(dir, (directory, files) => {
       console.log(files)
-      let wrapper = document.getElementById ('presence-scroller')
+      let wrapper = document.getElementById('presence-scroller')
       files.forEach(file => {
         console.log(file)
         if (file.includes(".json") && file.includes("settings") == false) {
@@ -478,15 +479,16 @@ document.addEventListener("DOMContentLoaded", () => {
       width: 1200,
       height: 700,
       webPreferences: {
-          nodeIntegration: true,
-          preload:`${__dirname}\\clientidDetect.js`
-        }});
+        nodeIntegration: true,
+        preload: `${__dirname}/clientidDetect.js`
+      }
+    });
     //load html into window
     develWindow.loadURL('https://discord.com/developers');
     develWindow.webContents.openDevTools();
     //garbage collection handle
-    develWindow.on('close', function(){
-      develWindow=null;
+    develWindow.on('close', function () {
+      develWindow = null;
     });
   })
 
