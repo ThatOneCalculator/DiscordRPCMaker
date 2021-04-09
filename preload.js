@@ -316,12 +316,9 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   document.getElementById("file-btn").addEventListener("click", () => {
-    console.log(dir)
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-    /*if (process.platform == "linux") { openExplorer(opendir) }
-    else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }*/
-    if (os.platform !== "win32"){opendir.replaceAll("\\", "/").replaceAll("//", "/")}
-    openExplorer(opendir)
+    if (process.platform !== "win32") { openExplorer(dir) }
+    else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }
   });
 
   //enable inputs 
