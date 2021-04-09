@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     /*if (process.platform == "linux") { openExplorer(opendir) }
     else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }*/
-    if (process.platform !== "win32"){opendir.replaceAll("\\", "/")}
+    if (os.platform !== "win32"){opendir.replaceAll("\\", "/").replaceAll("//", "/")}
     openExplorer(opendir)
   });
 
