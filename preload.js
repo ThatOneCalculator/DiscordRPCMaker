@@ -1,5 +1,6 @@
 const fs = require('fs');
 const os = require('os');
+const path = require('path');
 const RPC = require('discord-rpc')
 const openExplorer = require('open-file-explorer');
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
@@ -279,10 +280,38 @@ document.addEventListener("DOMContentLoaded", () => {
       message: 'Are you sure you want to delete this presence?',
       detail: 'This cannot be undone.',
     };
-    dialog.showMessageBox(null, options, (response, checkboxChecked) => {
-      console.log(response);
-      console.log(checkboxChecked);
-    });
+    dialog.showMessageBox(null, options).then(result => {
+      if (result.response == 1) { //delete the presence
+        let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\" )
+        let id = document.getElementById("presence-id").value
+        let fullpath = opendir + "\\" + id + ".json"
+
+        //delete the file
+        fs.stat(fullpath, function(err, stat) {
+          if(err == null) { //get if it exists
+              console.log(`${id}.json exists`);
+              fs.unlink(fullpath, (err) => {if (err) {throw err;} 
+                console.log("File is deleted."); //log that we deleted it
+                reloadPresences(); //reload the presences
+                const myNotification = new Notification("Discord RPC Maker", { //throw a notification
+                  body: `'${document.getElementById("presence-name-input").value}' has been saved.`,
+                  icon: "assets/icon.png",
+                  timeoutType: "default",
+                })
+                document.getElementById("new-presence-button").click() //clear all inputs
+              });
+              
+          } else if(err.code === 'ENOENT') { //if it doesen't exist then don't delete it lul
+               console.log(`${id}.json doesen't exist, nothing deleted.`)
+          } else {
+              alert('error while trying to delete file: ', err.code);
+          }
+        
+      });
+      }
+    }).catch(err => {
+      console.log("error while trying to create message box: " + err)
+    })
   })
 
   document.getElementById("file-btn").addEventListener("click", () => {
