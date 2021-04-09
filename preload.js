@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result.response == 1) { //delete the presence
         let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
         let id = document.getElementById("presence-id").value
-        let fullpath = opendir + "\\" + id + ".json"
+        let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
 
         //delete the file
         fs.stat(fullpath, function (err, stat) {
