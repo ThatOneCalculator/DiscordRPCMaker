@@ -1,6 +1,7 @@
 const fs = require('fs');
 const os = require('os');
 const RPC = require('discord-rpc')
+const openExplorer = require('open-file-explorer');
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
@@ -283,6 +284,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log(checkboxChecked);
     });
   })
+
+  document.getElementById("file-btn").addEventListener("click", () => {
+    if (process.platform == "linux") { openExplorer(dir) }
+    else { openExplorer(dir + document.getElementById("presence-id").value + ".json") }
+  });
 
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}) })

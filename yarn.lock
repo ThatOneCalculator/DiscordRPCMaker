@@ -1229,6 +1229,11 @@
   dependencies:
     "wrappy" "1"
 
+"open-file-explorer@^1.0.2":
+  "integrity" "sha512-U4p+VW5uhtgK5W7qSsRhKioYAHCiTX9PiqV4ZtAFLMGfQ3QhppaEevk8k8+DSjM6rgc1yNIR2nttDuWfdNnnJQ=="
+  "resolved" "https://registry.npmjs.org/open-file-explorer/-/open-file-explorer-1.0.2.tgz"
+  "version" "1.0.2"
+
 "p-cancelable@^1.0.0":
   "integrity" "sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw=="
   "resolved" "https://registry.npmjs.org/p-cancelable/-/p-cancelable-1.1.0.tgz"
