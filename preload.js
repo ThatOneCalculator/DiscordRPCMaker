@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("save").addEventListener("click", () => {
     saveAsJson()
     reloadPresences()
-    document.getElementById("new-presence-button").click()
+    //document.getElementById("new-presence-button").click()
     document.getElementById("del-btn").removeAttribute("disabled")
     document.getElementById("file-btn").removeAttribute("disabled")
   });
