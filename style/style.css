@@ -583,7 +583,8 @@ textarea {
 }
 
 #delete-presence {
-  grid-row: 13 / 14;
+  margin-top: 0.5rem;
+  grid-row: 12 / 14;
   grid-column: 2 / 3;
 }
 

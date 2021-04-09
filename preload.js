@@ -274,7 +274,6 @@ document.addEventListener("DOMContentLoaded", () => {
       message: 'Are you sure you want to delete this presence?',
       detail: 'This cannot be undone.',
     };
-
     dialog.showMessageBox(null, options, (response, checkboxChecked) => {
       console.log(response);
       console.log(checkboxChecked);
