@@ -451,10 +451,15 @@ document.addEventListener("DOMContentLoaded", () => {
       detail: 'Both will get you a spot on the Website & GitHub README. Both services accept PayPal. Make sure to join the Discord for more details.',
     };
 
-    dialog.showMessageBox(null, options, (response, checkboxChecked) => {
-      console.log(response);
-      console.log(checkboxChecked);
-    });
+    dialog.showMessageBox(null, options).then(result => {
+      if (result.response == 0) {
+        shell.openExternal('https://liberapay.com/ThatOneCalculator')
+      } else if (result.response == 1) {
+        shell.openExternal('https://buymeacoffee.com/that1calculator')
+      }
+    }).catch(err => {
+      console.log(err)
+    })
   })
 
 });
