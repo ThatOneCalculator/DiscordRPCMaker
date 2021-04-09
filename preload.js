@@ -286,8 +286,11 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   document.getElementById("file-btn").addEventListener("click", () => {
-    if (process.platform == "linux") { openExplorer(dir) }
-    else { openExplorer(dir + document.getElementById("presence-id").value + ".json") }
+    console.log(dir)
+    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\" )
+    /*if (process.platform == "linux") { openExplorer(opendir) }
+    else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }*/
+    openExplorer(opendir)
   });
 
   //enable inputs 
@@ -296,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function loadSavedPresences() {
     let files = fs.readdir(dir, (directory, files) => {
       console.log(files)
-      let wrapper = document.getElementById('presence-scroller')
+      let wrapper = document.getElementById ('presence-scroller')
       files.forEach(file => {
         console.log(file)
         if (file.includes(".json") && file.includes("settings") == false) {
