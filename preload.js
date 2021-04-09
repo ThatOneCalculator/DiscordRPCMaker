@@ -4,6 +4,7 @@ const path = require('path');
 const RPC = require('discord-rpc')
 const openExplorer = require('open-file-explorer');
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
+const slash = os.platform() == 'win32' ? "\\" : "/"
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
@@ -16,9 +17,9 @@ let inputs = []
 //url validation regex
 function validateurl(str) {
   const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
+  
   return regexp.test(str)
 }
-
 function dec2hex(dec) {
   return dec.toString(16).padStart(2, "0")
 }
@@ -478,9 +479,9 @@ document.addEventListener("DOMContentLoaded", () => {
       height: 700,
       webPreferences: {
         nodeIntegration: true,
-        preload: `${__dirname}/clientidDetect.js`
+        preload: `${__dirname}${slash}clientidDetect.js`
       }
-    });F
+    });
     //load html into window
     develWindow.loadURL('https://discord.com/developers');
     develWindow.webContents.openDevTools();
