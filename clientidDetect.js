@@ -1,9 +1,9 @@
 const electron = require('electron');
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.href =="https://discord.com/developers/applications") {
+    if (window.location.href == "https://discord.com/developers/applications") {
         makeflyout("Go to your desired application, and the Client ID will be detected automatically! ", "drpcm-hint-flyout")
     }
-    setTimeout(() => {hideUnwanted()}, 1000)
+    setTimeout(() => { hideUnwanted() }, 500)
 })
 document.addEventListener("mousemove", () => {
     let prevflyout = document.querySelector("#drpcm-hint-flyout")
@@ -21,6 +21,7 @@ document.addEventListener("mousemove", () => {
 })
 
 function makeflyout(html, id) {
+    setTimeout(() => { document.querySelector(".wrapper-3aJbIC").remove() }, 500)
     let flyout = document.createElement("div")
     flyout.id = id
     flyout.innerHTML = html + `<button style = "color: white; cursor: pointer; font-weight: bold;" onclick="this.parentElement.style.display = 'none'">&times;</button>`
@@ -38,13 +39,18 @@ function makeflyout(html, id) {
 
 function hideUnwanted() {
     let elems = [
-        document.querySelector(".wrapper-3aJbIC")
+        document.querySelector(".wrapper-3aJbIC"),
+        document.querySelector(".wrapper-36iaZw")
     ]
-    elems.forEach(elem => elem.remove())
+    elems.forEach(elem => { try { elem.remove() } catch (e) { } })
 
     document.querySelector(".flush-zNaLgf").innerText = "Click 'New Application' to create a new presence, or select an already created one below"
     document.querySelector(".wordmark-1G98vs").innerText = "Discord RPC Developer Portal"
-
+    let clientid = document.querySelector(".code-j7WzRK")
+    let clientelems = [
+        document.querySelector(`[href='https://discord.com/developers/applications'${clientid}/oauth2]`)
+    ]
+    elems.forEach(elem => { try { elem.remove() } catch (e) { } })
     document.querySelector(".button-38aScr").addEventListener("click", () => {
         let aaa = document.getElementsByClassName('medium-zmzTW- weightNormal-3CX1dN')
         aaa[0].innerText = "This is what your presence will be called."
