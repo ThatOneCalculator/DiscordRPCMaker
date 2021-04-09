@@ -320,6 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     /*if (process.platform == "linux") { openExplorer(opendir) }
     else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }*/
+    if (process.platform !== "win32"){opendir.replaceAll("\\", "/")}
     openExplorer(opendir)
   });
 
@@ -482,7 +483,7 @@ document.addEventListener("DOMContentLoaded", () => {
         nodeIntegration: true,
         preload: `${__dirname}/clientidDetect.js`
       }
-    });
+    });F
     //load html into window
     develWindow.loadURL('https://discord.com/developers');
     develWindow.webContents.openDevTools();
