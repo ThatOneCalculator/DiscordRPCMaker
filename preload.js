@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("file-btn").addEventListener("click", () => {
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     if (process.platform !== "win32") { openExplorer(dir) }
-    else { openExplorer(opendir + document.getElementById("presence-id").value + ".json") }
+    else { openExplorer(opendir) }
   });
 
   //enable inputs 
