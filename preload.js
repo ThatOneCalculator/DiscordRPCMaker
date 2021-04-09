@@ -255,6 +255,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     document.getElementById("small-image-input").setAttribute("disabled", "true")
+    document.getElementById("del-btn").setAttribute("disabled", "true")
+    document.getElementById("file-btn").setAttribute("disabled", "true")
     bootClientId(empty)
   });
 
@@ -263,6 +265,8 @@ document.addEventListener("DOMContentLoaded", () => {
     saveAsJson()
     reloadPresences()
     document.getElementById("new-presence-button").click()
+    document.getElementById("del-btn").removeAttribute("disabled")
+    document.getElementById("file-btn").removeAttribute("disabled")
   });
 
   document.getElementById("del-btn").addEventListener("click", () => {
@@ -465,6 +469,7 @@ function loadPresence(presence, file) {
   document.getElementById("presence-id").value = file.replaceAll(".json", "")
   document.getElementById("presence-name-input").value = presence.name
   document.getElementById("clientid-input").value = presence.clientid
-
+  document.getElementById("del-btn").removeAttribute("disabled")
+  document.getElementById("file-btn").removeAttribute("disabled")
   try { bootClientId(presence) } catch (e) { }
 }

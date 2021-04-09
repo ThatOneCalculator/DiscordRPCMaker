@@ -585,7 +585,7 @@ textarea {
 #delete-presence {
   margin-top: 0.4rem !important;
   grid-row: 12 / 14;
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
 }
 
 .pad-left {
@@ -594,4 +594,8 @@ textarea {
 
 #delete-presence button {
   padding: 0.4rem;
+}
+
+.file-btn {
+  margin-left: 0.3rem !important;
 }
