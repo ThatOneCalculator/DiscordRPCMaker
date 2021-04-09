@@ -332,7 +332,7 @@ textarea {
 }
 
 .hr-vr {
-  border-color: #9a9a9a99;
+  border-color: #9a9a9a40;
   height: 98%;
 }
 
@@ -436,6 +436,12 @@ textarea {
   grid-column: 1/4;
 }
 
+.preview-playingagame {
+  margin-top: 0.2rem;
+  margin-left: 0.65rem;
+  margin-bottom: 0.4rem;
+}
+
 .grid-preview-pfp {
   display: flex;
   justify-content: center;
@@ -491,6 +497,7 @@ textarea {
   font-weight: bold;
   grid-row: 1 / 2;
   grid-column: 2 / 4;
+  margin-top: 0.2rem;
 }
 
 .preview-description {
