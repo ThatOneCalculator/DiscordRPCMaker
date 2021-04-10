@@ -56,7 +56,7 @@ function createWindow() {
           if (err) {
             app.quit()
           } else {
-            setTimeout(() => loadingEvents.emit('finished'), 500)
+            setTimeout(() => loadingEvents.emit('finished'), 10000)
           }
         })
       }, 10000)
