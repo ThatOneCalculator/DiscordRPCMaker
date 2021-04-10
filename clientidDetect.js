@@ -1,15 +1,17 @@
 const electron = require('electron');
+
 document.addEventListener("DOMContentLoaded", () => {
     if (window.location.href == "https://discord.com/developers/applications") {
         makeflyout("Go to your desired application, and the Client ID will be detected automatically! ", "drpcm-hint-flyout")
+        // try { setTimeout(() => { document.querySelector(".wrapper-36iaZw").remove() }, 500) } catch (e) { console.log(e) }
     }
-    setTimeout(() => { hideUnwanted() }, 500)
+    try { setTimeout(() => { hideUnwanted() }, 500) } catch (e) { }
+    try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").remove() }, 500) } catch (e) { }
 })
 document.addEventListener("mousemove", () => {
     let prevflyout = document.querySelector("#drpcm-hint-flyout")
     let clientid = document.querySelector(".code-j7WzRK")
     let fly = document.querySelector("#drpcm-success-flyout")
-
     if (clientid !== null && fly == null) {
         let id = clientid.innerText
         if (prevflyout !== null) { prevflyout.remove() }
@@ -21,7 +23,6 @@ document.addEventListener("mousemove", () => {
 })
 
 function makeflyout(html, id) {
-    setTimeout(() => { document.querySelector(".wrapper-3aJbIC").remove() }, 500)
     let flyout = document.createElement("div")
     flyout.id = id
     flyout.innerHTML = html + `<button style = "color: white; cursor: pointer; font-weight: bold;" onclick="this.parentElement.style.display = 'none'">&times;</button>`
@@ -40,19 +41,22 @@ function makeflyout(html, id) {
 function hideUnwanted() {
     let elems = [
         document.querySelector(".wrapper-3aJbIC"),
-        document.querySelector(".wrapper-36iaZw")
+        document.querySelector(".content-32JuGj"),
+        document.querySelector(".wrapperInner-2p1_wN"),
+        // document.querySelector("href[https://discord.com/developers/teams]"),
+        // document.querySelector("href[https://discord.com/developers/servers]"),
+        // document.querySelector("href[https://discord.com/developers/docs]")
     ]
-    elems.forEach(elem => { try { elem.remove() } catch (e) { } })
+    elems.forEach(elem => {
+        try { setTimeout(() => elem.remove(), 500) } catch (e) { }
+    })
 
     document.querySelector(".flush-zNaLgf").innerText = "Click 'New Application' to create a new presence, or select an already created one below"
     document.querySelector(".wordmark-1G98vs").innerText = "Discord RPC Developer Portal"
     let clientid = document.querySelector(".code-j7WzRK")
-    let clientelems = [
-        document.querySelector(`[href='https://discord.com/developers/applications'${clientid}/oauth2]`)
-    ]
-    elems.forEach(elem => { try { elem.remove() } catch (e) { } })
     document.querySelector(".button-38aScr").addEventListener("click", () => {
         let aaa = document.getElementsByClassName('medium-zmzTW- weightNormal-3CX1dN')
         aaa[0].innerText = "This is what your presence will be called."
     })
+    try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").remove() }, 2000) } catch (e) { }
 }
