@@ -79,9 +79,3 @@ function hideUnwanted() {
     })
     try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
 }
-
-function hideFormElements() {
-    let a = document.querySelector(".contentWrapperInner-15LzPz")
-    a.childNodes[0].querySelector(".marginBottomMedium-3rCQQt").remove()
-    a.childNodes[0].querySelector(".marginBottomMedium-3rCQQt").remove()
-}
