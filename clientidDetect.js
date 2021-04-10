@@ -6,11 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     try { setTimeout(() => { modifiyText() }, 1000) } catch (e) { }
     try { setTimeout(() => { hideUnwanted() }, 1000) } catch (e) { }
+    try { setTimeout(() => { killGenBlocks() }, 1000) } catch (e) { }
     try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
-    setTimeout(() => { abortChildren() }, 1000)
+    setTimeout(() => { abortChildren() }, 2000)
 })
 
-document.addEventListener("mousemove", () => {
+document.addEventListener("click", () => {
+    setTimeout(function () { }, 500);
     let prevflyout = document.querySelector("#drpcm-hint-flyout")
     let clientid = document.querySelector(".code-j7WzRK")
     let fly = document.querySelector("#drpcm-success-flyout")
@@ -24,6 +26,9 @@ document.addEventListener("mousemove", () => {
     }
     abortChildren()
     modifiyText()
+    //TODO: killGenBlocks() broken, but works in console 🤔
+    killGenBlocks()
+    try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
 })
 
 function makeflyout(html, id) {
@@ -65,8 +70,18 @@ function abortChildren() {
         document.getElementsByClassName("headingContent-2bBpIC bottomMarginMedium-2YVTXf")[0],
         document.getElementsByClassName("heading-3MvkF0 marginBottom20-QW1wVs medium-zmzTW- size16-1__VVI height20-13xN5Z primary300-qtIOwv weightNormal-3CX1dN")[0]
     ]
-    otherBlocks.forEach(elem => { elem.style.display = "none" })
+    otherBlocks.forEach(elem => { try { setTimeout(() => { elem.style.display = "none" }, 500) } catch (e) { } })
     setTimeout(() => { document.querySelector("wrapper-3aJbIC") }, 2000)
+}
+
+function killGenBlocks() {
+    geninfoBlocks = [
+        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[3],
+        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[4],
+        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[5],
+        document.getElementsByClassName("flexChild-faoVW3 child-3prNf2 columnSpread12-1b_w2a")[1]
+    ]
+    geninfoBlocks.forEach(elem => { try { setTimeout(() => { elem.style.display = "none" }, 500) } catch (e) { } })
 }
 
 function hideUnwanted() {
