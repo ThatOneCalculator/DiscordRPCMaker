@@ -17,7 +17,7 @@ let inputs = []
 //url validation regex
 function validateurl(str) {
   const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
-  
+
   return regexp.test(str)
 }
 function dec2hex(dec) {
@@ -41,9 +41,19 @@ function getImageIdFromName(imgName) {
   return matchedid
 }
 
-//check for appdata / linux config dir and make it if it doesen't exist
+//check for appdata / .config dir and make it if it doesen't exist
 if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
+  fs.writeFile(`${dir}/settings.json`, {}, 'utf8', (err) => {
+    if (err) { throw err }
+    else {
+      const myNotification = new Notification("Discord RPC Maker", {
+        body: "First launch",
+        icon: "assets/icon.png",
+        timeoutType: "default",
+      })
+    }
+  })
 }
 
 //make the border red if url validation fails
