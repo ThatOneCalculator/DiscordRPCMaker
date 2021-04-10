@@ -54,6 +54,7 @@ function createWindow() {
       setTimeout(() => {
         require('dns').resolve("https://drpcm.t1c.dev", function (err) {
           if (err) {
+            //TODO: Alert user of no internet, tell them to connect to the interwebs 😎
             app.quit()
           } else {
             setTimeout(() => loadingEvents.emit('finished'), 10000)
