@@ -1,7 +1,9 @@
-const { app, BrowserWindow, Notification, Menu, MenuItem } = require("electron")
+const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain } = require("electron")
 const path = require("path")
-
+const EventEmitter = require("events")
 require('@electron/remote/main').initialize()
+
+const loadingEvents = new EventEmitter()
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -17,17 +19,8 @@ function createWindow() {
       icon: path.join(__dirname, "/assets/icon.png")
     }
   })
-  //win.setResizable(false);
 
-  /*globalShortcut.register("f5", function() {
-      win.reload()
-  })
-  globalShortcut.register("CommandOrControl+R", function() {
-      win.reload()
-  })
-  globalShortcut.register("Control+Shift+I", function() {
-    win.webContents.openDevTools();
-  })*/
+  //win.setResizable(false);
   const menu = new Menu()
   menu.append(new MenuItem({
     label: 'Options',
@@ -37,7 +30,7 @@ function createWindow() {
       click: () => { win.reload() }
     },
     {
-      label: 'Reload but with Ctrl+R',
+      label: 'Reload',
       accelerator: "CommandOrControl+R",
       click: () => { win.reload() }
     },
@@ -51,17 +44,37 @@ function createWindow() {
   Menu.setApplicationMenu(menu)
   //TODO: add a html button to show this for some peeps who don't know the hotkeys by default
   win.setMenuBarVisibility(false)
-  win.loadFile("index.html")
+  win.loadFile("loading.html")
+  loadingEvents.on('finished', () => {
+    win.loadFile('index.html')
+  })
 
+  require('dns').resolve("https://drpcm.t1c.dev", function (err) {
+    if (err) {
+      setTimeout(() => {
+        require('dns').resolve("https://drpcm.t1c.dev", function (err) {
+          if (err) {
+            app.quit()
+          } else {
+            setTimeout(() => loadingEvents.emit('finished'), 500)
+          }
+        })
+      }, 10000)
+    } else {
+      setTimeout(() => loadingEvents.emit('finished'), 500)
+    }
+  })
 }
 
 app.whenReady().then(createWindow)
 
+/*
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit()
   }
 })
+*/
 
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {
