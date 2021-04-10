@@ -105,7 +105,7 @@ function saveAsJson() {
     else {
       const myNotification = new Notification("Discord RPC Maker", {
         body: "Your presence has been saved.",
-        icon: "assets/icon.png",
+        icon: "assets/plus.png",
         timeoutType: "default",
       })
     }
