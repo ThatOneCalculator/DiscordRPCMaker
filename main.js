@@ -49,6 +49,7 @@ function createWindow() {
     win.loadFile('index.html')
   })
 
+  //TODO: Check if internet goes offline
   require('dns').resolve("https://drpcm.t1c.dev", function (err) {
     if (err) {
       setTimeout(() => {
