@@ -24,10 +24,9 @@ document.addEventListener("click", () => {
         <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
     `, "drpcm-success-flyout")
     }
-    abortChildren()
-    modifiyText()
-    //TODO: killGenBlocks() broken, but works in console 🤔
-    killGenBlocks()
+    try { setTimeout(() => { modifiyText() }, 100) } catch (e) { }
+    try { setTimeout(() => { hideUnwanted() }, 100) } catch (e) { }
+    try { setTimeout(() => { killGenBlocks() }, 500) } catch (e) { }
     try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
 })
 
