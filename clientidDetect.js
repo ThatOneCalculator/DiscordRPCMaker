@@ -26,7 +26,7 @@ document.addEventListener("click", () => {
     }
     try { setTimeout(() => { modifiyText() }, 100) } catch (e) { }
     try { setTimeout(() => { hideUnwanted() }, 100) } catch (e) { }
-    try { setTimeout(() => { killGenBlocks() }, 500) } catch (e) { }
+    try { setTimeout(() => { killGenBlocks() }, 1000) } catch (e) { }
     try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
 })
 
