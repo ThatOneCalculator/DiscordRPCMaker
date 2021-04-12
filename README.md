@@ -160,6 +160,7 @@ Make sure you are not invisible/offline. If you ARE online/idle/dnd...
 - Make sure you don't have another program taking up a presence slot.
 - Go to Settings > Game Activity > Make sure "Display currently running game as a status message" is ON.
 - Try running DRPC again.
+- THERE IS A KNOWN BUG IN macOS 11, where sometimes you can't see your own presence. However, other people can. This is a problem with Discord's macOS 11 client, not my program.
 
 ### The image(s) aren't showing!
 If you just put them in, *sometimes* Discord takes a minute or so to cache them properly.
@@ -205,4 +206,6 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 # Still need help, or just want to chat?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
 
-The program has been tested on Windows 10, macOS 10.14, macOS 10.15, macOS 11, Arch Linux, and Ubuntu 20.04 LTS. 
+The program has been tested on Windows 10, macOS 10.14, macOS 10.15, macOS 11\*, Arch Linux, and Ubuntu 20.04 LTS. 
+
+\* macOS 11 (Big Sur) has been observed to have some problems. Look in common issues.
