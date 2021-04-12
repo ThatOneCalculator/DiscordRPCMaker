@@ -205,4 +205,4 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 # Still need help, or just want to chat?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
 
-The program has been tested on Windows 10, macOS 10.14, macOS 10.15, Arch Linux, and Ubuntu 20.04 LTS. 
+The program has been tested on Windows 10, macOS 10.14, macOS 10.15, macOS 11, Arch Linux, and Ubuntu 20.04 LTS. 
