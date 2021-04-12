@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.location.href == "https://discord.com/developers/applications") {
         makeflyout("Go to your desired application, and the Client ID will be detected automatically! ", "drpcm-hint-flyout")
     }
-    try { setTimeout(() => { modifiyText() }, 1000) } catch (e) { }
+    try { setTimeout(() => { modifyText() }, 1000) } catch (e) { }
     try { setTimeout(() => { hideUnwanted() }, 1000) } catch (e) { }
     try { setTimeout(() => { killGenBlocks() }, 1000) } catch (e) { }
     try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
@@ -24,7 +24,7 @@ document.addEventListener("click", () => {
         <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
     `, "drpcm-success-flyout")
     }
-    try { setTimeout(() => { modifiyText() }, 100) } catch (e) { }
+    try { setTimeout(() => { modifyText() }, 100) } catch (e) { }
     try { setTimeout(() => { hideUnwanted() }, 100) } catch (e) { }
     try { setTimeout(() => { killGenBlocks() }, 1000) } catch (e) { }
     try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
@@ -45,7 +45,7 @@ function makeflyout(html, id) {
     document.body.appendChild(flyout)
 }
 
-function modifiyText() {
+function modifyText() {
     document.querySelector(".flush-zNaLgf").innerText = "Click 'New Application' to create a new presence, or select an already created one below"
     document.querySelector(".wordmark-1G98vs").innerText = "Discord RPC Developer Portal"
     let clientid = document.querySelector(".code-j7WzRK")
