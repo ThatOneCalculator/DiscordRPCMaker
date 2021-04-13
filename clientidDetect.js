@@ -1,4 +1,5 @@
-const electron = require('electron');
+const electron = require('electron')
+const copy = require('copy-to-clipboard')
 
 document.addEventListener("DOMContentLoaded", () => {
     if (window.location.href == "https://discord.com/developers/applications") {
@@ -37,18 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const config = { attributes: true, childList: true, subtree: true };
 
     // Callback function to execute when mutations are observed
-    const callback = function(mutationsList, observer) {
+    const callback = function (mutationsList, observer) {
         console.log("change")
-        try { acuallyEndPoorElements() } catch (e) {}
+        try { acuallyEndPoorElements() } catch (e) { }
         try { setTimeout(() => { modifyText() }, 1000) } catch (e) { }
     };
-    
+
     // Create an observer instance linked to the callback function
     const observer = new MutationObserver(callback);
 
     // Start observing the target node for configured mutations
     observer.observe(targetNode, config);
-    
+
 })
 
 document.addEventListener("click", () => {
@@ -59,9 +60,10 @@ document.addEventListener("click", () => {
         let id = clientid.innerText
         if (prevflyout !== null) { prevflyout.remove() }
         makeflyout(`
-        Detected Client ID!
+        Detected Client ID, copied to clipboard!
         <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
     `, "drpcm-success-flyout")
+        copy(id)
     }
     try { setTimeout(() => { modifyText() }, 100) } catch (e) { }
     acuallyEndPoorElements()
@@ -145,4 +147,4 @@ function addStyle(styleString) {
     const style = document.createElement('style');
     style.textContent = styleString;
     document.head.append(style);
-  }
+}
