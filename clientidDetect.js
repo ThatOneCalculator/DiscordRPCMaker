@@ -2,12 +2,7 @@ const electron = require('electron')
 const copy = require('copy-to-clipboard')
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (window.location.href == "https://discord.com/developers/applications") {
-        makeflyout("Go to your desired application, and the Client ID will be detected automatically! ", "drpcm-hint-flyout")
-    }
-    //try { setTimeout(() => { hideUnwanted() }, 1000) } catch (e) { }
-    //try { setTimeout(() => { killGenBlocks() }, 1000) } catch (e) { }
-    //try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
+    newflyout()
     addStyle(`
     .wrapper-3aJbIC, 
     [href="/developers/teams"],
@@ -42,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("change")
         try { acuallyEndPoorElements() } catch (e) { }
         try { setTimeout(() => { modifyText() }, 1000) } catch (e) { }
+        try { setTimeout(() => { newflyout() }, 1000) } catch (e) { }
     };
 
     // Create an observer instance linked to the callback function
@@ -53,25 +49,32 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("click", () => {
-    let prevflyout = document.querySelector("#drpcm-hint-flyout")
-    let clientid = document.querySelector(".code-j7WzRK")
-    let fly = document.querySelector("#drpcm-success-flyout")
-    if (clientid !== null && fly == null) {
-        let id = clientid.innerText
-        if (prevflyout !== null) { prevflyout.remove() }
-        makeflyout(`
+    setTimeout(() => {
+        let prevflyout = document.querySelector("#drpcm-hint-flyout")
+        let clientid = document.querySelector(".code-j7WzRK")
+        let fly = document.querySelector("#drpcm-success-flyout")
+        if (clientid !== null && fly == null) {
+            let id = clientid.innerText
+            console.log(id)
+            if (prevflyout !== null) { prevflyout.remove() }
+            makeflyout(`
         Detected Client ID, copied to clipboard!
         <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
     `, "drpcm-success-flyout")
-        copy(id)
-    }
+            copy(id)
+        }
+    }, 500)
     try { setTimeout(() => { modifyText() }, 100) } catch (e) { }
     acuallyEndPoorElements()
-
-    /*try { setTimeout(() => { hideUnwanted() }, 100) } catch (e) { }
-    try { setTimeout(() => { killGenBlocks() }, 1000) } catch (e) { }
-    try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }*/
 })
+
+function newflyout() {
+    let prevflyout = document.querySelector("#drpcm-hint-flyout")
+    if (prevflyout !== null) { prevflyout.remove() }
+    if (window.location.href == "https://discord.com/developers/applications") {
+        makeflyout("Go to your desired application, and the Client ID will be detected automatically! ", "drpcm-hint-flyout")
+    }
+}
 
 function makeflyout(html, id) {
     let flyout = document.createElement("div")
@@ -96,45 +99,6 @@ function modifyText() {
         let aaa = document.getElementsByClassName('medium-zmzTW- weightNormal-3CX1dN')
         aaa[0].innerText = "This is what your presence will be called."
     })
-}
-
-function abortChildren() {
-    document.getElementsByClassName("wrapper-3S5Jvh backToLink-UqPo19")[0].style.display = "none"
-    let optionsList = document.querySelector(".mainList-otExiM")
-    optionsList.childNodes[1].style.display = "none"
-    optionsList.childNodes[2].style.display = "none"
-    optionsList.childNodes[4].style.display = "none"
-    let subOptionsList = document.querySelector(".subList-3zlU-5")
-    subOptionsList.childNodes[1].style.display = "none"
-    document.querySelector(".marginBottomMedium-3rCQQt").style.display = "none"
-    otherBlocks = [
-        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[0],
-        document.getElementsByClassName("headingContent-2bBpIC bottomMarginMedium-2YVTXf")[0],
-        document.getElementsByClassName("heading-3MvkF0 marginBottom20-QW1wVs medium-zmzTW- size16-1__VVI height20-13xN5Z primary300-qtIOwv weightNormal-3CX1dN")[0]
-    ]
-    otherBlocks.forEach(elem => { try { setTimeout(() => { elem.style.display = "none" }, 500) } catch (e) { } })
-    setTimeout(() => { document.querySelector("wrapper-3aJbIC") }, 2000)
-}
-
-function killGenBlocks() {
-    geninfoBlocks = [
-        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[3],
-        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[4],
-        document.getElementsByClassName("flex-1xMQg5 flexHorizontal-1YWL8b flexJustifyStart-1R2n-N flexAlignStretch-1aueRm flexWrap-1K8nA-")[5],
-        document.getElementsByClassName("flexChild-faoVW3 child-3prNf2 columnSpread12-1b_w2a")[1]
-    ]
-    geninfoBlocks.forEach(elem => { try { setTimeout(() => { elem.style.display = "none !important" }, 500) } catch (e) { } })
-}
-
-function hideUnwanted() {
-    let elems = [
-        // document.querySelector(".marginBottomMedium-3rCQQt"),
-        // document.querySelector(".marginBottomMedium-3rCQQt")
-    ]
-    elems.forEach(elem => {
-        try { setTimeout(() => elem.style.display = "none", 1000) } catch (e) { }
-    })
-    try { setTimeout(() => { document.querySelector(".wrapper-3aJbIC").style.display = "none" }, 2000) } catch (e) { }
 }
 
 function acuallyEndPoorElements() {
