@@ -3,6 +3,7 @@ const os = require('os');
 const path = require('path');
 const RPC = require('discord-rpc')
 const openExplorer = require('open-file-explorer');
+const { ipcRenderer } = require('electron');
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
 const slash = os.platform() == 'win32' ? "\\" : "/"
 
@@ -226,6 +227,14 @@ async function bootClientId(presence) {
 
 //what to do when dom loads
 document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("no-internet-msg") != null) {
+    console.log("waiting for no internet")
+    ipcRenderer.on('no-internet', (event, arg) => {
+      document.getElementById("no-internet-msg").style.display = "block"
+    });
+  }
+
+  console.log("loaded")
   //load presences
   loadSavedPresences()
 

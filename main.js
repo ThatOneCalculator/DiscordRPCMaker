@@ -44,30 +44,38 @@ function createWindow() {
   Menu.setApplicationMenu(menu)
   //TODO: add a html button to show this for some peeps who don't know the hotkeys by default
   win.setMenuBarVisibility(false)
+
+  //start loading screen
   win.loadFile("loading.html")
+
   loadingEvents.on('finished', () => {
     win.loadFile('index.html')
   })
 
-  //TODO: Check if internet goes offline
-  require('dns').resolve("https://drpcm.t1c.dev", function (err) {
-    if (err) {
-      setTimeout(() => {
-        require('dns').resolve("https://drpcm.t1c.dev", function (err) {
-          if (err) {
-            //TODO: Alert user of no internet, tell them to connect to the interwebs 😎
-            app.quit()
-          } else {
-            setTimeout(() => loadingEvents.emit('finished'), 10000)
-          }
-        })
-      }, 10000)
-    } else {
-      setTimeout(() => loadingEvents.emit('finished'), 500)
-    }
-  })
-}
+  //load for one second, then do an internet check
+  setTimeout(() => {
+    require('dns').resolve("https://drpcm.t1c.dev", function (err) {
+      if (err) {
+        noInternet(win)
+      } else {
+        setTimeout(() => loadingEvents.emit('finished'), 500)
+      }
+    })
+  }, 500)
 
+  function noInternet() {
+    require('dns').resolve("https://drpcm.t1c.dev", function (err) {
+      if (err) {
+        win.webContents.send("no-internet")
+        console.log("sending no internet")
+        setTimeout(noInternet, 5000)
+      } else {
+        //when we connect just stop loading
+        loadingEvents.emit('finished')
+      }
+    })
+  }
+}
 app.whenReady().then(createWindow)
 
 /*
