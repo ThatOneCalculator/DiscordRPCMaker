@@ -36,8 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const callback = function (mutationsList, observer) {
         console.log("change")
         try { acuallyEndPoorElements() } catch (e) { }
-        try { setTimeout(() => { modifyText() }, 1000) } catch (e) { }
         try { setTimeout(() => { newflyout() }, 1000) } catch (e) { }
+        try { setTimeout(() => { modifyText() }, 1000) } catch (e) { }
+
     };
 
     // Create an observer instance linked to the callback function
@@ -55,7 +56,6 @@ document.addEventListener("click", () => {
         let fly = document.querySelector("#drpcm-success-flyout")
         if (clientid !== null && fly == null) {
             let id = clientid.innerText
-            console.log(id)
             if (prevflyout !== null) { prevflyout.remove() }
             makeflyout(`
         Detected Client ID, copied to clipboard!
