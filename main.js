@@ -58,7 +58,7 @@ function createWindow() {
       if (err) {
         noInternet(win)
       } else {
-        setTimeout(() => loadingEvents.emit('finished'), 500)
+        setTimeout(() => loadingEvents.emit('finished'), 250)
       }
     })
   }, 250)
