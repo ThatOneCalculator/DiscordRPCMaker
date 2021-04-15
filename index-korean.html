@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discord RPC Maker</title>
+    <script src="https://kit.fontawesome.com/f64c2e88c7.js" crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/matter.css">
+    <link rel="stylesheet" href="style/fosscord.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="main-grid">
+        <h2 class="presence-title">저장된 활동 상태(들)</h2>
+        <button id="new-presence-button" class="grey-btn white-btn"><i class="fas fa-plus-circle"><br></i></button>
+        <div class="presence-list grid-comp">
+            <div class="presence-scroller" id="presence-scroller">
+            </div>
+        </div>
+        <input type="text" id="presence-id" style="display: none" />
+        <div class="settings-wrapper grid-comp">
+
+        </div>
+        <div class="social-wrapper grid-comp ">
+            <span class="left-grey-buttons">
+                <button id="donate-button" class="grey-btn"><i class="fas fa-donate"></i></button>
+                <button id="discord-button" class="grey-btn"><i class="fab fa-discord"></i></button>
+                <button id="github-button" class="grey-btn"><i class="fab fa-github"></i></button>
+                <button id="web-button" class="grey-btn"><i class="fas fa-globe"></i></button>
+            </span>
+            <span class="right-grey-buttons">
+                <button id="faq-button" class="grey-btn"><i class="fas fa-question-circle"></i></button>
+                <button id="settings-button" class="grey-btn"><i class="fas fa-cog"></i></button>
+            </span>
+        </div>
+        <div class="logo grid-comp">
+            <div class="htest">
+                <h1 class="zoom"><img src="assets/icon.png" width="70" height="70" />&nbsp; Discord RPC Maker</h1>
+            </div>
+        </div>
+        <div class="pad-left presence-name grid-comp">
+            <!-- TODO koreanify -->
+            <input class="single-input mr" style="width: auto !important;" placeholder="활동 상태 이름" maxlength="20"
+                id="presence-name-input" name="활동 상태 이름" type="text" value="">
+            <!--  -->
+            <button id="devel" class="btn primary mr" style="padding: 0 0.3rem 0 0.3rem">개발자 포털</i></button>
+            <button id="save" class="btn primary enable-on-clientid mr" disabled>저장</button>
+            <button id="test" class="btn primary">활동 상태 시작하기</button>
+        </div>
+        <div class="pad-left client-id grid-comp">
+            <input class="single-input client-id-enabler" maxlength="20" placeholder="클라이언트 ID" name="클라이언트 ID"
+                type="text" value="" id="clientid-input">
+        </div>
+        <div class="pad-left large-image-name grid-comp">
+            <input list="large-image-list" class="single-input enable-on-clientid" maxlength="32"
+                placeholder="메인 이미지 이름 (선택 사항)" name="" 메인 이미지" type="text" value="" disabled id="large-image-input">
+            <datalist id="large-image-list"></datalist>
+        </div>
+        <div class="pad-left small-image-name grid-comp">
+            <input list="small-image-list" class="single-input enable-on-large-image" maxlength="32"
+                placeholder="서비 이미지 이름 (선택 사항, 메인 이미지가 있을때만 적어주세요)" name="서브 이미지" type="text" value="" disabled
+                id="small-image-input">
+            <datalist id="small-image-list"></datalist>
+        </div>
+        <div class="pad-left description-line-1 grid-comp">
+            <input class="single-input enable-on-clientid" id="description-input-1" maxlength="32"
+                placeholder="활동 상태에 나타날 소개줄 1 (선택 사항)" name="활동 상태 소개줄" type="text" value="" disabled>
+        </div>
+        <div class="pad-left description-line-2 grid-comp">
+            <input class="single-input enable-on-clientid" id="description-input-2" maxlength="32"
+                placeholder="활동 상태에 나타날 소개줄 2 (선택 사항)" name="활동 상태 소개줄" type="text" value="" disabled>
+        </div>
+        <div class="pad-left button1 button-setup grid-comp ">
+            <label class="matter-switch max-content mr">
+                <input type="checkbox" role="switch" id="button1-enable">
+                <span class="text secondary">버튼 1</span>
+            </label>
+            <input class="single-input autowidth mr" id="button1-input-name" maxlength="32" placeholder="라벨"
+                name="Button 1 label" type="text" value="" disabled>
+            <input class="single-input autowidth" id="button1-input-url" placeholder="링크" name="Button 1 URL"
+                type="text" value="" disabled>
+        </div>
+        <div class="pad-left button2 button-setup grid-comp">
+            <label class="matter-switch max-content mr" style="float: left;">
+                <input type="checkbox" role="switch" id="button2-enable" disabled>
+                <span class="text secondary">버튼 2</span>
+            </label>
+            <input class="single-input autowidth mr" id="button2-input-name" maxlength="32" placeholder="라벨"
+                name="Button 2 label" type="text" value="" disabled>
+            <input class="single-input autowidth" id="button2-input-url" placeholder="링크" name="Button 2 URL"
+                type="text" value="" disabled>
+        </div>
+        <div id="delete-presence" class="pad-left grid-comp">
+            <button class="danger outline btn" id="del-btn" disabled>활동 상태 설정 지우기</button>
+            <button class="secondary outline btn file-btn" id="file-btn" disabled>파일 탐색기에서 보기</button>
+        </div>
+        <div class="grid-vr grid-comp">
+            <hr class="hr-vr">
+        </div>
+        <div class="grid-preview grid-comp mr">
+            <div class="grid-preview-pfp grid-com">
+                <img src="assets/wumpus.gif" class="preview-pfp" alt="you">
+                <span class="preview-name">당신<span class="text secondary">#0001</span></span>
+            </div>
+            <div class="grid-preview-rpc grid-comp">
+                <div class="preview-playingagame">~~ 하는 중</div>
+                <div class="preview-top-section">
+                    <!--we just hide this when images are off-->
+                    <div class="preview-image-wrapper">
+                        <img src="assets/placeholder.png" class="preview-big-pic" id="large-image"></img>
+                        <img class="preview-small-pic" src="assets/blank.png" id="small-image">
+                    </div>
+
+                    <strong class="preview-title">애플리케이션 이름</strong>
+                    <p class="preview-description" id="preview-description-1">
+                    </p>
+                    <p class="preview-description class-desc2" id="preview-description-2">
+                    </p>
+
+                </div>
+                <button class="btn primary outline preview-button initially-hidden" id="preview-button-1">
+                </button>
+                <button class="btn primary outline preview-button initially-hidden" id="preview-button-2">
+                </button>
+            </div>
+        </div>
+    </div>
+    </p>
+
+</body>
+
+</html>

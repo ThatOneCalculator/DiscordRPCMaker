@@ -6,6 +6,8 @@
     "title": "Discord RPC Maker",
     "presence-title": "Saved Presences",
     "logo": "Discord RPC Maker",
+    "presence-name": "Presence Name",
+    "presence-name-placeholder": "Presence Name",
     "devel": "Developer Portal",
     "save": "Save",
     "test": "Launch Presence",
