@@ -19,7 +19,7 @@ function createWindow() {
       icon: path.join(__dirname, "/assets/icon.png")
     }
   })
-
+  win.setIcon(path.join(__dirname, "/assets/icon.png"))
   //win.setResizable(false);
   const menu = new Menu()
   menu.append(new MenuItem({
