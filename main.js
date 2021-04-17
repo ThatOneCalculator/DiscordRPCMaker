@@ -94,6 +94,7 @@ function createWindow() {
 app.whenReady().then(() => {
   createWindow()
   win = BrowserWindow.getAllWindows()[0]
+  //TODO: macOS light/dark monochrome icons
   appIcon = new Tray(iconpath)
   const contextMenu = new Menu()
   contextMenu.append(new MenuItem({
@@ -103,6 +104,11 @@ app.whenReady().then(() => {
   contextMenu.append(new MenuItem({
     label: 'Show',
     click: () => { app.isquitting = true; win.show() }
+  }))
+  contextMenu.append(new MenuItem({
+    //TODO: Update when presence is launched
+    label: 'Current presence: none',
+    enabled: false
   }))
   appIcon.setContextMenu(contextMenu)
 })
