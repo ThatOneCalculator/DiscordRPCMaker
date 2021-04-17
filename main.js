@@ -115,8 +115,6 @@ app.whenReady().then(() => {
   appIcon.setToolTip("Discord RPC Maker")
 })
 
-
-
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
