@@ -126,6 +126,7 @@ function saveAsJson() {
       })
     }
   })
+  return filename
 }
 
 async function bootClientId(presence) {
@@ -266,7 +267,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
-    reloadPresences()
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     let id = document.getElementById("presence-id").value
     let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
@@ -377,11 +377,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //save presence
   document.getElementById("save").addEventListener("click", () => {
-    saveAsJson()
+    filename = saveAsJson()
     reloadPresences()
     //document.getElementById("new-presence-button").click()
     document.getElementById("del-btn").removeAttribute("disabled")
     document.getElementById("file-btn").removeAttribute("disabled")
+    document.getElementById("presence-id").value = filename
   });
 
   document.getElementById("del-btn").addEventListener("click", () => {
