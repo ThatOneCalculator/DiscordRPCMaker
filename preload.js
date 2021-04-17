@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
               console.log("File is deleted."); //log that we deleted it
               reloadPresences(); //reload the presences
               const myNotification = new Notification("Discord RPC Maker", { //throw a notification
-                body: `'${document.getElementById("presence-name-input").value}' has been saved.`,
+                body: `'${document.getElementById("presence-name-input").value}' has been deleted.`,
                 icon: "assets/icon.png",
                 timeoutType: "default",
               })

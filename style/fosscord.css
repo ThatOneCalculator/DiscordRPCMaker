@@ -1121,4 +1121,179 @@ h3 {
   height: 15px;
 }
 
+:root {
+  --dropdown-background: var(--background-secondary);
+  --dropdown-padding: 8px;
+  --dropdown-border-radius: 4px;
+}
+
+.dropdown {
+  background: var(--dropdown-background);
+  border-radius: var(--dropdown-border-radius);
+  user-select: none;
+  position: relative;
+}
+
+.dropdown.open {
+  border: 1px solid var(--background-tertiary);
+}
+
+.dropdown.open .control {
+  border: none;
+}
+
+.dropdown .item {
+  display: flex;
+  min-height: 38px;
+  padding: var(--dropdown-padding);
+  cursor: pointer;
+}
+
+.dropdown .item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown .item.selected {
+  background: var(--background-tertiary);
+}
+
+.dropdown .item .left {
+  flex-grow: 1;
+}
+
+.dropdown .item .icon {
+  --size: 16px;
+  color: var(--text-muted);
+  display: inline-block;
+}
+
+.dropdown .item .name {
+  color: var(--text-default);
+}
+
+.dropdown .item span,
+.dropdown .item {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown .item span>*,
+.dropdown .item>* {
+  margin: 0 0.2rem;
+}
+
+.dropdown .control {
+  border: 1px solid var(--background-tertiary);
+  border-radius: var(--dropdown-border-radius);
+}
+
+.dropdown .control:hover {
+  background: none;
+}
+
+.dropdown.open .menu {
+  display: block;
+}
+
+.dropdown .menu {
+  display: none;
+  box-shadow: rgba(32, 34, 37, 0.5) 0px 1px 5px 0px;
+  position: absolute;
+  width: 100%;
+  background: var(--dropdown-background);
+  border: 1px solid var(--background-tertiary);
+  border-radius: var(--dropdown-border-radius);
+  overflow: hidden;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+}
+
+:root {
+  --modal-scale: 0.07;
+  --modal-padding: 60px;
+}
+
+.modal {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.2s;
+  -webkit-transform: translateZ(0);
+  background: var(--background-primary);
+  transform: scale(0.93);
+  display: flex;
+  z-index: 1;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(calc(1.01 + var(--modal-scale)));
+  margin: 0;
+}
+
+.modal .sidebar {
+  width: 30%;
+  padding: var(--modal-padding) 20px;
+  background: var(--background-secondary);
+  flex-shrink: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal>.content {
+  width: calc(70% - var(--modal-padding) * 3 - 20px);
+  padding: var(--modal-padding) 40px 80px;
+}
+
+.modal>.content .headline {
+  text-align: left !important;
+  color: var(--text-strong);
+}
+
+.modal>.content .headline:first-child {
+  margin-top: 0;
+}
+
+.modal .close-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: var(--modal-padding);
+  top: var(--modal-padding);
+}
+
+.modal .close-wrapper .text {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}
+
+.modal .close-wrapper .close {
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 2px solid var(--text-muted);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .close-wrapper .close .icon {
+  color: var(--text-strong);
+}
+
+.modal-background {
+  transition: transform ease 0.2s;
+}
+
+.modal-background.modal-open {
+  transform: scale(calc(1 - var(--modal-scale)));
+}
+
+
 /*# sourceMappingURL=index.css.map */
