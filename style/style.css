@@ -1,11 +1,11 @@
 @font-face {
   font-family: logo;
-  src: url("../assets/logo.woff");
+  src: url("../assets/logo.ttf");
 }
 
 @font-face {
   font-family: body;
-  src: url("../assets/body.woff");
+  src: url("../assets/body.ttf");
 }
 
 :root {
