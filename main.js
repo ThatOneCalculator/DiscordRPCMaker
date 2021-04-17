@@ -115,6 +115,7 @@ app.whenReady().then(() => {
     enabled: false
   }))
   appIcon.setContextMenu(contextMenu)
+  appIcon.setToolTip("Discord RPC Maker")
 })
 
 
