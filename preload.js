@@ -1,9 +1,9 @@
-const fs = require('fs');
-const os = require('os');
-const path = require('path');
+const fs = require('fs')
+const os = require('os')
+const path = require('path')
 const RPC = require('discord-rpc')
-const openExplorer = require('open-file-explorer');
-const { ipcRenderer } = require('electron');
+const openExplorer = require('open-file-explorer')
+const { ipcRenderer } = require('electron')
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
 const slash = os.platform() == 'win32' ? "\\" : "/"
 
