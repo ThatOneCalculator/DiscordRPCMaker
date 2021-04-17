@@ -62,6 +62,15 @@ if (!fs.existsSync(dir)) {
       })
     }
   })
+  const msg = {
+    type: 'question',
+    buttons: [],
+    defaultId: 0,
+    title: 'Welcome',
+    message: 'Thank you for choosing Discord RPC Maker!',
+    detail: 'If you need instructions, click the question (?) icon in the bottom right.',
+  };
+  dialog.showMessageBox(null, msg)
 }
 
 //make the border red if url validation fails
@@ -320,7 +329,25 @@ document.addEventListener("DOMContentLoaded", () => {
       fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
         if (err) { throw err }
         else {
-          //Alert saying thanks and all that
+          const msg = {
+            type: 'question',
+            buttons: ['Star the GitHub', 'Join the Discord', 'Donate'],
+            defaultId: 0,
+            title: 'Welcome',
+            message: 'Congrats, you launched your first presence!',
+            detail: 'Don\'t worry, this is the last time you\'ll see this. This project is and always will be free and open source. If you want to show your support, please consider donating, leaving a star on the GitHub, and/or joining the Discord server.',
+          };
+          dialog.showMessageBox(null, msg).then(result => {
+            if (result.response == 1) {
+              shell.openExternal('https://github.com/thatonecalculator/discordrpcmaker')
+            }
+            if (result.response == 2) {
+              shell.openExternal('https://discord.com/invite/Z7UZPR3bbW')
+            }
+            if (result.response == 3) {
+              shell.openExternal('https://buymeacoffee.com/that1calculator')
+            }
+          })
         }
       })
     }
