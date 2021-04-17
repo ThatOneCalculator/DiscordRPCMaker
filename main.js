@@ -111,11 +111,6 @@ app.whenReady().then(() => {
     label: 'Show',
     click: () => { app.isquitting = true; win.show() }
   }))
-  contextMenu.append(new MenuItem({
-    //TODO: Update when presence is launched
-    label: 'Current presence: none',
-    enabled: false
-  }))
   appIcon.setContextMenu(contextMenu)
   appIcon.setToolTip("Discord RPC Maker")
 })
