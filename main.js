@@ -95,7 +95,12 @@ app.whenReady().then(() => {
   createWindow()
   win = BrowserWindow.getAllWindows()[0]
   //TODO: macOS light/dark monochrome icons
-  appIcon = new Tray(iconpath)
+  if (os.platform() == "darwin") {
+    appIcon = new Tray(path.join(__dirname, "/assets/iconMacTemplate.png"))
+  }
+  else {
+    appIcon = new Tray(iconpath)
+  }
   const contextMenu = new Menu()
   contextMenu.append(new MenuItem({
     label: 'Quit',
