@@ -94,7 +94,6 @@ function createWindow() {
 app.whenReady().then(() => {
   createWindow()
   win = BrowserWindow.getAllWindows()[0]
-  //TODO: macOS light/dark monochrome icons
   if (os.platform() == "darwin") {
     appIcon = new Tray(path.join(__dirname, "/assets/iconMacTemplate.png"))
   }
