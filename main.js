@@ -1,8 +1,9 @@
-const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain } = require("electron")
+// libappindicator-gtk3 on Arch as req
+const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain, Tray } = require("electron")
 const path = require("path")
 const EventEmitter = require("events")
 require('@electron/remote/main').initialize()
-
+const iconpath = path.join(__dirname, "/assets/icon.png")
 const loadingEvents = new EventEmitter()
 
 function createWindow() {
@@ -16,10 +17,23 @@ function createWindow() {
       nodeIntegration: true,
       enableRemoteModule: true,
       preload: path.join(__dirname, "preload.js"),
-      icon: path.join(__dirname, "/assets/icon.png")
+      icon: iconpath
     }
   })
-  win.setIcon(path.join(__dirname, "/assets/icon.png"))
+  win.on('minimize', function (event) {
+    event.preventDefault();
+    win.hide();
+  });
+
+  win.on('close', function (event) {
+    if (!app.isQuiting) {
+      event.preventDefault();
+      win.hide();
+    }
+
+    return false;
+  });
+  win.setIcon(iconpath)
   //win.setResizable(false);
   const menu = new Menu()
   menu.append(new MenuItem({
@@ -76,15 +90,24 @@ function createWindow() {
     })
   }
 }
-app.whenReady().then(createWindow)
 
-/*
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit()
-  }
+app.whenReady().then(() => {
+  createWindow()
+  win = BrowserWindow.getAllWindows()[0]
+  appIcon = new Tray(iconpath)
+  const contextMenu = new Menu()
+  contextMenu.append(new MenuItem({
+    label: 'Quit',
+    click: () => { app.quit() }
+  }))
+  contextMenu.append(new MenuItem({
+    label: 'Show',
+    click: () => { app.isquitting = true; win.show() }
+  }))
+  appIcon.setContextMenu(contextMenu)
 })
-*/
+
+
 
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {

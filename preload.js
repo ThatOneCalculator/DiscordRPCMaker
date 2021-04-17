@@ -262,7 +262,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     let id = document.getElementById("presence-id").value
     let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
+    let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     const options = JSON.parse(fs.readFileSync(fullpath, 'utf8'))
+    let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     const activity = {}
     const assets = {}
 
@@ -307,11 +309,22 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     assembleClient(0)
+
     const myNotification = new Notification("Discord RPC Maker", {
       body: "Your presence has started.",
       icon: "assets/icon.png",
       timeoutType: "default",
     });
+    if (settings.launchedpresence == false) {
+      settings.launchedpresence = true
+      fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+        if (err) { throw err }
+        else {
+          //Alert saying thanks and all that
+        }
+      })
+    }
+
   });
 
   document.getElementById("new-presence-button").addEventListener("click", () => {
