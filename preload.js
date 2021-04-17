@@ -50,7 +50,7 @@ if (!fs.existsSync(dir)) {
     theme: "dark",
     quitonx: false
   }
-  fs.mkdirSync(dir);
+  fs.mkdirSync(dir, { recursive: true })
   fs.writeFile(`${dir}/settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
     if (err) { throw err }
     else {

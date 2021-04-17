@@ -25,7 +25,7 @@ function createWindow() {
   win.on('minimize', function (event) {
     event.preventDefault();
     win.hide();
-  });
+  })
 
   win.on('close', function (event) {
     if (!app.isQuiting) {
@@ -34,7 +34,7 @@ function createWindow() {
     }
 
     return false;
-  });
+  })
   win.setIcon(iconpath)
   //win.setResizable(false);
   const menu = Menu()
@@ -91,6 +91,11 @@ function createWindow() {
       }
     })
   }
+  app.on('window-all-closed', app.quit);
+  app.on('before-quit', () => {
+    win.removeAllListeners('close');
+    win.close();
+  })
 }
 
 app.whenReady().then(() => {
