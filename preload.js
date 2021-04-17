@@ -45,7 +45,6 @@ function getImageIdFromName(imgName) {
 //check for appdata / .config dir and make it if it doesen't exist
 if (!fs.existsSync(dir)) {
   initialdata = {
-    once: true,
     launchedpresence: false,
     language: "english",
     theme: "dark",
@@ -331,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
         else {
           const msg = {
             type: 'question',
-            buttons: ['Star the GitHub', 'Join the Discord', 'Donate'],
+            buttons: ['Close', 'Star on GitHub', 'Join the Discord', 'Donate'],
             defaultId: 0,
             title: 'Welcome',
             message: 'Congrats, you launched your first presence!',
