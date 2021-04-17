@@ -102,7 +102,7 @@ app.whenReady().then(() => {
   createWindow()
   win = BrowserWindow.getAllWindows()[0]
   if (os.platform() == "darwin") {
-    appIcon = new Tray(path.join(__dirname, "/assets/iconMacTemplate@2.png"))
+    appIcon = new Tray(path.join(__dirname, "/assets/iconMacTemplate.png"))
   }
   else {
     appIcon = new Tray(iconpath)
