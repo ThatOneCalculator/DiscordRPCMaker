@@ -59,7 +59,7 @@ h1 {
   text-align: center;
   font-size: 45px;
   letter-spacing: 0.02em;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: #7289da;
   /* align-items: center; */
   font-family: logo;
