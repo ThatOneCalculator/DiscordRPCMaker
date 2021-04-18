@@ -1288,12 +1288,11 @@ h3 {
 }
 
 .modal-background {
-  transition: transform ease 0.2s;
+  transition: transform ease 0.4s;
 }
 
 .modal-background.modal-open {
   transform: scale(calc(1 - var(--modal-scale)));
 }
-
 
 /*# sourceMappingURL=index.css.map */
