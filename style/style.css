@@ -68,6 +68,16 @@ h1 {
   top: 200%;
 }
 
+h2,
+h3 {
+  font-kerning: none;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 .htest {
   display: flex;
   justify-content: center;
@@ -229,8 +239,6 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-kerning: none;
-  letter-spacing: 0.05em;
   margin: 0px;
   grid-row: 1 / 3;
   background: var(--not-quite-black);
