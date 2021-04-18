@@ -38,27 +38,6 @@ function createWindow() {
   win.setIcon(iconpath)
   //win.setResizable(false);
   const menu = Menu()
-  // menu.append(new MenuItem({
-  //   label: 'Options',
-  //   submenu: [{
-  //     label: 'Reload',
-  //     accelerator: "f5",
-  //     click: () => { win.reload() }
-  //   },
-  //   {
-  //     label: 'Reload',
-  //     accelerator: "CommandOrControl+R",
-  //     click: () => { win.reload() }
-  //   },
-  //   {
-  //     label: 'Open Devtools',
-  //     accelerator: "CommandOrControl+Shift+I",
-  //     click: () => { win.webContents.openDevTools(); }
-  //   }]
-  // }))
-
-  // Menu.setApplicationMenu(menu)
-  //TODO: add a html button to show this for some peeps who don't know the hotkeys by default
   win.setMenuBarVisibility(false)
 
   //start loading screen
