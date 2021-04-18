@@ -73,13 +73,13 @@ if (!fs.existsSync(dir)) {
 }
 
 function openModal() {
-  const modal = document.querySelector("#modal");
+  const modal = document.querySelector("#faqmodal");
   document.querySelector(".main-grid").classList.add("modal-open");
-
   modal.classList.add("open");
 }
 
 function closeModal() {
+  const modal = document.querySelector("#faqmodal");
   modal.classList.remove("open");
   document.querySelector(".main-grid").classList.remove("modal-open");
 }
