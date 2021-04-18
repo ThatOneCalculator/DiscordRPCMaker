@@ -645,6 +645,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })
 
+  let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+  let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+  if (settings['language'] == 'english') {
+    document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
+  }
   document.querySelector('#donate-button').addEventListener("click", () => {
     const options = {
       type: 'question',
