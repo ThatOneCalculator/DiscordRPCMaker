@@ -72,6 +72,25 @@ if (!fs.existsSync(dir)) {
   dialog.showMessageBox(null, msg)
 }
 
+function openModal() {
+  const modal = document.querySelector("#modal");
+  document.querySelector(".main-grid").classList.add("modal-open");
+
+  modal.classList.add("open");
+}
+
+function closeModal() {
+  modal.classList.remove("open");
+  document.querySelector(".main-grid").classList.remove("modal-open");
+}
+
+window.addEventListener("keydown", (event) => {
+  if (event.keyCode !== 27) return;
+  closeModal();
+
+  console.log(event);
+});
+
 //make the border red if url validation fails
 function updateValidButton(button, event) {
   url = event.target.value
@@ -578,7 +597,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //fix win outline
   if (process.platform === "linux") {
-    document.querySelector("h1").setAttribute("style", "-webkit-text-stroke-width: 2px")
+    h1 = document.querySelectorAll("h1")
+    h1.forEach((item, i, arr) => {
+      item.setAttribute("style", "-webkit-text-stroke-width: 2px")
+    })
   }
 
   //make links open in new tab
@@ -637,6 +659,11 @@ function registerLinkToOpenInBrowser(elemid, link) {
   elem.addEventListener("click", () => {
     shell.openExternal(link)
   })
+
+  faq = document.getElementById("faq-button")
+  faq.addEventListener("click", () => { openModal() })
+  faq = document.getElementById("closemodal")
+  faq.addEventListener("click", () => { closeModal() })
 }
 
 function loadPresence(presence, file) {
