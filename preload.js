@@ -76,24 +76,28 @@ function openFaqModal() {
   const modal = document.querySelector("#faqmodal")
   document.querySelector(".main-grid").classList.add("modal-open")
   modal.classList.add("open")
+  document.querySelector(".preview-small-pic").style.visibility = "hidden"
 }
 
 function closeFaqModal() {
   const modal = document.querySelector("#faqmodal")
   modal.classList.remove("open")
   document.querySelector(".main-grid").classList.remove("modal-open")
+  document.querySelector(".preview-small-pic").style.visibility = "visible"
 }
 
 function openSettingsModal() {
   const modal = document.querySelector("#settingsmodal")
   document.querySelector(".main-grid").classList.add("modal-open")
   modal.classList.add("open")
+  document.querySelector(".preview-small-pic").style.visibility = "hidden"
 }
 
 function closeSettingsModal() {
   const modal = document.querySelector("#settingsmodal")
   modal.classList.remove("open")
   document.querySelector(".main-grid").classList.remove("modal-open")
+  document.querySelector(".preview-small-pic").style.visibility = "visible"
 }
 
 window.addEventListener("keydown", (event) => {
