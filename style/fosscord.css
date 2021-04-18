@@ -1288,7 +1288,7 @@ h3 {
 }
 
 .modal-background {
-  transition: transform ease 0.4s;
+  transition: transform ease-in 0.4s;
 }
 
 .modal-background.modal-open {
