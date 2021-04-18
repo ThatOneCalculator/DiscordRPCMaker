@@ -72,21 +72,36 @@ if (!fs.existsSync(dir)) {
   dialog.showMessageBox(null, msg)
 }
 
-function openModal() {
-  const modal = document.querySelector("#faqmodal");
-  document.querySelector(".main-grid").classList.add("modal-open");
-  modal.classList.add("open");
+function openFaqModal() {
+  const modal = document.querySelector("#faqmodal")
+  document.querySelector(".main-grid").classList.add("modal-open")
+  modal.classList.add("open")
 }
 
-function closeModal() {
-  const modal = document.querySelector("#faqmodal");
-  modal.classList.remove("open");
-  document.querySelector(".main-grid").classList.remove("modal-open");
+function closeFaqModal() {
+  const modal = document.querySelector("#faqmodal")
+  modal.classList.remove("open")
+  document.querySelector(".main-grid").classList.remove("modal-open")
+}
+
+function openSettingsModal() {
+  const modal = document.querySelector("#settingsmodal")
+  document.querySelector(".main-grid").classList.add("modal-open")
+  modal.classList.add("open")
+}
+
+function closeSettingsModal() {
+  const modal = document.querySelector("#settingsmodal")
+  modal.classList.remove("open")
+  document.querySelector(".main-grid").classList.remove("modal-open")
 }
 
 window.addEventListener("keydown", (event) => {
   if (event.keyCode !== 27) return;
-  closeModal();
+  try {
+    closeFaqModal()
+    closeSettingsModal()
+  } catch (e) { }
 
   console.log(event);
 });
@@ -660,10 +675,14 @@ function registerLinkToOpenInBrowser(elemid, link) {
     shell.openExternal(link)
   })
 
-  faq = document.getElementById("faq-button")
-  faq.addEventListener("click", () => { openModal() })
-  faq = document.getElementById("closemodal")
-  faq.addEventListener("click", () => { closeModal() })
+  faqbtn = document.getElementById("faq-button")
+  faqbtn.addEventListener("click", () => { openFaqModal() })
+  faqbtn = document.getElementById("closefaqmodal")
+  faqbtn.addEventListener("click", () => { closeFaqModal() })
+  settingsbtn = document.getElementById("settings-button")
+  settingsbtn.addEventListener("click", () => { openSettingsModal() })
+  settingsbtn = document.getElementById("closesettingsmodal")
+  settingsbtn.addEventListener("click", () => { closeSettingsModal() })
 }
 
 function loadPresence(presence, file) {
