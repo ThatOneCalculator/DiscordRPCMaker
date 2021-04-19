@@ -1,7 +1,7 @@
 :root {
-    --primary: #B38FAC;
-    --primary-shade: #82A2C0;
-    --primary-darker: #82A2C0;
+    --primary: #82A2C0;
+    --primary-shade: #5E81AC;
+    --primary-darker: #5E81AC;
     --primary-hover: rgba(114, 137, 218, 0.1);
     --primary-active: #82A2C0;
     --secondary: #747f8d;
