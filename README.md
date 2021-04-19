@@ -135,7 +135,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 **Click [here](https://github.com/ThatOneCalculator/DiscordRPCMaker/tree/gui/themes) to see a list of the pre-installed themes.**
 
 ## Creating your own theme
-- Use this template to create a theme, change all the hex colors + rgb values accordingly
+- Use this template to create a theme, change all the Hex Colors + RGB Values accordingly
 
 ```
 :root {
@@ -167,6 +167,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
     --BTN-success-active-background: #35976b;
 }
 ```
+Save the file in themes/yourthemename.css
 
 # [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
