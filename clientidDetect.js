@@ -1,5 +1,6 @@
 const electron = require('electron')
 const copy = require('copy-to-clipboard')
+var firstFlyout = false
 
 document.addEventListener("DOMContentLoaded", () => {
     newflyout()
@@ -30,15 +31,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const targetNode = document.body;
 
     // Options for the observer (which mutations to observe)
-    const config = { attributes: true, childList: true, subtree: true };
+    var config = { characterData: false, attributes: false, childList: true, subtree: true };
 
     // Callback function to execute when mutations are observed
-    const callback = function (mutationsList, observer) {
+    const callback = function (mutationsList) {
         console.log("change")
-        try { acuallyEndPoorElements() } catch (e) { }
-        try { setTimeout(() => { newflyout() }, 1000) } catch (e) { }
-        try { setTimeout(() => { modifyText() }, 1000) } catch (e) { }
-
+        if (document.readyState == "complete") {
+            let prevflyout = document.querySelector("#drpcm-hint-flyout")
+            if (prevflyout == null && firstFlyout == false) {
+                try {
+                    setTimeout(newflyout, 2000)
+                    firstFlyout = true
+                } catch (e) {
+                    //firstFlyout = false
+                }
+            }
+            try {
+                if (window.location.href == "https://discord.com/developers/applications") {
+                    setTimeout(acuallyEndPoorElements, 2000)
+                    setTimeout(modifyText, 2000)
+                } else {
+                    acuallyEndPoorElements()
+                    modifyText()
+                }
+                
+            } catch (e) {}
+            
+        }
     };
 
     // Create an observer instance linked to the callback function
@@ -55,6 +74,7 @@ document.addEventListener("click", () => {
         let clientid = document.querySelector(".code-j7WzRK")
         let fly = document.querySelector("#drpcm-success-flyout")
         if (clientid !== null && fly == null) {
+            console.log("detected clientid")
             let id = clientid.innerText
             if (prevflyout !== null) { prevflyout.remove() }
             makeflyout(`
@@ -64,8 +84,7 @@ document.addEventListener("click", () => {
             copy(id)
         }
     }, 500)
-    try { setTimeout(() => { modifyText() }, 100) } catch (e) { }
-    acuallyEndPoorElements()
+    //callback()
 })
 
 function newflyout() {
@@ -92,13 +111,15 @@ function makeflyout(html, id) {
 }
 
 function modifyText() {
-    document.querySelector(".flush-zNaLgf").innerText = "Click 'New Application' to create a new presence, or select an already created one below"
-    document.querySelector(".wordmark-1G98vs").innerText = "Discord RPC Developer Portal"
-    let clientid = document.querySelector(".code-j7WzRK")
-    document.querySelector(".button-38aScr").addEventListener("click", () => {
-        let aaa = document.getElementsByClassName('medium-zmzTW- weightNormal-3CX1dN')
-        aaa[0].innerText = "This is what your presence will be called."
-    })
+    if (document.querySelector(".flush-zNaLgf") !== null && document.querySelector(".wordmark-1G98vs").innerText != "Discord RPC Developer Portal") {
+        document.querySelector(".flush-zNaLgf").innerText = "Click 'New Application' to create a new presence, or select an already created one below"
+        document.querySelector(".wordmark-1G98vs").innerText = "Discord RPC Developer Portal"
+        let clientid = document.querySelector(".code-j7WzRK")
+        document.querySelector(".button-38aScr").addEventListener("click", () => {
+            let aaa = document.getElementsByClassName('medium-zmzTW- weightNormal-3CX1dN')
+            aaa[0].innerText = "This is what your presence will be called."
+        })
+    }
 }
 
 function acuallyEndPoorElements() {
