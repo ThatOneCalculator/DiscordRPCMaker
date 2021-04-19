@@ -485,7 +485,7 @@ textarea {
 }
 
 .grid-preview-rpc {
-  grid-row: 3 / 6;
+  grid-row: 3 / 7;
   grid-column: 1 / 2;
   background: var(--primary-darker);
   border-bottom-left-radius: 5px;
