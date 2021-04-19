@@ -167,7 +167,7 @@ As of right now, there's no way to do this through a mobile device. Sorry!
     --BTN-success-active-background: #35976b;
 }
 ```
-**Save the file as: yourthemename.css, in the themes folder.**
+**Save the file as yourthemename.css, in the themes folder.**
 
 # [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
