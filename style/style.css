@@ -1182,7 +1182,7 @@ h3 {
   border-top-style: solid;
   border-top-width: 1px;
   box-sizing: border-box;
-  color: #dcddde;
+  color: var(--text);
   display: block;
   font-size: 16px;
   font-stretch: 100%;

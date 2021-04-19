@@ -650,8 +650,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (settings['language'] == 'english') {
     document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
   }
+  document.querySelector('#theme-button').addEventListener('click', () => {
+    let themedir = path.join(__dirname, `${slash}themes${slash}rosebox.css`)
+    addStyle(fs.readFileSync(themedir, 'utf8'))
+  })
   document.querySelector('#donate-button').addEventListener("click", () => {
-    setThemeLight()
     const options = {
       type: 'question',
       buttons: ['Never mind', 'Liberapay', 'BuyMeACoffee'],
