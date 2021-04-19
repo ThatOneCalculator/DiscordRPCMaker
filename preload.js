@@ -51,7 +51,8 @@ if (!fs.existsSync(dir)) {
     quitonx: false
   }
   fs.mkdirSync(dir, { recursive: true })
-  fs.writeFile(`${dir}/settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
+  fs.mkdirSync(`${dir}${slash}themes`, { recursive: true })
+  fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
     if (err) { throw err }
     else {
       const myNotification = new Notification("Discord RPC Maker", {
