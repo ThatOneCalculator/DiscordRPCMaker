@@ -651,6 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
   }
   document.querySelector('#donate-button').addEventListener("click", () => {
+    setThemeLight()
     const options = {
       type: 'question',
       buttons: ['Never mind', 'Liberapay', 'BuyMeACoffee'],
@@ -701,4 +702,10 @@ function loadPresence(presence, file) {
   document.getElementById("del-btn").removeAttribute("disabled")
   document.getElementById("file-btn").removeAttribute("disabled")
   try { bootClientId(presence) } catch (e) { }
+}
+
+function addStyle(styleString) {
+  const style = document.createElement('style');
+  style.textContent = styleString;
+  document.head.append(style);
 }
