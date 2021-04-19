@@ -41,6 +41,7 @@ You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915
 - [Regular install](https://github.com/ThatOneCalculator/DiscordRPCMaker#regular-install)
 - [Run from source](https://github.com/ThatOneCalculator/DiscordRPCMaker#runningbuilding-from-source)
 - [Common issues](https://github.com/ThatOneCalculator/DiscordRPCMaker#common-issues)
+- [Themes](https://github.com/ThatOneCalculator/DiscordRPCMaker#themes)
 - [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker#planned-features)
 - [Contact](https://github.com/ThatOneCalculator/DiscordRPCMaker#still-need-help-or-just-want-to-chat)
 
@@ -129,6 +130,43 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 
 </details>
 
+# Themes
+## If you don't like the current color style of the app, you can theme it!
+**Click [here](https://github.com/ThatOneCalculator/DiscordRPCMaker/tree/gui/themes) to see a list of the pre-installed themes.**
+
+## Creating your own theme
+- Use this template to create a theme, change all the hex colors + rgb values accordingly
+
+```
+:root {
+    --primary: #7289da;
+    --primary-shade: #5c6fb1;
+    --primary-darker: #6C83D0;
+    --primary-hover: rgba(114, 137, 218, 0.1);
+    --primary-active: #4e5d94;
+    --secondary: #747f8d;
+    --secondary-hover: rgba(116, 127, 141, 0.1);
+    --success: #43b581;
+    --success-hover: rgba(67, 181, 129, 0.1);
+    --danger: #f04747;
+    --danger-hover: rgba(240, 71, 71, 0.1);
+    --text: #ffffff;
+    --background-primary: #36393f;
+    --background-secondary: #2f3136;
+    --background-tertiary: #202225;
+    --background-floating: #18191c;
+    --interactive: #b9bbbe;
+    --interactive-active: var(--text);
+    --interactive-hover: #dcddde;
+    /* Begin fosscord specific */
+    --BTN-primary-hover-background: #677bc4;
+    --BTN-primary-active-background: #5b6eae;
+    --BTN-danger-hover-background: #d84040;
+    --BTN-danger-active-background: #c03939;
+    --BTN-success-hover-background: #3ca374;
+    --BTN-success-active-background: #35976b;
+}
+```
 
 # [Planned features](https://github.com/ThatOneCalculator/DiscordRPCMaker/projects/1):
 - [x] v1.7+: Binary releases
