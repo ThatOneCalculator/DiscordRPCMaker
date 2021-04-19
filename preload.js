@@ -651,7 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
   }
   document.querySelector('#theme-button').addEventListener('click', () => {
-    let themedir = path.join(__dirname, `${slash}themes${slash}rosebox.css`)
+    let themedir = path.join(__dirname, `${slash}themes${slash}light.css`)
     addStyle(fs.readFileSync(themedir, 'utf8'))
   })
   document.querySelector('#donate-button').addEventListener("click", () => {
