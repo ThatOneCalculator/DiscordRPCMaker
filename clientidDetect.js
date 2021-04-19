@@ -33,33 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Options for the observer (which mutations to observe)
     var config = { characterData: false, attributes: false, childList: true, subtree: true };
 
-    // Callback function to execute when mutations are observed
-    const callback = function (mutationsList) {
-        console.log("change")
-        if (document.readyState == "complete") {
-            let prevflyout = document.querySelector("#drpcm-hint-flyout")
-            if (prevflyout == null && firstFlyout == false) {
-                try {
-                    setTimeout(newflyout, 2000)
-                    firstFlyout = true
-                } catch (e) {
-                    //firstFlyout = false
-                }
-            }
-            try {
-                if (window.location.href == "https://discord.com/developers/applications") {
-                    setTimeout(acuallyEndPoorElements, 2000)
-                    setTimeout(modifyText, 2000)
-                } else {
-                    acuallyEndPoorElements()
-                    modifyText()
-                }
-                
-            } catch (e) {}
-            
-        }
-    };
-
     // Create an observer instance linked to the callback function
     const observer = new MutationObserver(callback);
 
@@ -69,23 +42,54 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.addEventListener("click", () => {
-    setTimeout(() => {
-        let prevflyout = document.querySelector("#drpcm-hint-flyout")
-        let clientid = document.querySelector(".code-j7WzRK")
-        let fly = document.querySelector("#drpcm-success-flyout")
-        if (clientid !== null && fly == null) {
-            console.log("detected clientid")
-            let id = clientid.innerText
-            if (prevflyout !== null) { prevflyout.remove() }
-            makeflyout(`
-        Detected Client ID, copied to clipboard!
-        <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
-    `, "drpcm-success-flyout")
-            copy(id)
-        }
-    }, 500)
-    //callback()
+    callback()
 })
+
+const callback = function (mutationsList) {
+    console.log("change")
+    
+        let prevflyout = document.querySelector("#drpcm-hint-flyout")
+        if (prevflyout == null && firstFlyout == false) {
+            try {
+                setTimeout(newflyout, 2000)
+                firstFlyout = true
+            } catch (e) {
+                //firstFlyout = false
+            }
+        }
+        try {
+            /*if (window.location.href == "https://discord.com/developers/applications") {*/
+                setTimeout(acuallyEndPoorElements, 2000)
+                setTimeout(modifyText, 2000)
+            /*} else {*/
+                //acuallyEndPoorElements()
+                //modifyText()
+            /*}*/
+            
+        } catch (e) {}
+        setTimeout(() => {
+            let prevflyout = document.querySelector("#drpcm-hint-flyout")
+            let clientid = document.querySelector(".code-j7WzRK")
+            let fly = document.querySelector("#drpcm-success-flyout")
+            if (clientid !== null && fly == null) {
+                console.log("detected clientid")
+                let id = clientid.innerText
+                if (prevflyout !== null) { prevflyout.remove() }
+                makeflyout(`
+            Detected Client ID, copied to clipboard!
+            <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
+        `, "drpcm-success-flyout")
+                copy(id)
+                document.querySelector(".backToLink-UqPo19").addEventListener("click", () => {
+                    console.log("back")
+                    firstFlyout = false
+                    document.querySelector("#drpcm-success-flyout").remove()
+                })
+            }
+        }, 500)
+        
+    
+};
 
 function newflyout() {
     let prevflyout = document.querySelector("#drpcm-hint-flyout")
