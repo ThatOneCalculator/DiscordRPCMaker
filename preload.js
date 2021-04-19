@@ -646,6 +646,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })
 
+  let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
   let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
   let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   if (settings['language'] == 'english') {
