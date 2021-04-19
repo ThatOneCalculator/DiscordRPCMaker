@@ -13,8 +13,8 @@
     --text: #0B0D0A;
     --background-primary: #EAEAE9;
     --background-secondary: #EBEBEB;
-    --background-tertiary: #EBEBEB;
-    --background-floating: #EBEBEB;
+    --background-tertiary: #D2D2D1;
+    --background-floating: #D2D2D1;
     --interactive: #0B0D0A;
     --interactive-active: var(--text);
     --interactive-hover: #dcddde;
