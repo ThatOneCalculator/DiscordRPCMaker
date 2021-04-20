@@ -392,6 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
       timeoutType: "default",
     })
     document.getElementById("pfp").setAttribute("src", "assets/wumpus.gif")
+    document.getElementById("test").setAttribute("class", "btn success enable-on-clientid mr")
     if (settings.launchedpresence == false) {
       settings.launchedpresence = true
       fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
