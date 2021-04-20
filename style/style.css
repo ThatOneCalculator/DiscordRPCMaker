@@ -709,6 +709,18 @@ textarea {
   opacity: 0.3 !important;
 }
 
+#fader {
+  position: absolute;
+  z-index: 100 !important;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--background-secondary) !important;
+  transition: opacity 0.25s;
+  opacity: 100%;
+}
+
 /*----------------------------------------------------------------
 BEGIN FOSSCORD
 ------------------------------------------------------------------*/
