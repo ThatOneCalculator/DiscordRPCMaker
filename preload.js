@@ -310,14 +310,25 @@ document.addEventListener("DOMContentLoaded", () => {
   let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
   let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   let theme = settings["theme"]
-  let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
-  addStyle(fs.readFileSync(themedir, 'utf8'))
+  if (theme == "pywal") {
+    let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
+    pywalcss = fs.readFileSync(themedir, 'utf8').replaceAll("HOMEDIR", os.homedir)
+    console.log(pywalcss)
+    addStyle(pywalcss)
+  }
+  else if (theme == "custom") {
+    addStyle(fs.readFileSync(`${dir}/custom.css`, 'utf8'))
+  }
+  else {
+    let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
+    addStyle(fs.readFileSync(themedir, 'utf8'))
+  }
 
   if (os.platform() != "win32") {
     try {
       const output = execSync('which wal', { encoding: 'utf-8' }).toLowerCase()
       if (!output.indexOf("not found") >= 0) {
-        document.getElementById("pywaloption").removeAttribute("disabled")
+        document.getElementById("pywaloption").removeAttribute("hidden")
       }
     }
     catch (e) { }
@@ -420,41 +431,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (selected == "Default Dark") {
       theme = "dark"
     }
-    if (selected == "Light") {
+    else if (selected == "Light") {
       theme = "light"
     }
-    if (selected == "AMOLED Dark") {
+    else if (selected == "AMOLED Dark") {
       theme = "amoled"
     }
-    if (selected == "Gruvbox") {
+    else if (selected == "Gruvbox") {
       theme = "gruvbox"
     }
-    if (selected == "Gruvbox Light") {
+    else if (selected == "Gruvbox Light") {
       theme = "gruvboxlight"
     }
-    if (selected == "Nord") {
+    else if (selected == "Nord") {
       theme = "nord"
     }
-    if (selected == "Nord") {
+    else if (selected == "Nord") {
       theme = "nord"
     }
-    if (selected == "Rosebox") {
+    else if (selected == "Rosebox") {
       theme = "rosebox"
     }
-    if (selected == "Rosé Pine") {
+    else if (selected == "Rosé Pine") {
       theme = "rosepine"
     }
-    if (selected == "Rosé Pine Moon") {
+    else if (selected == "Rosé Pine Moon") {
       theme = "rosepinemoon"
     }
-
-    if (selected == "Rosé Pine Dawn") {
+    else if (selected == "Rosé Pine Dawn") {
       theme = "rosepinedawn"
     }
-    if (selected == "Custom") {
+    else if (selected == "Custom") {
       theme = "custom"
     }
-    if (selected == "Pywal") {
+    else if (selected == "Pywal") {
       theme = "pywal"
     }
     console.log(theme)
