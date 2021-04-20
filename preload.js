@@ -390,7 +390,8 @@ document.addEventListener("DOMContentLoaded", () => {
       body: "Your presence has started.",
       icon: "assets/icon.png",
       timeoutType: "default",
-    });
+    })
+    document.getElementById("pfp").setAttribute("src", "assets/wumpus.gif")
     if (settings.launchedpresence == false) {
       settings.launchedpresence = true
       fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
