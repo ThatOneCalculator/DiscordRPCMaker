@@ -51,7 +51,7 @@ if (!fs.existsSync(dir)) {
     quitonx: false
   }
   fs.mkdirSync(dir, { recursive: true })
-  fs.mkdirSync(`${dir}${slash}themes`, { recursive: true })
+  fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}/custom.css`)
   fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
     if (err) { throw err }
     else {
@@ -441,18 +441,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (selected == "Rosé Pine Dawn") {
       theme = "rosepinedawn"
     }
-    //TODO: Make work
-    let files = fs.readdir(`${dir}${slash}themes`, (directory, files) => {
-      console.log(files)
-      files.forEach(file => {
-        fileh = document.createElement("file");
-        fileh.text = file;
-        e.appendChild(fileh);
-        // e.add(file)
-      })
-    })
-    let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
-    addStyle(fs.readFileSync(themedir, 'utf8'))
+    if (selected == "Custom") {
+      theme = "custom"
+    }
+    if (selected == "Pywal") {
+      theme = "pywal"
+    }
+    console.log(theme)
+    if (theme == "pywal") {
+      let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
+      pywalcss = fs.readFileSync(themedir, 'utf8').replaceAll("HOMEDIR", os.homedir)
+      console.log(pywalcss)
+      addStyle(pywalcss)
+    }
+    else if (theme == "custom") {
+      addStyle(fs.readFileSync(`${dir}/custom.css`, 'utf8'))
+    }
+    else {
+      let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
+      addStyle(fs.readFileSync(themedir, 'utf8'))
+    }
     settings.theme = theme
     console.log(settings)
     fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
@@ -480,7 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("small-image-input").setAttribute("disabled", "true")
     document.getElementById("del-btn").setAttribute("disabled", "true")
-    document.getElementById("file-btn").setAttribute("disabled", "true")
+    // document.getElementById("file-btn").setAttribute("disabled", "true")
     bootClientId(empty)
   });
 
@@ -490,7 +498,7 @@ document.addEventListener("DOMContentLoaded", () => {
     reloadPresences()
     //document.getElementById("new-presence-button").click()
     document.getElementById("del-btn").removeAttribute("disabled")
-    document.getElementById("file-btn").removeAttribute("disabled")
+    // document.getElementById("file-btn").removeAttribute("disabled")
     document.getElementById("presence-id").value = filename
   });
 

@@ -1,6 +1,6 @@
 /* TODO: Make work from any computer */
 
-@import url(file:///home/kainoa/.cache/wal/colors.css);
+@import url(file://HOMEDIR/.cache/wal/colors.css);
 
 :root {
     --primary: var(--color4);
