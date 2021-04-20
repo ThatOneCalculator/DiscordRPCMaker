@@ -379,6 +379,12 @@ textarea {
   float: left;
 }
 
+.quitonclose {
+  padding-top: 0.4rem;
+  grid-row: 5/16;
+  grid-column: 2/10;
+}
+
 .max-content {
   width: max-content;
 }

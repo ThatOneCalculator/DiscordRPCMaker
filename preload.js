@@ -620,6 +620,29 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSavedPresences()
   }
 
+  document.getElementById("quitonclose-btn")
+  settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+  settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+  if (settings.quitonx) { document.getElementById("quitonclose-btn").click() }
+
+  document.getElementById("quitonclose-btn").addEventListener("change", () => {
+    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+    settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+    settings.quitonx = !settings['quitonx']
+    fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+      if (err) { throw err }
+      else { }
+    })
+    const msg = {
+      type: 'question',
+      buttons: [],
+      defaultId: 0,
+      title: 'Notice',
+      message: 'Setting will take affect next launch.',
+    }
+    dialog.showMessageBox(null, msg)
+  })
+
   //button enabling
   document.getElementById("button1-enable").addEventListener("change", () => {
     if (document.getElementById("button1-enable").checked) {
