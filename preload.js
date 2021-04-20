@@ -638,7 +638,7 @@ document.addEventListener("DOMContentLoaded", () => {
       buttons: [],
       defaultId: 0,
       title: 'Notice',
-      message: 'Setting will take affect next launch.',
+      message: 'This setting will take affect next launch.',
     }
     dialog.showMessageBox(null, msg)
   })
