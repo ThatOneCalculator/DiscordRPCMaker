@@ -304,14 +304,22 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("small-image-input")
   ]
 
+  let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+  let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+  let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+  let theme = settings["theme"]
+  let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
+  console.log("HERE!!!")
+  addStyle(fs.readFileSync(themedir, 'utf8'))
+
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
-    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+    opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     let id = document.getElementById("presence-id").value
     let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
-    let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
-    const options = JSON.parse(fs.readFileSync(fullpath, 'utf8'))
-    let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+    let options = JSON.parse(fs.readFileSync(fullpath, 'utf8'))
+    settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     const activity = {}
     const assets = {}
 
@@ -391,6 +399,68 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
   });
+
+  document.getElementById("themedropdown").addEventListener("change", function () {
+    let e = document.getElementById("themedropdown")
+    let selected = e.options[e.selectedIndex].text
+    opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+    settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+    theme = "dark"
+    if (selected == "Default Dark") {
+      theme = "dark"
+    }
+    if (selected == "Light") {
+      theme = "light"
+    }
+    if (selected == "AMOLED Dark") {
+      theme = "amoled"
+    }
+    if (selected == "Gruvbox") {
+      theme = "gruvbox"
+    }
+    if (selected == "Gruvbox Light") {
+      theme = "gruvboxlight"
+    }
+    if (selected == "Nord") {
+      theme = "nord"
+    }
+    if (selected == "Nord") {
+      theme = "nord"
+    }
+    if (selected == "Rosebox") {
+      theme = "rosebox"
+    }
+    if (selected == "Rosé Pine") {
+      theme = "rosepine"
+    }
+    if (selected == "Rosé Pine Moon") {
+      theme = "rosepinemoon"
+    }
+
+    if (selected == "Rosé Pine Dawn") {
+      theme = "rosepinedawn"
+    }
+    //TODO: Make work
+    let files = fs.readdir(`${dir}${slash}themes`, (directory, files) => {
+      console.log(files)
+      files.forEach(file => {
+        fileh = document.createElement("file");
+        fileh.text = file;
+        e.appendChild(fileh);
+        // e.add(file)
+      })
+    })
+    let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
+    addStyle(fs.readFileSync(themedir, 'utf8'))
+    settings.theme = theme
+    console.log(settings)
+    fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+      if (err) { throw err }
+      else { }
+    })
+  });
+
 
   document.getElementById("new-presence-button").addEventListener("click", () => {
     let empty = {
@@ -646,16 +716,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })
 
-  let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-  let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
-  let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+  opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+  settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+  settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   if (settings['language'] == 'english') {
     document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
   }
-  /*document.querySelector('#theme-button').addEventListener('click', () => {
-    let themedir = path.join(__dirname, `${slash}themes${slash}light.css`)
-    addStyle(fs.readFileSync(themedir, 'utf8'))
-  })*/
   document.querySelector('#donate-button').addEventListener("click", () => {
     const options = {
       type: 'question',

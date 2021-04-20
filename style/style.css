@@ -15,7 +15,7 @@
   --danger-hover: rgba(240, 71, 71, 0.1);
   --text: #ffffff;
   --background-primary: #36393f;
-  --background-secondary: #2f3136;
+  --background-secondary: #303338;
   --background-tertiary: #202225;
   --background-floating: #18191c;
   --interactive: #b9bbbe;
@@ -672,6 +672,39 @@ textarea {
   margin-left: 0.3rem !important;
 }
 
+.customdropdown {
+  padding: 10px 8px 10px 14px;
+  border: 1px solid var(--background-tertiary);
+  color: var(--background-tertiary);
+  border-radius: 3px;
+  background: var(--background-secondary) !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.customdropdown form select {
+  color: var(--text);
+  background: var(--background-secondary) !important;
+  font-size: 13px;
+}
+
+.customdropdown .select {
+  background: var(--background-secondary) !important;
+  width: 82.5%;
+}
+
+.customdropdown .select select {
+  background: var(--background-secondary) !important;
+  line-height: 1;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  width: 120%;
+  position: relative;
+  z-index: 10;
+  font-size: 1em;
+}
+
 /*----------------------------------------------------------------
 BEGIN FOSSCORD
 ------------------------------------------------------------------*/
@@ -1162,7 +1195,7 @@ h3 {
 }
 
 .single-input {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--background-secondary);
   border-color: rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
