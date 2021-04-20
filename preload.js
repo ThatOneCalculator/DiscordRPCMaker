@@ -5,6 +5,8 @@ const RPC = require('discord-rpc')
 const openExplorer = require('open-file-explorer')
 const { ipcRenderer } = require('electron')
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
+const execSync = require('child_process').execSync
+
 const slash = os.platform() == 'win32' ? "\\" : "/"
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
@@ -309,9 +311,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   let theme = settings["theme"]
   let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
-  console.log("HERE!!!")
   addStyle(fs.readFileSync(themedir, 'utf8'))
 
+  if (os.platform() != "win32") {
+    try {
+      const output = execSync('which wal', { encoding: 'utf-8' }).toLowerCase()
+      if (!output.indexOf("not found") >= 0) {
+        document.getElementById("pywaloption").removeAttribute("disabled")
+      }
+    }
+    catch (e) { }
+  }
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
     opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")

@@ -354,6 +354,11 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
+"child_process@^1.0.2":
+  "integrity" "sha1-sffn/HPSXn/R1FWtyU4UODAYK1o="
+  "resolved" "https://registry.npmjs.org/child_process/-/child_process-1.0.2.tgz"
+  "version" "1.0.2"
+
 "chromium-pickle-js@^0.2.0":
   "integrity" "sha1-BKEGZywYsIWrd02YPfo+oTjyIgU="
   "resolved" "https://registry.npmjs.org/chromium-pickle-js/-/chromium-pickle-js-0.2.0.tgz"
