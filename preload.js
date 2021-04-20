@@ -306,7 +306,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("small-image-input")
   ]
 
-  setTimeout(() => {document.getElementById("fader").style.opacity = "0"}, 500)
+  setTimeout(() => { document.getElementById("fader").style.opacity = "0" }, 250)
+  setTimeout(() => { document.getElementById("fader").remove() }, 500)
+
 
   let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
   let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
