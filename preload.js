@@ -765,8 +765,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     //load html into window
-    develWindow.loadURL('https://discord.com/developers');
-    develWindow.webContents.openDevTools();
+    develWindow.loadURL('https://discord.com/developers')
+    // develWindow.webContents.openDevTools();
     //garbage collection handle
     develWindow.on('close', function () {
       develWindow = null;
