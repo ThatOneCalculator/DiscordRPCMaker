@@ -821,6 +821,7 @@ function registerLinkToOpenInBrowser(elemid, link) {
   settingsbtn.addEventListener("click", () => { openSettingsModal() })
   settingsbtn = document.getElementById("closesettingsmodal")
   settingsbtn.addEventListener("click", () => { closeSettingsModal() })
+
 }
 
 function loadPresence(presence, file) {
