@@ -379,16 +379,9 @@ textarea {
   float: left;
 }
 
-.quitonclose {
-  padding-top: 0.4rem;
-  grid-row: 7/16;
-  grid-column: 2/10;
-}
-
+.quitonclose,
 .version {
-  padding-top: 0.4rem;
-  grid-row: 8/16;
-  grid-column: 2/10;
+  padding-top: 0.5rem;
 }
 
 .max-content {
