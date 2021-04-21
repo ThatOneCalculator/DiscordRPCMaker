@@ -385,6 +385,12 @@ textarea {
   grid-column: 2/10;
 }
 
+.version {
+  padding-top: 0.4rem;
+  grid-row: 8/16;
+  grid-column: 2/10;
+}
+
 .max-content {
   width: max-content;
 }
