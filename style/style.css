@@ -118,7 +118,7 @@ h3 {
 
 .modalbodytext {
   overflow-y: scroll;
-  grid-row: 3 / 10;
+  grid-row: 3 / 11;
 }
 
 .modalbodytext::-webkit-scrollbar-track {
@@ -293,6 +293,13 @@ textarea {
 
 .settings-wrapper {
   background: var(--background-tertiary);
+}
+#faqtitle {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+hr.modalbody {
+  margin-bottom: 0.5rem !important;
 }
 
 .logo {
