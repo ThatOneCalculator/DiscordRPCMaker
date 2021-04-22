@@ -686,6 +686,9 @@ textarea {
   overflow: hidden;
   position: relative;
 }
+select {
+  outline: 0px solid transparent !important;
+}
 
 .customdropdown form select {
   color: var(--text);
@@ -706,7 +709,7 @@ textarea {
   border-radius: 0;
   width: 120%;
   position: relative;
-  z-index: 10;
+  /*z-index: 10;*/
   font-size: 1em;
 }
 

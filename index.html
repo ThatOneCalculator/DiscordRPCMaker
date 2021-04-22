@@ -138,16 +138,28 @@
 				type="text" value="" id="clientid-input">
 		</div>
 		<div class="pad-left large-image-name grid-comp">
-			<input list="large-image-list" class="single-input enable-on-clientid" maxlength="64"
-				placeholder="Large Image name (optional)" name="Large Image name" type="text" value="" disabled
-				id="large-image-input">
-			<datalist id="large-image-list"></datalist>
+			<div class="customdropdown">
+				<div class="select">
+					<form>
+						<select name="Large Image" class="enable-on-clientid" disabled id="large-image-input">
+							<option selected="selected">Large Image (optional)</option>
+							<option>None</option>
+						</select>
+					</form>
+				</div>
+			</div>
 		</div>
 		<div class="pad-left small-image-name grid-comp">
-			<input list="small-image-list" class="single-input enable-on-large-image" maxlength="64"
-				placeholder="Small Image name (optional, only if you have a large image)" name="Small Image name"
-				type="text" value="" disabled id="small-image-input">
-			<datalist id="small-image-list"></datalist>
+			<div class="customdropdown">
+				<div class="select">
+					<form>
+						<select name="Small Image" class="enable-on-large-image" disabled id="small-image-input">
+							<option selected="selected">Small Image (optional)</option>
+							<option>None</option>
+						</select>
+					</form>
+				</div>
+			</div>
 		</div>
 		<div class="pad-left description-line-1 grid-comp">
 			<input class="single-input enable-on-clientid" id="description-input-1" maxlength="64"

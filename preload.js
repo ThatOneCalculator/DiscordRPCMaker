@@ -16,6 +16,7 @@ var options = {}
 let client = new RPC.Client({ transport: 'ipc' })
 
 let inputs = []
+let selects = []
 
 //url validation regex
 function validateurl(str) {
@@ -134,6 +135,8 @@ function saveAsJson() {
   let state = document.getElementById("description-input-2").value.toString()
   let largeimage = document.getElementById("large-image-input").value.toString()
   let smallimage = document.getElementById("small-image-input").value.toString()
+  largeimage = largeimage == "None" ? "" : largeimage
+  smallimage = smallimage == "None" ? "" : smallimage
   let buttononelabel = document.getElementById("button1-input-name").value.toString()
   let buttononeurl = document.getElementById("button1-input-url").value.toString()
   if (!buttononeurl.startsWith('http')) { buttononeurl = 'https://' + buttononeurl }
@@ -212,10 +215,12 @@ async function bootClientId(presence) {
         item.removeAttribute("disabled")
       })
 
-      //populate the image input datalists with fetched names of images from the discord api
-      imageinputs = document.querySelectorAll("#small-image-list, #large-image-list")
+      //populate the image select options with fetched names of images from the discord api
+      imageinputs = document.querySelectorAll("#large-image-input, #small-image-input")
       imageinputs.forEach((item, i, arr) => {
-        htmll = ``
+        htmll = ''
+        htmll += item == document.getElementById('large-image-input') ? '<option selected="selected">Large Image (optional)</option>' : '<option selected="selected">Small Image (optional)</option>'
+        htmll += '<option>None</option>'
         options.forEach((opt, index, array) => {
           htmll += `<option image-id="${opt.id}">${opt.name}</option>`
         })
@@ -234,11 +239,29 @@ async function bootClientId(presence) {
 
 
         //fill in the values from provided presence, and simulate user clicking / typing in the inputs, so the preview updates.
-        largeimg.value = presence.largeimage
-        largeimg.dispatchEvent(new KeyboardEvent("keyup"))
+        largeimg.querySelectorAll("option").forEach(opt => {
+          if (opt.getAttribute("selected") == "selected") {
+            opt.removeAttribute("selected")
+          }
+        })
+        largeimg.querySelectorAll("option").forEach(opt => {
+          if (opt.innerText == presence.largeimage) {
+            opt.setAttribute("selected", "selected")
+          }
+        })
+        largeimg.dispatchEvent(new Event("change"))
 
-        smallimg.value = presence.smallimage
-        smallimg.dispatchEvent(new KeyboardEvent("keyup"))
+        smallimg.querySelectorAll("option").forEach(opt => {
+          if (opt.getAttribute("selected") == "selected") {
+            opt.removeAttribute("selected")
+          }
+        })
+        smallimg.querySelectorAll("option").forEach(opt => {
+          if (opt.innerText == presence.smallimage) {
+            opt.setAttribute("selected", "selected")
+          }
+        })
+        smallimg.dispatchEvent(new Event("change"))
 
         desc1.value = presence.description
         desc2.value = presence.state
@@ -298,8 +321,8 @@ document.addEventListener("DOMContentLoaded", () => {
   inputs = [
     document.getElementById("clientid-input"),
     document.getElementById("presence-name-input"),
-    document.getElementById("large-image-input"),
-    document.getElementById("small-image-input"),
+    /*document.getElementById("large-image-input"),
+    document.getElementById("small-image-input"),*/
     document.getElementById("description-input-1"),
     document.getElementById("description-input-2"),
     document.getElementById("presence-id"),
@@ -511,6 +534,14 @@ document.addEventListener("DOMContentLoaded", () => {
       input.value = ""
       input.dispatchEvent(new KeyboardEvent("keyup"))
     })
+    document.getElementById("large-image-input").innerHTML = `
+    <option selected="selected">Large Image (optional)</option>
+    <option>None</option>
+    `
+    document.getElementById("small-image-input").innerHTML = `
+    <option selected="selected">Small Image (optional)</option>
+    <option>None</option>
+    `
 
     document.getElementById("small-image-input").setAttribute("disabled", "true")
     document.getElementById("del-btn").setAttribute("disabled", "true")
@@ -711,7 +742,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //updating of the large image
-  document.getElementById("large-image-input").addEventListener("keyup", () => {
+  document.getElementById("large-image-input").addEventListener("change", () => {
     let input = document.getElementById("large-image-input")
     let imgname = input.value
     let largeimage = document.getElementById("large-image")
@@ -727,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  document.getElementById("small-image-input").addEventListener("keyup", () => {
+  document.getElementById("small-image-input").addEventListener("change", () => {
     let input = document.getElementById("small-image-input")
     let imgname = input.value
     let smallimage = document.getElementById("small-image")
