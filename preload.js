@@ -877,7 +877,6 @@ function loadPresence(presence, file) {
   document.getElementById("del-btn").removeAttribute("disabled")
   document.getElementById("file-btn").removeAttribute("disabled")
   try { bootClientId(presence, true) } catch (e) { }
-  document.getElementById("test").removeAttribute("disabled")
 }
 
 function addStyle(styleString) {
