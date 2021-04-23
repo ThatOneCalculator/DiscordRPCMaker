@@ -85,8 +85,7 @@ h1 {
   top: 200%;
 }
 
-h2,
-h3 {
+h2 {
   font-kerning: none;
   letter-spacing: 0.05em;
 }
@@ -1057,7 +1056,7 @@ p {
 
 h3 {
   font-weight: 500;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 :root {
