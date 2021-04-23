@@ -17,6 +17,7 @@
     --background-floating: #f2e9de;
     --interactive: #575279;
     --interactive-active: var(--text);
+    --TEXT-secondary: var(--text) !important;
     --interactive-hover: #817c9c;
     /* Begin fosscord specific */
     --BTN-primary-hover-background: #907aa9;

@@ -11,6 +11,7 @@
     --danger: #f04747;
     --danger-hover: rgba(240, 71, 71, 0.1);
     --text: #0B0D0A;
+    --TEXT-secondary: var(--text) !important;
     --background-primary: #EAEAE9;
     --background-secondary: #EBEBEB;
     --background-tertiary: #D2D2D1;
