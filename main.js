@@ -95,12 +95,12 @@ app.whenReady().then(() => {
   }
   const contextMenu = new Menu()
   contextMenu.append(new MenuItem({
-    label: 'Quit',
-    click: () => { app.quit() }
-  }))
-  contextMenu.append(new MenuItem({
     label: 'Show',
     click: () => { app.isquitting = true; win.show() }
+  }))
+  contextMenu.append(new MenuItem({
+    label: 'Quit',
+    click: () => { app.quit() }
   }))
   appIcon.setContextMenu(contextMenu)
   appIcon.setToolTip("Discord RPC Maker")
