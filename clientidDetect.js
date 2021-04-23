@@ -80,13 +80,14 @@ const callback = function (mutationsList) {
             <code style = "font-family: monospace; background: #313131; padding: 5px; border-radius: 5px;">${id}</code>
         `, "drpcm-success-flyout")
             copy(id)
+            setTimeout(() => {document.querySelector("#drpcm-success-flyout").remove()}, "10000")
             document.querySelector(".backToLink-UqPo19").addEventListener("click", () => {
                 console.log("back")
                 firstFlyout = false
                 document.querySelector("#drpcm-success-flyout").remove()
             })
         }
-        document.querySelector(".alert-2Ffs8r.warning-2eRcFb").innerText = "Uploading/deleting can take a while depending on Discord's servers. After uploading an image, you cannot change its name."
+        document.querySelector(".alert-2Ffs8r.warning-2eRcFb").innerHTML = `<span style="color: white !important;">Uploading/deleting can sometimes take 1-2 minutes depending on Discord's servers. After uploading an image, you cannot change its name.</span>`
     }, 500)
 
 
