@@ -25,6 +25,7 @@ You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915
 
 - [**KingParity**](https://twitter.com/KingParity) 
 - [**Dylan Stone**](https://twitter.com/notDylanstone)
+- [**Lil Fox YT**](https://twitter.com/TMBF_YT)
 ---
 
 [![Windows](https://cdn.discordapp.com/attachments/671117418189422594/810784142442496010/image19.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v1.8.2/drpcm-windows.exe) 
