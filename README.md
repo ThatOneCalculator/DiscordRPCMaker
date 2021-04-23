@@ -26,6 +26,7 @@ You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915
 
 - [**KingParity**](https://twitter.com/KingParity) 
 - [**Dylan Stone**](https://twitter.com/notDylanstone)
+- [**Lil Fox YT**](https://twitter.com/TMBF_YT)
 
 ---
 
