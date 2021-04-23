@@ -362,7 +362,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
-    savePresence()
     opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     let id = document.getElementById("presence-id").value
     let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
