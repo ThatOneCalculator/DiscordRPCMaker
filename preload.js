@@ -46,7 +46,8 @@ function getImageIdFromName(imgName) {
 }
 
 function notReady() {
-  document.getElementById("test").setAttribute("disabled", "true")
+  // document.getElementById("test").setAttribute("disabled", "true")
+  console.log("I guess not ready, but who cares")
 }
 
 //check for appdata / .config dir and make it if it doesen't exist
@@ -184,6 +185,8 @@ async function bootClientId(presence, ready) {
   enableOnClientid.forEach((item, i, arr) => {
     item.disabled = true;
   })
+  document.getElementById("large-image-div").classList.add("customdisabled")
+  document.getElementById("small-image-div").classList.add("customdisabled")
 
   let button1enable = document.getElementById("button1-enable")
   let button2enable = document.getElementById("button2-enable")
@@ -218,6 +221,8 @@ async function bootClientId(presence, ready) {
       enableOnClientid.forEach((item, i, arr) => {
         item.removeAttribute("disabled")
       })
+      document.getElementById("large-image-div").classList.remove("customdisabled")
+      document.getElementById("small-image-div").classList.remove("customdisabled")
 
       //populate the image select options with fetched names of images from the discord api
       imageinputs = document.querySelectorAll("#large-image-input, #small-image-input")
@@ -566,7 +571,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("save").addEventListener("click", () => {
     savePresence()
-    setTimeout(() => {document.getElementById("test").removeAttribute("disabled")}, "2000")
+    setTimeout(() => { document.getElementById("test").removeAttribute("disabled") }, "2000")
   });
 
   document.getElementById("del-btn").addEventListener("click", () => {
@@ -745,12 +750,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //description line 1 updating
   document.getElementById("description-input-1").addEventListener("keyup", (event) => {
-    document.getElementById("preview-description-1").innerHTML = event.target.value; notReady()
+    document.getElementById("preview-description-1").innerHTML = event.target.value
   });
 
   //description line 2 updating
   document.getElementById("description-input-2").addEventListener("keyup", (event) => {
-    document.getElementById("preview-description-2").innerHTML = event.target.value; notReady()
+    document.getElementById("preview-description-2").innerHTML = event.target.value
   });
 
   //updating of the large image
@@ -764,10 +769,12 @@ document.addEventListener("DOMContentLoaded", () => {
     //if said image doesen't exist, show placeholder
     if (imgid == "") {
       largeimage.setAttribute("src", "assets/placeholder.png")
-      document.getElementById("small-image-input").setAttribute("disabled", "");
+      document.getElementById("small-image-input").setAttribute("disabled", "")
+      document.getElementById("small-image-div").classList.add("customdisabled")
     } else {
       largeimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
-      document.getElementById("small-image-input").removeAttribute("disabled");
+      document.getElementById("small-image-input").removeAttribute("disabled")
+      document.getElementById("small-image-div").classList.remove("customdisabled")
     }
   })
 

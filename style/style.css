@@ -294,10 +294,12 @@ textarea {
 .settings-wrapper {
   background: var(--background-tertiary);
 }
+
 #faqtitle {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 hr.modalbody {
   margin-bottom: 0.5rem !important;
 }
@@ -686,17 +688,26 @@ hr.modalbody {
 
 .customdropdown {
   padding: 0.625rem 0.8rem 0.625rem 0.375rem;
-  border: 1px solid var(--background-tertiary);
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  outline-style: none;
+  transition: border-color 0.2s ease-in-out;
   color: var(--background-tertiary);
   border-radius: 3px;
   background: var(--background-secondary) !important;
   overflow: hidden;
   position: relative;
 }
+
 select {
   outline: 0px solid transparent !important;
 }
-.customdropdown.disabled {
+
+/* .customdropdown.disabled {
+  opacity: 0.3 !important;
+} */
+
+.customdisabled {
   opacity: 0.3 !important;
 }
 
@@ -1263,6 +1274,7 @@ h3 {
   margin-right: 0px;
   margin-top: 0px;
   outline-style: none;
+  transition: border-color 0.2s ease-in-out;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -1274,7 +1286,6 @@ h3 {
   width: 300px;
   word-spacing: 0px;
   writing-mode: horizontal-tb;
-  transition: border-color 0.2s ease-in-out;
 }
 
 .single-input:focus {
