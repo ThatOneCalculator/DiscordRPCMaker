@@ -45,6 +45,10 @@ function getImageIdFromName(imgName) {
   return matchedid
 }
 
+function notReady() {
+  document.getElementById("test").setAttribute("disabled", "true")
+}
+
 //check for appdata / .config dir and make it if it doesen't exist
 if (!fs.existsSync(dir)) {
   initialdata = {
@@ -173,7 +177,7 @@ function saveAsJson() {
   return filename
 }
 
-async function bootClientId(presence) {
+async function bootClientId(presence, ready) {
   //checks what is in clientid input
   let inp = document.querySelector(".client-id-enabler")
   let enableOnClientid = document.querySelectorAll(".enable-on-clientid")
@@ -302,6 +306,9 @@ async function bootClientId(presence) {
       inp.classList.remove("input-success")
       inp.classList.add("input-danger")
     }
+  }
+  if (ready == true) {
+    document.getElementById("test").removeAttribute("disabled")
   }
 }
 
@@ -543,7 +550,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("small-image-input").setAttribute("disabled", "true")
     document.getElementById("del-btn").setAttribute("disabled", "true")
     // document.getElementById("file-btn").setAttribute("disabled", "true")
-    bootClientId(empty)
+    bootClientId(empty, false)
   });
 
   //save presence
@@ -554,9 +561,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("del-btn").removeAttribute("disabled")
     // document.getElementById("file-btn").removeAttribute("disabled")
     document.getElementById("presence-id").value = filename
+    document.getElementById("test").removeAttribute("disabled")
   }
+
   document.getElementById("save").addEventListener("click", () => {
     savePresence()
+    setTimeout(() => {document.getElementById("test").removeAttribute("disabled")}, "2000")
   });
 
   document.getElementById("del-btn").addEventListener("click", () => {
@@ -610,7 +620,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //enable inputs 
-  document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}) })
+  document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}, false) })
 
   function loadSavedPresences() {
     let files = fs.readdir(dir, (directory, files) => {
@@ -676,6 +686,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //button enabling
   document.getElementById("button1-enable").addEventListener("change", () => {
+    notReady()
     if (document.getElementById("button1-enable").checked) {
       //enable all buttons
       inps = document.querySelector(".button1")
@@ -685,8 +696,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.getElementById('button2-enable').removeAttribute('disabled')
       document.getElementById("preview-button-1").classList.remove("initially-hidden")
-      document.getElementById("button1-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value })
-      document.getElementById("button1-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event) })
+      document.getElementById("button1-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value; notReady() })
+      document.getElementById("button1-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event); notReady() })
     } else {
       //disable buttons
       inps = document.querySelector(".button1")
@@ -701,15 +712,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         //remove preview updating listeners
-        document.getElementById("button1-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value })
-        document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value })
+        document.getElementById("button1-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value; notReady() })
+        document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value; notReady() })
         //remove url validation listeners
-        document.getElementById("button1-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event) })
-        document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event) })
+        document.getElementById("button1-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event); notReady() })
+        document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event); notReady() })
       } catch (e) { }
     }
   });
   document.getElementById("button2-enable").addEventListener("change", () => {
+    notReady()
     if (document.getElementById("button2-enable").checked) {
       //enable second button
       inps = document.querySelector(".button2")
@@ -717,8 +729,8 @@ document.addEventListener("DOMContentLoaded", () => {
         item.removeAttribute("disabled");
       });
       document.getElementById("preview-button-2").classList.remove("initially-hidden")
-      document.getElementById("button2-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value })
-      document.getElementById("button2-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event) })
+      document.getElementById("button2-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value; notReady() })
+      document.getElementById("button2-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event); notReady() })
     } else {
       inps = document.querySelector(".button2")
       //disable second button
@@ -726,23 +738,24 @@ document.addEventListener("DOMContentLoaded", () => {
         item.setAttribute("disabled", "");
       });
       document.getElementById("preview-button-2").classList.add("initially-hidden")
-      document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value })
-      document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event) })
+      document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value; notReady() })
+      document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event); notReady() })
     }
   });
 
   //description line 1 updating
   document.getElementById("description-input-1").addEventListener("keyup", (event) => {
-    document.getElementById("preview-description-1").innerHTML = event.target.value
+    document.getElementById("preview-description-1").innerHTML = event.target.value; notReady()
   });
 
   //description line 2 updating
   document.getElementById("description-input-2").addEventListener("keyup", (event) => {
-    document.getElementById("preview-description-2").innerHTML = event.target.value
+    document.getElementById("preview-description-2").innerHTML = event.target.value; notReady()
   });
 
   //updating of the large image
   document.getElementById("large-image-input").addEventListener("change", () => {
+    notReady()
     let input = document.getElementById("large-image-input")
     let imgname = input.value
     let largeimage = document.getElementById("large-image")
@@ -759,6 +772,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   document.getElementById("small-image-input").addEventListener("change", () => {
+    notReady()
     let input = document.getElementById("small-image-input")
     let imgname = input.value
     let smallimage = document.getElementById("small-image")
@@ -787,6 +801,7 @@ document.addEventListener("DOMContentLoaded", () => {
   registerLinkToOpenInBrowser("web-button", "https://drpcm.t1c.dev")
 
   document.getElementById("devel").addEventListener("click", () => {
+    notReady()
     develWindow = new BrowserWindow({
       width: 1200,
       height: 700,
@@ -861,7 +876,8 @@ function loadPresence(presence, file) {
   document.getElementById("clientid-input").value = presence.clientid
   document.getElementById("del-btn").removeAttribute("disabled")
   document.getElementById("file-btn").removeAttribute("disabled")
-  try { bootClientId(presence) } catch (e) { }
+  try { bootClientId(presence, true) } catch (e) { }
+  document.getElementById("test").removeAttribute("disabled")
 }
 
 function addStyle(styleString) {
