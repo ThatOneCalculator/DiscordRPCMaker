@@ -696,6 +696,9 @@ hr.modalbody {
 select {
   outline: 0px solid transparent !important;
 }
+.customdropdown.disabled {
+  opacity: 0.3 !important;
+}
 
 .customdropdown form select {
   color: var(--text);
