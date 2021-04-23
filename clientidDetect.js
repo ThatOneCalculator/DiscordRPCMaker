@@ -86,6 +86,7 @@ const callback = function (mutationsList) {
                 document.querySelector("#drpcm-success-flyout").remove()
             })
         }
+        document.querySelector(".alert-2Ffs8r.warning-2eRcFb").innerText = "Uploading/deleting can take a while depending on Discord's servers. After uploading an image, you cannot change its name."
     }, 500)
 
 
@@ -123,6 +124,7 @@ function modifyText() {
             let aaa = document.getElementsByClassName('medium-zmzTW- weightNormal-3CX1dN')
             aaa[0].innerText = "This is what your presence will be called."
         })
+
     }
 }
 
