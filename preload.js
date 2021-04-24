@@ -30,7 +30,7 @@ if (!fs.existsSync(dir)) {
     quitonx: false
   }
   fs.mkdirSync(dir, { recursive: true })
-  fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}/custom.css`)
+  fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}${slash}custom.css`)
   fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
     if (err) { throw err }
     else {
@@ -111,7 +111,7 @@ function saveAsJson() {
 
   const data = JSON.stringify(content, null, 2)
   let filename = presenceid == "" ? generateId(10) : presenceid
-  fs.writeFile(`${dir}/${filename}.json`, data, 'utf8', (err) => {
+  fs.writeFile(`${dir}${slash}${filename}.json`, data, 'utf8', (err) => {
     if (err) { throw err }
     else {
       /*const myNotification = new Notification("Discord RPC Maker", {
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addStyle(pywalcss)
   }
   else if (theme == "custom") {
-    addStyle(fs.readFileSync(`${dir}/custom.css`, 'utf8'))
+    addStyle(fs.readFileSync(`${dir}${slash}custom.css`, 'utf8'))
   }
   else {
     let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
@@ -392,7 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("test").setAttribute("class", "btn success enable-on-clientid mr")
     if (settings.launchedpresence == false) {
       settings.launchedpresence = true
-      fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+      fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
         if (err) { throw err }
         else {
           const msg = {
@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
       addStyle(pywalcss)
     }
     else if (theme == "custom") {
-      addStyle(fs.readFileSync(`${dir}/custom.css`, 'utf8'))
+      addStyle(fs.readFileSync(`${dir}${slash}custom.css`, 'utf8'))
     }
     else {
       let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
@@ -482,7 +482,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     settings.theme = theme
     console.log(settings)
-    fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+    fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
       if (err) { throw err }
       else { }
     })
@@ -602,7 +602,7 @@ document.addEventListener("DOMContentLoaded", () => {
     settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     settings.quitonx = !settings['quitonx']
-    fs.writeFile(`${dir}/settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+    fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
       if (err) { throw err }
       else { }
     })
