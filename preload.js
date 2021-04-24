@@ -18,38 +18,6 @@ let client = new RPC.Client({ transport: 'ipc' })
 let inputs = []
 let selects = []
 
-//url validation regex
-function validateurl(str) {
-  const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
-
-  return regexp.test(str)
-}
-function dec2hex(dec) {
-  return dec.toString(16).padStart(2, "0")
-}
-
-function generateId(len) {
-  let arr = new Uint8Array((len || 40) / 2)
-  window.crypto.getRandomValues(arr)
-  return Array.from(arr, dec2hex).join('')
-}
-
-//get the image id from options provided the name
-function getImageIdFromName(imgName) {
-  let matchedid = ""
-  options.forEach((image, i, arr) => {
-    if (image.name == imgName) {
-      matchedid = image.id
-    }
-  })
-  return matchedid
-}
-
-function notReady() {
-  // document.getElementById("test").setAttribute("disabled", "true")
-  console.log("I guess not ready, but who cares")
-}
-
 //check for appdata / .config dir and make it if it doesen't exist
 if (!fs.existsSync(dir)) {
   initialdata = {
@@ -70,6 +38,7 @@ if (!fs.existsSync(dir)) {
       })
     }
   })
+  //welcom emessage
   const msg = {
     type: 'question',
     buttons: [],
@@ -81,34 +50,7 @@ if (!fs.existsSync(dir)) {
   dialog.showMessageBox(null, msg)
 }
 
-function openFaqModal() {
-  const modal = document.querySelector("#faqmodal")
-  document.querySelector(".main-grid").classList.add("modal-open")
-  modal.classList.add("open")
-  document.querySelector(".preview-small-pic").style.visibility = "hidden"
-}
-
-function closeFaqModal() {
-  const modal = document.querySelector("#faqmodal")
-  modal.classList.remove("open")
-  document.querySelector(".main-grid").classList.remove("modal-open")
-  document.querySelector(".preview-small-pic").style.visibility = "visible"
-}
-
-function openSettingsModal() {
-  const modal = document.querySelector("#settingsmodal")
-  document.querySelector(".main-grid").classList.add("modal-open")
-  modal.classList.add("open")
-  document.querySelector(".preview-small-pic").style.visibility = "hidden"
-}
-
-function closeSettingsModal() {
-  const modal = document.querySelector("#settingsmodal")
-  modal.classList.remove("open")
-  document.querySelector(".main-grid").classList.remove("modal-open")
-  document.querySelector(".preview-small-pic").style.visibility = "visible"
-}
-
+//esc to exit out of faq and settings
 window.addEventListener("keydown", (event) => {
   if (event.keyCode !== 27) return;
   try {
@@ -120,19 +62,20 @@ window.addEventListener("keydown", (event) => {
 });
 
 //make the border red if url validation fails
-function updateValidButton(button, event) {
-  url = event.target.value
+function updateValidButton(button, elem) {
+  url = elem.value
   isValid = validateurl(url)
 
   if (isValid) {
     button.classList.remove("danger")
-    event.target.classList.add("input-success")
+    elem.classList.add("input-success")
   } else {
-    event.target.classList.remove("input-success")
+    elem.classList.remove("input-success")
     button.classList.add("danger")
   }
 }
 
+//save presence as json
 function saveAsJson() {
   let presencename = document.getElementById("presence-name-input").value.toString()
   let presenceid = document.getElementById("presence-id").value.toString()
@@ -168,16 +111,18 @@ function saveAsJson() {
   fs.writeFile(`${dir}/${filename}.json`, data, 'utf8', (err) => {
     if (err) { throw err }
     else {
-      const myNotification = new Notification("Discord RPC Maker", {
+      /*const myNotification = new Notification("Discord RPC Maker", {
         body: "Your presence has been saved.",
         icon: "assets/plus.png",
         timeoutType: "default",
-      })
+      })*/
+      console.log("saved")
     }
   })
   return filename
 }
 
+//fetch discord for images, fill in selects and enable inputs
 async function bootClientId(presence, ready) {
   //checks what is in clientid input
   let inp = document.querySelector(".client-id-enabler")
@@ -275,8 +220,8 @@ async function bootClientId(presence, ready) {
         desc1.value = presence.description
         desc2.value = presence.state
 
-        desc1.dispatchEvent(new KeyboardEvent("keyup"))
-        desc2.dispatchEvent(new KeyboardEvent("keyup"))
+        desc1.dispatchEvent(new Event("input"))
+        desc2.dispatchEvent(new Event("input"))
 
         if (presence.buttons.length > 0) {
           if (presence.buttons.length == 2) {
@@ -298,10 +243,10 @@ async function bootClientId(presence, ready) {
             btn1label.value = presence.buttons[0].label
             btn1url.value = presence.buttons[0].url
           }
-          btn1label.dispatchEvent(new KeyboardEvent("keyup"))
-          btn2label.dispatchEvent(new KeyboardEvent("keyup"))
-          btn1url.dispatchEvent(new KeyboardEvent("keyup"))
-          btn2url.dispatchEvent(new KeyboardEvent("keyup"))
+          btn1label.dispatchEvent(new Event("input"))
+          btn2label.dispatchEvent(new Event("input"))
+          btn1url.dispatchEvent(new Event("input"))
+          btn2url.dispatchEvent(new Event("input"))
         }
 
       }
@@ -315,6 +260,16 @@ async function bootClientId(presence, ready) {
   if (ready == true) {
     document.getElementById("test").removeAttribute("disabled")
   }
+}
+
+//load a presence - celar al inputs
+function loadPresence(presence, file) {
+  document.getElementById("presence-id").value = file.replaceAll(".json", "")
+  document.getElementById("presence-name-input").value = presence.name
+  document.getElementById("clientid-input").value = presence.clientid
+  document.getElementById("del-btn").removeAttribute("disabled")
+  document.getElementById("file-btn").removeAttribute("disabled")
+  try { bootClientId(presence, true) } catch (e) { }
 }
 
 //what to do when dom loads
@@ -422,11 +377,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     assembleClient(0)
 
-    const myNotification = new Notification("Discord RPC Maker", {
+    /*const myNotification = new Notification("Discord RPC Maker", {
       body: "Your presence has started.",
       icon: "assets/icon.png",
       timeoutType: "default",
-    })
+    })*/
+    console.log("started")
     document.getElementById("pfp").setAttribute("src", "assets/wumpus.gif")
     document.getElementById("test").setAttribute("class", "btn success enable-on-clientid mr")
     if (settings.launchedpresence == false) {
@@ -541,7 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     inputs.forEach((input) => {
       input.value = ""
-      input.dispatchEvent(new KeyboardEvent("keyup"))
+      input.dispatchEvent(new Event("input"))
     })
     document.getElementById("large-image-input").innerHTML = `
     <option selected="selected">Large Image (optional)</option>
@@ -554,6 +510,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("small-image-input").setAttribute("disabled", "true")
     document.getElementById("del-btn").setAttribute("disabled", "true")
+    document.querySelector(".preview-pfp").setAttribute("src", "assets/wumpsearch.gif")
+    document.getElementById("large-image").setAttribute("src", "assets/placeholder.png")
+
     // document.getElementById("file-btn").setAttribute("disabled", "true")
     bootClientId(empty, false)
   });
@@ -625,46 +584,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //enable inputs 
-  document.querySelector(".client-id-enabler").addEventListener("keyup", () => { bootClientId({}, false) })
+  document.querySelector(".client-id-enabler").addEventListener("input", () => { bootClientId({}, false) })
 
-  function loadSavedPresences() {
-    let files = fs.readdir(dir, (directory, files) => {
-      console.log(files)
-      let wrapper = document.getElementById('presence-scroller')
-      files.forEach(file => {
-        console.log(file)
-        if (file.includes(".json") && file.includes("settings") == false) {
-          let presence = JSON.parse(fs.readFileSync(dir + file, 'utf8'));
-          let elem = document.createElement('div')
-          html = `
-        <div class="presence-list-item">
-          <div class="presence-item-title">${presence.name}</div>
-          <div class="presence-item-id text secondary">File: ${file.replaceAll(".json", "")}</div>
-          <button class="presence-edit"><i class="fas fa-edit"></i></button>
-        </div>
-        `
-          elem.innerHTML = html
-          wrapper.appendChild(elem)
-
-          elem.querySelector('.presence-edit').addEventListener("click", () => {
-            loadPresence(presence, file)
-          })
-        }
-      })
-    })
-  }
-
-  function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
-  }
-
-  function reloadPresences() {
-    let wrapper = document.getElementById('presence-scroller')
-    removeAllChildNodes(wrapper)
-    loadSavedPresences()
-  }
+  
 
   document.getElementById("quitonclose-btn")
   settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
@@ -690,6 +612,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   //button enabling
+  //enabling of first button
   document.getElementById("button1-enable").addEventListener("change", () => {
     notReady()
     if (document.getElementById("button1-enable").checked) {
@@ -701,8 +624,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.getElementById('button2-enable').removeAttribute('disabled')
       document.getElementById("preview-button-1").classList.remove("initially-hidden")
-      document.getElementById("button1-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value; notReady() })
-      document.getElementById("button1-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event); notReady() })
+      document.getElementById("button1-input-name").addEventListener("input", () => { updatePreview("btn1name") })
+      document.getElementById("button1-input-url").addEventListener("input", () => { updatePreview("btn1url") })
     } else {
       //disable buttons
       inps = document.querySelector(".button1")
@@ -716,26 +639,26 @@ document.addEventListener("DOMContentLoaded", () => {
       button2enable.disabled = true;
 
       try {
-        //remove preview updating listeners
-        document.getElementById("button1-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-1").innerHTML = event.target.value; notReady() })
-        document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value; notReady() })
-        //remove url validation listeners
-        document.getElementById("button1-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-1"), event); notReady() })
-        document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event); notReady() })
+        //remove listeners for both buttons
+        document.getElementById("button1-input-name").removeEventListener("input", () => { updatePreview("btn1name") })
+        document.getElementById("button1-input-url").removeEventListener("input", () => { updatePreview("btn1url") })
+        document.getElementById("button2-input-name").removeEventListener("input", () => { updatePreview("btn2name") })
+        document.getElementById("button2-input-url").removeEventListener("input", () => { updatePreview("btn2url") })
       } catch (e) { }
     }
   });
+  //enabling of second button
   document.getElementById("button2-enable").addEventListener("change", () => {
     notReady()
     if (document.getElementById("button2-enable").checked) {
       //enable second button
       inps = document.querySelector(".button2")
-      inps.querySelectorAll('input[disabled]').forEach((item, i, arr) => {
+      inps.querySelectorAll('input:disabled').forEach((item, i, arr) => {
         item.removeAttribute("disabled");
       });
       document.getElementById("preview-button-2").classList.remove("initially-hidden")
-      document.getElementById("button2-input-name").addEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value; notReady() })
-      document.getElementById("button2-input-url").addEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event); notReady() })
+      document.getElementById("button2-input-name").addEventListener("input", () => { updatePreview("btn2name") })
+      document.getElementById("button2-input-url").addEventListener("input", () => { updatePreview("btn2url") })
     } else {
       inps = document.querySelector(".button2")
       //disable second button
@@ -743,55 +666,28 @@ document.addEventListener("DOMContentLoaded", () => {
         item.setAttribute("disabled", "");
       });
       document.getElementById("preview-button-2").classList.add("initially-hidden")
-      document.getElementById("button2-input-name").removeEventListener("keyup", (event) => { document.getElementById("preview-button-2").innerHTML = event.target.value; notReady() })
-      document.getElementById("button2-input-url").removeEventListener("keyup", (event) => { updateValidButton(document.getElementById("preview-button-2"), event); notReady() })
+      document.getElementById("button2-input-name").removeEventListener("input", () => { updatePreview("btn2name") })
+      document.getElementById("button2-input-url").removeEventListener("input", () => { updatePreview("btn2url") })
     }
   });
 
   //description line 1 updating
-  document.getElementById("description-input-1").addEventListener("keyup", (event) => {
-    document.getElementById("preview-description-1").innerHTML = event.target.value
+  document.getElementById("description-input-1").addEventListener("input", () => {
+    updatePreview("desc1")
   });
 
   //description line 2 updating
-  document.getElementById("description-input-2").addEventListener("keyup", (event) => {
-    document.getElementById("preview-description-2").innerHTML = event.target.value
+  document.getElementById("description-input-2").addEventListener("input", () => {
+    updatePreview("desc2")
   });
 
   //updating of the large image
   document.getElementById("large-image-input").addEventListener("change", () => {
-    notReady()
-    let input = document.getElementById("large-image-input")
-    let imgname = input.value
-    let largeimage = document.getElementById("large-image")
-    let imgid = getImageIdFromName(imgname)
-
-    //if said image doesen't exist, show placeholder
-    if (imgid == "") {
-      largeimage.setAttribute("src", "assets/placeholder.png")
-      document.getElementById("small-image-input").setAttribute("disabled", "")
-      document.getElementById("small-image-div").classList.add("customdisabled")
-    } else {
-      largeimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
-      document.getElementById("small-image-input").removeAttribute("disabled")
-      document.getElementById("small-image-div").classList.remove("customdisabled")
-    }
+    updatePreview("largeimg")
   })
 
   document.getElementById("small-image-input").addEventListener("change", () => {
-    notReady()
-    let input = document.getElementById("small-image-input")
-    let imgname = input.value
-    let smallimage = document.getElementById("small-image")
-
-    let imgid = getImageIdFromName(imgname)
-
-    //if said image doesen't exist, show placeholder
-    if (imgid == "") {
-      smallimage.setAttribute("src", "assets/placeholder.png")
-    } else {
-      smallimage.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
-    }
+    updatePreview("smallimg")
   })
 
   //fix win outline
@@ -807,6 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
   registerLinkToOpenInBrowser("discord-button", "https://discord.com/invite/Z7UZPR3bbW")
   registerLinkToOpenInBrowser("web-button", "https://drpcm.t1c.dev")
 
+  //developer portal
   document.getElementById("devel").addEventListener("click", () => {
     notReady()
     develWindow = new BrowserWindow({
@@ -854,6 +751,61 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 });
+
+/*preview updating*/
+function updatePreview(type) {
+  notReady()
+  //images
+  let smallimage = document.getElementById("small-image-input")
+  let largeimage = document.getElementById("large-image-input")
+  let smallimageprev = document.getElementById("small-image")
+  let largeimageprev = document.getElementById("large-image")
+  //description
+  let desc1 = document.getElementById("description-input-1")
+  let desc2 = document.getElementById("description-input-2")
+  //buttons
+  let btn1name = document.getElementById("button1-input-name")
+  let btn1url = document.getElementById("button1-input-url")
+  let btn2name = document.getElementById("button2-input-name")
+  let btn2url = document.getElementById("button2-input-url")
+
+  if (type == "largeimg") { //large - if image from id not found, just put placeholder there
+    let imgid = getImageIdFromName(largeimage.value)
+    console.log(imgid)
+    if (imgid == "") {
+      largeimageprev.setAttribute("src", "assets/placeholder.png")
+      document.getElementById("small-image-input").setAttribute("disabled", "")
+      document.getElementById("small-image-div").classList.add("customdisabled")
+    } else {
+      largeimageprev.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
+      document.getElementById("small-image-input").removeAttribute("disabled")
+      document.getElementById("small-image-div").classList.remove("customdisabled")
+    }
+  } else if (type == "smallimg") { //small - if image from id not found, just put placeholder there
+    let imgid = getImageIdFromName(smallimage.value)
+    console.log(imgid)
+    if (imgid == "") {
+      smallimageprev.setAttribute("src", "assets/blank.png")
+    } else {
+      smallimageprev.setAttribute("src", `https://cdn.discordapp.com/app-assets/${clientID}/${imgid}.png`)
+    }
+  } else if (type == "desc1") { //description line 1
+    document.getElementById("preview-description-1").innerHTML = desc1.value
+  } else if (type == "desc2") { //description line 2
+    document.getElementById("preview-description-2").innerHTML = desc2.value
+  } else if (type == "btn1name") { //button 1 name
+    document.getElementById("preview-button-1").innerHTML = btn1name.value
+  } else if (type == "btn1url") {// button 1 url
+    updateValidButton(document.getElementById("preview-button-1"), btn1url)
+  } else if (type == "btn2name") { //button 2 name
+    document.getElementById("preview-button-2").innerHTML = btn2name.value
+  } else if (type == "btn2url") {// button 2 url
+    updateValidButton(document.getElementById("preview-button-2"), btn2url)
+  }
+}
+
+/*utility functions*/
+
 /**
  * register a button to open in the native browser
  * @param {String} elemid element id
@@ -877,17 +829,111 @@ function registerLinkToOpenInBrowser(elemid, link) {
 
 }
 
-function loadPresence(presence, file) {
-  document.getElementById("presence-id").value = file.replaceAll(".json", "")
-  document.getElementById("presence-name-input").value = presence.name
-  document.getElementById("clientid-input").value = presence.clientid
-  document.getElementById("del-btn").removeAttribute("disabled")
-  document.getElementById("file-btn").removeAttribute("disabled")
-  try { bootClientId(presence, true) } catch (e) { }
-}
-
+//add a style to head - used when loading themes
 function addStyle(styleString) {
   const style = document.createElement('style');
   style.textContent = styleString;
   document.head.append(style);
+}
+
+//url validation regex
+function validateurl(str) {
+  const regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/
+
+  return regexp.test(str)
+}
+function dec2hex(dec) {
+  return dec.toString(16).padStart(2, "0")
+}
+
+function generateId(len) {
+  let arr = new Uint8Array((len || 40) / 2)
+  window.crypto.getRandomValues(arr)
+  return Array.from(arr, dec2hex).join('')
+}
+
+//get the image id from options provided the name
+function getImageIdFromName(imgName) {
+  let matchedid = ""
+  options.forEach((image, i, arr) => {
+    if (image.name == imgName) {
+      matchedid = image.id
+    }
+  })
+  return matchedid
+}
+
+function notReady() {
+  document.getElementById("test").setAttribute("disabled", "true")
+  //console.log("not ready")
+}
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+//presences loading and reloading
+
+function loadSavedPresences() {
+  let files = fs.readdir(dir, (directory, files) => {
+    console.log(files)
+    let wrapper = document.getElementById('presence-scroller')
+    files.forEach(file => {
+      console.log(file)
+      if (file.includes(".json") && file.includes("settings") == false) {
+        let presence = JSON.parse(fs.readFileSync(dir + file, 'utf8'));
+        let elem = document.createElement('div')
+        html = `
+      <div class="presence-list-item">
+        <div class="presence-item-title">${presence.name}</div>
+        <div class="presence-item-id text secondary">File: ${file.replaceAll(".json", "")}</div>
+        <button class="presence-edit"><i class="fas fa-edit"></i></button>
+      </div>
+      `
+        elem.innerHTML = html
+        wrapper.appendChild(elem)
+
+        elem.querySelector('.presence-edit').addEventListener("click", () => {
+          loadPresence(presence, file)
+        })
+      }
+    })
+  })
+}
+
+function reloadPresences() {
+  let wrapper = document.getElementById('presence-scroller')
+  removeAllChildNodes(wrapper)
+  loadSavedPresences()
+}
+
+/*faq and settings*/
+function openFaqModal() {
+  const modal = document.querySelector("#faqmodal")
+  document.querySelector(".main-grid").classList.add("modal-open")
+  modal.classList.add("open")
+  document.querySelector(".preview-small-pic").style.visibility = "hidden"
+}
+
+function closeFaqModal() {
+  const modal = document.querySelector("#faqmodal")
+  modal.classList.remove("open")
+  document.querySelector(".main-grid").classList.remove("modal-open")
+  document.querySelector(".preview-small-pic").style.visibility = "visible"
+}
+
+function openSettingsModal() {
+  const modal = document.querySelector("#settingsmodal")
+  document.querySelector(".main-grid").classList.add("modal-open")
+  modal.classList.add("open")
+  document.querySelector(".preview-small-pic").style.visibility = "hidden"
+}
+
+function closeSettingsModal() {
+  const modal = document.querySelector("#settingsmodal")
+  modal.classList.remove("open")
+  document.querySelector(".main-grid").classList.remove("modal-open")
+  document.querySelector(".preview-small-pic").style.visibility = "visible"
 }
