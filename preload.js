@@ -427,46 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
     settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     theme = "dark"
-    if (selected == "Default Dark") {
-      theme = "dark"
-    }
-    else if (selected == "Light") {
-      theme = "light"
-    }
-    else if (selected == "AMOLED Dark") {
-      theme = "amoled"
-    }
-    else if (selected == "Gruvbox") {
-      theme = "gruvbox"
-    }
-    else if (selected == "Gruvbox Light") {
-      theme = "gruvboxlight"
-    }
-    else if (selected == "Nord") {
-      theme = "nord"
-    }
-    else if (selected == "Nord") {
-      theme = "nord"
-    }
-    else if (selected == "Rosebox") {
-      theme = "rosebox"
-    }
-    else if (selected == "Rosé Pine") {
-      theme = "rosepine"
-    }
-    else if (selected == "Rosé Pine Moon") {
-      theme = "rosepinemoon"
-    }
-    else if (selected == "Rosé Pine Dawn") {
-      theme = "rosepinedawn"
-    }
-    else if (selected == "Custom") {
-      theme = "custom"
-    }
-    else if (selected == "Pywal") {
-      theme = "pywal"
-    }
-    console.log(theme)
+    theme = selected.toLowerCase().replaceAll(" ", "").replaceAll("é", "e")
     if (theme == "pywal") {
       let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
       pywalcss = fs.readFileSync(themedir, 'utf8').replaceAll("HOMEDIR", os.homedir)
