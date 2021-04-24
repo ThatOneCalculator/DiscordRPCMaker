@@ -18,6 +18,9 @@ let client = new RPC.Client({ transport: 'ipc' })
 let inputs = []
 let selects = []
 
+let activity = {}
+let assets = {}
+
 //check for appdata / .config dir and make it if it doesen't exist
 if (!fs.existsSync(dir)) {
   initialdata = {
@@ -329,14 +332,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
+    client.destroy()
     opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-    let id = document.getElementById("presence-id").value
-    let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
+    id = document.getElementById("presence-id").value
+    fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
     settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
-    let options = JSON.parse(fs.readFileSync(fullpath, 'utf8'))
+    options = JSON.parse(fs.readFileSync(fullpath, 'utf8'))
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
-    const activity = {}
-    const assets = {}
+    activity = {}
+    assets = {}
 
     if (options.largeimage !== '') {
       assets.large_image = options.largeimage
@@ -354,6 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (options.buttons.length !== 0) { activity.buttons = options.buttons }
 
     function assembleClient(timeout = 5000) {
+      console.log(options)
       client.destroy()
       client = new RPC.Client({ transport: 'ipc' })
       client.on('ready', () => {
@@ -375,7 +380,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
 
-    assembleClient(0)
+    assembleClient(1000)
 
     /*const myNotification = new Notification("Discord RPC Maker", {
       body: "Your presence has started.",
@@ -530,7 +535,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("save").addEventListener("click", () => {
     savePresence()
-    setTimeout(() => { document.getElementById("test").removeAttribute("disabled") }, "2000")
+    setTimeout(() => { document.getElementById("test").removeAttribute("disabled") }, 2000)
   });
 
   document.getElementById("del-btn").addEventListener("click", () => {
@@ -586,7 +591,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("input", () => { bootClientId({}, false) })
 
-  
+
 
   document.getElementById("quitonclose-btn")
   settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
