@@ -4,7 +4,7 @@
     "loading": "Betöltés",
     "nointernet": "Kérlek csatlakozz az internethez, hogy használhasd a Discord RPC Készítőt.",
     "title": "Discord RPC Készítő",
-    "presence-title": "Mentett Megjelenések",
+    "presence-title": "Mentett megjelenések",
     "logo": "Discord RPC Készítő",
     "presence-name": "Megjelenés neve",
     "presence-name-placeholder": "Megjelenés neve",
@@ -36,5 +36,5 @@
     "detected-flyout": "Kliens ID érzékelve, és kimásolva a vágólapra!",
     "flush-zNaLgf": "Kattints az 'Új applikáció' gombra, hogy készíthess egy új presence-t, vagy válassz ki egy már meglévőt lent.",
     "wordmark-1G98vs": "Discord RPC Fejlesztői Portál",
-    "aaa-innertext": "Ez lesz a neve a Megjelenésednek"
+    "aaa-innertext": "Ez lesz a neve a megjelenésednek"
 }
