@@ -1,16 +1,16 @@
 {
     "translate-credits": "aprobeni",
-    "language": "Hungarian",
-    "loading": "Betöltés",
+    "language": "Magyar",
+    "loading": "Betöltés...",
     "nointernet": "Kérlek csatlakozz az internethez, hogy használhasd a Discord RPC Készítőt.",
     "title": "Discord RPC Készítő",
-    "presence-title": "Mentett presence-k",
+    "presence-title": "Mentett Megjelenések",
     "logo": "Discord RPC Készítő",
-    "presence-name": "Presence neve",
-    "presence-name-placeholder": "Presence neve",
+    "presence-name": "Megjelenés neve",
+    "presence-name-placeholder": "Megjelenés neve",
     "devel": "Fejlesztői portál",
     "save": "Mentés",
-    "test": "Presence bekapcsolása",
+    "test": "Megjelenés bekapcsolása",
     "client-id": "Kliens ID",
     "client-id-placeholder": "Kliens ID",
     "large-image": "Nagy kép",
@@ -27,7 +27,7 @@
     "button-1-url": "url",
     "button-2-label": "Szöveg",
     "button-2-url": "url",
-    "del-btn": "Presence törlése",
+    "del-btn": "Megjelenés törlése",
     "file-btn": "Megtekintés fájlban",
     "preview-name": "Te",
     "preview-playingagame": "JÁTÉKBAN",
@@ -36,5 +36,5 @@
     "detected-flyout": "Kliens ID érzékelve, és kimásolva a vágólapra!",
     "flush-zNaLgf": "Kattints az 'Új applikáció' gombra, hogy készíthess egy új presence-t, vagy válassz ki egy már meglévőt lent.",
     "wordmark-1G98vs": "Discord RPC Fejlesztői Portál",
-    "aaa-innertext": "Ez lesz a neve a presence-nek"
+    "aaa-innertext": "Ez lesz a neve a Megjelenésednek"
 }
