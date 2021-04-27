@@ -668,6 +668,7 @@ document.addEventListener("DOMContentLoaded", () => {
   registerLinkToOpenInBrowser("github-button", "https://github.com/ThatOneCalculator/DiscordRPCMaker")
   registerLinkToOpenInBrowser("discord-button", "https://discord.com/invite/Z7UZPR3bbW")
   registerLinkToOpenInBrowser("web-button", "https://drpcm.t1c.dev")
+  registerLinkToOpenInBrowser("donate-button", "https://buymeacoffee.com/that1calculator")
 
   //developer portal
   document.getElementById("devel").addEventListener("click", () => {
@@ -695,28 +696,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (settings['language'] == 'english') {
     document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
   }
-  document.querySelector('#donate-button').addEventListener("click", () => {
-    const options = {
-      type: 'question',
-      buttons: ['Never mind', 'Liberapay', 'BuyMeACoffee'],
-      defaultId: 0,
-      title: 'Donate',
-      message: 'Thanks for supporting the project! Liberapay is for recurring donations, and BuyMeACoffee is for one time donations.',
-      detail: 'Both will get you a spot on the Website & GitHub README. Both services accept PayPal. Make sure to join the Discord for more details.',
-    };
-
-    dialog.showMessageBox(null, options).then(result => {
-      if (result.response == 0) {
-        shell.openExternal('https://liberapay.com/ThatOneCalculator')
-      } else if (result.response == 1) {
-        shell.openExternal('https://buymeacoffee.com/that1calculator')
-      }
-    }).catch(err => {
-      console.log(err)
-    })
-  })
-
-});
+})
 
 /*preview updating*/
 function updatePreview(type) {
