@@ -27,7 +27,8 @@ if (!fs.existsSync(dir)) {
     launchedpresence: false,
     language: "english",
     theme: "dark",
-    quitonx: false
+    quitonx: false,
+    showtimestamp: false
   }
   fs.mkdirSync(dir, { recursive: true })
   fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}${slash}custom.css`)
@@ -343,19 +344,25 @@ document.addEventListener("DOMContentLoaded", () => {
     assets = {}
 
     if (options.largeimage !== '') {
-      assets.large_image = options.largeimage
+      activity.largeImageKey = options.largeimage
       // If you change this and some asks about this, please still give me credit :)
-      assets.large_text = "Made with ThatOneCalculator's Discord RPC Maker (v2.0)!"
+      activity.largeImageText = "Made with ThatOneCalculator's Discord RPC Maker (v2.0)!"
     }
     if (options.smallimage !== '') {
-      assets.small_image = options.smallimage
+      activity.smallImageKey = options.smallimage
       // Same applies with assets.large_text
-      assets.small_text = 'https://drpcm.t1c.dev/'
+      activity.smallImageText = 'https://drpcm.t1c.dev/'
     }
     if (assets !== {}) { activity.assets = assets }
     if (options.description !== '') { activity.details = options.description }
     if (options.state !== '') { activity.state = options.state }
     if (options.buttons.length !== 0) { activity.buttons = options.buttons }
+
+    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+    settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+    if (settings.showtimestamp == true) {
+      activity.startTimestamp = Date.now()
+    }
 
     function assembleClient(timeout = 5000) {
       console.log(options)
@@ -363,10 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
       client = new RPC.Client({ transport: 'ipc' })
       client.on('ready', () => {
         running = true;
-        client.request('SET_ACTIVITY', {
-          pid: process.pid,
-          activity: activity
-        })
+        client.setActivity(activity);
         client.transport.socket.on("close", (c, s) => {
           assembleClient()
         })
@@ -552,12 +556,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("input", () => { bootClientId({}, false) })
 
-
-
   document.getElementById("quitonclose-btn")
   settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   if (settings.quitonx) { document.getElementById("quitonclose-btn").click() }
+  if (settings.showtimestamp) { document.getElementById("showtimestamp-btn").click() }
 
   document.getElementById("quitonclose-btn").addEventListener("change", () => {
     settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
@@ -573,6 +576,24 @@ document.addEventListener("DOMContentLoaded", () => {
       defaultId: 0,
       title: 'Notice',
       message: 'This setting will take affect next launch.',
+    }
+    dialog.showMessageBox(null, msg)
+  })
+
+  document.getElementById("showtimestamp-btn").addEventListener("change", () => {
+    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+    settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+    settings.showtimestamp = !settings['showtimestamp']
+    fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
+      if (err) { throw err }
+      else { }
+    })
+    const msg = {
+      type: 'question',
+      buttons: [],
+      defaultId: 0,
+      title: 'Notice',
+      message: 'This setting will take affect the next time you click the Launch Presence button.',
     }
     dialog.showMessageBox(null, msg)
   })

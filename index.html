@@ -93,6 +93,12 @@
 							<span class="text default">Quit on Close</span>
 						</label>
 					</div>
+					<div class="button-setup showtimestamp">
+						<label class="matter-switch max-content mr">
+							<input type="checkbox" role="switch" id="showtimestamp-btn">
+							<span class="text default">Show Elapsed Time</span>
+						</label>
+					</div>
 					<p class="text secondary version">Build: v2.0.0 beta 2</p>
 				</span>
 
@@ -164,11 +170,11 @@
 			</div>
 		</div>
 		<div class="pad-left description-line-1 grid-comp">
-			<input class="single-input enable-on-clientid" id="description-input-1" maxlength="64"
+			<input class="single-input enable-on-clientid" id="description-input-1" maxlength="64" minlength="2"
 				placeholder="Description line 1 (optional)" name="Description" type="text" value="" disabled>
 		</div>
 		<div class="pad-left description-line-2 grid-comp">
-			<input class="single-input enable-on-clientid" id="description-input-2" maxlength="64"
+			<input class="single-input enable-on-clientid" id="description-input-2" maxlength="64" minlength="2"
 				placeholder="Description line 2 (optional)" name="Description" type="text" value="" disabled>
 		</div>
 		<div class="pad-left button1 button-setup grid-comp ">

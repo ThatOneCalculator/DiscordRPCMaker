@@ -388,6 +388,7 @@ hr.modalbody {
 }
 
 .quitonclose,
+.showtimestamp,
 .version {
   padding-top: 0.5rem;
 }
@@ -505,7 +506,7 @@ hr.modalbody {
   border-bottom-right-radius: 5px;
   display: grid;
   grid-template: repeat(8, 1fr) / repeat(3, 1fr);
-  padding-top: 1rem ;
+  padding-top: 1rem;
 }
 
 .grid-preview-rpc .preview-playingagame {
