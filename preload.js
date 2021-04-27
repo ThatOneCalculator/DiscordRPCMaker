@@ -693,9 +693,7 @@ document.addEventListener("DOMContentLoaded", () => {
   opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
   settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
-  if (settings['language'] == 'english') {
-    document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}english.html`))
-  }
+  document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}${settings['language']}.html`))
 })
 
 /*preview updating*/
