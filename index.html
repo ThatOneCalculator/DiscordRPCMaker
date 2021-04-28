@@ -104,7 +104,7 @@
 
 			</span>
 		</div>
-		<h2 class="presence-title">Saved Presences</h2>
+		<h2 class="presence-title lang-presence-title">Saved Presences</h2>
 		<button id="new-presence-button" class="grey-btn white-btn"><i class="fas fa-plus-circle"><br></i></button>
 		<div class="presence-list grid-comp">
 			<div class="presence-scroller" id="presence-scroller">
@@ -130,19 +130,19 @@
 		</div>
 		<div class="logo grid-comp">
 			<div class="htest">
-				<h1 class="zoom"><img src="assets/icon.png" width="70" height="70" id="logoimage" />&nbsp; Discord RPC
+				<h1 class="zoom lang-title"><img src="assets/icon.png" width="70" height="70" id="logoimage" />&nbsp; Discord RPC
 					Maker</h1>
 			</div>
 		</div>
 		<div class="pad-left presence-name grid-comp">
-			<input class="single-input mr" style="width: auto !important;" placeholder="Presence Name" maxlength="20"
+			<input class="single-input mr lang-presence-name lang-presence-name-placeholder" style="width: auto !important;" placeholder="Presence Name" maxlength="20"
 				id="presence-name-input" name="Presence Name" type="text" value="">
-			<button id="devel" class="btn primary mr" style="padding: 0 0.3rem 0 0.3rem">Developer Portal</i></button>
-			<button id="save" class="btn primary enable-on-clientid mr" disabled>Save</button>
-			<button id="test" class="btn primary enable-on-clientid mr" disabled>Launch Presence</button>
+			<button id="devel" class="btn primary mr lang-devel" style="padding: 0 0.3rem 0 0.3rem">Developer Portal</i></button>
+			<button id="save" class="btn primary enable-on-clientid mr lang-save" disabled>Save</button>
+			<button id="test" class="btn primary enable-on-clientid mr lang-test" disabled>Launch Presence</button>
 		</div>
 		<div class="pad-left client-id grid-comp">
-			<input class="single-input client-id-enabler" maxlength="20" placeholder="Client ID" name="Client ID"
+			<input class="single-input client-id-enabler lang-client-id lang-client-id-placeholder" maxlength="20" placeholder="Client ID" name="Client ID"
 				type="text" value="" id="clientid-input">
 		</div>
 		<div class="pad-left large-image-name grid-comp">
@@ -150,7 +150,7 @@
 				<div class="select">
 					<form>
 						<select name="Large Image" class="enable-on-clientid" disabled id="large-image-input">
-							<option selected="selected">Large Image (optional)</option>
+							<option selected="selected" class="lang-large-image-placeholder">Large Image (optional)</option>
 							<option>None</option>
 						</select>
 					</form>
@@ -162,7 +162,7 @@
 				<div class="select">
 					<form>
 						<select name="Small Image" class="enable-on-large-image" disabled id="small-image-input">
-							<option selected="selected">Small Image (optional)</option>
+							<option selected="selected" class="small-image-placeholder">Small Image (optional)</option>
 							<option>None</option>
 						</select>
 					</form>

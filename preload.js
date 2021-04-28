@@ -289,6 +289,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //load presences
   loadSavedPresences()
 
+  //for testing
+  loadLang("german")
+
   inputs = [
     document.getElementById("clientid-input"),
     document.getElementById("presence-name-input"),
@@ -331,6 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     catch (e) { }
   }
+
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
     client.destroy()
@@ -903,4 +907,38 @@ function closeSettingsModal() {
   modal.classList.remove("open")
   document.querySelector(".main-grid").classList.remove("modal-open")
   document.querySelector(".preview-small-pic").style.visibility = "visible"
+}
+
+//lang
+
+function loadLang(language) {
+
+  /*let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+  let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+  let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))*/
+
+  //let lang = settings.language
+  let source = `.${slash}locales${slash}${language}.json`
+  let lang = JSON.parse(fs.readFileSync(source, 'utf8'))
+  let keys = Object.keys(lang)
+
+  console.log(lang, source)
+  for (let i = 0; i < Object.keys(lang).length; i++) {
+    const name = keys[i];
+    const item = lang[name];
+
+    try {
+      document.querySelector(`.lang-${name}`).innerText = item
+      if (document.querySelector(`.lang-${name}`).nodeName === "INPUT") {
+          document.querySelector(`.lang-${name}`).setAttribute("placeholder", item)
+      }
+    } catch (e) {}
+
+    
+
+    //document.querySelector(`.lang-${name}`).innerText = item
+    
+  }
+  
+  
 }
