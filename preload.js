@@ -551,7 +551,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     if (process.platform !== "win32") { openExplorer(dir) }
     else { openExplorer(opendir) }
-  });
+  })
+
+  //Easter eggs
 
   //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("input", () => { bootClientId({}, false) })
