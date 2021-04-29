@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSavedPresences()
 
   //for testing
-  loadLang("german")
+  // loadLang("german")
 
   inputs = [
     document.getElementById("clientid-input"),
@@ -930,15 +930,15 @@ function loadLang(language) {
     try {
       document.querySelector(`.lang-${name}`).innerText = item
       if (document.querySelector(`.lang-${name}`).nodeName === "INPUT") {
-          document.querySelector(`.lang-${name}`).setAttribute("placeholder", item)
+        document.querySelector(`.lang-${name}`).setAttribute("placeholder", item)
       }
-    } catch (e) {}
+    } catch (e) { }
 
-    
+
 
     //document.querySelector(`.lang-${name}`).innerText = item
-    
+
   }
-  
-  
+
+
 }
