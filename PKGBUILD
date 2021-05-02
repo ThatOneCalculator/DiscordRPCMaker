@@ -11,7 +11,7 @@ arch=('x86_64')
 url="https://drpcm.t1c.dev/"
 license=('GPL')
 _appimage="drpcm-linux.appimage"
-source_x86_64=("${_appimage}::https://github.com/thatonecalculator/releases/releases/download/v${pkgver}/${_appimage}")
+source_x86_64=("${_appimage}::https://github.com/thatonecalculator/discordrpcmaker/releases/download/v${pkgver}/${_appimage}")
 noextract=("${_appimage}")
 
 prepare() {
