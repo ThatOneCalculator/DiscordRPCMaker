@@ -13,13 +13,14 @@
 ### Features
 
 - [x] Clickable buttons!
-- [x] Clean, lightweight, and themable UI
+- [x] Make and manage multiple presences
+- [x] Clean and lightweight UI
 - [x] Clear instructions
 - [x] Optional timer
-- [x] Make and manage multiple presences
 - [x] Custom, simplified developer portal
 - [x] Easy installers for Windows, macOS, and Linux
 - [x] Export and share with friends
+- [x] Multiple themes
 - [x] Pywal support
 - [x] AUR Package
 - [ ] Translations (soon)
