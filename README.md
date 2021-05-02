@@ -21,6 +21,7 @@
 - [x] Easy installers for Windows, macOS, and Linux
 - [x] Export presences and share with friends
 - [x] Multiple themes
+- [x] Cross-platform system tray support
 - [x] Pywal support
 - [x] AUR Package
 - [ ] Translations (soon)
