@@ -40,7 +40,7 @@
 
 #### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-macos.dmg)
 
-- Download/mount the dmg, drag the app into the Applications folder > Right click on DiscordRPCMaker > Open > Run
+- Download/mount the dmg, drag Discord RPC Maker into the Applications folder > Double click on the Applications folder > Right click on Discord RPC Maker > Open (1st option) > Run (first, not selected option)
 
 ---
 
