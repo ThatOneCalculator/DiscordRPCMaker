@@ -10,8 +10,8 @@ lerna-debug.log*
 
 # Builds
 out/
-build/
- 
+dist/
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -86,7 +86,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
