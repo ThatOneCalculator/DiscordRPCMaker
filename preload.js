@@ -335,6 +335,13 @@ document.addEventListener("DOMContentLoaded", () => {
     catch (e) { }
   }
 
+  //stop presence of
+  document.getElementById("stop").addEventListener("click", () => {
+    client.destroy()
+    document.getElementById("stop").setAttribute("hidden", "true")
+    document.getElementById("test").setAttribute("class", "btn primary enable-on-clientid mr")
+    document.getElementById("pfp").setAttribute("src", "assets/wumpsearch.gif")
+  })
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
     client.destroy()
@@ -396,6 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
       timeoutType: "default",
     })*/
     console.log("started")
+    document.getElementById("stop").removeAttribute("hidden")
     document.getElementById("pfp").setAttribute("src", "assets/wumpus.gif")
     document.getElementById("test").setAttribute("class", "btn success enable-on-clientid mr")
     if (settings.launchedpresence == false) {
