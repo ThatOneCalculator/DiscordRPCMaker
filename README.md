@@ -86,3 +86,5 @@ We're trying to raise $150 to pay for online services and code signing!
 
 ## Still need help, or just want to chat?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
+
+Made by [ThatOneCalculator](https://t1c.dev) and [KraXen72](https://github.com/kraxen72). Not officially affiliated with Discord. Thank you [discord.js](https://github.com/discordjs/rpc/), [electron-builder](https://electron.build), [fosscord-ui](https://github.com/fosscord/fosscord-ui), and all our lovely stargazers, helpers, translators, and users for making this project possible. Full credits are in the Instructions & Info menu in the program.
