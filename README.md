@@ -64,10 +64,6 @@
 
 - Download, `tar -xvf /path/to/drpcm-linux.tar` > Run: `rpcmaker-2.0.0/rpcmaker`; Install: `mv rpcmaker-2.0.0 /usr/lib/rpcmaker && ln -s /usr/lib/rpcmaker/rpcmaker /usr/bin/rpcmaker && rpcmaker`
 
-#### [FreeBSD ![freebsd](https://media.discordapp.net/attachments/810799100940255260/838494384843915264/ezgif-2-d2bc61beed9e.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm.freebsd)
-
-- Have fun lol
-
 ---
 
 ## Supporters
