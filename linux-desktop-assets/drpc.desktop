@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=2.0
-Type=Application
-Name=drpc
-Terminal=false
-GenericName=Discord RPC Launcher
-TryExec=drpc
-Exec=drpc
-Icon=drpc
