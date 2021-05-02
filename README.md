@@ -54,7 +54,7 @@
 
 #### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.deb)
 
-- Download, `sudo apt install /path/to/drpcm-linux.deb`
+- Download, `sudo apt install /path/to/drpcm-linux.deb` or open with GDebi/Eddy.
 
 #### [.rpm (RPM based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png) ![suse](https://media.discordapp.net/attachments/810799100940255260/838492513152270377/ezgif-6-179f42e57f24.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.rpm)
 
