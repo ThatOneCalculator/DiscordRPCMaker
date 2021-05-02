@@ -46,7 +46,7 @@
 
 #### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.appimage)
 
-- Download, `chmod +x` if necessary, and run.
+- Download and run. Easy!
 
 #### [AUR package (discordrpcmaker)](https://aur.archlinux.org/packages/discordrpcmaker/) ![arch](https://media.discordapp.net/attachments/810799100940255260/838491685892784178/ezgif-6-fd025aa8c722.png)
 
@@ -64,7 +64,7 @@
 
 - Download, `tar -xvf /path/to/drpcm-linux.tar` > Run: `rpcmaker-2.0.0/rpcmaker`; Install: `mv rpcmaker-2.0.0 /usr/lib/rpcmaker && ln -s /usr/lib/rpcmaker/rpcmaker /usr/bin/rpcmaker && rpcmaker`
 
-#### [FreeBSD ![freebsd](https://media.discordapp.net/attachments/810799100940255260/838494384843915264/ezgif-2-d2bc61beed9e.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.freebsd)
+#### [FreeBSD ![freebsd](https://media.discordapp.net/attachments/810799100940255260/838494384843915264/ezgif-2-d2bc61beed9e.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm.freebsd)
 
 - Have fun lol
 
