@@ -46,8 +46,6 @@ We're trying to raise $150 to pay for online services and code signing!
 
 ### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-macos.dmg)
 
----
-
 ### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.appimage)
 
 ### [AUR package:](https://aur.archlinux.org/packages/discordrpcmaker/) `yay -S discordrpcmaker` ![arch](https://media.discordapp.net/attachments/810799100940255260/838491685892784178/ezgif-6-fd025aa8c722.png)
@@ -55,6 +53,10 @@ We're trying to raise $150 to pay for online services and code signing!
 ### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.deb)
 
 ### [.rpm (RPM based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png) ![suse](https://media.discordapp.net/attachments/810799100940255260/838492513152270377/ezgif-6-179f42e57f24.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.rpm)
+
+### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.tar.gz)
+
+### [FreeBSD ![freebsd](https://media.discordapp.net/attachments/810799100940255260/838494384843915264/ezgif-2-d2bc61beed9e.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.freebsd)
 
 ---
 
