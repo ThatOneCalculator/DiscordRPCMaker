@@ -50,7 +50,7 @@ We're trying to raise $150 to pay for online services and code signing!
 
 ### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.appimage)
 
-### AUR package: [discordrpcmaker](https://aur.archlinux.org/packages/discordrpcmaker/) (`yay -S discordrpcmaker`) ![arch](https://media.discordapp.net/attachments/810799100940255260/838491685892784178/ezgif-6-fd025aa8c722.png)
+### [AUR package:](https://aur.archlinux.org/packages/discordrpcmaker/) `yay -S discordrpcmaker` ![arch](https://media.discordapp.net/attachments/810799100940255260/838491685892784178/ezgif-6-fd025aa8c722.png)
 
 ### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.deb)
 
