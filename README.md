@@ -38,7 +38,6 @@
 #### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.appimage)
 
 #### [AUR package (discordrpcmaker)](https://aur.archlinux.org/packages/discordrpcmaker/) ![arch](https://media.discordapp.net/attachments/810799100940255260/838491685892784178/ezgif-6-fd025aa8c722.png)
-###### `yay -S discordrpcmaker`
 
 #### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.deb)
 
@@ -51,8 +50,7 @@
 ---
 
 ### Supporters
-You can [![Liberapay](https://img.shields.io/badge/support_with-liberapay-F6C915?style=shield&logo=liberapay)](https://liberapay.com/thatonecalculator) or
-[![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
+You can [![BuyMeACoffee](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
 
 We're trying to raise $150 to pay for online services and code signing!
 
