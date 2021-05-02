@@ -66,6 +66,13 @@
 
 ---
 
+#### From source ![electron](https://media.discordapp.net/attachments/810799100940255260/838533828384391208/ezgif-2-828b221b651a.png)
+###### ⚠ Don't do this unless you intend to modify the code!
+- Install NodeJS/NPM & Electron
+- `git clone https://thatonecalculator/discordrpcmaker && cd discordrpcmaker && npm i && npm run start`
+
+---
+
 ## Supporters
 You can [![BuyMeACoffee](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
 
