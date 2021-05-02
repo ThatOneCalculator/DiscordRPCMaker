@@ -22,6 +22,7 @@
 - [x] Custom, simplified developer portal
 - [x] Easy installers for Windows, macOS, and Linux
 - [x] Export and share with friends
+- [x] Pywal support
 - [ ] Translations (soon)
 - [ ] Hotkeys (soon)
 - [ ] Online sharing (future)
