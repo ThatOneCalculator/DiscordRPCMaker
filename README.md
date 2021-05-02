@@ -10,7 +10,7 @@
 
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=banner2)](https://discord.gg/Z7UZPR3bbW)
 
-### Features
+## Features
 
 - [x] Clickable buttons!
 - [x] Make and manage multiple presences
@@ -54,7 +54,7 @@
 
 ---
 
-### Supporters
+## Supporters
 You can [![BuyMeACoffee](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
 
 We're trying to raise $150 to pay for online services and code signing!
@@ -65,5 +65,5 @@ We're trying to raise $150 to pay for online services and code signing!
 
 ---
 
-# Still need help, or just want to chat?
+## Still need help, or just want to chat?
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
