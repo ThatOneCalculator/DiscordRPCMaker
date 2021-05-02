@@ -69,7 +69,7 @@
 #### From source ![electron](https://media.discordapp.net/attachments/810799100940255260/838533828384391208/ezgif-2-828b221b651a.png)
 ###### ⚠ Don't do this unless you intend to modify the code!
 - Install NodeJS/NPM & Electron
-- `git clone https://thatonecalculator/discordrpcmaker && cd discordrpcmaker && npm i && npm run start`
+- `git clone https://github.com/thatonecalculator/discordrpcmaker && cd discordrpcmaker && npm i && npm run start`
 
 ---
 
