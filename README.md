@@ -7,8 +7,8 @@
 [![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
 [![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator)
 
-![Large](https://cdn.discordapp.com/attachments/671117418189422594/803419758287519754/scrot.png)
-![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
+![Large](https://media.discordapp.net/attachments/810799100940255260/838485035506073630/unknown.png)
+![Small](https://media.discordapp.net/attachments/810799100940255260/838485901520797776/unknown.png)
 
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=banner2)](https://discord.gg/Z7UZPR3bbW)
 
