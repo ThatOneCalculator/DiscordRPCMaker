@@ -19,7 +19,7 @@
 - [x] Optional timer
 - [x] Custom, simplified developer portal
 - [x] Easy installers for Windows, macOS, and Linux
-- [x] Export and share with friends
+- [x] Export presences and share with friends
 - [x] Multiple themes
 - [x] Pywal support
 - [x] AUR Package
