@@ -23,6 +23,7 @@
 - [x] Export presences and share with friends
 - [x] Multiple themes
 - [x] Cross-platform system tray support
+- [x] Auto-update
 - [x] Pywal support
 - [x] AUR Package
 - [x] CLI utility
