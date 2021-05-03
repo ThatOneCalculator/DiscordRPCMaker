@@ -315,7 +315,6 @@ document.addEventListener("DOMContentLoaded", () => {
           defaultId: 1,
           title: 'Update',
           message: 'An update is avaliable!',
-          detail: 'Don\'t worry, this is the last time you\'ll see this. This project is and always will be free and open source. If you want to show your support, please consider donating, leaving a star on the GitHub, and/or joining the Discord server.',
         };
         dialog.showMessageBox(null, msg).then(result => {
           if (result.response == 1) {
