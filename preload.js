@@ -56,7 +56,7 @@ if (!fs.existsSync(dir)) {
 
 //esc to exit out of faq and settings
 window.addEventListener("keydown", (event) => {
-  if (event.keyCode !== 27) return;
+  if (event.key !== "Escape") { return }
   try {
     closeFaqModal()
     closeSettingsModal()
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       let ver = await latestVersion('discordrpcmaker')
       console.log(ver)
-      if (ver != '2.0.2') {
+      if (ver != '2.0.3') {
         const msg = {
           type: 'question',
           buttons: ['No thanks', 'Update!'],
