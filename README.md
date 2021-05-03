@@ -69,7 +69,7 @@
 ---
 
 #### [CLI Utility ![term](https://media.discordapp.net/attachments/810799100940255260/838607193833078794/ezgif-3-ff3d230cb6db.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI)
-- Reccomended for Linux users who want to daemonize presence launching.
+- Reccomended for Linux users who want to daemonize presence launching, but works on all platforms.
 
 ---
 
