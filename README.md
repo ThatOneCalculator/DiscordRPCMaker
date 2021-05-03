@@ -42,7 +42,7 @@
 
 #### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-macos.dmg)
 
-- Download/mount the dmg, drag Discord RPC Maker into the Applications folder > Double click on the Applications folder > Right click on Discord RPC Maker > Open (1st option) > Run (first, not selected option)
+- Download & mount the dmg, drag Discord RPC Maker into the Applications folder > Double click on the Applications folder > Right click on Discord RPC Maker > Open (1st option) > Run (first, not selected option)
 
 ---
 
@@ -64,7 +64,7 @@
 
 #### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.tar.gz)
 
-- Download, `tar -xvf /path/to/drpcm-linux.tar` > Run: `rpcmaker-2.0.0/rpcmaker`; Install: `mv rpcmaker-2.0.0 /usr/lib/rpcmaker && ln -s /usr/lib/rpcmaker/rpcmaker /usr/bin/rpcmaker && rpcmaker`
+- Download, `tar -xvf /path/to/drpcm-linux.tar` > Run: `discordrpcmaker-2.0.0/discordrpcmaker`; Install: `mv discordrpcmaker-2.0.0 /usr/lib/discordrpcmaker && ln -s /usr/lib/discordrpcmaker/discordrpcmaker /usr/bin/discordrpcmaker && discordrpcmaker`
 
 ---
 
