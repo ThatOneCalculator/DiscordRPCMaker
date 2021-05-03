@@ -1,7 +1,7 @@
 # Maintainer: Kainoa Kanter <kainoa@t1c.dev>
+# Based off of: https://daveparrish.net/posts/2019-11-16-Better-AppImage-PKGBUILD-template.html
 
 _pkgname=discordrpcmaker
-_Pkgname=DiscordRPCMaker
 
 pkgname="${_pkgname}"
 pkgver=2.0.0
@@ -13,6 +13,7 @@ license=('GPL')
 _appimage="drpcm-linux.appimage"
 source_x86_64=("${_appimage}::https://github.com/thatonecalculator/discordrpcmaker/releases/download/v${pkgver}/${_appimage}")
 noextract=("${_appimage}")
+sha256sums_x86_64=('SKIP')
 
 prepare() {
     chmod +x "${_appimage}"
@@ -30,7 +31,6 @@ build() {
 package() {
     # AppImage
     install -Dm755 "${srcdir}/${_appimage}" "${pkgdir}/opt/${pkgname}/${pkgname}.AppImage"
-
     # Desktop file
     install -Dm644 "${srcdir}/squashfs-root/${_pkgname}.desktop"\
             "${pkgdir}/usr/share/applications/${_pkgname}.desktop"
