@@ -89,6 +89,7 @@ We're trying to raise $150 to pay for online services and code signing!
 - [**KingParity**](https://twitter.com/KingParity) 
 - [**Dylan Stone**](https://twitter.com/notDylanstone)
 - [**Lil Fox YT**](https://twitter.com/TMBF_YT)
+- [**Jorc0**](https://twitter.com/Jorcus334)
 
 ---
 

@@ -967,11 +967,7 @@ function loadLang(language) {
       }
     } catch (e) { }
 
-
-
     //document.querySelector(`.lang-${name}`).innerText = item
 
   }
-
-
 }
