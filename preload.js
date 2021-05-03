@@ -12,7 +12,7 @@ const slash = os.platform() == 'win32' ? "\\" : "/"
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
 let clientID = 0
-var options = {}
+let options = {}
 let client = new RPC.Client({ transport: 'ipc' })
 
 let inputs = []
