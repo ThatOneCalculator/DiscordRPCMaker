@@ -82,9 +82,31 @@ function updateValidButton(button, elem) {
 //save presence as json
 function saveAsJson() {
   let presencename = document.getElementById("presence-name-input").value.toString()
+  if (presencename.length == 0) {
+    const msg = {
+      type: 'error',
+      title: 'Error',
+      message: 'You need to have a title.',
+    }
+    dialog.showMessageBox(null, msg)
+    document.getElementById("test").setAttribute("disabled", "true")
+    return
+  }
   let presenceid = document.getElementById("presence-id").value.toString()
+  if (presenceid == "undefined" || presenceid.length == 0) {
+    const msg = {
+      type: 'error',
+      title: 'Error',
+      message: 'Unexpected error. Click edit on another presence, or just close and reopen :/',
+    }
+    dialog.showMessageBox(null, msg)
+    document.getElementById("test").setAttribute("disabled", "true")
+    return
+  }
   let description = document.getElementById("description-input-1").value.toString()
+  if (description.length == 1) { description += "_" }
   let state = document.getElementById("description-input-2").value.toString()
+  if (state.length == 1) { state += "_" }
   let largeimage = document.getElementById("large-image-input").value.toString()
   let smallimage = document.getElementById("small-image-input").value.toString()
   largeimage = largeimage == "None" ? "" : largeimage
