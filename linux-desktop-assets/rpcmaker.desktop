@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.8.1
-Type=Application
-Name=rpcmaker
-Terminal=true
-GenericName=Discord RPC Maker
-TryExec=rpcmaker
-Exec=rpckamer
-Icon=rpcmaker
