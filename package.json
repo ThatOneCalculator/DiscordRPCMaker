@@ -1,0 +1,58 @@
+{
+  "name": "discordrpcmaker",
+  "version": "2.0.0",
+  "description": "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!",
+  "main": "./main.js",
+  "bin": {
+    "rpcmaker": "./main.js"
+  },
+  "scripts": {
+    "run": "node ./main.js && exit 1",
+    "start": "electron main.js"
+  },
+  "keywords": [
+    "discord",
+    "rpc",
+    "discord-rpc",
+    "cli",
+    "rich-presence",
+    "richpresence",
+    "rpcmaker",
+    "drpc",
+    "discordrpcmaker"
+  ],
+  "author": {
+    "name": "ThatOneCalculator",
+    "email": "kainoa@t1c.dev",
+    "url": "https://t1c.dev/"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/that1calculator"
+  },
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ThatOneCalculator/DiscordRPCMaker/issues",
+    "email": "kainoa@t1c.dev"
+  },
+  "homepage": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
+  "repository": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
+  "dependencies": {
+    "@electron/remote": "^1.1.0",
+    "child_process": "^1.0.2",
+    "copy-to-clipboard": "^3.3.1",
+    "discord-rpc": "^3.1.4",
+    "latest-version": "^5.1.0",
+    "open-file-explorer": "^1.0.2"
+  },
+  "pkg": {
+    "assets": [
+      "./node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5",
+    "fs": "^0.0.1-security"
+  }
+}
