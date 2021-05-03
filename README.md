@@ -24,6 +24,7 @@
 - [x] Cross-platform system tray support
 - [x] Pywal support
 - [x] AUR Package
+- [x] CLI utility
 - [ ] Translations (soon)
 - [ ] Hotkeys (soon)
 - [ ] Online sharing (future)
@@ -64,6 +65,11 @@
 #### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.0/drpcm-linux.tar.gz)
 
 - Download, `tar -xvf /path/to/drpcm-linux.tar` > Run: `rpcmaker-2.0.0/rpcmaker`; Install: `mv rpcmaker-2.0.0 /usr/lib/rpcmaker && ln -s /usr/lib/rpcmaker/rpcmaker /usr/bin/rpcmaker && rpcmaker`
+
+---
+
+#### [CLI Utility ![term](https://media.discordapp.net/attachments/810799100940255260/838607193833078794/ezgif-3-ff3d230cb6db.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI)
+- Reccomended for Linux users who want to daemonize presence launching.
 
 ---
 
