@@ -754,6 +754,12 @@ select {
   opacity: 100%;
 }
 
+.hyperlink {
+  color: var(--primary) !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /*----------------------------------------------------------------
 BEGIN FOSSCORD
 ------------------------------------------------------------------*/

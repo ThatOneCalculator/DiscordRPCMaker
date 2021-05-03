@@ -729,6 +729,9 @@ document.addEventListener("DOMContentLoaded", () => {
   settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}${settings['language']}.html`))
+  registerLinkToOpenInBrowser("cliutility", "https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI")
+  registerLinkToOpenInBrowser("t1c", "https://t1c.dev")
+  registerLinkToOpenInBrowser("kraxen", "https://github.com/KraXen72")
 })
 
 /*preview updating*/
