@@ -1,5 +1,5 @@
 {
-  "name": "rpcmaker",
+  "name": "discordrpcmaker",
   "version": "2.0.0",
   "description": "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!",
   "main": "./main.js",
@@ -18,7 +18,8 @@
     "rich-presence",
     "richpresence",
     "rpcmaker",
-    "drpc"
+    "drpc",
+    "discordrpcmaker"
   ],
   "author": {
     "name": "ThatOneCalculator",
@@ -27,7 +28,7 @@
   },
   "funding": {
     "type": "individual",
-    "url": "https://paypal.me/kainoakanter"
+    "url": "https://buymeacoffee.com/that1calculator"
   },
   "license": "GPL-3.0-or-later",
   "bugs": {
