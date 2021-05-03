@@ -4,6 +4,7 @@
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=shield)](https://discord.gg/Z7UZPR3bbW)
 [![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
 [![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator)
+[![NPM](https://img.shields.io/badge/on-npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/discordrpcmaker)
 
 ![Large](https://media.discordapp.net/attachments/810799100940255260/838485035506073630/unknown.png)
 ![Small](https://media.discordapp.net/attachments/810799100940255260/838485901520797776/unknown.png)
