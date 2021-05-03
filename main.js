@@ -23,25 +23,39 @@ function createWindow() {
     }
   })
 
-  // const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
-  // const opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-  // const settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
-  // const settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
-  // if (settings['quitonx'] == false) {
-  //   win.on('minimize', function (event) {
-  //     event.preventDefault();
-  //     win.hide();
-  //   })
+  let settings = {}
 
-  //   win.on('close', function (event) {
-  //     if (!app.isQuiting) {
-  //       event.preventDefault();
-  //       win.hide();
-  //     }
+  try {
+    let dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
+    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+    let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+    settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+  }
+  catch (e) {
+    console.log(e)
+    settings = {
+      launchedpresence: false,
+      language: "english",
+      theme: "dark",
+      quitonx: false,
+      showtimestamp: false
+    }
+  }
+  if (settings['quitonx'] == false) {
+    win.on('minimize', function (event) {
+      event.preventDefault();
+      win.hide();
+    })
 
-  //     return false;
-  //   })
-  // }
+    win.on('close', function (event) {
+      if (!app.isQuiting) {
+        event.preventDefault();
+        win.hide();
+      }
+
+      return false;
+    })
+  }
   win.setIcon(iconpath)
   //win.setResizable(false);
   const menu = Menu()

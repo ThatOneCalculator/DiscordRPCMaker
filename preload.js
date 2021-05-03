@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       let ver = await latestVersion('discordrpcmaker')
       console.log(ver)
-      if (ver != '2.0.1') {
+      if (ver != '2.0.2') {
         const msg = {
           type: 'question',
           buttons: ['No thanks', 'Update!'],
