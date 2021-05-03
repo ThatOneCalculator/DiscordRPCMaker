@@ -93,16 +93,7 @@ function saveAsJson() {
     return
   }
   let presenceid = document.getElementById("presence-id").value.toString()
-  if (presenceid == "undefined" || presenceid.length == 0) {
-    const msg = {
-      type: 'error',
-      title: 'Error',
-      message: 'Unexpected error. Click edit on another presence, or just close and reopen :/',
-    }
-    dialog.showMessageBox(null, msg)
-    document.getElementById("test").setAttribute("disabled", "true")
-    return
-  }
+
   let description = document.getElementById("description-input-1").value.toString()
   if (description.length == 1) { description += "_" }
   let state = document.getElementById("description-input-2").value.toString()
@@ -317,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       let ver = await latestVersion('discordrpcmaker')
       console.log(ver)
-      if (ver != '2.0.0') {
+      if (ver != '2.0.1') {
         const msg = {
           type: 'question',
           buttons: ['No thanks', 'Update!'],
