@@ -9,5 +9,5 @@ mv *.AppImage discordrpcmaker-linux.appimage
 mv *.deb discordrpcmaker-linux.deb
 mv *.rpm discordrpcmaker-linux.rpm
 mv *.tar.gz discordrpcmaker-linux.tar.gz
-nemo . & disown
 yay -Rnscd rpm-tools
+nemo . & disown
