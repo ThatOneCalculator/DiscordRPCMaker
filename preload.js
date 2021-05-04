@@ -34,13 +34,7 @@ if (!fs.existsSync(dir)) {
   fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}${slash}custom.css`)
   fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
     if (err) { throw err }
-    else {
-      const myNotification = new Notification("Discord RPC Maker", {
-        body: "First launch",
-        icon: "assets/icon.png",
-        timeoutType: "default",
-      })
-    }
+    else { console.log("First launch") }
   })
   //welcom emessage
   const msg = {
