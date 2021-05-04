@@ -1,6 +1,8 @@
-[![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.dev/)
-# Discord Rich Presence Maker, WITH BUTTONS!
-### ⬇️ Scroll down for instructions! ⬇️
+# This is only for archival purposes. There is absolutely no reason to use this, [there is a CLI tool for v2.](https://github.com/thatonecalculator/discordrpcmaker-cli)
+
+
+<details>
+    <summary markdown="span">Click for old instructions</summary>
 ###### Version 1.8.2, [![on npm!](https://img.shields.io/badge/on-npm!-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/rpcmaker)
 
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=shield)](https://discord.gg/Z7UZPR3bbW)
@@ -14,8 +16,6 @@
 ![Small](https://cdn.discordapp.com/attachments/671117418189422594/803419819293540385/scrot.png)
 
 [![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=banner2)](https://discord.gg/Z7UZPR3bbW)
-
-## This is meant to be noob-friendly, as long as you follow the instructions!
 
 ---
 
@@ -209,3 +209,4 @@ As of right now, there's no way to do this through a mobile device. Sorry!
 The program has been tested on Windows 10, macOS 10.14, macOS 10.15, macOS 11\*, Arch Linux, and Ubuntu 20.04 LTS. 
 
 \* macOS 11 (Big Sur) has been observed to have some problems. Look in common issues.
+</details>
