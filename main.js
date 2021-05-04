@@ -27,14 +27,41 @@ function createWindow() {
 
   let settings = {}
 
-  try {
+  if (!fs.existsSync(dir)) {
+    initialdata = {
+      launchedpresence: false,
+      language: "english",
+      theme: "dark",
+      quitonx: false,
+      showtimestamp: false
+    }
+    fs.mkdirSync(dir, { recursive: true })
+    fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}${slash}custom.css`)
+    fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
+      if (err) { throw err }
+      else { console.log("First launch") }
+    })
+    //welcom emessage
+    const msg = {
+      type: 'question',
+      buttons: [],
+      defaultId: 0,
+      title: 'Welcome',
+      message: 'Thank you for choosing Discord RPC Maker!',
+      detail: 'If you need instructions, click the question (?) icon in the bottom right.',
+    };
+    dialog.showMessageBox(null, msg)
+  }
 
+
+  try {
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   }
   catch (e) {
     console.log(e)
+    fs.mkdirSync(dir, { recursive: true })
     settings = {
       launchedpresence: false,
       language: "english",
