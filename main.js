@@ -47,7 +47,7 @@ function createWindow() {
       if (err) { throw err }
       else { console.log("First launch") }
     })
-    //welcom emessage
+    //welcome message
     const msg = {
       type: 'question',
       buttons: [],

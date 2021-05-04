@@ -766,6 +766,7 @@ document.addEventListener("DOMContentLoaded", () => {
   registerLinkToOpenInBrowser("cliutility", "https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI")
   registerLinkToOpenInBrowser("t1c", "https://t1c.dev")
   registerLinkToOpenInBrowser("kraxen", "https://github.com/KraXen72")
+  registerLinkToOpenInBrowser("mikey", "https://twitter.com/ChildishMigster")
 })
 
 /*preview updating*/
