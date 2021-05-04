@@ -3,6 +3,7 @@
 <meta name="theme-color" content="#7289DA"/>
 <meta property="og:image" content="https://cdn.discordapp.com/attachments/810799100940255260/838968321516503111/ad200kb.jpg"/>
 <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/733857078388457502/810788933947621376/emote.png"/>
+<meta name="twitter:card" content="summary_large_image">
 
 [![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.dev/)
 ## ⬇️ Scroll down for install instructions! ⬇️
