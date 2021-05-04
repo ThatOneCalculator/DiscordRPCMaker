@@ -98,7 +98,7 @@ function createWindow() {
   app.on('window-all-closed', app.quit);
   app.on('before-quit', () => {
     win.removeAllListeners('close');
-    win.close(0);
+    win.close();
   })
 }
 
@@ -118,7 +118,7 @@ app.whenReady().then(() => {
   }))
   contextMenu.append(new MenuItem({
     label: 'Quit Discord RPC Maker',
-    click: () => { app.quit(0) }
+    click: () => { app.quit() }
   }))
   appIcon.setContextMenu(contextMenu)
   appIcon.setToolTip("Discord RPC Maker")
