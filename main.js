@@ -7,6 +7,8 @@ const EventEmitter = require("events")
 require('@electron/remote/main').initialize()
 const iconpath = path.join(__dirname, "/assets/icon.png")
 const loadingEvents = new EventEmitter()
+const slash = os.platform() == 'win32' ? "\\" : "/"
+let dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -26,7 +28,7 @@ function createWindow() {
   let settings = {}
 
   try {
-    let dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
+
     let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
     let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
