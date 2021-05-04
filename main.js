@@ -81,7 +81,7 @@ function createWindow() {
         setTimeout(() => loadingEvents.emit('finished'), 250)
       }
     })
-  }, 200)
+  }, 150)
 
   function noInternet() {
     require('dns').resolve("https://drpcm.t1c.dev", function (err) {
