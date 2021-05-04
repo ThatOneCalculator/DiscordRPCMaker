@@ -9,6 +9,7 @@ const iconpath = path.join(__dirname, "/assets/icon.png")
 const loadingEvents = new EventEmitter()
 const slash = os.platform() == 'win32' ? "\\" : "/"
 let dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
+let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -35,7 +36,12 @@ function createWindow() {
       quitonx: false,
       showtimestamp: false
     }
-    fs.mkdirSync(dir, { recursive: true })
+    if (os.platform() == "win32") {
+      fs.mkdirSync(opendir, { recursive: true })
+    }
+    else {
+      fs.mkdirSync(dir, { recursive: true })
+    }
     fs.copyFileSync(`${path.join(__dirname, `${slash}themes${slash}dark.css`)}`, `${dir}${slash}custom.css`)
     fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(initialdata, null, 2), 'utf8', (err) => {
       if (err) { throw err }
@@ -55,7 +61,7 @@ function createWindow() {
 
 
   try {
-    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+
     let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   }
