@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
           defaultId: 1,
           title: 'Update',
           message: 'An update is avaliable!',
-        };
+        }
         dialog.showMessageBox(null, msg).then(result => {
           if (result.response == 1) {
             shell.openExternal('https://github.com/thatonecalculator/discordrpcmaker')
