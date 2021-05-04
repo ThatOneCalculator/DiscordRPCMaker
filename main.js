@@ -1,10 +1,9 @@
 // libappindicator-gtk3 on Arch as req
-const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain, Tray } = require("electron")
+const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain, Tray, dialog } = require("electron")
 const path = require("path")
 const fs = require('fs')
 const os = require('os')
 const EventEmitter = require("events")
-const { dialog, shell, BrowserWindow } = require('@electron/remote')
 require('@electron/remote/main').initialize()
 const iconpath = path.join(__dirname, "/assets/icon.png")
 const loadingEvents = new EventEmitter()
