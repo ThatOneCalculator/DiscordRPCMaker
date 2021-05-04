@@ -42,21 +42,21 @@
 ---
 
 ## Install
-###### Version 2.0.3
+###### Version 2.0.5
 
-#### [Windows ![windows](https://media.discordapp.net/attachments/810799100940255260/838488668816932965/ezgif-6-ac9683508192.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.3/discordrpcmaker-windows.exe)
+#### [Windows ![windows](https://media.discordapp.net/attachments/810799100940255260/838488668816932965/ezgif-6-ac9683508192.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.5/discordrpcmaker-windows.exe)
 
 - Download the exe, click More Info > Run Anyway > Open rpcmaker from the start menu
 
 ---
 
-#### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.3/discordrpcmaker-macos.dmg)
+#### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.5/discordrpcmaker-macos.dmg)
 
 - Download & mount the dmg, drag Discord RPC Maker into the Applications folder > Double click on Applications folder > Right click Discord RPC Maker > Open > Open
 
 ---
 
-#### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.3/discordrpcmaker-linux.appimage)
+#### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.5/discordrpcmaker-linux.appimage)
 
 - Download and run. Easy!
 
@@ -64,17 +64,17 @@
 
 - `yay -S discordrpcmaker` (replace `yay` with your AUR helper of choice)
 
-#### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.3/discordrpcmaker-linux.deb)
+#### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.5/discordrpcmaker-linux.deb)
 
 - Download, `sudo apt install /path/to/discordrpcmaker-linux.deb` or open with GDebi/Eddy.
 
-#### [.rpm (RPM based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png) ![suse](https://media.discordapp.net/attachments/810799100940255260/838492513152270377/ezgif-6-179f42e57f24.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.3/discordrpcmaker-linux.rpm)
+#### [.rpm (RPM based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png) ![suse](https://media.discordapp.net/attachments/810799100940255260/838492513152270377/ezgif-6-179f42e57f24.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.5/discordrpcmaker-linux.rpm)
 
 - Download, `sudo rpm -i /path/to/discordrpcmaker-linux.rpm`
 
-#### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.3/discordrpcmaker-linux.tar.gz)
+#### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.5/discordrpcmaker-linux.tar.gz)
 
-- Download, `tar -xvf /path/to/discordrpcmaker-linux.tar.gz` > Run: `discordrpcmaker-2.0.3/discordrpcmaker`; To install, `mv ./discordrpcmaker-2.02 /bin/drpcm && ln -s /bin/drpcm/discordrpcmaker /bin/discordrpcmaker`, and run `discordrpcmaker`.
+- Download, `tar -xvf /path/to/discordrpcmaker-linux.tar.gz` > Run: `discordrpcmaker-2.0.5/discordrpcmaker`; To install, `mv ./discordrpcmaker-2.02 /bin/drpcm && ln -s /bin/drpcm/discordrpcmaker /bin/discordrpcmaker`, and run `discordrpcmaker`.
 
 ---
 
@@ -106,4 +106,3 @@ We're trying to raise $150 to pay for online services and code signing!
 [Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
 
 Made by [ThatOneCalculator](https://t1c.dev) and [KraXen72](https://github.com/kraxen72). Not officially affiliated with Discord. Thank you [discord.js](https://github.com/discordjs/rpc/), [electron-builder](https://electron.build), [fosscord-ui](https://github.com/fosscord/fosscord-ui), and all our lovely stargazers, helpers, translators, and users for making this project possible. Full credits are in the Instructions & Info menu in the program.
-
