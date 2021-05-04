@@ -42,7 +42,7 @@ function createWindow() {
     }
     fs.writeFileSync(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
       if (err) { throw err }
-      else { console.log("Wrote base settigns") }
+      else { console.log("Wrote base settings") }
     })
   }
   if (settings['quitonx'] == false) {
