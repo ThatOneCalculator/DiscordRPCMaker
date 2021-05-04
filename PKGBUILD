@@ -10,6 +10,7 @@ pkgdesc="Discord RPC Maker lets you make and manage custom Discord Rich Presence
 arch=('x86_64')
 url="https://drpcm.t1c.dev/"
 license=('GPL')
+depends=('libnotify' 'libappindicator-gtk3')
 _appimage="discordrpcmaker-linux.appimage"
 source_x86_64=("${_appimage}::https://github.com/thatonecalculator/discordrpcmaker/releases/download/v${pkgver}/${_appimage}")
 noextract=("${_appimage}")
