@@ -15,6 +15,7 @@ nemo . & disown
 cd ../../discordrpcmaker-aur
 rm ./.SRCINFO
 cp ../DiscordRPCMaker/PKGBUILD ./
+makepkg --printsrcinfo > .SRCINFO
 git add .SRCINFO PKGBUILD
 git commit -m "automatic script commit message"
 git push
