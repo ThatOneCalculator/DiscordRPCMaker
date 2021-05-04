@@ -12,6 +12,7 @@
 [![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator)
 [![NPM](https://img.shields.io/badge/on-npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/discordrpcmaker)
 
+![Promo](https://cdn.discordapp.com/attachments/810799100940255260/838968321516503111/ad200kb.jpg)
 ![Large](https://media.discordapp.net/attachments/810799100940255260/838485035506073630/unknown.png)
 ![Small](https://media.discordapp.net/attachments/810799100940255260/838485901520797776/unknown.png)
 
@@ -105,4 +106,3 @@ We're trying to raise $150 to pay for online services and code signing!
 
 Made by [ThatOneCalculator](https://t1c.dev) and [KraXen72](https://github.com/kraxen72). Not officially affiliated with Discord. Thank you [discord.js](https://github.com/discordjs/rpc/), [electron-builder](https://electron.build), [fosscord-ui](https://github.com/fosscord/fosscord-ui), and all our lovely stargazers, helpers, translators, and users for making this project possible. Full credits are in the Instructions & Info menu in the program.
 
-![Promo](https://cdn.discordapp.com/attachments/810799100940255260/838968321516503111/ad200kb.jpg)
