@@ -10,6 +10,10 @@ const execSync = require('child_process').execSync
 const slash = os.platform() == 'win32' ? "\\" : "/"
 
 const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
+const opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+const settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+let theme = settings["theme"]
 
 let clientID = 0
 let options = {}
@@ -295,30 +299,34 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("loaded")
 
   // Check for updates
+  function checkForUpdates() {
+    let run = false
 
-  const latestVersion = require('latest-version');
+    const latestVersion = require('latest-version');
 
-  (async () => {
-    try {
-      let ver = await latestVersion('discordrpcmaker')
+    (async () => {
+      const ver = await latestVersion('discordrpcmaker')
       console.log(ver)
-      if (ver != '2.0.5') {
+      if (ver != '2.0.5' && !run) {
         const msg = {
           type: 'question',
           buttons: ['No thanks', 'Update!'],
           defaultId: 1,
           title: 'Update',
-          message: 'An update is avaliable!',
+          message: 'An update is avaliable! Please follow the link to redownload this program.',
         }
         dialog.showMessageBox(null, msg).then(result => {
           if (result.response == 1) {
-            shell.openExternal('https://github.com/thatonecalculator/discordrpcmaker')
+            shell.openExternal('https://drpcm.t1c.dev/#install')
           }
         })
+        run = true
+        return;
       }
-    }
-    catch (e) { console.log(e) }
-  })()
+    })()
+  }
+
+  checkForUpdates()
 
   //load presences
   loadSavedPresences()
@@ -340,15 +348,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => { document.getElementById("fader").style.opacity = "0" }, 250)
   setTimeout(() => { document.getElementById("fader").remove() }, 500)
 
-
-  let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-  let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
-  let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
-  let theme = settings["theme"]
+  settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
+  theme = settings["theme"]
   if (theme == "pywal") {
     let themedir = path.join(__dirname, `${slash}themes${slash}${theme}.css`)
     pywalcss = fs.readFileSync(themedir, 'utf8').replaceAll("HOMEDIR", os.homedir)
-    console.log(pywalcss)
     addStyle(pywalcss)
   }
   else if (theme == "custom") {
@@ -379,10 +383,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //launch presence
   document.getElementById("test").addEventListener("click", () => {
     client.destroy()
-    opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+
     id = document.getElementById("presence-id").value
     fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
-    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     options = JSON.parse(fs.readFileSync(fullpath, 'utf8'))
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     activity = {}
@@ -403,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (options.state !== '') { activity.state = options.state }
     if (options.buttons.length !== 0) { activity.buttons = options.buttons }
 
-    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     if (settings.showtimestamp == true) {
       activity.startTimestamp = Date.now()
@@ -473,8 +476,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("themedropdown").addEventListener("change", function () {
     let e = document.getElementById("themedropdown")
     let selected = e.options[e.selectedIndex].text
-    opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+
+
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     theme = "dark"
     theme = selected.toLowerCase().replaceAll(" ", "").replaceAll("é", "e")
@@ -560,7 +563,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     dialog.showMessageBox(null, options).then(result => {
       if (result.response == 1) { //delete the presence
-        let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+
         let id = document.getElementById("presence-id").value
         let fullpath = os.platform() == "win32" ? opendir + "\\" + id + ".json" : dir + "/" + id + ".json"
 
@@ -594,7 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   document.getElementById("file-btn").addEventListener("click", () => {
-    let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
+
     if (process.platform !== "win32") { openExplorer(dir) }
     else { openExplorer(opendir) }
   })
@@ -605,13 +608,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".client-id-enabler").addEventListener("input", () => { bootClientId({}, false) })
 
   document.getElementById("quitonclose-btn")
-  settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   if (settings.quitonx) { document.getElementById("quitonclose-btn").click() }
   if (settings.showtimestamp) { document.getElementById("showtimestamp-btn").click() }
 
   document.getElementById("quitonclose-btn").addEventListener("change", () => {
-    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
+
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     settings.quitonx = !settings['quitonx']
     fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
@@ -629,7 +632,6 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   document.getElementById("showtimestamp-btn").addEventListener("change", () => {
-    settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
     settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
     settings.showtimestamp = !settings['showtimestamp']
     fs.writeFile(`${dir}${slash}settings.json`, JSON.stringify(settings, null, 2), 'utf8', (err) => {
@@ -759,8 +761,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   })
 
-  opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-  settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}${settings['language']}.html`))
   registerLinkToOpenInBrowser("cliutility", "https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI")
@@ -958,10 +958,6 @@ function closeSettingsModal() {
 //lang
 
 function loadLang(language) {
-
-  /*let opendir = dir.replaceAll("/", "\\").replaceAll("\\\\", "\\")
-  let settingspath = os.platform() == "win32" ? opendir + "\\" + "settings.json" : dir + "/" + "settings.json"
-  let settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))*/
 
   //let lang = settings.language
   let source = `.${slash}locales${slash}${language}.json`
