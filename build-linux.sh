@@ -12,10 +12,10 @@ mv *.rpm discordrpcmaker-linux.rpm
 mv *.tar.gz discordrpcmaker-linux.tar.gz
 yay -Rnscd rpm-tools
 nemo . & disown
-cd ../../aur/discordrpcmaker
-rm ./.SRCINFO
-cp ../../DiscordRPCMaker/PKGBUILD ./
-makepkg --printsrcinfo > .SRCINFO
-git add .SRCINFO PKGBUILD
-git commit -m "automatic script commit message"
-git push
+# cd ../../aur/discordrpcmaker
+# rm ./.SRCINFO
+# cp ../../DiscordRPCMaker/PKGBUILD ./
+# makepkg --printsrcinfo > .SRCINFO
+# git add .SRCINFO PKGBUILD
+# git commit -m "automatic script commit message"
+# git push
