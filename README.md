@@ -28,6 +28,7 @@
 - [x] Pywal support
 - [x] AUR Package
 - [x] CLI utility
+- [ ] Code signing on Windows (soon) 
 - [ ] Translations (soon)
 - [ ] Hotkeys (soon)
 - [ ] Online sharing (future)
@@ -86,8 +87,9 @@
 ## Supporters
 You can [![BuyMeACoffee](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
 
-We're trying to raise $150 to pay for online services and code signing!
+We're trying to raise $150 to pay for online services for the next update and code signing!
 
+- [**JusticeServ**](https://github.com/justiceserv)
 - [**KingParity**](https://twitter.com/KingParity) 
 - [**Dylan Stone**](https://twitter.com/notDylanstone)
 - [**Lil Fox YT**](https://twitter.com/TMBF_YT)
