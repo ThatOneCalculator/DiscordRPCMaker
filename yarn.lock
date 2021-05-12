@@ -634,8 +634,8 @@ electron-publish@22.11.2:
     mime "^2.5.0"
 
 electron@^12.0.2:
-  version "12.0.6"
-  resolved "https://registry.npmjs.org/electron/-/electron-12.0.6.tgz"
+  version "12.0.7"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-12.0.7.tgz#e0fca2c8be34cb7da48c4d15cfb1d2ad666d2718"
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^14.6.2"
