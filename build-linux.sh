@@ -2,7 +2,7 @@
 
 yay -S rpm-tools
 rm -rf ./dist/
-npm i
+yarn install
 electron-builder -l AppImage tar.gz deb rpm -c.productName "Discord RPC Maker" 
 cd ./dist/
 chmod +x *.AppImage
