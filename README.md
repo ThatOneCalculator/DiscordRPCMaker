@@ -68,7 +68,7 @@
 
 #### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.0.7/discordrpcmaker-linux.tar.gz)
 
-- Download, `tar -xvf /path/to/discordrpcmaker-linux.tar.gz` > Run: `discordrpcmaker-2.0.7/discordrpcmaker`; To install, `mv ./discordrpcmaker-2.02 /bin/drpcm && ln -s /bin/drpcm/discordrpcmaker /bin/discordrpcmaker`, and run `discordrpcmaker`.
+- Download, `tar -xvf /path/to/discordrpcmaker-linux.tar.gz` > Run: `discordrpcmaker-2.0.7/discordrpcmaker`; To install, `mv ./discordrpcmaker-2.0.7 /bin/drpcm && ln -s /bin/drpcm/discordrpcmaker /bin/discordrpcmaker`, and run `discordrpcmaker`.
 
 ---
 
