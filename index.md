@@ -1,6 +1,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
  <link rel="stylesheet" href="style.css">
 <meta name="theme-color" content="#7289DA"/>
+<meta name="description" content="Discord Rich Presence Maker: the best way to make and manage custom Discord Rich Presences with buttons!">
 <meta property="og:image" content="https://cdn.discordapp.com/attachments/810799100940255260/838968321516503111/ad200kb.jpg"/>
 <meta property="twitter:image" content="https://cdn.discordapp.com/attachments/733857078388457502/810788933947621376/emote.png"/>
 <meta name="twitter:card" content="summary_large_image">
