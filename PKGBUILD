@@ -4,7 +4,7 @@
 _pkgname=discordrpcmaker
 
 pkgname="${_pkgname}"
-pkgver=2.0.6
+pkgver=2.0.7
 pkgrel=2
 pkgdesc="Discord RPC Maker lets you make and manage custom Discord Rich Presences with buttons!"
 arch=('x86_64')
