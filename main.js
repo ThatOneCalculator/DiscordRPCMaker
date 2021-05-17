@@ -141,27 +141,45 @@ function createWindow() {
   })
 }
 
-app.whenReady().then(() => {
-  createWindow()
-  win = BrowserWindow.getAllWindows()[0]
-  if (os.platform() == "darwin") {
-    appIcon = new Tray(path.join(__dirname, "/assets/iconTemplate.png"))
-  }
-  else {
-    appIcon = new Tray(iconpath)
-  }
-  const contextMenu = new Menu()
-  contextMenu.append(new MenuItem({
-    label: 'Show Discord RPC Maker',
-    click: () => { app.isquitting = true; win.show() }
-  }))
-  contextMenu.append(new MenuItem({
-    label: 'Quit Discord RPC Maker',
-    click: () => { app.quit() }
-  }))
-  appIcon.setContextMenu(contextMenu)
-  appIcon.setToolTip("Discord RPC Maker")
-})
+
+
+const gotTheLock = app.requestSingleInstanceLock()
+
+if (!gotTheLock) {
+  app.quit()
+} else {
+  app.on('second-instance', (event, commandLine, workingDirectory) => {
+    // Someone tried to run a second instance, we should focus our window.
+    if (myWindow) {
+      if (myWindow.isMinimized()) myWindow.restore()
+      myWindow.focus()
+    }
+  })
+
+  // Create myWindow, load the rest of the app, etc...
+  app.whenReady().then(() => {
+    createWindow()
+    win = BrowserWindow.getAllWindows()[0]
+    if (os.platform() == "darwin") {
+      appIcon = new Tray(path.join(__dirname, "/assets/iconTemplate.png"))
+    }
+    else {
+      appIcon = new Tray(iconpath)
+    }
+    const contextMenu = new Menu()
+    contextMenu.append(new MenuItem({
+      label: 'Show Discord RPC Maker',
+      click: () => { app.isquitting = true; win.show() }
+    }))
+    contextMenu.append(new MenuItem({
+      label: 'Quit Discord RPC Maker',
+      click: () => { app.quit() }
+    }))
+    appIcon.setContextMenu(contextMenu)
+    appIcon.setToolTip("Discord RPC Maker")
+  })
+}
+
 
 app.on("activate", () => {
   if (BrowserWindow.getAllWindows().length === 0) {
