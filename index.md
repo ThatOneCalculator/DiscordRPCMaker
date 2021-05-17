@@ -35,7 +35,7 @@
 - [x] Pywal support
 - [x] AUR Package
 - [x] CLI utility
-- [ ] Code signing on Windows (soon) 
+- [ ] Code signing on Windows (soon)
 - [ ] Translations (soon)
 - [ ] Hotkeys (soon)
 - [ ] Online sharing (future)
@@ -86,8 +86,8 @@
 
 #### From source ![electron](https://media.discordapp.net/attachments/810799100940255260/838533828384391208/ezgif-2-828b221b651a.png)
 ###### ⚠ Don't do this unless you intend to modify the code!
-- Install NodeJS/NPM & Electron
-- `git clone https://github.com/thatonecalculator/discordrpcmaker && cd discordrpcmaker && npm i && npm run start`
+- Install NodeJS/NPM, Yarn, & Electron
+- `git clone https://github.com/thatonecalculator/discordrpcmaker && cd discordrpcmaker && yarn install && npm run start`
 
 ---
 
@@ -97,7 +97,7 @@ You can [![BuyMeACoffee](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?sty
 We're trying to raise $150 to pay for online services for the next update and code signing!
 
 - [**JusticeServ**](https://github.com/justiceserv)
-- [**KingParity**](https://twitter.com/KingParity) 
+- [**KingParity**](https://twitter.com/KingParity)
 - [**Dylan Stone**](https://twitter.com/notDylanstone)
 - [**Lil Fox YT**](https://twitter.com/TMBF_YT)
 - [**Jorc0**](https://twitter.com/Jorcus334)
