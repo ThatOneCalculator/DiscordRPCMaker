@@ -28,7 +28,7 @@
 - [x] Pywal support
 - [x] AUR Package
 - [x] CLI utility
-- [ ] Code signing on Windows (soon) 
+- [ ] Code signing on Windows (soon)
 - [ ] Translations (soon)
 - [ ] Hotkeys (soon)
 - [ ] Online sharing (future)
