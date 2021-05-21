@@ -1,5 +1,5 @@
 const electron = require('electron')
-const keytar = require('keytar')
+// const keytar = require('keytar')
 
 document.addEventListener("DOMContentLoaded", () => {
     const targetNode = document.body;

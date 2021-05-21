@@ -1,6 +1,6 @@
 {
   "name": "discordrpcmaker",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!",
   "main": "./main.js",
   "bin": {
@@ -42,7 +42,6 @@
     "child_process": "^1.0.2",
     "copy-to-clipboard": "^3.3.1",
     "discord-rpc": "^3.1.4",
-    "keytar": "^7.7.0",
     "latest-version": "^5.1.0",
     "open-file-explorer": "^1.0.2"
   },

@@ -3,7 +3,7 @@ const os = require('os')
 const path = require('path')
 const RPC = require('discord-rpc')
 const openExplorer = require('open-file-explorer')
-const keytar = require('keytar')
+// const keytar = require('keytar')
 const { ipcRenderer } = require('electron')
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
 const execSync = require('child_process').execSync
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (async () => {
       const ver = await latestVersion('discordrpcmaker')
       console.log(ver)
-      if (ver != '2.0.7' && !run) {
+      if (ver != '2.0.8' && !run) {
         const msg = {
           type: 'question',
           buttons: ['No thanks', 'Update!'],
@@ -778,7 +778,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}${settings['language']}.html`))
-  registerLinkToOpenInBrowser("cliutility", "https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI")
   registerLinkToOpenInBrowser("t1c", "https://t1c.dev")
   registerLinkToOpenInBrowser("kraxen", "https://github.com/KraXen72")
   registerLinkToOpenInBrowser("mikey", "https://twitter.com/ChildishMigster")
