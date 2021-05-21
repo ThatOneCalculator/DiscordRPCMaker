@@ -124,7 +124,7 @@ function saveAsJson() {
 
   const data = JSON.stringify(content, null, 2)
   let filename = presenceid == "" ? generateId(10) : presenceid
-  fs.writeFile(`${dir}${slash}${filename}.json`, data, 'utf8', (err) => {
+  fs.writeFileSync(`${dir}${slash}${filename}.json`, data, 'utf8', (err) => {
     if (err) { throw err }
     else {
       /*const myNotification = new Notification("Discord RPC Maker", {
