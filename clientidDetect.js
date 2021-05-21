@@ -5,7 +5,7 @@ var firstFlyout = false
 document.addEventListener("DOMContentLoaded", () => {
     newflyout()
     addStyle(`
-    .wrapper-3aJbIC, 
+    .wrapper-3aJbIC,
     [href="/developers/teams"],
     [href="/developers/servers"],
     [href="/developers/docs"],

@@ -244,6 +244,22 @@ textarea {
   color: var(--secondary);
 }
 
+#smalldiscordlogo:hover {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .presence-scroller {
   overflow-y: auto;
   height: 100%;
