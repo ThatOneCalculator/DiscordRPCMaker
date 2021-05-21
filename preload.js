@@ -3,6 +3,7 @@ const os = require('os')
 const path = require('path')
 const RPC = require('discord-rpc')
 const openExplorer = require('open-file-explorer')
+const keytar = require('keytar')
 const { ipcRenderer } = require('electron')
 const { dialog, shell, BrowserWindow } = require('@electron/remote')
 const execSync = require('child_process').execSync
