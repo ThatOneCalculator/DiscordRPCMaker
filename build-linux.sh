@@ -1,6 +1,7 @@
 #/bin/sh
 
 yay -S rpm-tools
+cp ./PKGBUILD ../aur/discordrpcmaker/
 rm -rf ./dist/
 yarn install
 electron-builder -l AppImage tar.gz deb rpm -c.productName "Discord RPC Maker"
