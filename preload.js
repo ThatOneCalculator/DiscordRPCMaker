@@ -126,14 +126,7 @@ function saveAsJson() {
   let filename = presenceid == "" ? generateId(10) : presenceid
   fs.writeFileSync(`${dir}${slash}${filename}.json`, data, 'utf8', (err) => {
     if (err) { throw err }
-    else {
-      /*const myNotification = new Notification("Discord RPC Maker", {
-        body: "Your presence has been saved.",
-        icon: "assets/plus.png",
-        timeoutType: "default",
-      })*/
-      console.log("saved")
-    }
+    else { console.log("saved") }
   })
   return filename
 }
