@@ -388,7 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (options.largeimage !== '') {
       activity.largeImageKey = options.largeimage
       // If you change this and some asks about this, please still give me credit :)
-      activity.largeImageText = "Made with ThatOneCalculator's Discord RPC Maker (v2.0.8)!"
+      activity.largeImageText = "Made with ThatOneCalculator's Discord RPC Maker (v2.0)!"
     }
     if (options.smallimage !== '') {
       activity.smallImageKey = options.smallimage
@@ -591,35 +591,14 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   document.getElementById("file-btn").addEventListener("click", () => {
+
     if (process.platform !== "win32") { openExplorer(dir) }
     else { openExplorer(opendir) }
   })
 
-  document.getElementById("signin-btn").addEventListener("click", () => {
-    //developer portal
-      notReady()
-      develWindow = new BrowserWindow({
-        width: 1200,
-        height: 700,
-        webPreferences: {
-          nodeIntegration: true,
-          preload: `${__dirname}${slash}signIn.js`
-        }
-      });
-      //load html into window
-    develWindow.loadURL('https://discord.com/api/oauth2/authorize?client_id=803330335759925298&redirect_uri=http%3A%2F%2Fdiscordrpcmaker-oauth.kainoakanter.repl.co&response_type=code&scope=identify%20email')
-      // develWindow.webContents.openDevTools();
-      //garbage collection handle
-      develWindow.on('close', function () {
-        develWindow = null;
-      });
-  })
-
-
-
   //Easter eggs
 
-  //enable inputs
+  //enable inputs 
   document.querySelector(".client-id-enabler").addEventListener("input", () => { bootClientId({}, false) })
 
   document.getElementById("quitonclose-btn")
@@ -778,6 +757,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   settings = JSON.parse(fs.readFileSync(settingspath, 'utf8'))
   document.querySelector("#faqbody").innerHTML = fs.readFileSync(path.join(__dirname + `${slash}locales${slash}faq${slash}${settings['language']}.html`))
+  registerLinkToOpenInBrowser("cliutility", "https://github.com/ThatOneCalculator/DiscordRPCMaker-CLI")
   registerLinkToOpenInBrowser("t1c", "https://t1c.dev")
   registerLinkToOpenInBrowser("kraxen", "https://github.com/KraXen72")
   registerLinkToOpenInBrowser("mikey", "https://twitter.com/ChildishMigster")
