@@ -5,7 +5,7 @@ cp ./PKGBUILD ../aur/discordrpcmaker/
 rm -rf ./dist/
 yarn install
 electron-builder -l AppImage tar.gz deb rpm -c.productName "Discord RPC Maker"
-electron-builder -w -m -c.productName "Discord RPC Maker"
+electron-builder -w -c.productName "Discord RPC Maker"
 cd ./dist/
 chmod +x *.AppImage
 mv *.AppImage discordrpcmaker-linux.appimage

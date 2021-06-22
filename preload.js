@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		(async () => {
 			const ver = await latestVersion('discordrpcmaker')
 			console.log(ver)
-			if (ver != '2.1.0' && !run) {
+			if (ver != '2.1.1' && !run) {
 				const msg = {
 					type: 'question',
 					buttons: ['No thanks', 'Update!'],
@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		catch (e) { }
 	}
 
-	//stop presence of
+	//stop presence
 	document.getElementById("stop").addEventListener("click", () => {
 		client.destroy()
 		document.getElementById("stop").setAttribute("hidden", "true")
