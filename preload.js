@@ -410,6 +410,18 @@ document.addEventListener("DOMContentLoaded", () => {
 			// Same applies with assets.large_text
 			activity.smallImageText = 'https://drpcm.t1c.dev/'
 		}
+		if (options.largeimage.length > 32 || options.smallimage.length > 32) {
+            		const msg = {
+               		type: 'error',
+                	buttons: [],
+                	defaultId: 0,
+                	title: 'error',
+                	message: 'Error',
+                	detail: 'The name of your image exceeds 32 characters, please shorten it.',
+            		};
+        		dialog.showMessageBox(null, msg);
+         		return;
+       		}
 		if (assets !== {}) { activity.assets = assets }
 		if (options.description !== '') { activity.details = options.description }
 		if (options.state !== '') { activity.state = options.state }
