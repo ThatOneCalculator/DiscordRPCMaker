@@ -411,8 +411,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			activity.smallImageText = 'https://drpcm.t1c.dev/'
 		}
 		if (assets !== {}) { activity.assets = assets }
-		if (options.description !== '') { activity.details = options.description }
-		if (options.state !== '') { activity.state = options.state }
+		if (options.description !== '') { activity.details = options.description.substring(0, 31) }
+		if (options.state !== '') { activity.state = options.state.substring(0, 31) }
 		if (options.buttons.length !== 0) { activity.buttons = options.buttons }
 
 
