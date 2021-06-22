@@ -28,6 +28,7 @@
 - [x] Pywal support
 - [x] AUR Package
 - [x] CLI support
+- [x] Autostart
 - [ ] Code signing on Windows (soon)
 - [ ] Translations (soon)
 - [ ] Hotkeys (soon)
