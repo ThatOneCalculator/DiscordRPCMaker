@@ -1,5 +1,5 @@
 // libappindicator-gtk3 on Arch as req
-const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain, Tray, dialog } = require("electron")
+const { app, BrowserWindow, Notification, Menu, MenuItem, ipcMain, Tray, dialog, protocol } = require("electron")
 const path = require('path')
 const fs = require('fs')
 const os = require('os')
@@ -33,7 +33,7 @@ if (id !== undefined) {
   if (options.largeimage !== '') {
     activity.largeImageKey = options.largeimage
     // If you change this and some asks about this, please still give me credit :)
-    activity.largeImageText = "Made with ThatOneCalculator's Discord RPC Maker (v2.0.9 CLI)!"
+    activity.largeImageText = "Made with ThatOneCalculator's Discord RPC Maker (v2.1.0 CLI)!"
   }
   if (options.smallimage !== '') {
     activity.smallImageKey = options.smallimage
