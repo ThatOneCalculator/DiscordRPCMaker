@@ -14,7 +14,7 @@ depends=('libnotify' 'libappindicator-gtk3' 'fuse2' 'fuse3' 'fuse-common' 'libse
 _appimage="discordrpcmaker-linux.appimage"
 source_x86_64=("${_appimage}::https://github.com/thatonecalculator/discordrpcmaker/releases/download/v${pkgver}/${_appimage}")
 noextract=("${_appimage}")
-sha256sums_x86_64=('480e717f2f6883cd454c7df26a9fd9f51911b6db5dae5cbe0d0347b560e82afb')
+sha256sums_x86_64=('594f3b7f9f6fedd00f5ca64c74441505d9000b35e1ecc37595b8af6fb44c3728')
 options+=('!strip')
 
 prepare() {
