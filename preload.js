@@ -399,7 +399,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (err) { throw err }
 			else { console.log("Wrote latest.txt") }
 		})
+		if (options.largeimage.length > 32 || options.smallimage.length > 32) {
+            		const msg = {
+               		type: 'error',
+            		buttons: [],
+            		defaultId: 0,
+            		title: 'error',
+            		message: 'Error',
+            		detail: 'The name of your image exceeds 32 characters, please shorten it. Images will not load!',
+            		};
 
+        		dialog.showMessageBox(null, msg);
+        		options.largeimage = '';
+        		options.smallimage = '';
+           	}
 		if (options.largeimage !== '') {
 			activity.largeImageKey = options.largeimage
 			// If you change this and some asks about this, please still give me credit :)
