@@ -71,9 +71,9 @@
 
 - Download, `sudo apt install /path/to/discordrpcmaker-linux.deb` or open with GDebi/Eddy.
 
-#### [.rpm (RPM based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png) ![suse](https://media.discordapp.net/attachments/810799100940255260/838492513152270377/ezgif-6-179f42e57f24.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.rpm)
+#### [.rpm (RedHat based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.rpm)
 
-- Download, `sudo rpm -i /path/to/discordrpcmaker-linux.rpm`
+- Download, `sudo rpm -i /path/to/discordrpcmaker-linux.rpm` (does not support openSUSE).
 
 #### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.tar.gz)
 
