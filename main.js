@@ -261,3 +261,8 @@ else {
 		}
 	})
 }
+
+ipcMain.on('dropped-file', (event, arg) => {
+	console.log('Dropped File(s):', arg);
+	event.returnValue = `Received ${arg.length} paths.`; // Synchronous reply
+})
