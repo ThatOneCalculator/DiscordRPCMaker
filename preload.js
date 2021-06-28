@@ -69,6 +69,7 @@ window.addEventListener("keydown", (event) => {
 	try {
 		closeFaqModal()
 		closeSettingsModal()
+		closeStoreModal()
 	} catch (e) { }
 
 	console.log(event);
@@ -444,8 +445,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				client.transport.socket.on("close", (c, s) => {
 					assembleClient()
 				})
+				console.log(client.user)
 			})
-			setTimeout(() => client.login({ clientId: options.clientid }), timeout)
+			setTimeout(() => {
+				client.login({ clientId: options.clientid })
+			}, timeout)
 		}
 
 		process.on("unhandledRejection", e => {
@@ -906,7 +910,10 @@ function registerLinkToOpenInBrowser(elemid, link) {
 	settingsbtn.addEventListener("click", () => { openSettingsModal() })
 	settingsbtn = document.getElementById("closesettingsmodal")
 	settingsbtn.addEventListener("click", () => { closeSettingsModal() })
-
+	storebtn = document.getElementById("store-button")
+	storebtn.addEventListener("click", () => { openStoreModal() })
+	storebtn = document.getElementById("closestoremodal")
+	storebtn.addEventListener("click", () => { closeStoreModal() })
 }
 
 //add a style to head - used when loading themes
@@ -1017,6 +1024,21 @@ function closeSettingsModal() {
 	document.querySelector(".main-grid").classList.remove("modal-open")
 	document.querySelector(".preview-small-pic").style.visibility = "visible"
 }
+
+function openStoreModal() {
+	const modal = document.querySelector("#storemodal")
+	document.querySelector(".main-grid").classList.add("modal-open")
+	modal.classList.add("open")
+	document.querySelector(".preview-small-pic").style.visibility = "hidden"
+}
+
+function closeStoreModal() {
+	const modal = document.querySelector("#storemodal")
+	modal.classList.remove("open")
+	document.querySelector(".main-grid").classList.remove("modal-open")
+	document.querySelector(".preview-small-pic").style.visibility = "visible"
+}
+
 
 document.addEventListener('dragover', (e) => {
 	e.preventDefault();

@@ -255,6 +255,7 @@ textarea {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -2056,4 +2057,154 @@ h3 {
   transform: scale(calc(1 - var(--modal-scale)));
 }
 
-/*# sourceMappingURL=index.css.map */
+:root {
+  --card-icon-radius: 20%;
+}
+
+.card-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+}
+
+.card-grid .card:hover .logo {
+  transform: scale(1.05);
+}
+
+.card-grid .card .header {
+  height: 143px;
+  max-width: none;
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: visible;
+}
+
+.card-grid .card .logo {
+  position: relative;
+  padding: 0.1rem;
+  top: 0rem;
+  left: 1rem;
+  margin-top: -2rem;
+  margin-bottom: 1rem;
+}
+
+.card-grid .card .content {
+  padding: 0 16px 16px;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.card-list .card {
+  display: flex;
+}
+
+.card-list .card .header {
+  max-width: 248px;
+}
+
+.card-list .card .content {
+  padding: 1rem;
+  padding-left: 1.5rem;
+}
+
+.card-list .card .logo {
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  transition: background-color ease 0.2s, box-shadow ease 0.2s;
+  border: 4px solid transparent;
+}
+
+.card.active {
+  border-color: var(--primary);
+}
+
+.card:hover {
+  background: var(--background-tertiary);
+  box-shadow: var(--elevation-high);
+}
+
+.card:hover .header {
+  transform: scale(1.05);
+  width: 100%;
+}
+
+.card:hover .logo {
+  background: var(--background-tertiary);
+}
+
+.card .header {
+  max-width: 300px;
+  transition: transform ease 0.2s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card .logo {
+  border-radius: var(--card-icon-radius);
+  display: inline-block;
+  background: var(--background-secondary);
+  transition: transform ease 0.2s, background-color ease 0.2s;
+}
+
+.card .logo img {
+  height: 40px;
+  width: 40px;
+  margin-bottom: -4px;
+  border-radius: var(--card-icon-radius);
+}
+
+.card .title {
+  color: var(--text-strong);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.card .title .badge {
+  --size: 15px;
+  margin-right: 0.4rem;
+}
+
+.card .description {
+  text-align: justify;
+  font-size: 0.9rem;
+  color: var(--text-default);
+}
+
+.card .stats {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.card .stats .online:before,
+.card .stats .members:before {
+  content: "";
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  background: var(--success);
+  display: inline-block;
+}
+
+.card .stats .members:before {
+  background: var(--secondary);
+}
