@@ -5,6 +5,7 @@
 [![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
 [![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator)
 [![NPM](https://img.shields.io/badge/on-npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/discordrpcmaker)
+[![GitHub all releases](https://img.shields.io/github/downloads/ThatOneCalculator/DiscordRPCMaker/total)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases)
 
 ![Promo](https://cdn.discordapp.com/attachments/810799100940255260/838968321516503111/ad200kb.jpg)
 ![Large](https://media.discordapp.net/attachments/810799100940255260/838485035506073630/unknown.png)
