@@ -15,7 +15,7 @@
     "client-id-placeholder": "Client ID",
     "large-image": "Immagine grande",
     "large-image-placeholder": "Nome Immagine grande (facoltativo)",
-    "small-image": "Imamgine Piccola",
+    "small-image": "Immagine Piccola",
     "small-image-placeholder": "Nome Immagine piccola (facoltativo, solo se hai una immagine grande)",
     "description-1": "Descrizione",
     "description-1-placeholder": "Linea 1 della descrizione (facoltativa)",
@@ -35,6 +35,6 @@
     "base-flyout": "Vai all'applicazione desiderata e il Client ID verrà rilevato automaticamente! ",
     "detected-flyout": "Rilvato Client ID, copiato negli appunti!",
     "flush-zNaLgf": "Fai clic su 'New Application' per creare una nuova presenza o selezionane una già creata di seguito",
-    "wordmark-1G98vs": "Discord RPC Developer Portal",
+    "wordmark-1G98vs": "Portale per sviluppaotri Discord RPC",
     "aaa-innertext": "Questo sarà il nome della tua presenza."
 }
