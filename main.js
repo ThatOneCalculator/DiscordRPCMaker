@@ -33,12 +33,12 @@ if (id !== undefined) {
 	if (options.largeimage !== '') {
 		activity.largeImageKey = options.largeimage
 		// If you change this and some asks about this, please still give me credit :)
-		activity.largeImageText = "Made with ThatOneCalculator's Discord RPC Maker (v2.1.1 CLI)!"
+		activity.largeImageText = "www.capboi.net"
 	}
 	if (options.smallimage !== '') {
 		activity.smallImageKey = options.smallimage
 		// Same applies with assets.large_text
-		activity.smallImageText = 'https://drpcm.t1c.dev/'
+		activity.smallImageText = 'play.capboi.net'
 	}
 	if (assets !== {}) { activity.assets = assets }
 	if (options.description !== '') { activity.details = options.description }
@@ -48,8 +48,6 @@ if (id !== undefined) {
 	if (settings.showtimestamp == true) {
 		activity.startTimestamp = Date.now()
 	}
-
-	function assembleClient(timeout = 5000) {
 		client.destroy()
 		client = new RPC.Client({ transport: 'ipc' })
 		client.on('ready', () => {
