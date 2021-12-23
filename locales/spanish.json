@@ -2,7 +2,7 @@
     "translate-credits": "Jimmysit0",
     "language": "Español",
     "loading": "Cargando...",
-    "nointernet": "Por favor, conectate al internet para usar Discord RPC Maker.",
+    "nointernet": "Por favor, conectate a internet para usar Discord RPC Maker.",
     "title": "Discord RPC Maker",
     "presence-title": "Presencias guardadas",
     "logo": "Discord RPC Maker",
@@ -36,5 +36,5 @@
     "detected-flyout": "ID del cliente detectada, copiada al portapapeles!",
     "flush-zNaLgf": "Clickea 'Nueva aplicación' para crear una presencia nueva, o seleccionar una ya creada debajo",
     "wordmark-1G98vs": "Portal de Discord RPC Developer",
-    "aaa-innertext": "Así es como se llamará tu precencia."
+    "aaa-innertext": "Así es como se llamará tu presencia."
 }
