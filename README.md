@@ -92,6 +92,8 @@ We're trying to raise $150 to pay for online services for the next update and co
 - [**Lil Fox YT**](https://twitter.com/TMBF_YT)
 - [**Jorc0**](https://twitter.com/Jorcus334)
 - [**Funnion**](https://nion.fun/)
+- [**TheKFCBandit**](https://thekfcbandit.ca/)
+- [**EmiIy**](https://www.kawaiilista.com/)
 
 ---
 
