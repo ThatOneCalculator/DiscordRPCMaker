@@ -17,6 +17,7 @@ let win = null
 const args = process.argv.slice(2)
 const id = args[0]
 
+
 if (id !== undefined) {
 	const slash = os.platform() == 'win32' ? "\\" : "/"
 	const dir = `${os.userInfo().homedir}/${process.platform === 'win32' ? '/AppData/Roaming/drpcm/' : '/.config/drpcm/'}`
@@ -75,6 +76,7 @@ if (id !== undefined) {
 }
 
 else {
+	app.enableSandbox()
 	function createWindow() {
 		win = new BrowserWindow({
 			width: 1200,
@@ -232,6 +234,7 @@ else {
 
 		// Create myWindow, load the rest of the app, etc...
 		app.whenReady().then(() => {
+			console.log("App ready")
 			createWindow()
 			win = BrowserWindow.getAllWindows()[0]
 			if (os.platform() == "darwin") {
