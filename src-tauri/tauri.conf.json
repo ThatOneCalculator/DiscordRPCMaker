@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "discord-rpc-maker",
+    "productName": "discordrpcmaker",
     "version": "0.1.0"
   },
   "build": {
