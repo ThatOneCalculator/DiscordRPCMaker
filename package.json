@@ -1,7 +1,8 @@
 {
   "name": "discordrpcmaker",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "license": "GPL-3.0-only"
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
