@@ -1,0 +1,28 @@
+:root {
+    --primary: #82A2C0;
+    --primary-shade: #5E81AC;
+    --primary-darker: #5E81AC;
+    --primary-hover: rgba(114, 137, 218, 0.1);
+    --primary-active: #82A2C0;
+    --secondary: #747f8d;
+    --secondary-hover: rgba(116, 127, 141, 0.1);
+    --success: #A4BD8E;
+    --success-hover: rgba(67, 181, 129, 0.1);
+    --danger: #BD626B;
+    --danger-hover: rgba(240, 71, 71, 0.1);
+    --text: #E5E9F0;
+    --background-primary: #2E3440;
+    --background-secondary: #3B4251;
+    --background-tertiary: #3B4251;
+    --background-floating: #3B4251;
+    --interactive: #D8DEE9;
+    --interactive-active: var(--text);
+    --interactive-hover: #ECEFF4;
+    /* Begin fosscord specific */
+    --BTN-primary-hover-background: #82A2C0;
+    --BTN-primary-active-background: #8AC0CF;
+    --BTN-danger-hover-background: #a8535b;
+    --BTN-danger-active-background: #BD626B;
+    --BTN-success-hover-background: #93aa7e;
+    --BTN-success-active-background: #A4BD8E;
+}

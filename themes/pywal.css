@@ -1,0 +1,30 @@
+@import url(file://HOMEDIR/.cache/wal/colors.css);
+
+:root {
+    --primary: var(--color4);
+    --primary-shade: var(--color5);
+    --primary-darker: var(--color5);
+    --primary-hover: rgba(114, 137, 218, 0.1);
+    --primary-active: var(--color6);
+    --secondary: var(--color15);
+    --secondary-hover: rgba(116, 127, 141, 0.1);
+    --success: var(--color2);
+    --success-hover: rgba(67, 181, 129, 0.1);
+    --danger: var(--color1);
+    --danger-hover: rgba(240, 71, 71, 0.1);
+    --text: var(--foreground);
+    --background-primary: var(--background);
+    --background-secondary: var(--color0);
+    --background-tertiary: var(--color0);
+    --background-floating: var(--color8);
+    --interactive: var(--color7);
+    --interactive-active: var(--text);
+    --interactive-hover: var(--color15);
+    /* Begin fosscord specific */
+    --BTN-primary-hover-background: var(--color5);
+    --BTN-primary-active-background: var(--color5);
+    --BTN-danger-hover-background: var(--color1);
+    --BTN-danger-active-background: var(--color1);
+    --BTN-success-hover-background: var(--color2);
+    --BTN-success-active-background: var(--color2);
+}
