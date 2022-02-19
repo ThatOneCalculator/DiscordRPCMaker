@@ -1,103 +1,109 @@
-[![Logo](https://cdn.discordapp.com/attachments/802218008574820393/803422081105526804/image3.png)](https://drpcm.t1c.dev/)
-## ⬇️ Scroll down for install instructions! ⬇️
+*Psst — looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
 
-[![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=shield)](https://discord.gg/Z7UZPR3bbW)
-[![Github](https://img.shields.io/badge/star_it_on-github-black?style=shield&logo=github)](https://github.com/thatonecalculator/discordrpcmaker)
-[![BMC](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator)
-[![NPM](https://img.shields.io/badge/on-npm-CF1212.svg?style=flat&logo=npm)](https://www.npmjs.com/discordrpcmaker)
-[![GitHub all releases](https://img.shields.io/github/downloads/ThatOneCalculator/DiscordRPCMaker/total)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases)
-
-![Promo](https://cdn.discordapp.com/attachments/810799100940255260/838968321516503111/ad200kb.jpg)
-![Large](https://media.discordapp.net/attachments/810799100940255260/838485035506073630/unknown.png)
-![Small](https://media.discordapp.net/attachments/810799100940255260/838485901520797776/unknown.png)
-
-[![Discord](https://discordapp.com/api/guilds/716364441658327120/embed.png?style=banner2)](https://discord.gg/Z7UZPR3bbW)
-
-## Features
-
-- [x] Clickable buttons!
-- [x] Make and manage multiple presences
-- [x] Clean and lightweight UI
-- [x] Clear instructions
-- [x] Optional timer
-- [x] Custom, simplified developer portal
-- [x] Easy installers for Windows, macOS, and Linux
-- [x] Export presences and share with friends
-- [x] Multiple themes
-- [x] Cross-platform system tray support
-- [x] Auto-update
-- [x] Pywal support
-- [x] AUR Package
-- [x] CLI support
-- [x] Autostart
-- [ ] Code signing on Windows (soon)
-- [ ] Translations (soon)
-- [ ] Hotkeys (soon)
-- [ ] Online sharing (future)
+*Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
 
-## Install
-###### Version 2.1.1
+# svelte app
 
-#### [Windows ![windows](https://media.discordapp.net/attachments/810799100940255260/838488668816932965/ezgif-6-ac9683508192.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-windows.exe)
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
-- Download the exe, click More Info > Run Anyway > Open Discord RPC Maker from the desktop shortcut or start menu
+To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
----
+```bash
+npx degit sveltejs/template svelte-app
+cd svelte-app
+```
 
-#### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-macos.dmg)
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-- Download & mount the dmg, drag Discord RPC Maker into the Applications folder > Double click on Applications folder > Right click Discord RPC Maker > Open > Open
 
----
+## Get started
 
-#### [AppImage (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png) ![ai](https://media.discordapp.net/attachments/810799100940255260/838490721232355398/ezgif-6-35f6005300eb.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.appimage)
+Install the dependencies...
 
-- Download and run. Easy!
+```bash
+cd svelte-app
+npm install
+```
 
-#### [AUR package (discordrpcmaker)](https://aur.archlinux.org/packages/discordrpcmaker/) ![arch](https://media.discordapp.net/attachments/810799100940255260/838491685892784178/ezgif-6-fd025aa8c722.png)
+...then start [Rollup](https://rollupjs.org):
 
-- `yay -S discordrpcmaker` (replace `yay` with your AUR helper of choice).
+```bash
+npm run dev
+```
 
-#### [.deb (Ubuntu/Debian based Linux distros) ![ubun](https://media.discordapp.net/attachments/810799100940255260/838490150610796544/ezgif-6-0bcaf2484f82.png) ![deb](https://media.discordapp.net/attachments/810799100940255260/838489897975021609/ezgif-6-6c941861dbcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.deb)
+Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
-- Download, `sudo apt install /path/to/discordrpcmaker-linux.deb` or open with GDebi/Eddy.
+By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
 
-#### [.rpm (RedHat based Linux distros) ![fedora](https://media.discordapp.net/attachments/810799100940255260/838492071698104320/ezgif-6-e99994d2403a.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.rpm)
+If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
 
-- Download, `sudo rpm -i /path/to/discordrpcmaker-linux.rpm` (does not support openSUSE).
+## Building and running in production mode
 
-#### [Tarball (all Linux distros) ![tux](https://media.discordapp.net/attachments/810799100940255260/838491112863039558/ezgif-6-17b58fff7c7c.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-linux.tar.gz)
+To create an optimised version of the app:
 
-- Download, `tar -xvf /path/to/discordrpcmaker-linux.tar.gz` > Run: `discordrpcmaker-2.1.1/discordrpcmaker`; To install, `mv ./discordrpcmaker-2.1.1 /bin/drpcm && ln -s /bin/drpcm/discordrpcmaker /bin/discordrpcmaker`, and run `discordrpcmaker`.
+```bash
+npm run build
+```
 
----
+You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
-#### From source ![electron](https://media.discordapp.net/attachments/810799100940255260/838533828384391208/ezgif-2-828b221b651a.png)
-###### ⚠ Don't do this unless you intend to modify the code!
-- Install NodeJS/NPM, Yarn, & Electron
-- `git clone https://github.com/thatonecalculator/discordrpcmaker && cd discordrpcmaker && yarn install && npm run start`
 
----
+## Single-page app mode
 
-## Supporters
-You can [![BuyMeACoffee](https://img.shields.io/badge/buy_me_a-coffee-FFDD00?style=shield&logo=paypal)](https://buymeacoffee.com/that1calculator) to get your name here!
+By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
 
-We're trying to raise $150 to pay for online services for the next update and code signing!
+If you're building a single-page app (SPA) with multiple routes, sirv needs to be able to respond to requests for *any* path. You can make it so by editing the `"start"` command in package.json:
 
-- [**JusticeServ**](https://github.com/justiceserv)
-- [**KingParity**](https://twitter.com/KingParity)
-- [**Dylan Stone**](https://twitter.com/notDylanstone)
-- [**Lil Fox YT**](https://twitter.com/TMBF_YT)
-- [**Jorc0**](https://twitter.com/Jorcus334)
-- [**Funnion**](https://nion.fun/)
-- [**TheKFCBandit**](https://thekfcbandit.ca/)
-- [**EmiIy**](https://www.kawaiilista.com/)
+```js
+"start": "sirv public --single"
+```
 
----
+## Using TypeScript
 
-## Still need help, or just want to chat?
-[Open a new issue here](https://github.com/ThatOneCalculator/DiscordRPCMaker/issues) or [join the Discord!](https://discord.gg/Z7UZPR3bbW)
+This template comes with a script to set up a TypeScript development environment, you can run it immediately after cloning the template with:
 
-Made by [ThatOneCalculator](https://t1c.dev) and [KraXen72](https://github.com/kraxen72). Not officially affiliated with Discord. Thank you [discord.js](https://github.com/discordjs/rpc/), [electron-builder](https://electron.build), [fosscord-ui](https://github.com/fosscord/fosscord-ui), and all our lovely stargazers, helpers, translators, and users for making this project possible. Full credits are in the Instructions & Info menu in the program.
+```bash
+node scripts/setupTypeScript.js
+```
+
+Or remove the script via:
+
+```bash
+rm scripts/setupTypeScript.js
+```
+
+If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need to set up `@rollup/plugin-alias` to tell Rollup to resolve the aliases. For more info, see [this StackOverflow question](https://stackoverflow.com/questions/63427935/setup-tsconfig-path-in-svelte).
+
+## Deploying to the web
+
+### With [Vercel](https://vercel.com)
+
+Install `vercel` if you haven't already:
+
+```bash
+npm install -g vercel
+```
+
+Then, from within your project folder:
+
+```bash
+cd public
+vercel deploy --name my-project
+```
+
+### With [surge](https://surge.sh/)
+
+Install `surge` if you haven't already:
+
+```bash
+npm install -g surge
+```
+
+Then, from within your project folder:
+
+```bash
+npm run build
+surge public my-project.surge.sh
+```
