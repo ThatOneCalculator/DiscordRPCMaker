@@ -1,4 +1,4 @@
-                   The Based License v1.3.1
+                   The Based License v1.3.2
 
 Used by Kainoa Kanter (ThatOneCalculator) on 1 March, 2022
 Written by Kainoa Kanter (ThatOneCalculator) on 1 March, 2022
@@ -26,6 +26,7 @@ BEGIN LICENSE TERMS
 
 All copies of this software that are redistributed (INCLUDING modifications to the software)
 must have their source code easily and publicly avaliable, and also be licensed under the based license.
+That means that this is a copyleft license.
 
 The author of this software has the right to claim the software as their own, and while anyone can contribute
 to, redistribute, and modify this software (under the based license), they cannot claim it as their own software,
@@ -38,8 +39,8 @@ If this software has network connectivity (i.e. connecting to the internet), thi
 frontend, and any middleware must be licensed under the based license.
 
 This software cannot be used to mint or produce NFTs (Non Fungible Tokens) or any other similar smart-contract
-based proof-of-ownership scheme. This includes the source code, binaries, screenshots, artifacts produced, websites,
-the name of the software, or anything of the like.
+based proof-of-ownership scheme. This includes the source code, binaries, screenshots, artifacts produced,
+websites, the name of the software, or anything else from or of this software.
 
 If this software depends on other software dependenccies under different licenses, the parts that are used under
 different licenses must be stated clearly in the software or in documentation. If this software depends on any
@@ -57,10 +58,10 @@ violations are not resolved within one week (7 days) after being notified by the
 
 END LICENSE TERMS
 
-⠘⡀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⠀⠀⠀
-  ⠑⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀
-   ⠈⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠴⠊⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀ ⠑⠀ ⠀⠀  ⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⡀⠤⠄⠒⠈⠀⠀⠀⠀⠀⠀⠀⠀
+⠘⡀  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜⠀⠀⠀
+  ⠑⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡔⠁⠀⠀⠀
+   ⠈⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠴⠊⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀ ⠑⠀ ⠀⠀  ⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⣀⣀⡀⢀⣀⣀⣀⡀⠤⠄⠒⠈⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠘⣀⠄⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀
 ⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠛⠛⠋⠉⠈⠉⠉⠉⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿
