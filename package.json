@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "electron": "^18.0.0",
-    "electron-builder": "^22.10.5",
+    "electron-builder": "^23.0.3",
     "fs": "^0.0.1-security"
   }
 }
