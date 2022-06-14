@@ -44,6 +44,10 @@
 
 - Download the exe, click More Info > Run Anyway > Open Discord RPC Maker from the desktop shortcut or start menu
 
+#### [Winget ![windows](https://media.discordapp.net/attachments/810799100940255260/838488668816932965/ezgif-6-ac9683508192.png)](https://winstall.app/apps/ThatOneCalculator.DiscordRPCMaker)
+
+- `winget install --id=ThatOneCalculator.DiscordRPCMaker -e`
+
 ---
 
 #### [macOS ![mac](https://media.discordapp.net/attachments/810799100940255260/838489488505307176/ezgif-6-cea52c6e0dcc.png)](https://github.com/ThatOneCalculator/DiscordRPCMaker/releases/download/v2.1.1/discordrpcmaker-macos.dmg)
