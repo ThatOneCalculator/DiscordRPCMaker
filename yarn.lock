@@ -865,9 +865,9 @@ electron-publish@23.3.3:
     mime "^2.5.2"
 
 electron@^20.0.0:
-  version "20.0.2"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-20.0.2.tgz#5a610b07192a03979f83a35b9b9d1568a7f08c93"
-  integrity sha512-Op4nxSyXH0tXjhvWC+WDn9EI0gep5etPccainxu1A4wes+ZFQBMCBXxibotanJfG+WNW4RaOv88NArwHIsSmPw==
+  version "20.1.2"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-20.1.2.tgz#ef5502e4a1ea7c08bfbae17a49da861ac9f882dc"
+  integrity sha512-Yz2GAUqgXNr3+7vI+xL3qoCBUw4nVX+MeF/+HNL80y67ZrhMFUbJFirw7Tm6/Kx8r6TBPz0/D3aleeySWFUmzw==
   dependencies:
     "@electron/get" "^1.14.1"
     "@types/node" "^16.11.26"
