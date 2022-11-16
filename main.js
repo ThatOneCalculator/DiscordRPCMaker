@@ -1,4 +1,5 @@
 // libappindicator-gtk3 on Arch as req
+
 const {
   app,
   BrowserWindow,
@@ -12,7 +13,10 @@ const fs = require("fs");
 const os = require("os");
 const RPC = require("discord-rpc");
 const EventEmitter = require("events");
+
+if (require("electron-squirrel-startup")) app.quit();
 require("@electron/remote/main").initialize();
+
 const iconpath = path.join(__dirname, "/assets/icon.png");
 const loadingEvents = new EventEmitter();
 const slash = os.platform() == "win32" ? "\\" : "/";
@@ -57,7 +61,7 @@ if (id !== undefined) {
     // Same applies with assets.large_text
     activity.smallImageText = "https://drpcm.t1c.dev/";
   }
-  
+
   if (assets !== {}) activity.assets = assets;
 
   if (options.description !== "") activity.details = options.description;
@@ -238,10 +242,9 @@ if (id !== undefined) {
     }
 
     app.on("window-all-closed", () => {
-      if (process.platform !== "darwin") {
-        app.quit();
-      }
+      if (process.platform !== "darwin") app.quit();
     });
+
     app.on("before-quit", () => {
       win.removeAllListeners("close");
       win.close();
@@ -266,6 +269,11 @@ if (id !== undefined) {
     app.whenReady().then(() => {
       console.log("App ready");
       createWindow();
+
+      app.on("activate", () => {
+        if (BrowserWindow.getAllWindows().length === 0) createWindow();
+      });
+
       win = BrowserWindow.getAllWindows()[0];
       if (os.platform() == "darwin") {
         appIcon = new Tray(path.join(__dirname, "/assets/iconTemplate.png"));
@@ -294,10 +302,4 @@ if (id !== undefined) {
       appIcon.setToolTip("Discord RPC Maker");
     });
   }
-
-  app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
-    }
-  });
 }
