@@ -153,6 +153,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@electron-forge/plugin-auto-unpack-natives@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "@electron-forge/plugin-auto-unpack-natives@npm:6.0.3"
+  dependencies:
+    "@electron-forge/plugin-base": ^6.0.3
+    "@electron-forge/shared-types": ^6.0.3
+  checksum: 64d7c4388e08081d3bfe8553402a4f4bacc42b3b188c6292cc43b03b713c5e7acb5387cdb50c4074b27a5676c7f068a8cdc449158830e7b6f3ed5496e332d8cf
+  languageName: node
+  linkType: hard
+
 "@electron-forge/plugin-base@npm:^6.0.3":
   version: 6.0.3
   resolution: "@electron-forge/plugin-base@npm:6.0.3"
@@ -1306,6 +1316,7 @@ __metadata:
     "@electron-forge/maker-dmg": ^6.0.3
     "@electron-forge/maker-rpm": ^6.0.3
     "@electron-forge/maker-squirrel": ^6.0.3
+    "@electron-forge/plugin-auto-unpack-natives": ^6.0.3
     "@electron/remote": ^2.0.8
     "@types/discord-rpc": ^4.0.3
     "@types/node": ^18.11.9
