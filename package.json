@@ -52,7 +52,6 @@
     "@electron-forge/maker-dmg": "^6.0.3",
     "@electron-forge/maker-rpm": "^6.0.3",
     "@electron-forge/maker-squirrel": "^6.0.3",
-    "@electron-forge/plugin-auto-unpack-natives": "^6.0.3",
     "@types/discord-rpc": "^4.0.3",
     "@types/node": "^18.11.9",
     "electron": "^21.2.3"
