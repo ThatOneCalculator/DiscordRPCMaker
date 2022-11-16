@@ -111,3 +111,14 @@ typings/
 # Options
 options.json
 .vscode/settings.json
+
+# macOS
+.DS_Store
+
+# yarn
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

@@ -7,8 +7,9 @@
     "rpcmaker": "./main.js"
   },
   "scripts": {
-    "run": "node ./main.js && exit 1",
-    "start": "electron main.js"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "keywords": [
     "discord",
@@ -38,21 +39,23 @@
   "homepage": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
   "repository": "https://github.com/ThatOneCalculator/DiscordRPCMaker",
   "dependencies": {
-    "@electron/remote": "^2.0.1",
-    "child_process": "^1.0.2",
-    "copy-to-clipboard": "^3.3.1",
+    "@electron/remote": "^2.0.8",
+    "copy-to-clipboard": "^3.3.3",
     "discord-rpc": "^4.0.1",
-    "latest-version": "^7.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "latest-version": "5.1.0",
     "open-file-explorer": "^1.0.2"
   },
-  "pkg": {
-    "assets": [
-      "./node_modules/"
-    ]
-  },
   "devDependencies": {
-    "electron": "^20.0.0",
-    "electron-builder": "^23.0.3",
-    "fs": "^0.0.1-security"
-  }
+    "@electron-forge/cli": "^6.0.3",
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-dmg": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.0.3",
+    "@types/discord-rpc": "^4.0.3",
+    "@types/node": "^18.11.9",
+    "electron": "^21.2.3"
+  },
+  "packageManager": "yarn@3.3.0"
 }
