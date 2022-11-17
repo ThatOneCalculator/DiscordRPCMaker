@@ -6,9 +6,3 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
-
-<script setup lang="ts">
-import devtools from "@vue/devtools";
-
-if (process.dev) devtools.connect("127.0.0.1", 8098);
-</script>

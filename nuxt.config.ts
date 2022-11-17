@@ -1,8 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
-  modules: ["@pinia/nuxt", '@vueuse/nuxt'],
+  modules: ["@pinia/nuxt", "@vueuse/nuxt"],
   css: ["@/assets/styles/global.scss"],
+  app: {
+    head: {
+      script: [
+        // vue-devtools
+        !!process.env.TAURI_DEBUG ? { src: "http://localhost:8098" } : undefined,
+      ],
+    },
+  },
   vite: {
     clearScreen: false,
     server: {
