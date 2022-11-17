@@ -1,0 +1,17 @@
+{
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "files.exclude": {
+    ".yarn": false,
+    "yarn.lock": false,
+    "src-tauri/Cargo.lock": true,
+    "src-tauri/target": false,
+  },
+  "search.exclude": {
+    ".yarn": true,
+    "yarn.lock": true,
+    "src-tauri/Cargo.lock": true,
+    "src-tauri/target": true,
+  }
+}
