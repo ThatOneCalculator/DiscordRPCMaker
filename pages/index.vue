@@ -94,14 +94,16 @@ h1 {
 </style>
 
 <template>
-    <div class="screen-size center-grid">
+    <div v-if="!pending" class="screen-size center-grid">
         <div class="center container">
-            <h1 class="lang-loading">Loading</h1>
-            <div class="spinner">
-                <div class="cube1"></div>
-                <div class="cube2"></div>
+            <div v-if="isOnline">
+                <h1 class="lang-loading">{{ languageData ? languageData["loading"] : "" }}</h1>
+                <div class="spinner">
+                    <div class="cube1"></div>
+                    <div class="cube2"></div>
+                </div>
             </div>
-            <div v-if="props.noInternet" class="lang-nointernet">
+            <div v-else>
                 <h2>Please connect to the internet to use Discord RPC Maker.</h2>
             </div>
         </div>
@@ -109,8 +111,8 @@ h1 {
 </template>
 
 <script setup lang="ts">
-// TODO: Change this to a store
-const props = defineProps<{
-    noInternet: boolean
-}>();
+import { useNetwork } from "@vueuse/core";
+
+const { pending, languageData } = useLanguage();
+const { isOnline } = useNetwork();
 </script>

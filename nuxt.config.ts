@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
-  modules: [],
+  modules: ["@pinia/nuxt", '@vueuse/nuxt'],
   css: ["@/assets/styles/global.scss"],
   vite: {
     clearScreen: false,

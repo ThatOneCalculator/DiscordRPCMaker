@@ -9,8 +9,11 @@
     "tauri": "tauri"
   },
   "devDependencies": {
+    "@pinia/nuxt": "^0.4.4",
     "@tauri-apps/cli": "^1.2.0",
     "@vue/devtools": "^6.4.5",
+    "@vueuse/core": "^9.5.0",
+    "@vueuse/nuxt": "^9.5.0",
     "nuxt": "3.0.0",
     "sass": "^1.56.1",
     "typescript": "^4.9.3",

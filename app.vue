@@ -8,8 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import devtools from '@vue/devtools';
+import devtools from "@vue/devtools";
 
-if (process.dev)
-  devtools.connect('http://localhost', 8098);
+if (process.dev) devtools.connect("127.0.0.1", 8098);
 </script>
