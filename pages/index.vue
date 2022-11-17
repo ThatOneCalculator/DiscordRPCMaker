@@ -111,10 +111,10 @@ h1 {
 </template>
 
 <script setup lang="ts">
-import { useNetwork } from "@vueuse/core";
+import { useOnline } from "@vueuse/core";
 
 const { pending, languageData } = useLanguage();
-const { isOnline } = useNetwork();
+const isOnline = useOnline();
 
 setTimeout(() => {
     navigateTo("/main-menu");
