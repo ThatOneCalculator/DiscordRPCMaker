@@ -1,6 +1,6 @@
-<style src="~/assets/styles/style.scss" />
+<style scoped src="~/assets/styles/style.scss" />
 
-<style lang="scss">
+<style scoped lang="scss">
 .spinner {
     margin: 100px auto;
     width: 40px;
@@ -115,4 +115,8 @@ import { useNetwork } from "@vueuse/core";
 
 const { pending, languageData } = useLanguage();
 const { isOnline } = useNetwork();
+
+setTimeout(() => {
+    navigateTo("/main-menu");
+}, 3000);
 </script>
