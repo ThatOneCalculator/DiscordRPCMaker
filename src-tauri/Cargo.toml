@@ -1,0 +1,28 @@
+[package]
+name = "app"
+version = "3.0.0"
+description = "Cross-platform Discord Rich Presence Generator, WITH BUTTONS!"
+authors = ["ThatOneCalculator"]
+license = "GPL-3.0"
+repository = "https://github.com/ThatOneCalculator/DiscordRPCMaker"
+default-run = "app"
+edition = "2021"
+rust-version = "1.59"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.2.0", features = [] }
+
+[dependencies]
+serde_json = "1.0.87"
+serde = { version = "1.0.147", features = ["derive"] }
+tauri = { version = "1.2.0", features = ["clipboard-write-text", "system-tray"] }
+
+[features]
+# by default Tauri runs in production mode
+# when `tauri dev` runs it is executed with `cargo run --no-default-features` if `devPath` is an URL
+default = [ "custom-protocol" ]
+# this feature is used for production builds where `devPath` points to the filesystem
+# DO NOT remove this
+custom-protocol = [ "tauri/custom-protocol" ]

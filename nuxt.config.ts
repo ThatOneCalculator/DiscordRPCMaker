@@ -1,0 +1,27 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  ssr: false,
+  modules: [],
+  css: ["@/assets/styles/global.scss"],
+  vite: {
+    clearScreen: false,
+    server: {
+      strictPort: true,
+    },
+    envPrefix: ["VITE_", "TAURI_"],
+    build: {
+      target: ["es2021", "chrome100", "safari13"],
+      minify: !process.env.TAURI_DEBUG ? "esbuild" : false,
+      sourcemap: !!process.env.TAURI_DEBUG,
+      emptyOutDir: true,
+    },
+  },
+  typescript: {
+    shim: false,
+    strict: true,
+    typeCheck: true,
+    tsConfig: {
+      exclude: ["../src-tauri"],
+    },
+  },
+});
