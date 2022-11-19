@@ -52,6 +52,9 @@ export default defineNuxtConfig({
     defaultLocale: "en",
     strategy: "no_prefix",
   },
+  image: {
+    provider: "static",
+  },
   vite: {
     clearScreen: false,
     server: {
