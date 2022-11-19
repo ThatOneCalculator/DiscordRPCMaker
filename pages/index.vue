@@ -1,6 +1,4 @@
-<style scoped src="~/assets/styles/style.scss" />
-
-<style scoped lang="scss">
+<style lang="scss">
 .spinner {
     margin: 100px auto;
     width: 40px;
@@ -94,17 +92,18 @@ h1 {
 </style>
 
 <template>
-    <div v-if="!pending" class="screen-size center-grid">
+    <div class="screen-size center-grid">
         <div class="center container">
             <div v-if="isOnline">
-                <h1 class="lang-loading">{{ languageData ? languageData["loading"] : "" }}</h1>
+                <h1></h1>
+                <h1 class="lang-loading">{{ $t("loading") }}</h1>
                 <div class="spinner">
                     <div class="cube1"></div>
                     <div class="cube2"></div>
                 </div>
             </div>
             <div v-else>
-                <h2>Please connect to the internet to use Discord RPC Maker.</h2>
+                <h2>{{ $t("nointernet") }}</h2>
             </div>
         </div>
     </div>
@@ -113,10 +112,7 @@ h1 {
 <script setup lang="ts">
 import { useOnline } from "@vueuse/core";
 
-const { pending, languageData } = useLanguage();
 const isOnline = useOnline();
 
-setTimeout(() => {
-    navigateTo("/main-menu");
-}, 3000);
+navigateTo("/main-menu");
 </script>

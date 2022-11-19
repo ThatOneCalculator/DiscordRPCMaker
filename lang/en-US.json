@@ -1,6 +1,7 @@
 {
-  "translate-credits": "ThatOneCalculator",
-  "language": "English",
+  "translate-credits": "ThatOneCalculator, xhayper (aka hayper)",
+  "language": "Language",
+  "theme": "Theme",
   "loading": "Loading",
   "nointernet": "Please connect to the internet to use Discord RPC Maker.",
   "title": "Discord RPC Maker",

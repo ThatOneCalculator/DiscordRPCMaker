@@ -9,6 +9,8 @@
     "tauri": "tauri"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "1.0.0-27809804.194d2d6",
+    "@nuxtjs/i18n": "next",
     "@pinia/nuxt": "^0.4.4",
     "@tauri-apps/cli": "^1.2.0",
     "@vue/devtools": "^6.4.5",

@@ -1,4 +1,6 @@
-<style lang="scss" src="~/assets/styles/global.scss" />
+<style src="~/assets/styles/normalize.css" />
+<style src="~/assets/styles/matter.css" />
+<style src="~/assets/styles/style.css" />
 
 <template>
   <NuxtLayout>
