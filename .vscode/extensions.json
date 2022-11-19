@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "tauri-apps.tauri-vscode",
     "vue.volar",
     "rust-lang.rust-analyzer",
     "vadimcn.vscode-lldb"

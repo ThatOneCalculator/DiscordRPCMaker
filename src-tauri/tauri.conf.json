@@ -12,10 +12,7 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false,
-      "clipboard": {
-        "writeText": true
-      }
+      "all": true
     },
     "systemTray": {
       "iconAsTemplate": true,
@@ -25,8 +22,7 @@
       "active": true,
       "category": "Utility",
       "copyright": "",
-      "appimage": {
-      },
+      "appimage": {},
       "deb": {
         "depends": []
       },
@@ -65,10 +61,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
         "resizable": true,
         "title": "Discord RPC Maker",
-        "width": 800
+        "width": 800,
+        "height": 600
       }
     ]
   }
