@@ -1313,7 +1313,7 @@ __metadata:
     discord-rpc: ^4.0.1
     electron: ^21.2.3
     electron-squirrel-startup: ^1.0.0
-    latest-version: 5.1.0
+    latest-version: 6.0.0
     open-file-explorer: ^1.0.2
   bin:
     rpcmaker: ./main.js
@@ -2031,7 +2031,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:^11.7.0, got@npm:^11.8.5":
+"got@npm:^11.7.0, got@npm:^11.8.2, got@npm:^11.8.5":
   version: 11.8.5
   resolution: "got@npm:11.8.5"
   dependencies:
@@ -2494,12 +2494,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"latest-version@npm:5.1.0":
-  version: 5.1.0
-  resolution: "latest-version@npm:5.1.0"
+"latest-version@npm:6.0.0":
+  version: 6.0.0
+  resolution: "latest-version@npm:6.0.0"
   dependencies:
-    package-json: ^6.3.0
-  checksum: fbc72b071eb66c40f652441fd783a9cca62f08bf42433651937f078cd9ef94bf728ec7743992777826e4e89305aef24f234b515e6030503a2cbee7fc9bdc2c0f
+    package-json: ^7.0.0
+  checksum: c3f282dee464b400dacac9bd785415df9f55b31b08f7e201ca9d6862ce829c6f49d2c14120632d43f6bca48e0eaa2daa6cf755f291fac9fe5dc67fdd9777ab77
   languageName: node
   linkType: hard
 
@@ -3260,15 +3260,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"package-json@npm:^6.3.0":
-  version: 6.5.0
-  resolution: "package-json@npm:6.5.0"
+"package-json@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "package-json@npm:7.0.0"
   dependencies:
-    got: ^9.6.0
+    got: ^11.8.2
     registry-auth-token: ^4.0.0
     registry-url: ^5.0.0
-    semver: ^6.2.0
-  checksum: cc9f890d3667d7610e6184decf543278b87f657d1ace0deb4a9c9155feca738ef88f660c82200763d3348010f4e42e9c7adc91e96ab0f86a770955995b5351e2
+    semver: ^7.3.5
+  checksum: c03699b057f665c5bf2d6af76190b8fb32aaf69c70a78faf7c073c03c3d0d5e168d4a96f386739a4d179e925e66289bf0b93a446fbb3f97b05451a3cd2a3bd90
   languageName: node
   linkType: hard
 
