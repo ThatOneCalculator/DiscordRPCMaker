@@ -136,16 +136,16 @@ __metadata:
   linkType: hard
 
 "@electron-forge/maker-rpm@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "@electron-forge/maker-rpm@npm:6.0.3"
+  version: 6.0.4
+  resolution: "@electron-forge/maker-rpm@npm:6.0.4"
   dependencies:
-    "@electron-forge/maker-base": ^6.0.3
-    "@electron-forge/shared-types": ^6.0.3
+    "@electron-forge/maker-base": ^6.0.4
+    "@electron-forge/shared-types": ^6.0.4
     electron-installer-redhat: ^3.2.0
   dependenciesMeta:
     electron-installer-redhat:
       optional: true
-  checksum: c5ac87b4aa95a4fba1ec1358ae61119b1436a587eab9a0009fe5ad27e4b987d902fe001d0b4d53b6ce86bde1fcb9b6e9e1a9f5e61075a4e0b70a9de8e913982d
+  checksum: 34d7757e92de394b6e7f1cc2413c556f0ecc971138f4f76d52693cceaa98713e376452d663b13f615a56d5171709cb15afde7fdefd215c805d45a13aee22c33f
   languageName: node
   linkType: hard
 
