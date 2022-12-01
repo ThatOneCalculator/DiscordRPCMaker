@@ -107,16 +107,16 @@ __metadata:
   linkType: hard
 
 "@electron-forge/maker-deb@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "@electron-forge/maker-deb@npm:6.0.3"
+  version: 6.0.4
+  resolution: "@electron-forge/maker-deb@npm:6.0.4"
   dependencies:
-    "@electron-forge/maker-base": ^6.0.3
-    "@electron-forge/shared-types": ^6.0.3
+    "@electron-forge/maker-base": ^6.0.4
+    "@electron-forge/shared-types": ^6.0.4
     electron-installer-debian: ^3.0.0
   dependenciesMeta:
     electron-installer-debian:
       optional: true
-  checksum: 851532fc4184c490ec7ba63970e50febe370148315974be067afc13bb54404f2ebe603caf9c673dd90470f0e8bb4a46f59a8fd555986d5f698d3a5c316002d1a
+  checksum: 5b90fd21ecfc67bd27ead0528573a7c51d48eaae7f8c3bc13c4183d6f3a599c21cb1003426649989042d93b564fd0cc26ffba09addf4f58d62230b380d1d7fb1
   languageName: node
   linkType: hard
 
