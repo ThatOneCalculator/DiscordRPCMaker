@@ -150,17 +150,17 @@ __metadata:
   linkType: hard
 
 "@electron-forge/maker-squirrel@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "@electron-forge/maker-squirrel@npm:6.0.3"
+  version: 6.0.4
+  resolution: "@electron-forge/maker-squirrel@npm:6.0.4"
   dependencies:
-    "@electron-forge/maker-base": ^6.0.3
-    "@electron-forge/shared-types": ^6.0.3
+    "@electron-forge/maker-base": ^6.0.4
+    "@electron-forge/shared-types": ^6.0.4
     electron-winstaller: ^5.0.0
     fs-extra: ^10.0.0
   dependenciesMeta:
     electron-winstaller:
       optional: true
-  checksum: 6b58e0345b7e5d5f87f6eb872c5a22070706957fda8c52f6dceac5094f1e453eaa07ef895b649cd57d0512b7260443c58c3de5831544dde2ca12f7f1e102b69f
+  checksum: 83e4504c6a87c12b278e39a7586310266fdaedce3585dcb07a9f4313c5d79732b3df2445bf40f21e64bc2b060621a389305d712b3b8416c6f13f2277ef7d9e15
   languageName: node
   linkType: hard
 
