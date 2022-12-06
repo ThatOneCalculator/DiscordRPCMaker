@@ -328,11 +328,11 @@ __metadata:
   linkType: hard
 
 "@electron/remote@npm:^2.0.8":
-  version: 2.0.8
-  resolution: "@electron/remote@npm:2.0.8"
+  version: 2.0.9
+  resolution: "@electron/remote@npm:2.0.9"
   peerDependencies:
     electron: ">= 13.0.0"
-  checksum: d0ef11b3f09d789baf4330c2c021cfc1a997fc5ffdb56e8810ed7fe2fd76cda1a168c0589d2a10284a907fd3829bae14002a58b35c4881473cdd0049f07fbd63
+  checksum: 7949c528df0ecc9661c0b43e7f2586befb9eddfb53739adf204dc2097ba4331fb08b01f6904636e4c566d28b051a80a55718fb643ee2d2df0793c0c05278dbd4
   languageName: node
   linkType: hard
 
