@@ -84,6 +84,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@electron-forge/maker-base@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@electron-forge/maker-base@npm:6.1.0"
+  dependencies:
+    "@electron-forge/shared-types": 6.1.0
+    fs-extra: ^10.0.0
+    which: ^2.0.2
+  checksum: 50c98c80d093e071da4dfb51009062ec73c075d94c4ed26160a8a1a6bd9f86ab3029b51863f1af75aeff27b91def943a17ee0db7a5e774b96e49ec0c0b78ef72
+  languageName: node
+  linkType: hard
+
 "@electron-forge/maker-base@npm:^6.0.3":
   version: 6.0.3
   resolution: "@electron-forge/maker-base@npm:6.0.3"
@@ -150,17 +161,17 @@ __metadata:
   linkType: hard
 
 "@electron-forge/maker-squirrel@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "@electron-forge/maker-squirrel@npm:6.0.3"
+  version: 6.1.0
+  resolution: "@electron-forge/maker-squirrel@npm:6.1.0"
   dependencies:
-    "@electron-forge/maker-base": ^6.0.3
-    "@electron-forge/shared-types": ^6.0.3
+    "@electron-forge/maker-base": 6.1.0
+    "@electron-forge/shared-types": 6.1.0
     electron-winstaller: ^5.0.0
     fs-extra: ^10.0.0
   dependenciesMeta:
     electron-winstaller:
       optional: true
-  checksum: 6b58e0345b7e5d5f87f6eb872c5a22070706957fda8c52f6dceac5094f1e453eaa07ef895b649cd57d0512b7260443c58c3de5831544dde2ca12f7f1e102b69f
+  checksum: 594ed4a9d64f98b96fa77665cb785767cff26b43ca105e4b68401b78c2ddde03b49ce52e30d715285af7697053c4999229842c4b0fbbf03ae6354dea61bbac98
   languageName: node
   linkType: hard
 
@@ -179,6 +190,17 @@ __metadata:
   dependencies:
     "@electron-forge/shared-types": ^6.0.3
   checksum: 3a1cdf8becc1d0ac3ec84089dac1f4a4d1478d492371020527f30d17cd565ecc993ddb279a6eb75a7a73cbb2c26f207282227e2b8cf4bb72f71225f8713240be
+  languageName: node
+  linkType: hard
+
+"@electron-forge/shared-types@npm:6.1.0":
+  version: 6.1.0
+  resolution: "@electron-forge/shared-types@npm:6.1.0"
+  dependencies:
+    "@electron/rebuild": ^3.2.10
+    electron-packager: ^17.1.1
+    listr2: ^5.0.3
+  checksum: 76d4e3e0bc3ba8da63796f5adea38575582f16a28ed303ee5d483e3daf1c317cad9ed26ed77ca77705a96f2b8ac5387a14d3ccde2fb1e73645e313d7aed91af0
   languageName: node
   linkType: hard
 
